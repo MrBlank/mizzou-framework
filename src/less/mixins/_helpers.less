@@ -1,0 +1,161 @@
+/*! HELPER STYLES */
+/*--------------------------------------------------------------
+  
+* Site:             Mizzou Framework
+* Author:           Josh Nichols, MU Web Communications
+* version:          1.1
+  
+--------------------------------------------------------------*/
+
+
+// Some of these are not nessesary ... 
+
+
+.bottom {
+    margin-bottom: 0!important;
+}
+.right {
+    float: right!important;
+}
+.left {
+    float: left!important;
+}
+.no-bold {
+    font-weight: normal;
+}
+.no-italic {
+    font-style: normal;
+}
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+
+
+//! Type helpers
+
+.dquo {
+	margin-left: -.3em;
+}
+.quo {
+	margin-left: -.2em;
+}
+.caps {
+	font-size: 90%;
+	text-transform: uppercase;
+}
+.dropcap { 
+	font-weight:@font-bold; 
+	float:left; 
+	display: block;
+	line-height:.7; 
+	font-size:5.4em; 
+	margin:.11em .08em 0 -.04em; 
+
+    &.hang {
+	    margin-left: -.3em;
+    }
+}
+
+/*doc
+---
+title: Type Helpers
+name: zhelpers_02
+category: Mixins & Helper Classes
+---
+
+## Hanging Quotes
+
+The `.quo` and `.dquo` classes are for single quotes and double quotes, respectively. 
+They push the element to the left a little to cause the punctuation to hang into the margins.
+
+```html_example 
+<h1><span class="quo">&#8216;</span>Let these columns stand. Let them stand a thousand years.&#8217;</h1>
+<p><span class="dquo">&#8220;</span>Let these columns stand. Let them stand a thousand years. Crown them with an arch, memorial to the men who in their magnificent presence learned what life and duty are, and how to live the one and do the other. They will be to all the rallying point of future devotion and service to the university.&#8221;</p>
+```
+
+## Small Caps
+
+The `.caps` class shrinks text a little and transforms text to uppercase.
+
+```html_example 
+<p>The quarterly magazine of <span class="caps">MAA</span> is called <span class="caps">MIZZOU</span> and provides news and information about the University of Missouri</p>
+```
+
+## Dropcaps
+
+The `.dropcap` class works on an inline element, usually and span tag. Add the class `.hang` when it starts with punctuation to hang it in the margins. 
+
+```html_example 
+<p><span class="dropcap">L</span>Let these columns stand. Let them stand a thousand years. Crown them with an arch, memorial to the men who in their magnificent presence learned what life and duty are, and how to live the one and do the other. They will be to all the rallying point of future devotion and service to the university.</p>
+<p><span class="dropcap hang">&#8216;L</span>Let these columns stand. Let them stand a thousand years. Crown them with an arch, memorial to the men who in their magnificent presence learned what life and duty are, and how to live the one and do the other. They will be to all the rallying point of future devotion and service to the university.&#8217;</p>
+```
+
+*/
+
+
+
+//! Skip links */
+
+.offset {
+    
+    a { 
+        position:absolute; 
+        left:-9999em; 
+        padding:5px 10px; 
+        color: @color-text; 
+        font-size: 1em; 
+        background: @gold;
+        box-shadow: @box-shadow;
+        
+        &:focus {
+            position:fixed; 
+            top:20px; 
+            left:20px; 
+            z-index: 1000;
+        }
+    }
+}
+
+/*doc
+---
+title: Skip to Content
+name: zhelpers_03
+category: Mixins & Helper Classes
+---
+
+The "Skip-To" link is an accessibility technique to allow users to skip directly to navigation 
+or content. `.offset` should be the first element inside the `<body>` tag. You can see what it looks 
+like by tabbing through the document. More skip links can be added as necessary.
+
+```
+<div class="offset">
+    <a href="#nav" tabindex="1">Skip to navigation</a>
+    <a href="#content" tabindex="2">Skip to content</a>
+</div>
+```
+*/
+
+
+
+
+
+
+//! Document links
+
+// PNG falback?
+
+a[href$=".pdf"] { 
+    background: url('@{img-path}/icons/pdf.svg') left center no-repeat; 
+    padding-left: 20px; 
+}
+@media print {
+    a[href$=".pdf"] { 
+        padding-left: 0px; 
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    
+    <%if !blocks.empty? %>
+    <title>Mizzou Framework // <%= title %></title>
+    <% else %>
+    <title>Mizzou Framework</title>
+    <%end %>
+    
+    <!-- CSS -->
+    <!--[if gt IE 7]><!--><link href="css/styleguide.css" rel="stylesheet" /><!--<![endif]-->
+    <!--[if IE 8]><link href="css/ie.css" rel="stylesheet" /><![endif]-->
+    <!--[if lte IE 7]><link href="css/text-only.css" rel="stylesheet" /><![endif]-->
+    
+    <script src="scripts-min.js"></script>
+</head>
+<body class="styleguide">
+    
+    <div class="offset">
+        <a href="#nav" tabindex="1">Skip to navigation</a>
+        <a href="#content" tabindex="2">Skip to content</a>
+    </div>
+        
+    <div class="main-content">
+        
+        <% if !blocks.empty? %>
+        <nav class="section-nav">
+            
+            <h1 class="styleguide-h1"><%= title %></h1>
+                
+                <% if blocks.length >1 %>
+                <ul>
+                    <% @blocks.each do |b| %>
+                    <li><a href="#<%= b[:name] %>"><%= b[:title] %></a></li>
+                    <% end %>
+                </ul>
+                <% end %>
+            
+        </nav>
+        <% end %>
+        
+    <a id="content"></a>

@@ -1,0 +1,174 @@
+
+/*! MIZZOU BRAND STYLES - IE */
+/*--------------------------------------------------------------
+  
+* Site:             Mizzou Web Style Guide
+* Author:           Josh Nichols, MU Web Communications
+* Version:          1
+* Dependancies: 
+    
+    Autoprefixer - https://github.com/ai/autoprefixer
+  
+--------------------------------------------------------------*/
+
+// Mizzou Logo - PNG fallbacks
+    
+.sig-options-ie (
+    @sig-size: "48", 
+    @logo-style: "none", 
+    @wordmark-color: "black", 
+    @print: "no", 
+    @unit-img
+    ) {
+       
+    & when (@sig-size = "32") {
+        
+        .logo a { 
+            
+            & when (@logo-style = "none") {
+                background-image: url('@{img-path}/mizzou-logo-32.png');
+            }
+            & when (@logo-style = "stroked") {
+                background-image: url('@{img-path}/mizzou-logo-32-stroked.png');
+            }                
+            & when ( @print = "yes" ) {
+                .print-image('@{img-path}/mizzou-logo-32.png');
+            }
+        }
+        .wordmark a {
+            
+            & when (@wordmark-color = "black") {
+                background-image: url('@{img-path}/wordmark-32.png');
+            }
+            & when (@wordmark-color = "white") {
+                background-image: url('@{img-path}/wordmark-32-white.png');
+            }
+            
+            & when (@print = "yes") {
+                .print-image('@{img-path}/wordmark-32.png');
+            }
+        }
+        .unit a {
+            background-image: url('@{img-path}/@{unit-img}');
+        }
+    }
+    
+    & when (@sig-size = "48") { // Defualt
+        
+        .logo a { 
+            
+            & when (@logo-style = "none") {
+                background-image: url('@{img-path}/mizzou-logo-48.png');
+            }
+            & when (@logo-style = "stroked") {
+                background-image: url('@{img-path}/mizzou-logo-48-stroked.png');
+            }                
+            & when (@print = "yes") {
+                .print-image('@{img-path}/mizzou-logo-48.png');
+            }
+        }
+        .wordmark a {
+            
+            & when (@wordmark-color = "black") { 
+                background-image: url('@{img-path}/wordmark-48.png');
+            }
+            & when (@wordmark-color = "white") { 
+                background-image: url('@{img-path}/wordmark-48-white.png');
+            }
+            & when (@print = "yes") {
+                .print-image('@{img-path}/wordmark-48.png');
+            }
+        } 
+        .unit a {
+            background-image: url('@{img-path}/@{unit-img}');
+        }       
+    }
+    
+    & when (@sig-size = "64") {
+        
+        .logo a { 
+            
+            & when (@logo-style = "none") {
+                background-image: url('@{img-path}/mizzou-logo-64.png');
+            }
+            & when (@logo-style = "stroked") {
+                background-image: url('@{img-path}/mizzou-logo-64-stroked.png');
+            }
+            & when (@print = "yes") {
+                .print-image('@{img-path}/mizzou-logo-64.png');
+            }
+        }
+        .wordmark a {
+            
+            & when (@wordmark-color = "black") {
+                background-image: url('@{img-path}/wordmark-64.png');
+            }
+            & when (@wordmark-color = "white") {
+                background-image: url('@{img-path}/wordmark-64-white.png');
+            }              
+            & when (@print = "yes") {
+                .print-image('@{img-path}/wordmark-64.png');
+            }
+        }
+        .unit a {
+            background-image: url('@{img-path}/@{unit-img}');
+        }
+    }
+}    
+
+//! Replaces background image with content selector and after pseudo element for printing
+
+.print-image ( @img ) {
+    
+    @media print {
+        
+        &:after {
+            content: url("@{img}");
+        }   
+    }
+}
+
+/*doc
+---
+title: Unit Signature IE8 Fallback 
+name: 03_unit-sig_10
+category: Unit Signatures
+---
+
+There are PNG fallback mixins for browsers that do not support SVG images. When needed, use the 
+`.sig-options-ie()` mixin in your IE specific stylesheet to override the SVG image with a PNG version. 
+
+`.sig-options-ie()` must be used in conjunction with the `.sig()` and `.sig-options()` mixins 
+and uses some of the same variables set in `.sig-options()`.
+
+
+These must be set again if used in `.sig-options()`.
+
+```
+@sig-size 
+@logo-style 
+@wordmark-color 
+@print
+@unit-img // Required
+
+```
+
+```html_example
+<div class="ie">
+    <p class="logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
+    <h1 class="unit"><a href="http://missouri.edu">Of&#64257;ce of Programs</a></h1>
+    <h2 class="wordmark"><a href="http://missouri.edu">University of Missouri</a></h2>
+</div>
+```
+```
+.ie {
+    .sig(); 
+    .sig-options(@sig-size: "64", @print: "yes", @unit-width: 404px, @unit-height: 57px, @unit-img: "unit-name_64.svg");
+}
+ 
+// Override for IE8 in your IE8 stylesheet
+.ie {
+    .sig-options-ie(@sig-size: "64", @print: "yes", @unit-img: "unit-name_64.png"); 
+}
+```
+*/

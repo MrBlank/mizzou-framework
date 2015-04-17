@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    
+    
+    <title>Mizzou Framework // Grid Mixin</title>
+    
+    
+    <!-- CSS -->
+    <!--[if gt IE 7]><!--><link href="css/styleguide.css" rel="stylesheet" /><!--<![endif]-->
+    <!--[if IE 8]><link href="css/ie.css" rel="stylesheet" /><![endif]-->
+    <!--[if lte IE 7]><link href="css/text-only.css" rel="stylesheet" /><![endif]-->
+    
+    <script src="scripts-min.js"></script>
+</head>
+<body class="styleguide">
+    
+    <div class="offset">
+        <a href="#nav" tabindex="1">Skip to navigation</a>
+        <a href="#content" tabindex="2">Skip to content</a>
+    </div>
+        
+    <div class="main-content">
+        
+        
+        <nav class="section-nav">
+            
+            <h1 class="styleguide-h1">Grid Mixin</h1>
+                
+                
+                <ul>
+                    
+                    <li><a href="#grid-01">Grid Setup</a></li>
+                    
+                    <li><a href="#grid-02">Basic Use</a></li>
+                    
+                    <li><a href="#grid-03">Push and Pull Examples</a></li>
+                    
+                    <li><a href="#grid-04">Layered Page Structure</a></li>
+                    
+                    <li><a href="#grid-05">Nested Columns</a></li>
+                    
+                </ul>
+                
+            
+        </nav>
+        
+        
+    <a id="content"></a><h1 id="grid-01" class="styleguide">Grid Setup</h1>
+<p class="styleguide">This grd system assumes you have <code class="styleguide">box-sizing</code> set to <code class="styleguide">border-box</code> on elements that use these mixins.</p>
+<h2>Columns</h2>
+<p class="styleguide">This mixin takes a given fraction, and generates a column. The gutter is created from padding. </p><div class="codeBlock">
+  <div class="highlight">
+    <pre>.grid-column(1, 2);</pre>
+  </div>
+</div><p class="styleguide">... which will output the following:</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>float: left
+width: 50%;</pre>
+  </div>
+</div><p class="styleguide">Parameter options:</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>@x                  Numerator
+@y                  Denominator
+@padding-left       (Optional) Padding left for the column (defaults to 0.5rem)
+@padding-right      (Optional) Padding right for the column (defaults to 0.5rem)
+@float-direction    (Optional) How to float the column (defaults to left)</pre>
+  </div>
+</div>
+<h2>Rows</h2>
+<p class="styleguide">To create rows, add this mixin to the colum container. It adds left and right padding so 
+outer padding is consistant with the column gutters.</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>.grid-row();</pre>
+  </div>
+</div><p class="styleguide">Parameter options:</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>@padding-left      (Optional) Padding left for the row (defaults to 0.5rem)
+ @padding-right     (Optional) Padding right for the row (defaults to 0.5rem)</pre>
+  </div>
+</div>
+<h2>Push and Pull</h2>
+<p class="styleguide">You can add optional left and right margins to push and pull columns. It works like the 
+<code class="styleguide">grid-pad-column()</code> mixin and takes a given fraction to calculate the margin.</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>.grid-push(1, 6)    // Adds left margin 1/6 of the parent's width
+.grid-pull(1, 6)    // Adds right margin 1/6 of the parent's width</pre>
+  </div>
+</div><p class="styleguide">Parameter options:</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>@x                  Numerator
+@y                  Denominator</pre>
+  </div>
+</div><p class="styleguide"><em>Note: This grid system only works for IE8+. It requires <code class="styleguide">box-sizing: border-box;</code> compatibility on the columns.</em></p><p class="styleguide"><em>Note: Other styles are added to the examples below to show the column structures.</em></p>
+<h1 id="grid-02" class="styleguide">Basic Use</h1>
+<p class="styleguide">A basic 2-column layout. The content area is 2/3 the page width and the aside is 1/3.   </p><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="basic">
+    <article>
+        <p>Content</p>
+        <p>&#160</p>
+        <p>&#160</p>
+    </article>
+    <aside>
+        <p>Aside</p>
+        <p>&#160</p>
+    </aside>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"basic"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;article&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Content<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p&gt;</span><span class="err">&amp;</span>#160<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p&gt;</span><span class="err">&amp;</span>#160<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/article&gt;</span>
+    <span class="nt">&lt;aside&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Aside<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p&gt;</span><span class="err">&amp;</span>#160<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/aside&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>.basic {
+    .grid-row();
+    background-color: @tan-dark;
+    .rem(margin-bottom, 1.5);
+
+    p {
+        margin-bottom: 0;
+        background-color: @tan;
+        .rem(padding, 1);
+    }
+    article {
+        .grid-column(2, 3);
+    }
+    aside {
+        .grid-column(1, 3);
+    }
+}</pre>
+  </div>
+</div>
+<h1 id="grid-03" class="styleguide">Push and Pull Examples</h1>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="push-pull">
+    <div class="push">
+        <p>Push Column 3</p>
+        <p>&#160</p>
+    </div>
+</div>
+<div class="push-pull">
+    <div class="pull">
+        <p>Pull Column 3</p>
+        <p>&#160</p>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"push-pull"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"push"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Push Column 3<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p&gt;</span><span class="err">&amp;</span>#160<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"push-pull"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pull"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Pull Column 3<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p&gt;</span><span class="err">&amp;</span>#160<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>.push-pull {
+    .grid-row();
+    background-color: @tan-dark;
+    .rem(margin-bottom, 1.5);
+
+    p {
+        margin-bottom: 0;
+        background-color: @tan;
+        .rem(padding, 1);
+    }
+    .push {
+        .grid-column(3, 4);
+        .grid-push(1, 4);
+    }
+    .pull {
+        .grid-column(3, 4);
+        .grid-pull(1, 4);
+    }
+}</pre>
+  </div>
+</div>
+<h1 id="grid-04" class="styleguide">Layered Page Structure</h1>
+<p class="styleguide">Here is an example of a page with full-width layers of color.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="header-layer">
+    <div class="header-wrapper">
+        <header>
+            <p>Header</p>
+        </header>
+    </div>
+</div>
+<div class="content-layer">
+    <div class="content-wrapper">
+        <article>
+            <p>Content</p>
+            <p>&#160</p>
+            <p>&#160</p>
+        </article>
+        <aside>
+            <p>Aside</p>
+            <p>&#160</p>
+        </aside>
+    </div>
+</div>
+<div class="footer-layer">
+    <div class="footer-wrapper">
+        <footer>
+            <p>Footer</p>
+        </footer>
+    </div>
+</div>   
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"header-layer"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"header-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;header&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Header<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/header&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content-layer"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;article&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Content<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;p&gt;</span><span class="err">&amp;</span>#160<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;p&gt;</span><span class="err">&amp;</span>#160<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/article&gt;</span>
+        <span class="nt">&lt;aside&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Aside<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;p&gt;</span><span class="err">&amp;</span>#160<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/aside&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"footer-layer"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"footer-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;footer&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Footer<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/footer&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>.header-layer,
+.content-layer,
+.footer-layer {
+    .rem(padding, 0, 1);
+
+    p {
+        margin-bottom: 0;
+        .rem(padding, 1);
+        background-color: fade(#fff, 50%);
+    }
+}
+.header-wrapper,
+.content-wrapper,
+.footer-wrapper {
+    .grid-row();
+}
+.header-layer2 {
+    background-color: @grey-dark;
+
+    header {
+        .grid-column(1, 1);
+    }
+}
+.content-layer {
+    background-color: @tan;
+
+    article {
+        .grid-column(4, 6);
+    }
+    aside {
+        .grid-column(2, 6);
+    }   
+}
+.footer-layer {
+    background-color: @grey-dark;
+    .rem(margin-bottom, 2);
+
+    footer {
+        .grid-column(1 ,1);
+    }
+}</pre>
+  </div>
+</div>
+<h1 id="grid-05" class="styleguide">Nested Columns</h1>
+<p class="styleguide">Remove left and right padding from either the parent column or the nested columns to prevent 
+padding from doubling up around the parent. In this case the padding was removed from the 
+<code class="styleguide">article</code> element.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="nested">
+    <article>
+        <div class="one-whole">
+            <p>100% Wide</p>
+        </div>
+        <hr class="space">
+        <div class="one-half">
+            <p>50% Wide</p>
+            <p>&#160</p>
+        </div>
+        <div class="one-half">
+            <p>50% Wide</p>
+            <p>&#160</p>
+        </div>
+        <hr class="space">
+        <div class="one-fourth">
+            <p>25% Wide</p>
+            <p>&#160</p>
+        </div>
+        <div class="one-fourth">
+            <p>25% Wide</p>
+            <p>&#160</p>
+        </div>
+        <div class="one-fourth">
+            <p>25% Wide</p>
+            <p>&#160</p>
+        </div>
+        <div class="one-fourth">
+            <p>25% Wide</p>
+            <p>&#160</p>
+        </div>
+    </article>
+    <aside>
+        <p>Aside</p>
+        <p>&#160</p>
+        <p>&#160</p>
+    </aside>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"nested"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;article&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-whole"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p&gt;</span>100% Wide<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"space"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-half"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p&gt;</span>50% Wide<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;p&gt;</span><span class="err">&amp;</span>#160<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-half"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p&gt;</span>50% Wide<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;p&gt;</span><span class="err">&amp;</span>#160<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"space"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-fourth"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p&gt;</span>25% Wide<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;p&gt;</span><span class="err">&amp;</span>#160<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-fourth"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p&gt;</span>25% Wide<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;p&gt;</span><span class="err">&amp;</span>#160<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-fourth"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p&gt;</span>25% Wide<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;p&gt;</span><span class="err">&amp;</span>#160<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-fourth"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p&gt;</span>25% Wide<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;p&gt;</span><span class="err">&amp;</span>#160<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/article&gt;</span>
+    <span class="nt">&lt;aside&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Aside<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p&gt;</span><span class="err">&amp;</span>#160<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p&gt;</span><span class="err">&amp;</span>#160<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/aside&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>.nested {
+    .grid-row();
+    background-color: @tan-dark;
+    .rem(margin-bottom, 1.5);
+
+    p {
+        margin-bottom: 0;
+        background-color: @tan;
+        .rem(padding, 1);
+    }
+    article {
+        .grid-column(2, 3, 0, 0);
+    }
+    aside {
+        .grid-column(1, 3);
+    }
+    .one-fourth {
+        .grid-column(1, 4);
+    }
+    .one-half {
+        .grid-column(1, 2);
+    }
+    .one-whole {
+        .grid-column(1, 1); 
+    }
+}</pre>
+  </div>
+</div>        <footer class="styleguide-footer">
+            <p><small>&#169; 2015 — Curators of the <a href="http://www.umsystem.edu">University of Missouri</a>. All rights reserved. <a href="http://www.missouri.edu/dmca/">DMCA</a> and <a href="http://www.missouri.edu/copyright.php">other copyright information</a>. An <a href="http://www.missouri.edu/eeo-aa.php">equal opportunity/affirmative action</a> institution. Published by <a href="http://universityaffairs.missouri.edu/department/web-communications/">MU Web Communications</a>. This documentation generated using <a href="http://github.com/trulia/hologram">Hologram</a>.</small></p>
+        </footer>
+      
+        </div>
+    
+        
+        <nav class="styleguide-nav">
+            
+            <header class="signature">
+                <p class="logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
+                <h1 class="unit"><a href="index.html">Mizzou Framework</a></h1>
+                <h2 class="wordmark"><a href="http://missouri.edu">University of Missouri</a></h2>
+            </header>
+            
+            <ol id="nav">
+                
+                
+                    
+                    <li><a href="introduction.html">Introduction</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="guidelines.html">Guidelines</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="unit_signatures.html">Unit Signatures</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="colors.html">Colors</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="typography.html">Typography</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="block_elements.html">Block Elements</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="buttons.html">Buttons</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="form_elements.html">Form Elements</a></li>
+                    
+                    
+                
+                
+                    
+                    <li class="active"><a href="grid_mixin.html">Grid Mixin</a></li>
+                    
+                    
+                    
+                
+                
+                    
+                    <li><a href="inline_elements.html">Inline Elements</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="list_elements.html">List Elements</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="mixins_&_helper_classes.html">Mixins & Helper Classes</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="print.html">Print</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="rem_mixins.html">REM Mixins</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="tables.html">Tables</a></li>
+                    
+                    
+                
+            </ol>
+            
+        </nav>
+        
+      
+  </body>
+</html>

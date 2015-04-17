@@ -1,0 +1,319 @@
+/*! LIST STYLES */
+/*--------------------------------------------------------------
+  
+* Site:         Mizzou Web Style Guide
+* Author:       Josh Nichols, MU Web Communications
+* Version:      1.0   
+   
+--------------------------------------------------------------*/
+
+ul,
+ol,
+dl {
+    margin: 0;
+    .rem(padding-left, 2.5);
+    .rem(margin-bottom, 1.5);
+}
+
+ul,
+ol {    
+    ul,
+    ol {
+        margin-bottom: 0;
+    }
+    
+    li {
+        .rem(margin-bottom, .25);
+    }
+    
+    &.list-spaced > li {
+        margin: 0;
+        .rem(margin-bottom, 1);
+    }
+}
+
+ul.list-square {
+    list-style: square;
+}
+
+ul.list-disc {
+    list-style: disc;
+}
+
+ul.list-circle {
+    list-style: circle;
+}
+
+ol.list-decimal {
+    list-style: decimal;
+}
+
+ol.list-lower-alpha {
+    list-style: lower-alpha;
+}
+
+ol.list-upper-alpha {
+    list-style: upper-alpha;
+}
+
+ol.list-lower-roman {
+    list-style: lower-roman;
+}
+
+ol.list-upper-roman {
+    list-style: upper-roman;
+}
+ul.list-none {
+    list-style: none;
+    padding-left: 0;
+}
+
+li li,
+li p {
+    font-size: inherit;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0;
+    .rem(margin-bottom, 1);
+}
+
+
+/*doc
+---
+title: Unordered List
+name: lists_01
+category: List Elements
+---
+
+```html_example
+<ul>
+    <li>Bulleted Item</li>
+    <li>Bulleted Item
+        <ul>
+            <li>Nested Bulleted Item</li>
+            <li>Nested Bulleted Item</li>
+        </ul>
+    </li>
+    <li>Bulleted Item
+        <ol>
+            <li>Nested Numbered Item</li>
+            <li>Nested Numbered Item</li>
+        </ol>
+    </li>
+</ul>
+```
+
+*/
+
+
+/*doc
+---
+title: Ordered List
+name: lists_02
+category: List Elements
+---
+
+```html_example
+<ol>
+    <li>Numbered Item</li>
+    <li>Numbered Item
+        <ol>
+            <li>Nested Numbered Item</li>
+            <li>Nested Numbered Item</li>
+        </ol>
+    </li>
+    <li>Numbered Item
+        <ul>
+            <li>Nested Bulleted Item</li>
+            <li>Nested Bulleted Item</li>
+        </ul>
+    </li>
+</ol>
+```
+
+*/
+
+
+/*doc
+---
+title: Spaced-Out
+name: lists_03
+category: List Elements
+---
+
+```html_example
+<ul class="list-spaced">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ul>
+
+<ol class="list-spaced">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ol>
+```
+
+*/
+
+
+/*doc
+---
+title: Square Bullets
+name: lists_04
+category: List Elements
+---
+
+```html_example
+<ul class="list-square">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ul>
+```
+
+*/
+
+
+/*doc
+---
+title: Disc Bullets
+name: lists_05
+category: List Elements
+---
+
+```html_example
+<ul class="list-disc">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ul>
+```
+
+*/
+
+
+/*doc
+---
+title: Circle Bullets
+name: lists_06
+category: List Elements
+---
+
+```html_example
+<ul class="list-circle">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ul>
+```
+
+*/
+
+
+/*doc
+---
+title: Decimal Numbers
+name: lists_07
+category: List Elements
+---
+
+```html_example
+<ol class="list-decimal">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ol>
+```
+
+*/
+
+
+/*doc
+---
+title: Lowercase Alpha
+name: lists_08
+category: List Elements
+---
+
+```html_example
+<ol class="list-lower-alpha">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ol>
+```
+
+*/
+
+
+/*doc
+---
+title: Uppercase Alpha
+name: lists_09
+category: List Elements
+---
+
+```html_example
+<ol class="list-upper-alpha">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ol>
+```
+
+*/
+
+
+/*doc
+---
+title: Lowercase Roman
+name: lists_10
+category: List Elements
+---
+
+```html_example
+<ol class="list-lower-roman">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ol>
+```
+
+*/
+
+
+/*doc
+---
+title: Uppercase Roman
+name: lists_11
+category: List Elements
+---
+
+```html_example
+<ol class="list-upper-roman">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ol>
+```
+
+*/
+
+
+/*doc
+---
+title: Definition List
+name: lists_12
+category: List Elements
+---
+
+```html_example
+<dl>
+    <dt>Definition</dt>
+    <dd>This is the definition.</dd>
+    
+    <dt>Definition</dt>
+    <dd>This is the definition.</dd>
+</dl>
+```
+
+*/
+
+

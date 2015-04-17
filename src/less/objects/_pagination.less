@@ -1,0 +1,26 @@
+.pagination-wrapper {
+	border-top: solid 1px @gold;
+	padding-top: 1.5em;
+}
+
+.pagination {
+	clear: both;
+	list-style: none;
+	padding: 0;
+	
+	li {
+		display: inline;
+		
+		a {
+    		.button();
+    		min-width: 2.8em;
+		}
+		
+		&.current a { 
+			background: #111;
+			color: #eee !important;
+			text-shadow: 0 0 0 transparent;
+			border-color: #111;
+		}
+	}
+}

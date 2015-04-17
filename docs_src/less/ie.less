@@ -1,0 +1,18 @@
+/*! IE 8 STYLES */
+/*--------------------------------------------------------------
+  
+* Site:             Mizzou Styleguide
+* Author:           Josh Nichols, MU Web Communications
+  
+--------------------------------------------------------------*/
+
+@import '../../src/less/vars/_vars.less';
+@import '../../src/less/mixins/_mizzou-ie.less';
+
+.ie {
+    // Override for IE8 
+    .sig-options-ie(@sig-size: "64", @print: "yes", @unit-img: "unit-name_64.png"); 
+}
+.signature { 
+    .sig-options-ie(@sig-size: "32", @logo-style: "stroked", @wordmark-color: "white", @print: "yes", @unit-img: "mizzou-framework_32.svg");
+}

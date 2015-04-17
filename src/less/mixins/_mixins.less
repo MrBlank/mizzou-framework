@@ -1,0 +1,174 @@
+/*! MIXIN STYLES */
+/*--------------------------------------------------------------
+
+* Site:         Mizzou Framework
+* Author:       Josh Nichols, MU Web Communications
+* Version:      3.1
+  
+--------------------------------------------------------------*/
+
+.clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+/*doc
+---
+title: Clearfix
+name: mixins_01
+category: Mixins & Helper Classes
+---
+
+The `.clearfix()` mixin is way to apply a <a href="http://nicolasgallagher.com/micro-clearfix-hack/">clear fix</a> to an element without extra markup.
+
+*/
+
+
+
+.box (@background: @color-box-bg, @padding: 1, @border-size: 0px, @border-color: @color-box-border, @border-style: solid) {
+    .rem(padding, @padding); 
+    .rem(margin-bottom, 1.5); 
+    .last-child();
+    
+    & when not (@border-size = "0") {
+        border: @border-style @border-size @border-color;
+    }
+    & when not (@color-box-bg = "none") {
+        background-color: @background;
+    }
+}
+
+/*doc
+---
+title: Box
+name: mixins_02
+category: Mixins & Helper Classes
+---
+
+The `.box()` mixin is good for adding empasis to an element. 
+
+```html_example
+<div class="box-example">
+    <p>A box with some added style options.</p>
+</div>
+```
+Here are the variables that can be used with their defaults:
+
+```
+@background: @color-box-bg          // Use 'none' to remove
+@padding: 1                         // This is a REM unit 
+@border-size: 0                     // Change this to add a border
+@border-color: @color-box-border 
+@border-style: solid
+
+.box-example {
+    .box(@gold-lightest, 1.5, 1px, @gold);
+}
+```
+*/
+
+
+.center-block (@block-max-width: none, @block-min-width: none) {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    
+    & when not ( @block-max-width = none) {
+        max-width: @block-max-width;
+    }
+    & when not (@block-min-width = none) {
+        min-width: @block-min-width;
+    }
+    
+}
+
+/*doc
+---
+title: Center Block
+name: mixins_03
+category: Mixins & Helper Classes
+---
+
+The `.center-block()` mixin is a quick way to center layouts.
+
+```html_example
+<div class="center-me">
+    <p>A Centered, block-level element.</p>
+</div>
+```
+Here are the variables that can be used:
+
+```
+@block-max-width  
+@block-min-width
+
+.center-me {
+    .center-block(@block-max-width: 300px, @block-min-width: 150px);
+    .box();
+    width: 50%;
+}
+```
+
+*/
+
+.img-replace() {
+    display: block;
+    text-indent: 120%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    padding: 0;
+}
+
+/*doc
+---
+title: Image Replace
+name: mixins_04
+category: Mixins & Helper Classes
+---
+
+`.img-replace()` is an accessibility trick to allow use of image sprites for text. Size the element to your image and this indents the text off-screen.
+
+```html_example 
+<p class="img-replace-example">
+    <a href="http://missouri.edu">Mizzou Logo</a>
+</p>
+```
+```
+.img-replace-example {
+    .img-replace();
+    width: 64px;
+    height: 72px;
+    background-image: url("@{img-path}/mizzou-logo-64.svg");
+}
+```
+
+*/
+
+/*doc
+---
+title: Last Child
+name: mixins_05
+category: Mixins & Helper Classes
+---
+
+The `.last-child()` mixin overrides the bottom margin of the last child element to 0. This helps keep padding on the parent element consistant.
+Used in the `.box()` mixin.
+
+*/
+
+.last-child() {
+    *:last-child { 
+        margin-bottom: 0!important; 
+    }
+}
+
+.font-smoothing(@value: antialiased) {
+    -webkit-font-smoothing: @value;
+}

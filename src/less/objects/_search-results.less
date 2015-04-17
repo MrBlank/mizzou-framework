@@ -1,0 +1,79 @@
+// We need a front-end that matches the search field styles in the Mizzou Framework.
+// I'm importing them here.
+
+#search {
+
+    .search-wrap {
+        //.search-container();
+        margin-left: 0!important; // Inline style override in the front end GSA template WTF? BAD!
+    }
+    .search-field-result {
+        //.search-field();
+    }
+    .search-button-result {
+        //.search-button();
+    }
+}
+
+
+
+.search-meta {
+	border-bottom: solid 1px @gold;
+	margin-bottom: 1.5em;
+	
+	h3 { 
+        margin-bottom: 0; 
+    }
+	.meta-time { 
+    	display: none; 
+    }
+}
+.suggested {
+	.box();
+	margin-bottom: 2.5em;
+}
+.search-results {
+	list-style: none;
+	padding: 0;
+	
+	li {
+		margin-bottom: 2.5em;
+	}
+	.title {
+		margin-bottom: .5em;
+	}
+	.excerpt {
+		margin-bottom: .5em;
+		
+		br {
+    		display: none;
+		}
+	}
+	.source {
+		color: #666;
+		display: block;
+		overflow: hidden;
+	}
+	b {
+		color: @accent;
+	}
+	h3 b {
+		background-color: @gold-light;
+	}
+	.indent {
+		margin-left: 3em;
+	}
+}
+.meta-suggest {
+	margin-bottom: 1.5em;
+	
+	.meta-spelling {
+		margin-bottom: .5em;
+	}
+	.meta-synonym {
+		margin-bottom: .5em;
+	}
+}
+.search-string {
+	color: @accent;
+}

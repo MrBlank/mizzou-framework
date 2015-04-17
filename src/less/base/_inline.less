@@ -1,0 +1,139 @@
+/*! INLINE ELEMENT STYLES */
+/*--------------------------------------------------------------
+  
+* Site:         Mizzou Web Style Guide
+* Author:       Josh Nichols, MU Web Communications
+* Version:      1.0  
+   
+--------------------------------------------------------------*/
+
+small, 
+.small { 
+    line-height: 1.2; 
+    font-size: .8em;
+}
+
+/*doc
+---
+title: Small
+name: inline-small
+category: Inline Elements
+---
+
+This also has a class of `.small` that matches. Font-size is set in EMs to scale with its parent element.
+
+```html_example
+<p>
+    <small>&#169; 2014 &#8212; Curators of the <a href="http://www.umsystem.edu">University of Missouri</a>. All rights reserved. <a href="http://www.missouri.edu/dmca/">DMCA</a> and <a href="http://www.missouri.edu/copyright.php">other copyright information</a>. An <a href="http://www.missouri.edu/eeo-aa.php">equal opportunity/affirmative action</a> institution. Published by <a href="http://universityaffairs.missouri.edu/department/web-communications/">MU Web Communications</a>.</small>
+</p>
+```
+*/
+
+a, .like-a {
+    
+    color: @color-link;
+    cursor: pointer;
+    text-decoration: underline;
+    
+    &:hover,
+    &:focus {
+        color: @color-link-hover;
+    }
+    
+    &.no-underline {
+        text-decoration: none;
+    }
+}
+
+
+/*doc
+---
+title: Links
+name: inline-links
+category: Inline Elements
+---
+
+```html_example
+<p><a href="#">An example link</a>. <a href="#" class="no-underline">An example link with no underline</a>.</p>
+```
+
+*/
+
+
+b,
+strong,
+.bold {
+    font-weight: bold;
+}
+
+i,
+em,
+.italic {
+    font-style: italic;
+}
+
+u {
+    text-decoration: none; // Sorry, unacceptable to use this
+}
+
+
+/*doc
+---
+title: Bold, Italic and Underline
+name: inline-bold
+category: Inline Elements
+---
+
+```html_example
+<p><b>Bold text here.</b> <strong>Strong text is the same.</strong> <i>Italics are nice.</i> <em>So is emphasis.</em></p> 
+<u>Underlining is not cool at all. Don't do it unless it's a link!</u></p>
+```
+
+*/
+
+
+
+abbr,
+acronym {
+    border-bottom: 1px dotted @color-abbr;
+    cursor: help;
+}
+
+sub,
+sup {
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+mark {
+    background: @color-mark;
+}
+
+
+/*doc
+---
+title: Others
+name: inline-other
+category: Inline Elements
+---
+
+```html_example
+<p><abbr title="College of Agriculture, Food, and Natural Resources">CAFNR</abbr> is an abbreviation</p>
+<p>The mark tag is a great way to <mark>highlight something</mark></p>
+<p>Here is an inline piece of code: <code>$var = "foo"</code></p>
+<p>The event is on the 4<sup>th</sup> of July and will include H<sub>2</sub>O</p>
+```
+*/
+
+
+

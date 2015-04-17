@@ -1,0 +1,32 @@
+/*! GENERAL TAG STYLES */
+/*--------------------------------------------------------------
+  
+* Site:         Mizzou Web Style Guide
+* Author:       Josh Nichols, MU Web Communications
+* Version:      1.0   
+   
+--------------------------------------------------------------*/
+
+//! Resets (In addition to Normalize.css)  
+
+html {
+  box-sizing: border-box;
+}
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+
+//! Selection colors */
+
+::-moz-selection { 
+    color: #000; 
+    color: rgba(0,0,0,.85); 
+    background: fadeout(@gold, 70%); 
+}
+::selection { 
+    color: #000; 
+    color: rgba(0,0,0,.85); 
+    background: fadeout(@gold, 70%); 
+}

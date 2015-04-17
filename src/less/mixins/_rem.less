@@ -1,0 +1,133 @@
+/*! REM MIXIN STYLES */
+/*--------------------------------------------------------------
+
+* Site:         Mizzou Framework
+* Author:       Josh Hughes, MU Web Communications
+* Version:      3.1
+  
+--------------------------------------------------------------*/
+
+/*doc
+---
+title: Why REMs?
+name: rem_01
+category: REM Mixins
+---
+
+These mixins create pixel versions of REMs for non-responsive browsers, like IE8 
+and below, that do not support the REM unit. The advantage of the REM unit is that
+it is relative to the `@font-base` set on the `font-size` rule of the HTML tag. 
+Unlike EMs, which are relative to their parent element, it will be the same dimention 
+no matter where it’s used in the DOM. This avoids the Russian doll effect when nesting 
+elements.
+
+```
+// The default in px
+@font-base: 16;
+```
+*/
+
+
+/**
+ * @param string @property Name of the property to effect
+ * @param int @value1 Pixel value 1
+ * @param int @value2 (Optional) Pixel value 2
+ * @param int @value3 (Optional) Pixel value 3
+ * @param int @value4 (Optional) Pixel value 4
+ */
+.rem(@property, @value1) {
+    @{property}: unit(@value1 * @font-base, px);
+    @{property}: unit(@value1, rem);
+}
+
+.rem(@property, @value1, @value2) {
+    @{property}: unit(@value1 * @font-base, px) unit(@value2 * @font-base, px);
+    @{property}: unit(@value1, rem) unit(@value2, rem);
+}
+
+.rem(@property, @value1, @value2, @value3) {
+    @{property}: unit(@value1 * @font-base, px) unit(@value2 * @font-base, px) unit(@value3 * @font-base, px);
+    @{property}: unit(@value1, rem) unit(@value2, rem) unit(@value3, rem);
+}
+
+.rem(@property, @value1, @value2, @value3, @value4) {
+    @{property}: unit(@value1 * @font-base, px) unit(@value2 * @font-base, px) unit(@value3 * @font-base, px) unit(@value4 * @font-base, px);
+    @{property}: unit(@value1, rem) unit(@value2, rem) unit(@value3, rem) unit(@value4, rem);
+}
+
+/*doc
+---
+title: REMs to Pixels
+name: rem_02
+category: REM Mixins
+---
+
+`.rem()` takes a given property and up to four pixel values, separated by a comma, and creates px-sized equivalents.  
+
+## Examples
+
+    .rem(margin-left, 2);
+    .rem(padding, 2, 0, 2, 0);
+
+... which, assuming HTML has a font-size of 18px, will output the following:
+
+    margin-left: 32px;
+    margin-left: 2rem;
+    padding: 32px 0 32px 0;
+    padding: 2rem 0 2rem 0; 
+
+*/
+
+
+
+
+
+/** 
+ * @param string @property Name of the property to effect
+ * @param int @value1 Pixel value 1
+ * @param int @value2 (Optional) Pixel value 2
+ * @param int @value3 (Optional) Pixel value 3
+ * @param int @value4 (Optional) Pixel value 4
+ */
+.px-to-rem(@property, @value1) {
+    @{property}: unit(@value1, px);
+    @{property}: unit(@value1/@font-base, rem);
+}
+
+.px-to-rem(@property, @value1, @value2) {
+    @{property}: unit(@value1, px) unit(@value2, px);
+    @{property}: unit(@value1/@font-base, rem) unit(@value2/@font-base, rem);
+}
+
+.px-to-rem(@property, @value1, @value2, @value3) {
+    @{property}: unit(@value1, px) unit(@value2, px) unit(@value3, px);
+    @{property}: unit(@value1/@font-base, rem) unit(@value2/@font-base, rem) unit(@value3/@font-base, rem);
+}
+
+.px-to-rem(@property, @value1, @value2, @value3, @value4) {
+    @{property}: unit(@value1, px) unit(@value2, px) unit(@value3, px) unit(@value4, px);
+    @{property}: unit(@value1/@font-base, rem) unit(@value2/@font-base, rem) unit(@value3/@font-base, rem) unit(@value4/@font-base, rem);
+}
+
+/*doc
+---
+title: Pixels to REMs
+name: rem_03
+category: REM Mixins
+---
+
+`.px-to-rem()` takes a given property and up to four pixel values, separated by a comma, and creates REM-sized equivalents.
+
+## Examples
+
+    .px-to-rem(margin-left, 32);
+    .px-to-rem(padding, 32, 0);
+
+... which, assuming HTML has a font-size of 18px, will output the following:
+
+    margin-left: 32px;
+    margin-left: 2rem; 
+    padding: 32px 0;
+    padding: 2rem 0; 
+
+*/

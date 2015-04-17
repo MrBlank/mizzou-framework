@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    
+    
+    <title>Mizzou Framework // REM Mixins</title>
+    
+    
+    <!-- CSS -->
+    <!--[if gt IE 7]><!--><link href="css/styleguide.css" rel="stylesheet" /><!--<![endif]-->
+    <!--[if IE 8]><link href="css/ie.css" rel="stylesheet" /><![endif]-->
+    <!--[if lte IE 7]><link href="css/text-only.css" rel="stylesheet" /><![endif]-->
+    
+    <script src="scripts-min.js"></script>
+</head>
+<body class="styleguide">
+    
+    <div class="offset">
+        <a href="#nav" tabindex="1">Skip to navigation</a>
+        <a href="#content" tabindex="2">Skip to content</a>
+    </div>
+        
+    <div class="main-content">
+        
+        
+        <nav class="section-nav">
+            
+            <h1 class="styleguide-h1">REM Mixins</h1>
+                
+                
+                <ul>
+                    
+                    <li><a href="#rem_01">Why REMs?</a></li>
+                    
+                    <li><a href="#rem_02">REMs to Pixels</a></li>
+                    
+                    <li><a href="#rem_03">Pixels to REMs</a></li>
+                    
+                </ul>
+                
+            
+        </nav>
+        
+        
+    <a id="content"></a><h1 id="rem_01" class="styleguide">Why REMs?</h1>
+<p class="styleguide">These mixins create pixel versions of REMs for non-responsive browsers, like IE8 
+and below, that do not support the REM unit. The advantage of the REM unit is that
+it is relative to the <code class="styleguide">@font-base</code> set on the <code class="styleguide">font-size</code> rule of the HTML tag. 
+Unlike EMs, which are relative to their parent element, it will be the same dimention 
+no matter where it’s used in the DOM. This avoids the Russian doll effect when nesting 
+elements.</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>// The default in px
+@font-base: 16;</pre>
+  </div>
+</div>
+<h1 id="rem_02" class="styleguide">REMs to Pixels</h1>
+<p class="styleguide"><code class="styleguide">.rem()</code> takes a given property and up to four pixel values, separated by a comma, and creates px-sized equivalents.  </p>
+<h2>Examples</h2>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>.rem(margin-left, 2);
+.rem(padding, 2, 0, 2, 0);</pre>
+  </div>
+</div><p class="styleguide">... which, assuming HTML has a font-size of 18px, will output the following:</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>margin-left: 32px;
+margin-left: 2rem;
+padding: 32px 0 32px 0;
+padding: 2rem 0 2rem 0;</pre>
+  </div>
+</div>
+<h1 id="rem_03" class="styleguide">Pixels to REMs</h1>
+<p class="styleguide"><code class="styleguide">.px-to-rem()</code> takes a given property and up to four pixel values, separated by a comma, and creates REM-sized equivalents.</p>
+<h2>Examples</h2>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>.px-to-rem(margin-left, 32);
+.px-to-rem(padding, 32, 0);</pre>
+  </div>
+</div><p class="styleguide">... which, assuming HTML has a font-size of 18px, will output the following:</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>margin-left: 32px;
+margin-left: 2rem; 
+padding: 32px 0;
+padding: 2rem 0;</pre>
+  </div>
+</div>        <footer class="styleguide-footer">
+            <p><small>&#169; 2015 — Curators of the <a href="http://www.umsystem.edu">University of Missouri</a>. All rights reserved. <a href="http://www.missouri.edu/dmca/">DMCA</a> and <a href="http://www.missouri.edu/copyright.php">other copyright information</a>. An <a href="http://www.missouri.edu/eeo-aa.php">equal opportunity/affirmative action</a> institution. Published by <a href="http://universityaffairs.missouri.edu/department/web-communications/">MU Web Communications</a>. This documentation generated using <a href="http://github.com/trulia/hologram">Hologram</a>.</small></p>
+        </footer>
+      
+        </div>
+    
+        
+        <nav class="styleguide-nav">
+            
+            <header class="signature">
+                <p class="logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
+                <h1 class="unit"><a href="index.html">Mizzou Framework</a></h1>
+                <h2 class="wordmark"><a href="http://missouri.edu">University of Missouri</a></h2>
+            </header>
+            
+            <ol id="nav">
+                
+                
+                    
+                    <li><a href="introduction.html">Introduction</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="guidelines.html">Guidelines</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="unit_signatures.html">Unit Signatures</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="colors.html">Colors</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="typography.html">Typography</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="block_elements.html">Block Elements</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="buttons.html">Buttons</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="form_elements.html">Form Elements</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="grid_mixin.html">Grid Mixin</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="inline_elements.html">Inline Elements</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="list_elements.html">List Elements</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="mixins_&_helper_classes.html">Mixins & Helper Classes</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="print.html">Print</a></li>
+                    
+                    
+                
+                
+                    
+                    <li class="active"><a href="rem_mixins.html">REM Mixins</a></li>
+                    
+                    
+                    
+                
+                
+                    
+                    <li><a href="tables.html">Tables</a></li>
+                    
+                    
+                
+            </ol>
+            
+        </nav>
+        
+      
+  </body>
+</html>

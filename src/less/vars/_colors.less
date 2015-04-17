@@ -1,0 +1,252 @@
+/*! COLOR VARIABLES */
+/*--------------------------------------------------------------
+  
+* Site:             Mizzou Framework
+* Author:           Josh Nichols, MU Web Communications
+* Version:          1.2
+  
+--------------------------------------------------------------*/
+
+@gold-darker:       darken(@gold, 20%);
+@gold-dark:         darken(@gold, 12%);
+@gold:              #f1b82d; // Mizzou Gold
+@gold-light:        lighten(@gold, 18%);
+@gold-lighter:      lighten(@gold, 28%);
+@gold-lightest:     lighten(@gold, 35%);
+
+@black:             #000;
+@grey-darker:       lighten(#000, 13.5%); // #222
+@grey-dark:         lighten(#000, 26.5%); // #444
+@grey:              lighten(#000, 40%);   // #666
+@grey-light:        lighten(#000, 60%);   // #999
+@grey-lighter:      lighten(#000, 80%);   // #ccc
+@grey-lightest:     lighten(#000, 93.5%); // #ededed
+@white:             #fff;
+
+@tan-dark:          #cac8b5;
+@tan:               #edebd5;
+@tan-light:         #f5f2f0;
+
+@accent:            #900000; // #920000?
+@accent-light:      lighten(@accent, 68%);
+@accent2:           #318fd7;
+@accent2-light:     lighten(@accent2, 42%);
+@accent2-dark:      darken(@accent2, 18%);
+@accent3:           #69901d;
+@accent3-light:     lighten(@accent3, 55%);
+
+// In use ... Should I eliminate these to simplify?
+
+@color-text:                    @grey-darker;
+@color-background:              @white;
+@color-link:                    @black;
+@color-link-hover:              @accent;
+@color-hr:                      @grey-lighter;
+@color-box-bg:                  @tan-light;
+@color-box-border:              @tan;
+@color-code-bg:                 @tan-light;
+@color-code-border:             @tan;
+@color-abbr:                    @grey-lighter;
+@color-mark:                    @gold-lighter;
+@color-help:                    @grey-light;
+@color-form-error-message:      @accent;
+@color-form-error-bg:           @accent-light;
+@color-form-error-border:       @accent;
+@color-form-field-border:       @grey-lighter;
+@color-table-cell-border:       @grey-lighter;
+@color-table-cell-stripe:       @grey-lightest;
+@color-table-cell-header:       @gold-lightest;
+
+/*doc
+---
+title: Mizzou&#8217;s Colors
+name: 04_colors-01
+category: Colors
+---
+
+MU&#8217;s offical colors are black and MU gold.
+
+
+<figure class="color-block wide">
+    <span class="gold"></span>
+    <figcaption>
+        <p class="color-name">@gold (#f1b82d)</p>
+    </figcaption>
+</figure>
+
+<figure class="color-block wide">
+    <span class="black"></span>
+    <figcaption>
+        <p class="color-name">@black (#00000)</p>
+    </figcaption>
+</figure>
+
+
+*/
+
+/*doc
+---
+title: Variations
+name: 04_colors-02
+category: Colors
+---
+
+## Golds
+
+<figure class="color-block">
+    <span class="gold-lightest"></span>
+    <figcaption>
+        <p class="color-name">@gold-lightest</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="gold-lighter"></span>
+    <figcaption>
+        <p class="color-name">@gold-lighter</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="gold-light"></span>
+    <figcaption>
+        <p class="color-name">@gold-light</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="gold"></span>
+    <figcaption>
+        <p class="color-name">@gold</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="gold-dark"></span>
+    <figcaption>
+        <p class="color-name">@gold-dark</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="gold-darker"></span>
+    <figcaption>
+        <p class="color-name">@gold-darker</p>
+    </figcaption>
+</figure>
+
+## Greys
+
+<figure class="color-block">
+    <span class="grey-lightest"></span>
+    <figcaption>
+        <p class="color-name">@grey-lightest</p>
+    </figcaption>
+</figure>
+
+<figure class="color-block">
+    <span class="grey-lighter"></span>
+    <figcaption>
+        <p class="color-name">@grey-lighter</p>
+    </figcaption>
+</figure>
+
+<figure class="color-block">
+    <span class="grey-light"></span>
+    <figcaption>
+        <p class="color-name">@grey-light</p>
+    </figcaption>
+</figure>
+
+<figure class="color-block">
+    <span class="grey"></span>
+    <figcaption>
+        <p class="color-name">@grey</p>
+    </figcaption>
+</figure>
+
+<figure class="color-block">
+    <span class="grey-dark"></span>
+    <figcaption>
+        <p class="color-name">@grey-dark</p>
+    </figcaption>
+</figure>
+
+<figure class="color-block">
+    <span class="grey-darker"></span>
+    <figcaption>
+        <p class="color-name">@grey-darker</p>
+    </figcaption>
+</figure>
+
+## Tans
+
+These are a little warmer than the neutral greys.
+    
+<figure class="color-block">
+    <span class="tan-light"></span>
+    <figcaption>
+        <p class="color-name">@tan-light</p>
+    </figcaption>
+</figure>
+
+<figure class="color-block">
+    <span class="tan"></span>
+    <figcaption>
+        <p class="color-name">@tan</p>
+    </figcaption>
+</figure>
+
+<figure class="color-block">
+    <span class="tan-dark"></span>
+    <figcaption>
+        <p class="color-name">@tan-dark</p>
+    </figcaption>
+</figure>
+
+*/
+
+
+/*doc
+---
+title: Accents and Alerts
+name: 04_colors-03
+category: Colors
+---
+
+Use accents sparingly. These are mostly used with form alerts.            
+
+<figure class="color-block">
+    <span class="accent"></span>
+    <figcaption>
+        <p class="color-name">@accent</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="accent2"></span>
+    <figcaption>
+        <p class="color-name">@accent2</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="accent3"></span>
+    <figcaption>
+        <p class="color-name">@accent3</p>
+    </figcaption>
+</figure>
+
+<figure class="color-block">
+    <span class="accent-light"></span>
+    <figcaption>
+        <p class="color-name">@accent-light</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="accent2-light"></span>
+    <figcaption>
+        <p class="color-name">@accent2-light</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="accent3-light"></span>
+    <figcaption>
+        <p class="color-name">@accent3-light</p>
+    </figcaption>
+</figure>
+
+*/

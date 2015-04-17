@@ -1,0 +1,322 @@
+/*! BLOCK LEVEL TAG STYLES */
+/*--------------------------------------------------------------
+  
+* Site:         Mizzou Web Style Guide
+* Author:       Josh Nichols, MU Web Communications
+* Version:      1.0   
+   
+--------------------------------------------------------------*/
+
+//! Base Elements  
+
+html {
+    font-size: unit(@font-base, px);
+    line-height: @font-line-height;
+    background: @color-background;
+    color: @color-text;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: @font-base-family;
+    line-height: 1.5;
+}
+
+
+//! Headings
+
+h1, h2, h3, h4, h5, h6,
+.like-h1, .like-h2, .like-h3, .like-h4, .like-h5, .like-h6 {
+    font-weight: normal;
+    color: #111;
+    margin: 0;
+    .rem(margin-bottom, 1.5);
+}
+h1, .like-h1 {
+    .rem(font-size, 2.4);
+    line-height: 1;
+    font-weight: @font-thin;
+    .rem(margin-bottom, 2); 
+} 
+h2, .like-h2 {
+    .rem(font-size, 1.4);
+    line-height: 1.2;
+    font-weight: @font-bold;
+}
+h3, .like-h3 {
+    .rem(font-size, 1.3);
+    line-height: 1.2;
+    font-weight: @font-light;
+}
+h4, .like-h4 {
+    .rem(font-size, 1.2);
+    font-weight: @font-bold;
+}
+h5, .like-h5 {
+    .rem(font-size, 1.2);
+    font-weight: @font-normal;
+    color: @grey-light;
+    
+    a {
+        color: @grey-light;
+    }
+}
+h6, .like-h6 {
+    .rem(font-size, 1);
+    font-style: italic;
+    color: @grey;
+    
+    a {
+        color: @grey;
+    }
+}
+
+/*doc
+---
+title: Headings
+name: headings
+category: Block Elements
+---
+
+These are standard styles for headings. There is also a matching class to match a particular 
+heading. Example: `.like-h2`
+
+```html_example
+<h1>Heading 1 With Some Additional Text <a href="#">and a Link</a></h1>
+<h2>Heading 2 With Some Additional Text <a href="#">and a Link</a></h2>
+<h3>Heading 3 With Some Additional Text <a href="#">and a Link</a></h3>
+<h4>Heading 4 With Some Additional Text <a href="#">and a Link</a></h4>
+<h5>Heading 5 With Some Additional Text <a href="#">and a Link</a></h5>
+<h6>Heading 6 With Some Additional Text <a href="#">and a Link</a></h6>
+```
+*/
+
+//! Paragraphs
+
+p, 
+.like-p,
+blockquote, 
+.like-blockquote {
+    margin: 0;
+    .rem(margin-bottom, 1.5);
+}
+
+/*doc
+---
+title: Paragraphs
+name: paragraphs
+category: Block Elements
+---
+
+```html_example
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+<p>Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue.</p>
+```
+*/
+
+//! Blockquotes
+
+blockquote, 
+.like-blockquote {
+    
+    p {
+        font-size: inherit;
+    }
+
+    .attribution {
+        text-align: right;
+    }
+    
+    &.pull-quote {
+        .rem(font-size, 1.5);
+        font-family: @font-serif;
+        
+        .attribution {
+            .rem(font-size, 1.2);
+        }
+    }
+    .last-child();
+}
+
+/*doc
+---
+title: Blockquote
+name: blockquote
+category: Block Elements
+---
+
+## Default
+
+This can also be set as a class, `.like-blockquote`, for CMS systems that do not have a blockquote button.
+
+```html_example 
+<blockquote>
+    <p><span class="dquo">&#8220;</span>&#8230; Let these columns stand. Let them stand a thousand years. Crown them with an arch, memorial to the men who in their magnificent presence learned what life and duty are, and how to live the one and do the other. They will be to all the rallying point of future devotion and service to the University.&#8221;</p>
+    <p class="attribution"><cite>&#8212;G. F. Rothwell</cite></p>
+</blockquote>
+```
+
+## Pull Quote
+
+This can also be set as a class, `.like-blockquote.pull-quote`, for CMS systems that do not have a blockquote button.
+
+```html_example 
+<blockquote class="pull-quote">
+    <p><span class="dquo">&#8220;</span>&#8230; Let these columns stand. Let them stand a thousand years. Crown them with an arch, memorial to the men who in their magnificent presence learned what life and duty are, and how to live the one and do the other. They will be to all the rallying point of future devotion and service to the University.&#8221;</p>
+    <p class="attribution"><cite>&#8212;G. F. Rothwell</cite></p>
+</blockquote>
+```
+
+*/
+
+
+
+//! Address
+
+address {
+    font-style: normal;
+    .rem(margin, 0, 0, 1.5);
+}
+
+
+// !Horizontal Rules
+
+hr {
+    clear: both;
+    border: 0;
+    border-bottom: 1px solid @color-hr;
+    .rem(margin-bottom, 1.5);
+    
+    &.dashed     {
+        border-style: dashed;
+    }
+    &.space {
+        border-color: transparent;
+        visibility: hidden;
+    }
+}
+
+/*doc
+---
+title: Horizontal Rules
+name: horizontal-rules
+category: Block Elements
+---
+
+There are solid, dashed and clearing/spacer versions.
+
+```html_example
+<hr />
+<hr class="dashed" />
+<hr class="space" />
+```
+*/
+
+
+//! Code 
+
+pre, .like-pre,
+code, .like-code {
+    font-family: @font-monospace;
+    .rem(font-size, .8);
+    background: @color-code-bg;
+    border: 1px solid @color-code-border;
+}
+pre, .like-pre {
+    overflow: auto;
+    overflow-y: hidden;
+    .rem(padding, 1);
+    .rem(margin, 0, 0, 1.5, 0);
+}
+code, .like-code {
+	.rem(padding, .2, .3, .2, .3);
+	white-space: pre-wrap;
+    word-wrap: break-word;
+	border-radius: 4px;
+	color: @accent;
+	vertical-align: middle;
+}
+pre code {
+    padding: 0;
+    overflow: auto;
+    overflow-y: hidden;
+    white-space: normal;
+    word-wrap: normal;
+}
+
+/*doc
+---
+title: Pre Formatted
+name: pre
+category: Block Elements
+---
+
+Can also use a class of `.like-pre` to match this element style.
+
+```
+<pre>
+    <script>
+        var message = "Hello world";
+        alert(message);
+    </script>
+</pre>
+```
+
+*/
+
+
+//! Figures and Images
+
+img, 
+embed, 
+object, 
+video {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+iframe {
+    border: 0;
+    clear: both;
+    max-width: 100%;
+    vertical-align: baseline;
+}
+
+figure {
+    margin: 0;
+    .rem(margin-bottom, 1.5);
+}
+figcaption {
+    .rem(font-size, 0.875);
+    .last-child();
+    
+    p {
+        font-size: inherit;
+    }
+}
+
+/*doc
+---
+title: Images and Figures
+name: figures-images
+category: Block Elements
+---
+
+## Images
+
+Examples of images and alignment. Mention max-width 100% on all images by default.
+
+
+## Standard Figure
+
+```html_example 
+<figure>
+    <img src="http://placehold.it/150x150" alt="Placeholder" />
+    <figcaption><p>Image caption.</p></figcaption>
+</figure>
+```
+*/
+
+
+

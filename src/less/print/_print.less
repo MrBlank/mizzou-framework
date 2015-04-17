@@ -1,0 +1,47 @@
+/*! PRINT STYLES */
+/*--------------------------------------------------------------
+  
+    * Site:            Mizzou Framework
+    * Author:          Josh Nichols, MU Web Communications
+    * Version:         1.0
+  
+--------------------------------------------------------------*/
+
+// Remove backgrounds
+// Make text and borders black
+
+*, 
+*:before, 
+*:after {
+    background-image: none !important;
+    background-color: #fff !important;
+    color: #000 !important;
+    border-color: #000 !important;
+}
+
+// Overrrides
+
+html {
+    font-size: 11pt!important;
+}
+
+/*doc
+---
+title: Print Reset
+name: print
+category: Print
+---
+
+The `_print.less` stylesheet does the following to all elements on the page to help with printer compatibility:
+
+* Makes text black
+* Makes borders black
+* Removes backgrand images
+* Makes background colors white
+
+It also overrides the base font size and sets it to 11px on the `html` tag.
+
+Individual sites will need a separate set of rules to hide unnecessary block level elements and make fine-tuned adjustments.
+
+*/
+

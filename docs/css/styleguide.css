@@ -1,0 +1,3423 @@
+/*! STYLE GUIDE */
+/*--------------------------------------------------------------
+  
+* Site:            Mizzou Style Guide
+* Author:          Josh Nichols, MU Web Communications
+  
+--------------------------------------------------------------*/
+/*! JANSON FONT STYLES */
+/*--------------------------------------------------------------
+	
+	# Notes
+	
+    * License: http://www.myfonts.com/viewlicense?type=web&buildid=2799089
+	* Licensed pageviews: 1,000,000
+	* Purchased from myfonts.com with Webcom account
+	* Include licence and tracking @import when embedding in a site
+    
+    # Tracking 
+ 
+    * We have limited pageviews for this font! 
+    * Tracking ID is based on the fontkit generated at myfonts.com 
+    * Replace the ID with the one generated from the fontkit 
+    * To use other fontkits with fewer fonts, you must create a new one 
+      at myfonts.com and apply he new ID 
+    
+--------------------------------------------------------------*/
+/**
+ * @license
+ * MyFonts Webfont Build ID 2799089, 2014-04-22T16:49:18-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Janson URW Regular by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-t-regular/
+ * 
+ * Webfont: Janson URW Medium by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-t-medium/
+ * 
+ * Webfont: Janson URW Bold Italic by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-t-bold-italic/
+ * 
+ * Webfont: Janson URW Light by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-t-light/
+ * 
+ * Webfont: Janson URW Medium Italic by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-t-medium-italic/
+ * 
+ * Webfont: Janson URW SC by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-sc-t-regular/
+ * 
+ * Webfont: Janson URW Bold by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-t-bold/
+ * 
+ * Webfont: Janson URW Italic by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-t-italic/
+ * 
+ * Webfont: Janson URW Light Italic by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-t-light-italic/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2799089
+ * Licensed pageviews: 20,000
+ * Webfonts copyright: (URW)++,Copyright 2006 by (URW)++ Design &amp; Development
+ * 
+ * © 2014 MyFonts Inc
+*/
+/* Tracking */
+/* Light 300 */
+@font-face {
+  font-family: 'Janson';
+  src: url('../fonts/2AB5F1_3_0.eot');
+  src: url('../fonts/2AB5F1_3_0.eot?#iefix') format('embedded-opentype'), url('../fonts/2AB5F1_3_0.woff') format('woff'), url('../fonts/2AB5F1_3_0.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Janson';
+  src: url('../fonts/2AB5F1_8_0.eot');
+  src: url('../fonts/2AB5F1_8_0.eot?#iefix') format('embedded-opentype'), url('../fonts/2AB5F1_8_0.woff') format('woff'), url('../fonts/2AB5F1_8_0.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+/* Roman 400 */
+@font-face {
+  font-family: 'Janson';
+  src: url('../fonts/2AB5F1_0_0.eot');
+  src: url('../fonts/2AB5F1_0_0.eot?#iefix') format('embedded-opentype'), url('../fonts/2AB5F1_0_0.woff') format('woff'), url('../fonts/2AB5F1_0_0.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Janson';
+  src: url('../fonts/2AB5F1_7_0.eot');
+  src: url('../fonts/2AB5F1_7_0.eot?#iefix') format('embedded-opentype'), url('../fonts/2AB5F1_7_0.woff') format('woff'), url('../fonts/2AB5F1_7_0.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+/* Medium 500 */
+@font-face {
+  font-family: 'Janson';
+  src: url('../fonts/2AB5F1_1_0.eot');
+  src: url('../fonts/2AB5F1_1_0.eot?#iefix') format('embedded-opentype'), url('../fonts/2AB5F1_1_0.woff') format('woff'), url('../fonts/2AB5F1_1_0.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Janson';
+  src: url('../fonts/2AB5F1_4_0.eot');
+  src: url('../fonts/2AB5F1_4_0.eot?#iefix') format('embedded-opentype'), url('../fonts/2AB5F1_4_0.woff') format('woff'), url('../fonts/2AB5F1_4_0.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+/* Bold 600 */
+@font-face {
+  font-family: 'Janson';
+  src: url('../fonts/2AB5F1_6_0.eot');
+  src: url('../fonts/2AB5F1_6_0.eot?#iefix') format('embedded-opentype'), url('../fonts/2AB5F1_6_0.woff') format('woff'), url('../fonts/2AB5F1_6_0.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Janson';
+  src: url('../fonts/2AB5F1_2_0.eot');
+  src: url('../fonts/2AB5F1_2_0.eot?#iefix') format('embedded-opentype'), url('../fonts/2AB5F1_2_0.woff') format('woff'), url('../fonts/2AB5F1_2_0.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+/* Smallcaps 400 */
+@font-face {
+  font-family: 'Janson-SC';
+  src: url('../fonts/2AB5F1_5_0.eot');
+  src: url('../fonts/2AB5F1_5_0.eot?#iefix') format('embedded-opentype'), url('../fonts/2AB5F1_5_0.woff') format('woff'), url('../fonts/2AB5F1_5_0.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+/*! PROXIMA NOVA FONT STYLES */
+/*--------------------------------------------------------------
+	
+	# Notes
+	
+    * License: http://www.fontspring.com/fonts/mark-simonson-studio/proxima-nova
+	* Licensed pageviews: 5,000,000 Pageviews
+	* Purchased from fontspring.com with Webcom account
+	* No tracking code
+  
+--------------------------------------------------------------*/
+/*
+ * Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2012 Fontspring
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      Mark Simonson Studio
+ * License URL: http://www.fontspring.com/fflicense/mark-simonson-studio
+ *
+ */
+/* Thin 200 */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Thin-webfont.eot');
+  src: url('../fonts/ProximaNova-Thin-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Thin-webfont.woff') format('woff'), url('../fonts/ProximaNova-Thin-webfont.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-ThinIt-webfont.eot');
+  src: url('../fonts/ProximaNova-ThinIt-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-ThinIt-webfont.woff') format('woff'), url('../fonts/ProximaNova-ThinIt-webfont.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+/* Light 300 */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Light-webfont.eot');
+  src: url('../fonts/ProximaNova-Light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Light-webfont.woff') format('woff'), url('../fonts/ProximaNova-Light-webfont.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-LightIt-webfont.eot');
+  src: url('../fonts/ProximaNova-LightIt-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-LightIt-webfont.woff') format('woff'), url('../fonts/ProximaNova-LightIt-webfont.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+/* Regular 400 */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Reg-webfont.eot');
+  src: url('../fonts/ProximaNova-Reg-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Reg-webfont.woff') format('woff'), url('../fonts/ProximaNova-Reg-webfont.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-RegIt-webfont.eot');
+  src: url('../fonts/ProximaNova-RegIt-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-RegIt-webfont.woff') format('woff'), url('../fonts/ProximaNova-RegIt-webfont.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+/* Semibold 500 */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Sbold-webfont.eot');
+  src: url('../fonts/ProximaNova-Sbold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Sbold-webfont.woff') format('woff'), url('../fonts/ProximaNova-Sbold-webfont.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-SboldIt-webfont.eot');
+  src: url('../fonts/ProximaNova-SboldIt-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-SboldIt-webfont.woff') format('woff'), url('../fonts/ProximaNova-SboldIt-webfont.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+/* Bold 600 */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Bold-webfont.eot');
+  src: url('../fonts/ProximaNova-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Bold-webfont.woff') format('woff'), url('../fonts/ProximaNova-Bold-webfont.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-BoldIt-webfont.eot');
+  src: url('../fonts/ProximaNova-BoldIt-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-BoldIt-webfont.woff') format('woff'), url('../fonts/ProximaNova-BoldIt-webfont.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+/* Extra Bold 700 */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Xbold-webfont.eot');
+  src: url('../fonts/ProximaNova-Xbold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Xbold-webfont.woff') format('woff'), url('../fonts/ProximaNova-Xbold-webfont.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-XboldIt-webfont.eot');
+  src: url('../fonts/ProximaNova-XboldIt-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-XboldIt-webfont.woff') format('woff'), url('../fonts/ProximaNova-XboldIt-webfont.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+/* Black 800 */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Black-webfont.eot');
+  src: url('../fonts/ProximaNova-Black-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Black-webfont.woff') format('woff'), url('../fonts/ProximaNova-Black-webfont.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-BlackIt-webfont.eot');
+  src: url('../fonts/ProximaNova-BlackIt-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-BlackIt-webfont.woff') format('woff'), url('../fonts/ProximaNova-BlackIt-webfont.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+/*! STYLES */
+/*--------------------------------------------------------------
+  
+* Site:             Mizzou Framework
+* Author:           Josh Nichols, MU Web Communications
+* version:          1.1
+  
+--------------------------------------------------------------*/
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+  background: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */ /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+/*! VARIABLES */
+/*--------------------------------------------------------------
+  
+* Site:             Mizzou Web Style Guide
+* Author:           Josh Nichols, MU Web Communications
+* Version:          1.2
+  
+--------------------------------------------------------------*/
+@viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+/*! COLOR VARIABLES */
+/*--------------------------------------------------------------
+  
+* Site:             Mizzou Framework
+* Author:           Josh Nichols, MU Web Communications
+* Version:          1.2
+  
+--------------------------------------------------------------*/
+/*! TYPE VARIABLES */
+/*--------------------------------------------------------------
+  
+* Site:             Mizzou Web Style Guide
+* Author:           Josh Nichols, MU Web Communications
+* Version:          1.2
+  
+--------------------------------------------------------------*/
+/*! MEDIA VARIABLES */
+/*--------------------------------------------------------------
+  
+* Site:             Mizzou Web Style Guide
+* Author:           Josh Nichols, MU Web Communications
+* Version:          1.2
+  
+--------------------------------------------------------------*/
+/*! MIXIN STYLES */
+/*--------------------------------------------------------------
+
+* Site:         Mizzou Framework
+* Author:       Josh Nichols, MU Web Communications
+* Version:      3.1
+  
+--------------------------------------------------------------*/
+/*doc
+---
+title: Clearfix
+name: mixins_01
+category: Mixins & Helper Classes
+---
+
+The `.clearfix()` mixin is way to apply a <a href="http://nicolasgallagher.com/micro-clearfix-hack/">clear fix</a> to an element without extra markup.
+
+*/
+/*doc
+---
+title: Box
+name: mixins_02
+category: Mixins & Helper Classes
+---
+
+The `.box()` mixin is good for adding empasis to an element. 
+
+```html_example
+<div class="box-example">
+    <p>A box with some added style options.</p>
+</div>
+```
+Here are the variables that can be used with their defaults:
+
+```
+@background: @color-box-bg          // Use 'none' to remove
+@padding: 1                         // This is a REM unit 
+@border-size: 0                     // Change this to add a border
+@border-color: @color-box-border 
+@border-style: solid
+
+.box-example {
+    .box(@gold-lightest, 1.5, 1px, @gold);
+}
+```
+*/
+/*doc
+---
+title: Center Block
+name: mixins_03
+category: Mixins & Helper Classes
+---
+
+The `.center-block()` mixin is a quick way to center layouts.
+
+```html_example
+<div class="center-me">
+    <p>A Centered, block-level element.</p>
+</div>
+```
+Here are the variables that can be used:
+
+```
+@block-max-width  
+@block-min-width
+
+.center-me {
+    .center-block(@block-max-width: 300px, @block-min-width: 150px);
+    .box();
+    width: 50%;
+}
+```
+
+*/
+/*doc
+---
+title: Image Replace
+name: mixins_04
+category: Mixins & Helper Classes
+---
+
+`.img-replace()` is an accessibility trick to allow use of image sprites for text. Size the element to your image and this indents the text off-screen.
+
+```html_example 
+<p class="img-replace-example">
+    <a href="http://missouri.edu">Mizzou Logo</a>
+</p>
+```
+```
+.img-replace-example {
+    .img-replace();
+    width: 64px;
+    height: 72px;
+    background-image: url("@{img-path}/mizzou-logo-64.svg");
+}
+```
+
+*/
+/*doc
+---
+title: Last Child
+name: mixins_05
+category: Mixins & Helper Classes
+---
+
+The `.last-child()` mixin overrides the bottom margin of the last child element to 0. This helps keep padding on the parent element consistant.
+Used in the `.box()` mixin.
+
+*/
+/*! HELPER STYLES */
+/*--------------------------------------------------------------
+  
+* Site:             Mizzou Framework
+* Author:           Josh Nichols, MU Web Communications
+* version:          1.1
+  
+--------------------------------------------------------------*/
+.bottom {
+  margin-bottom: 0!important;
+}
+.right {
+  float: right!important;
+}
+.left {
+  float: left!important;
+}
+.no-bold {
+  font-weight: normal;
+}
+.no-italic {
+  font-style: normal;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.dquo {
+  margin-left: -0.3em;
+}
+.quo {
+  margin-left: -0.2em;
+}
+.caps {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+.dropcap {
+  font-weight: 600;
+  float: left;
+  display: block;
+  line-height: .7;
+  font-size: 5.4em;
+  margin: 0.11em 0.08em 0 -0.04em;
+}
+.dropcap.hang {
+  margin-left: -0.3em;
+}
+/*doc
+---
+title: Type Helpers
+name: zhelpers_02
+category: Mixins & Helper Classes
+---
+
+## Hanging Quotes
+
+The `.quo` and `.dquo` classes are for single quotes and double quotes, respectively. 
+They push the element to the left a little to cause the punctuation to hang into the margins.
+
+```html_example 
+<h1><span class="quo">&#8216;</span>Let these columns stand. Let them stand a thousand years.&#8217;</h1>
+<p><span class="dquo">&#8220;</span>Let these columns stand. Let them stand a thousand years. Crown them with an arch, memorial to the men who in their magnificent presence learned what life and duty are, and how to live the one and do the other. They will be to all the rallying point of future devotion and service to the university.&#8221;</p>
+```
+
+## Small Caps
+
+The `.caps` class shrinks text a little and transforms text to uppercase.
+
+```html_example 
+<p>The quarterly magazine of <span class="caps">MAA</span> is called <span class="caps">MIZZOU</span> and provides news and information about the University of Missouri</p>
+```
+
+## Dropcaps
+
+The `.dropcap` class works on an inline element, usually and span tag. Add the class `.hang` when it starts with punctuation to hang it in the margins. 
+
+```html_example 
+<p><span class="dropcap">L</span>Let these columns stand. Let them stand a thousand years. Crown them with an arch, memorial to the men who in their magnificent presence learned what life and duty are, and how to live the one and do the other. They will be to all the rallying point of future devotion and service to the university.</p>
+<p><span class="dropcap hang">&#8216;L</span>Let these columns stand. Let them stand a thousand years. Crown them with an arch, memorial to the men who in their magnificent presence learned what life and duty are, and how to live the one and do the other. They will be to all the rallying point of future devotion and service to the university.&#8217;</p>
+```
+
+*/
+.offset a {
+  position: absolute;
+  left: -9999em;
+  padding: 5px 10px;
+  color: #222222;
+  font-size: 1em;
+  background: #f1b82d;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+.offset a:focus {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+/*doc
+---
+title: Skip to Content
+name: zhelpers_03
+category: Mixins & Helper Classes
+---
+
+The "Skip-To" link is an accessibility technique to allow users to skip directly to navigation 
+or content. `.offset` should be the first element inside the `<body>` tag. You can see what it looks 
+like by tabbing through the document. More skip links can be added as necessary.
+
+```
+<div class="offset">
+    <a href="#nav" tabindex="1">Skip to navigation</a>
+    <a href="#content" tabindex="2">Skip to content</a>
+</div>
+```
+*/
+a[href$=".pdf"] {
+  background: url('../images/icons/pdf.svg') left center no-repeat;
+  padding-left: 20px;
+}
+@media print {
+  a[href$=".pdf"] {
+    padding-left: 0px;
+  }
+}
+/*! REM MIXIN STYLES */
+/*--------------------------------------------------------------
+
+* Site:         Mizzou Framework
+* Author:       Josh Hughes, MU Web Communications
+* Version:      3.1
+  
+--------------------------------------------------------------*/
+/*doc
+---
+title: Why REMs?
+name: rem_01
+category: REM Mixins
+---
+
+These mixins create pixel versions of REMs for non-responsive browsers, like IE8 
+and below, that do not support the REM unit. The advantage of the REM unit is that
+it is relative to the `@font-base` set on the `font-size` rule of the HTML tag. 
+Unlike EMs, which are relative to their parent element, it will be the same dimention 
+no matter where it’s used in the DOM. This avoids the Russian doll effect when nesting 
+elements.
+
+```
+// The default in px
+@font-base: 16;
+```
+*/
+/**
+ * @param string @property Name of the property to effect
+ * @param int @value1 Pixel value 1
+ * @param int @value2 (Optional) Pixel value 2
+ * @param int @value3 (Optional) Pixel value 3
+ * @param int @value4 (Optional) Pixel value 4
+ */
+/*doc
+---
+title: REMs to Pixels
+name: rem_02
+category: REM Mixins
+---
+
+`.rem()` takes a given property and up to four pixel values, separated by a comma, and creates px-sized equivalents.  
+
+## Examples
+
+    .rem(margin-left, 2);
+    .rem(padding, 2, 0, 2, 0);
+
+... which, assuming HTML has a font-size of 18px, will output the following:
+
+    margin-left: 32px;
+    margin-left: 2rem;
+    padding: 32px 0 32px 0;
+    padding: 2rem 0 2rem 0; 
+
+*/
+/** 
+ * @param string @property Name of the property to effect
+ * @param int @value1 Pixel value 1
+ * @param int @value2 (Optional) Pixel value 2
+ * @param int @value3 (Optional) Pixel value 3
+ * @param int @value4 (Optional) Pixel value 4
+ */
+/*! GRID MIXINS */
+/*--------------------------------------------------------------
+
+* Site:         Mizzou Framework
+* Author:       Josh Hughes, MU Web Communications
+* Version:      3.2
+     
+--------------------------------------------------------------*/
+/*! BUTTON STYLES */
+/*--------------------------------------------------------------
+  
+* Site:         Mizzou Web Style Guide
+* Author:       Josh Nichols, MU Web Communications
+* Version:      1.0  
+   
+--------------------------------------------------------------*/
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  vertical-align: top;
+  cursor: pointer;
+}
+/*doc
+---
+title: Form Buttons
+name: buttons-01
+category: Buttons
+---
+
+```html_example
+<form>
+    <div class="field">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        <input type="button" value="Button">
+        <button type="submit">A Real Button</button>
+        <button class="outline" type="submit">A Real Button Outlined</button>
+    </div>
+</form>
+```
+*/
+.button {
+  margin-bottom: .5em;
+  display: inline-block;
+  text-align: center;
+  padding: .5em 1em .4em;
+  line-height: 1.25;
+  text-decoration: none;
+  border: solid 1px #f1b82d;
+  color: #222;
+  font-size: 1em;
+  font-weight: 400;
+  border-radius: 3px;
+  background-color: #f7d583;
+}
+.button:hover,
+.button:focus {
+  background: #fae5b3;
+}
+.button.outline {
+  background-color: transparent;
+}
+/*! MIZZOU BRAND STYLES */
+/*--------------------------------------------------------------
+  
+* Site:             Mizzou Web Style Guide
+* Author:           Josh Hughes, Josh Nichols, MU Web Communications
+* Version:          1.5
+* Dependancies: 
+    
+    Autoprefixer - https://github.com/ai/autoprefixer
+    
+* Notes 
+    - Make centered versions of header
+    - Make versions with just the university of MO next to logo.
+  
+--------------------------------------------------------------*/
+/*! GENERAL TAG STYLES */
+/*--------------------------------------------------------------
+  
+* Site:         Mizzou Web Style Guide
+* Author:       Josh Nichols, MU Web Communications
+* Version:      1.0   
+   
+--------------------------------------------------------------*/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+::-moz-selection {
+  color: #000;
+  color: rgba(0, 0, 0, 0.85);
+  background: rgba(241, 184, 45, 0.3);
+}
+::selection {
+  color: #000;
+  color: rgba(0, 0, 0, 0.85);
+  background: rgba(241, 184, 45, 0.3);
+}
+/*! INLINE ELEMENT STYLES */
+/*--------------------------------------------------------------
+  
+* Site:         Mizzou Web Style Guide
+* Author:       Josh Nichols, MU Web Communications
+* Version:      1.0  
+   
+--------------------------------------------------------------*/
+small,
+.small {
+  line-height: 1.2;
+  font-size: .8em;
+}
+/*doc
+---
+title: Small
+name: inline-small
+category: Inline Elements
+---
+
+This also has a class of `.small` that matches. Font-size is set in EMs to scale with its parent element.
+
+```html_example
+<p>
+    <small>&#169; 2014 &#8212; Curators of the <a href="http://www.umsystem.edu">University of Missouri</a>. All rights reserved. <a href="http://www.missouri.edu/dmca/">DMCA</a> and <a href="http://www.missouri.edu/copyright.php">other copyright information</a>. An <a href="http://www.missouri.edu/eeo-aa.php">equal opportunity/affirmative action</a> institution. Published by <a href="http://universityaffairs.missouri.edu/department/web-communications/">MU Web Communications</a>.</small>
+</p>
+```
+*/
+a,
+.like-a {
+  color: #000000;
+  cursor: pointer;
+  text-decoration: underline;
+}
+a:hover,
+.like-a:hover,
+a:focus,
+.like-a:focus {
+  color: #900000;
+}
+a.no-underline,
+.like-a.no-underline {
+  text-decoration: none;
+}
+/*doc
+---
+title: Links
+name: inline-links
+category: Inline Elements
+---
+
+```html_example
+<p><a href="#">An example link</a>. <a href="#" class="no-underline">An example link with no underline</a>.</p>
+```
+
+*/
+b,
+strong,
+.bold {
+  font-weight: bold;
+}
+i,
+em,
+.italic {
+  font-style: italic;
+}
+u {
+  text-decoration: none;
+}
+/*doc
+---
+title: Bold, Italic and Underline
+name: inline-bold
+category: Inline Elements
+---
+
+```html_example
+<p><b>Bold text here.</b> <strong>Strong text is the same.</strong> <i>Italics are nice.</i> <em>So is emphasis.</em></p> 
+<u>Underlining is not cool at all. Don't do it unless it's a link!</u></p>
+```
+
+*/
+abbr,
+acronym {
+  border-bottom: 1px dotted #cccccc;
+  cursor: help;
+}
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+mark {
+  background: #fae5b3;
+}
+/*! BLOCK LEVEL TAG STYLES */
+/*--------------------------------------------------------------
+  
+* Site:         Mizzou Web Style Guide
+* Author:       Josh Nichols, MU Web Communications
+* Version:      1.0   
+   
+--------------------------------------------------------------*/
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  background: #ffffff;
+  color: #222222;
+  text-rendering: optimizeLegibility;
+}
+body {
+  font-family: "Proxima Nova", "Arial", sans-serif;
+  line-height: 1.5;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.like-h1,
+.like-h2,
+.like-h3,
+.like-h4,
+.like-h5,
+.like-h6 {
+  font-weight: normal;
+  color: #111;
+  margin: 0;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+h1,
+.like-h1 {
+  font-size: 38.4px;
+  font-size: 2.4rem;
+  line-height: 1;
+  font-weight: 200;
+  margin-bottom: 32px;
+  margin-bottom: 2rem;
+}
+h2,
+.like-h2 {
+  font-size: 22.4px;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+h3,
+.like-h3 {
+  font-size: 20.8px;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  font-weight: 300;
+}
+h4,
+.like-h4 {
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+h5,
+.like-h5 {
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #999999;
+}
+h5 a,
+.like-h5 a {
+  color: #999999;
+}
+h6,
+.like-h6 {
+  font-size: 16px;
+  font-size: 1rem;
+  font-style: italic;
+  color: #666666;
+}
+h6 a,
+.like-h6 a {
+  color: #666666;
+}
+/*doc
+---
+title: Headings
+name: headings
+category: Block Elements
+---
+
+These are standard styles for headings. There is also a matching class to match a particular 
+heading. Example: `.like-h2`
+
+```html_example
+<h1>Heading 1 With Some Additional Text <a href="#">and a Link</a></h1>
+<h2>Heading 2 With Some Additional Text <a href="#">and a Link</a></h2>
+<h3>Heading 3 With Some Additional Text <a href="#">and a Link</a></h3>
+<h4>Heading 4 With Some Additional Text <a href="#">and a Link</a></h4>
+<h5>Heading 5 With Some Additional Text <a href="#">and a Link</a></h5>
+<h6>Heading 6 With Some Additional Text <a href="#">and a Link</a></h6>
+```
+*/
+p,
+.like-p,
+blockquote,
+.like-blockquote {
+  margin: 0;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+/*doc
+---
+title: Paragraphs
+name: paragraphs
+category: Block Elements
+---
+
+```html_example
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+<p>Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue.</p>
+```
+*/
+blockquote p,
+.like-blockquote p {
+  font-size: inherit;
+}
+blockquote .attribution,
+.like-blockquote .attribution {
+  text-align: right;
+}
+blockquote.pull-quote,
+.like-blockquote.pull-quote {
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-family: "Janson", "Times New Roman", Times, serif;
+}
+blockquote.pull-quote .attribution,
+.like-blockquote.pull-quote .attribution {
+  font-size: 19.2px;
+  font-size: 1.2rem;
+}
+blockquote *:last-child,
+.like-blockquote *:last-child {
+  margin-bottom: 0!important;
+}
+/*doc
+---
+title: Blockquote
+name: blockquote
+category: Block Elements
+---
+
+## Default
+
+This can also be set as a class, `.like-blockquote`, for CMS systems that do not have a blockquote button.
+
+```html_example 
+<blockquote>
+    <p><span class="dquo">&#8220;</span>&#8230; Let these columns stand. Let them stand a thousand years. Crown them with an arch, memorial to the men who in their magnificent presence learned what life and duty are, and how to live the one and do the other. They will be to all the rallying point of future devotion and service to the University.&#8221;</p>
+    <p class="attribution"><cite>&#8212;G. F. Rothwell</cite></p>
+</blockquote>
+```
+
+## Pull Quote
+
+This can also be set as a class, `.like-blockquote.pull-quote`, for CMS systems that do not have a blockquote button.
+
+```html_example 
+<blockquote class="pull-quote">
+    <p><span class="dquo">&#8220;</span>&#8230; Let these columns stand. Let them stand a thousand years. Crown them with an arch, memorial to the men who in their magnificent presence learned what life and duty are, and how to live the one and do the other. They will be to all the rallying point of future devotion and service to the University.&#8221;</p>
+    <p class="attribution"><cite>&#8212;G. F. Rothwell</cite></p>
+</blockquote>
+```
+
+*/
+address {
+  font-style: normal;
+  margin: 0px 0px 24px;
+  margin: 0rem 0rem 1.5rem;
+}
+hr {
+  clear: both;
+  border: 0;
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+hr.dashed {
+  border-style: dashed;
+}
+hr.space {
+  border-color: transparent;
+  visibility: hidden;
+}
+/*doc
+---
+title: Horizontal Rules
+name: horizontal-rules
+category: Block Elements
+---
+
+There are solid, dashed and clearing/spacer versions.
+
+```html_example
+<hr />
+<hr class="dashed" />
+<hr class="space" />
+```
+*/
+pre,
+.like-pre,
+code,
+.like-code {
+  font-family: "Menlo", "Consolas", "Courier New", monospace;
+  font-size: 12.8px;
+  font-size: 0.8rem;
+  background: #f5f2f0;
+  border: 1px solid #edebd5;
+}
+pre,
+.like-pre {
+  overflow: auto;
+  overflow-y: hidden;
+  padding: 16px;
+  padding: 1rem;
+  margin: 0px 0px 24px 0px;
+  margin: 0rem 0rem 1.5rem 0rem;
+}
+code,
+.like-code {
+  padding: 3.2px 4.8px 3.2px 4.8px;
+  padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border-radius: 4px;
+  color: #900000;
+  vertical-align: middle;
+}
+pre code {
+  padding: 0;
+  overflow: auto;
+  overflow-y: hidden;
+  white-space: normal;
+  word-wrap: normal;
+}
+/*doc
+---
+title: Pre Formatted
+name: pre
+category: Block Elements
+---
+
+Can also use a class of `.like-pre` to match this element style.
+
+```
+<pre>
+    <script>
+        var message = "Hello world";
+        alert(message);
+    </script>
+</pre>
+```
+
+*/
+img,
+embed,
+object,
+video {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+iframe {
+  border: 0;
+  clear: both;
+  max-width: 100%;
+  vertical-align: baseline;
+}
+figure {
+  margin: 0;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+figcaption {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+figcaption *:last-child {
+  margin-bottom: 0!important;
+}
+figcaption p {
+  font-size: inherit;
+}
+/*! LIST STYLES */
+/*--------------------------------------------------------------
+  
+* Site:         Mizzou Web Style Guide
+* Author:       Josh Nichols, MU Web Communications
+* Version:      1.0   
+   
+--------------------------------------------------------------*/
+ul,
+ol,
+dl {
+  margin: 0;
+  padding-left: 40px;
+  padding-left: 2.5rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-bottom: 0;
+}
+ul li,
+ol li {
+  margin-bottom: 4px;
+  margin-bottom: 0.25rem;
+}
+ul.list-spaced > li,
+ol.list-spaced > li {
+  margin: 0;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+}
+ul.list-square {
+  list-style: square;
+}
+ul.list-disc {
+  list-style: disc;
+}
+ul.list-circle {
+  list-style: circle;
+}
+ol.list-decimal {
+  list-style: decimal;
+}
+ol.list-lower-alpha {
+  list-style: lower-alpha;
+}
+ol.list-upper-alpha {
+  list-style: upper-alpha;
+}
+ol.list-lower-roman {
+  list-style: lower-roman;
+}
+ol.list-upper-roman {
+  list-style: upper-roman;
+}
+ul.list-none {
+  list-style: none;
+  padding-left: 0;
+}
+li li,
+li p {
+  font-size: inherit;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin: 0;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+}
+/*! FORM STYLES */
+/*--------------------------------------------------------------
+  
+* Site:         Mizzou Web Style Guide
+* Author:       Josh Nichols, MU Web Communications
+* Version:      1.0  
+   
+--------------------------------------------------------------*/
+form {
+  margin: 0;
+}
+fieldset,
+legend {
+  padding: 0;
+  border: 0;
+}
+fieldset {
+  margin: 0;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+}
+legend {
+  font-weight: normal;
+  color: #111;
+  margin: 0;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  font-size: 22.4px;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+.field {
+  padding-top: 8px;
+  padding-top: 0.5rem;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+}
+.field:before,
+.field:after {
+  content: "";
+  display: table;
+}
+.field:after {
+  clear: both;
+}
+.field.error {
+  padding: 8px;
+  padding: 0.5rem;
+  background: #ffecec;
+  border: 1px solid #900000;
+}
+.horizontal-layout {
+  display: table;
+  width: 100%;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+}
+.horizontal-layout .field {
+  display: table-row;
+}
+.horizontal-layout .field:after {
+  display: none;
+}
+.horizontal-layout .field .label,
+.horizontal-layout .field .control {
+  display: table-cell;
+  vertical-align: top;
+  padding: 8px;
+  padding: 0.5rem;
+}
+.horizontal-layout .field .label {
+  width: 184px;
+  width: 11.5rem;
+  padding-right: 16px;
+  padding-right: 1rem;
+}
+.horizontal-layout .error {
+  padding: 0;
+}
+.help {
+  font-size: 12px;
+  font-size: 0.75rem;
+  color: #999999;
+  margin-bottom: 0;
+}
+.error .help {
+  color: #900000;
+}
+.error-message {
+  color: #900000;
+  display: inline;
+}
+.label {
+  font-weight: 500;
+}
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="email"],
+textarea {
+  margin: 0;
+  padding: 4px;
+  padding: 0.25rem;
+  border: 1px solid #cccccc;
+  font-size: 100%;
+  font-family: inherit;
+  color: #222222;
+  border-radius: 0;
+  box-shadow: inset 0 0 4px rgba(204, 204, 204, 0.75);
+  display: block;
+}
+input[type="text"].full-width,
+input[type="password"].full-width,
+input[type="search"].full-width,
+input[type="tel"].full-width,
+input[type="url"].full-width,
+input[type="email"].full-width,
+textarea.full-width {
+  width: 100%;
+}
+.error input[type="text"],
+.error input[type="password"],
+.error input[type="search"],
+.error input[type="tel"],
+.error input[type="url"],
+.error input[type="email"],
+.error textarea {
+  border-color: #900000;
+}
+.control ul {
+  list-style: none;
+  padding: 0;
+}
+/*doc
+---
+title: Text and Password Fields
+name: forms-fields
+category: Form Elements
+---
+
+```html_example
+<form>
+    <div class="field">
+        <div class="label">
+            <label>Text Field</label>
+        </div>
+        <div class="control">
+            <input type="text">
+        </div>
+    </div>
+    
+    <div class="field">
+        <div class="label">
+            <label>Password Field</label>
+        </div>
+        <div class="control">
+            <input type="password">
+            <p class="help">This is some help text.</p>
+        </div>
+    </div>
+</form>
+```
+*/
+/*doc
+---
+title: Textarea
+name: forms-textarea
+category: Form Elements
+---
+
+```html_example
+<form>
+    <div class="field">
+        <div class="label">
+            <label>Textarea</label>
+        </div>
+        <div class="control">
+            <textarea></textarea>
+        </div>
+    </div>
+</form>
+```
+*/
+/*doc
+---
+title: Text Fields and Textareas at Full Width
+name: forms-text-full
+category: Form Elements
+---
+
+```html_example
+<form>
+    <div class="field">
+        <div class="label">
+            <label>Text Field</label>
+        </div>
+        <div class="control">
+            <input type="text" class="full-width">
+        </div>
+    </div>
+
+    <div class="field">
+        <div class="label">
+            <label>Textarea</label>
+        </div>
+        <div class="control">
+            <textarea class="full-width"></textarea>
+        </div>
+    </div>
+</form>
+```
+*/
+/*doc
+---
+title: Text Field with Error
+name: forms-text
+category: Form Elements
+---
+
+```html_example
+<form>
+    <div class="field error">
+        <div class="label">
+            <label>Text Field</label>
+            <p class="error-message">(Missing)</p>
+        </div>
+        <div class="control">
+            <input type="text">
+            <p class="help">This is some help text.</p>
+        </div>
+    </div>
+</form>
+```
+*/
+/*doc
+---
+title: Horizontal Labels
+name: forms-hlabel
+category: Form Elements
+---
+
+```html_example
+<form class="horizontal-layout">
+    <div class="field">
+        <div class="label">
+            <label>Text Field</label>
+        </div>
+        <div class="control">
+            <input type="text">
+        </div>
+    </div>
+
+    <div class="field">
+        <div class="label">
+            <label>Textarea</label>
+        </div>
+        <div class="control">
+            <textarea class="full-width"></textarea>
+        </div>
+    </div>
+    
+    <div class="field error">
+        <div class="label">
+            <label>Text Field</label>
+            <p class="error-message">(Missing)</p>
+        </div>
+        <div class="control">
+            <input type="text">
+            <p class="help">This is some help text.</p>
+        </div>
+    </div>
+    
+    <div class="field error">
+        <div class="label">
+            <label>Text Field</label>
+            <p class="error-message">(Missing)</p>
+        </div>
+        <div class="control">
+            <input type="text" class="full-width">
+            <p class="help">This is some help text.</p>
+        </div>
+    </div>
+</form>
+```
+*/
+/*doc
+---
+title: Select Field
+name: forms-select
+category: Form Elements
+---
+
+```html_example
+<form>
+    <div class="field">
+        <div class="label">
+            <label>Select Field</label>
+        </div>
+        <div class="control">
+            <select>
+                <option>Option 1</option>
+                <option>Option 2</option>
+            </select>
+        </div>
+    </div>
+</form>
+```
+*/
+/*doc
+---
+title: Radio Buttons and Checkboxes
+name: forms-radio-check
+category: Form Elements
+---
+
+```html_example
+<form>
+    <div class="field">
+        <div class="label">
+            <span>Options</span>
+        </div>
+        <div class="control">
+            <ul>
+                <li><label><input type="checkbox"> Checkbox</label></li>
+                <li><label><input type="radio"> Radio</label></li>
+            </ul>
+        </div>
+    </div>
+</form>
+```
+*/
+/*doc
+---
+title: File Upload
+name: forms-fileupload
+category: Form Elements
+---
+
+```html_example
+<form>
+    <div class="field">
+        <div class="label">
+            <label>Choose a File</label>
+        </div>
+        <div class="control">
+            <input type="file">
+        </div>
+    </div>
+</form>
+```
+*/
+/*doc
+---
+title: Fieldset and Legend
+name: forms-fieldset
+category: Form Elements
+---
+
+```html_example
+<form>
+    <fieldset>
+        <legend>Legend</legend>
+        <p>Fieldsets and legends should primarily be used for semantic-separation, as they are difficult to style.</p>
+    </fieldset>
+</form>
+```
+*/
+.search-container {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 3px;
+  border: solid 1px #f1b82d;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+input.search-field {
+  box-shadow: 0 0 0 transparent;
+  width: 100%;
+  border: none;
+  margin: 0;
+  padding: .5em 6em .4em .5em;
+  font-size: 1em;
+  line-height: 1.25;
+  font-family: "Proxima Nova", "Arial", sans-serif;
+  border-radius: 2px;
+}
+input.search-button {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 5.5em;
+  font-size: 1em;
+  line-height: 1.25;
+  color: #222;
+  font-family: "Proxima Nova", "Arial", sans-serif;
+  font-weight: normal;
+  margin: 0;
+  padding: .5em 0 .4em;
+  border: none;
+  border-left: solid 1px #f1b82d;
+  background-color: #f7d583;
+  vertical-align: middle;
+  border-radius: 0 2px 2px 0;
+}
+input.search-button:hover,
+input.search-button:focus {
+  cursor: pointer;
+  color: #000;
+  background: #fae5b3;
+}
+input.search-button::-moz-focus-inner {
+  border: 0;
+}
+/*! TABLE STYLES */
+/*--------------------------------------------------------------
+  
+* Site:         Mizzou Web Style Guide
+* Author:       Josh Nichols, MU Web Communications
+* Version:      1.0  
+   
+--------------------------------------------------------------*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+}
+th,
+td {
+  border: 1px solid #cccccc;
+  text-align: left;
+  vertical-align: top;
+  padding: 4px;
+  padding: 0.25rem;
+  padding-left: 8px;
+  padding-left: 0.5rem;
+  padding-right: 8px;
+  padding-right: 0.5rem;
+}
+.stripe th,
+.stripe td {
+  background-color: #eeeeee;
+}
+th {
+  background-color: #fcf1d4;
+}
+th[scope="col"] {
+  border-bottom-width: 2px;
+}
+th[scope="row"] {
+  border-right-width: 2px;
+}
+tfoot th,
+tfoot td {
+  font-size: 14px;
+  font-size: 0.875rem;
+  border: 0;
+}
+caption {
+  font-weight: normal;
+  color: #111;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+#search .search-wrap {
+  margin-left: 0!important;
+}
+.search-meta {
+  border-bottom: solid 1px #f1b82d;
+  margin-bottom: 1.5em;
+}
+.search-meta h3 {
+  margin-bottom: 0;
+}
+.search-meta .meta-time {
+  display: none;
+}
+.suggested {
+  padding: 16px;
+  padding: 1rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  border: solid 0px #edebd5;
+  background-color: #f5f2f0;
+  margin-bottom: 2.5em;
+}
+.suggested *:last-child {
+  margin-bottom: 0!important;
+}
+.search-results {
+  list-style: none;
+  padding: 0;
+}
+.search-results li {
+  margin-bottom: 2.5em;
+}
+.search-results .title {
+  margin-bottom: .5em;
+}
+.search-results .excerpt {
+  margin-bottom: .5em;
+}
+.search-results .excerpt br {
+  display: none;
+}
+.search-results .source {
+  color: #666;
+  display: block;
+  overflow: hidden;
+}
+.search-results b {
+  color: #900000;
+}
+.search-results h3 b {
+  background-color: #f7d583;
+}
+.search-results .indent {
+  margin-left: 3em;
+}
+.meta-suggest {
+  margin-bottom: 1.5em;
+}
+.meta-suggest .meta-spelling {
+  margin-bottom: .5em;
+}
+.meta-suggest .meta-synonym {
+  margin-bottom: .5em;
+}
+.search-string {
+  color: #900000;
+}
+.pagination-wrapper {
+  border-top: solid 1px #f1b82d;
+  padding-top: 1.5em;
+}
+.pagination {
+  clear: both;
+  list-style: none;
+  padding: 0;
+}
+.pagination li {
+  display: inline;
+}
+.pagination li a {
+  margin-bottom: .5em;
+  display: inline-block;
+  text-align: center;
+  padding: .5em 1em .4em;
+  line-height: 1.25;
+  text-decoration: none;
+  border: solid 1px #f1b82d;
+  color: #222;
+  font-size: 1em;
+  font-weight: 400;
+  border-radius: 3px;
+  background-color: #f7d583;
+  min-width: 2.8em;
+}
+.pagination li a:hover,
+.pagination li a:focus {
+  background: #fae5b3;
+}
+.pagination li a.outline {
+  background-color: transparent;
+}
+.pagination li.current a {
+  background: #111;
+  color: #eee !important;
+  text-shadow: 0 0 0 transparent;
+  border-color: #111;
+}
+@media print {
+  /*! PRINT STYLES */
+  /*--------------------------------------------------------------
+  
+    * Site:            Mizzou Framework
+    * Author:          Josh Nichols, MU Web Communications
+    * Version:         1.0
+  
+--------------------------------------------------------------*/
+  *,
+  *:before,
+  *:after {
+    background-image: none !important;
+    background-color: #fff !important;
+    color: #000 !important;
+    border-color: #000 !important;
+  }
+  html {
+    font-size: 11pt!important;
+  }
+}
+// Copied from Github
+
+hll { background-color: #ffffcc }
+.c { color: #999988; font-style: italic } /* Comment */
+.err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.k { color: #000000; font-weight: bold } /* Keyword */
+.o { color: #000000; font-weight: bold } /* Operator */
+.cm { color: #999988; font-style: italic } /* Comment.Multiline */
+.cp { color: #999999; font-weight: bold; font-style: italic } /* Comment.Preproc */
+.c1 { color: #999988; font-style: italic } /* Comment.Single */
+.cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
+.gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.ge { color: #000000; font-style: italic } /* Generic.Emph */
+.gr { color: #aa0000 } /* Generic.Error */
+.gh { color: #999999 } /* Generic.Heading */
+.gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.go { color: #888888 } /* Generic.Output */
+.gp { color: #555555 } /* Generic.Prompt */
+.gs { font-weight: bold } /* Generic.Strong */
+.gu { color: #aaaaaa } /* Generic.Subheading */
+.gt { color: #aa0000 } /* Generic.Traceback */
+.kc { color: #000000; font-weight: bold } /* Keyword.Constant */
+.kd { color: #000000; font-weight: bold } /* Keyword.Declaration */
+.kn { color: #000000; font-weight: bold } /* Keyword.Namespace */
+.kp { color: #000000; font-weight: bold } /* Keyword.Pseudo */
+.kr { color: #000000; font-weight: bold } /* Keyword.Reserved */
+.kt { color: #445588; font-weight: bold } /* Keyword.Type */
+.m { color: #009999 } /* Literal.Number */
+.s { color: #d01040 } /* Literal.String */
+.na { color: #008080 } /* Name.Attribute */
+.nb { color: #0086B3 } /* Name.Builtin */
+.nc { color: #445588; font-weight: bold } /* Name.Class */
+.no { color: #008080 } /* Name.Constant */
+.nd { color: #3c5d5d; font-weight: bold } /* Name.Decorator */
+.ni { color: #800080 } /* Name.Entity */
+.ne { color: #990000; font-weight: bold } /* Name.Exception */
+.nf { color: #990000; font-weight: bold } /* Name.Function */
+.nl { color: #990000; font-weight: bold } /* Name.Label */
+.nn { color: #555555 } /* Name.Namespace */
+.nt { color: #000080 } /* Name.Tag */
+.nv { color: #008080 } /* Name.Variable */
+.ow { color: #000000; font-weight: bold } /* Operator.Word */
+.w { color: #bbbbbb } /* Text.Whitespace */
+.mf { color: #009999 } /* Literal.Number.Float */
+.mh { color: #009999 } /* Literal.Number.Hex */
+.mi { color: #009999 } /* Literal.Number.Integer */
+.mo { color: #009999 } /* Literal.Number.Oct */
+.sb { color: #d01040 } /* Literal.String.Backtick */
+.sc { color: #d01040 } /* Literal.String.Char */
+.sd { color: #d01040 } /* Literal.String.Doc */
+.s2 { color: #d01040 } /* Literal.String.Double */
+.se { color: #d01040 } /* Literal.String.Escape */
+.sh { color: #d01040 } /* Literal.String.Heredoc */
+.si { color: #d01040 } /* Literal.String.Interpol */
+.sx { color: #d01040 } /* Literal.String.Other */
+.sr { color: #009926 } /* Literal.String.Regex */
+.s1 { color: #d01040 } /* Literal.String.Single */
+.ss { color: #990073 } /* Literal.String.Symbol */
+.bp { color: #999999 } /* Name.Builtin.Pseudo */
+.vc { color: #008080 } /* Name.Variable.Class */
+.vg { color: #008080 } /* Name.Variable.Global */
+.vi { color: #008080 } /* Name.Variable.Instance */
+.il { color: #009999 } /* Literal.Number.Integer.Long */
+/*! STYLE GUIDE EXAMPLES */
+/*--------------------------------------------------------------
+  
+* Site:            Mizzou Style Guide
+* Author:          Josh Nichols, MU Web Communications
+  
+--------------------------------------------------------------*/
+.sig-default:before,
+.sig-default:after {
+  content: "";
+  display: table;
+}
+.sig-default:after {
+  clear: both;
+}
+.sig-default .logo,
+.sig-default .wordmark,
+.sig-default .unit {
+  margin: 0;
+}
+.sig-default .logo a {
+  display: block;
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-position: left 0;
+  background-repeat: no-repeat;
+}
+.sig-default .wordmark a {
+  display: block;
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-position: left 0;
+  background-repeat: no-repeat;
+}
+.sig-default .unit a {
+  display: block;
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-position: left 0;
+  background-repeat: no-repeat;
+}
+.sig-default .logo a {
+  width: 50px;
+  height: 56px;
+  background-image: url('../images/mizzou-logo-48.svg');
+  float: left;
+  margin-left: -1px;
+}
+.sig-default .wordmark,
+.sig-default .unit {
+  margin-left: 64px;
+}
+.sig-default .wordmark a {
+  width: 183px;
+  height: 20px;
+  background-image: url('../images/wordmark-48.svg');
+}
+.sig-default .wordmark a:hover,
+.sig-default .wordmark a:focus,
+.sig-default .wordmark a:active {
+  background-position: left -20px;
+}
+.sig-default .unit a {
+  width: 284px;
+  height: 40px;
+  background-image: url('../images/unit-name_48.svg');
+}
+.sig-default .unit a:hover,
+.sig-default .unit a:focus,
+.sig-default .unit a:active {
+  background-position: left -40px;
+}
+.sig-dark {
+  padding: 1.5em;
+  background: #333;
+}
+.sig-dark:before,
+.sig-dark:after {
+  content: "";
+  display: table;
+}
+.sig-dark:after {
+  clear: both;
+}
+.sig-dark .logo,
+.sig-dark .wordmark,
+.sig-dark .unit {
+  margin: 0;
+}
+.sig-dark .logo a {
+  display: block;
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-position: left 0;
+  background-repeat: no-repeat;
+}
+.sig-dark .wordmark a {
+  display: block;
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-position: left 0;
+  background-repeat: no-repeat;
+}
+.sig-dark .unit a {
+  display: block;
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-position: left 0;
+  background-repeat: no-repeat;
+}
+.sig-dark .logo a {
+  width: 66px;
+  height: 74px;
+  background-image: url('../images/mizzou-logo-64-stroked.svg');
+  float: left;
+  margin-left: -1px;
+}
+@media print {
+  .sig-dark .logo a {
+    position: relative;
+    background: none;
+  }
+  .sig-dark .logo a:after {
+    content: url("../images/mizzou-logo-64.svg");
+    text-indent: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.sig-dark .wordmark,
+.sig-dark .unit {
+  margin-left: 85px;
+}
+.sig-dark .wordmark {
+  padding-left: 2px;
+}
+.sig-dark .wordmark a {
+  width: 243px;
+  height: 26px;
+  background-image: url('../images/wordmark-64-white.svg');
+}
+@media print {
+  .sig-dark .wordmark a {
+    position: relative;
+    background: none;
+  }
+  .sig-dark .wordmark a:after {
+    content: url("../images/wordmark-64.svg");
+    text-indent: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.sig-dark .wordmark a:hover,
+.sig-dark .wordmark a:focus,
+.sig-dark .wordmark a:active {
+  background-position: left -26px;
+}
+.sig-dark .unit a {
+  width: 404px;
+  height: 57px;
+  background-image: url('../images/unit-name-white_64.svg');
+}
+.sig-dark .unit a:hover,
+.sig-dark .unit a:focus,
+.sig-dark .unit a:active {
+  background-position: left -57px;
+}
+@media print {
+  .sig-dark .unit a {
+    position: relative;
+    background: none;
+  }
+  .sig-dark .unit a:after {
+    content: url("../images/unit-name-white_64.svg");
+    text-indent: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.sig-gold {
+  padding: 1.5em;
+  background: #f1b82d;
+}
+.sig-gold:before,
+.sig-gold:after {
+  content: "";
+  display: table;
+}
+.sig-gold:after {
+  clear: both;
+}
+.sig-gold .logo,
+.sig-gold .wordmark,
+.sig-gold .unit {
+  margin: 0;
+}
+.sig-gold .logo a {
+  display: block;
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-position: left 0;
+  background-repeat: no-repeat;
+}
+.sig-gold .wordmark a {
+  display: block;
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-position: left 0;
+  background-repeat: no-repeat;
+}
+.sig-gold .unit a {
+  display: block;
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-position: left 0;
+  background-repeat: no-repeat;
+}
+.sig-gold .logo a,
+.sig-gold .wordmark a,
+.sig-gold .unit a {
+  margin-left: auto;
+  margin-right: auto;
+}
+.sig-gold .logo a {
+  width: 34px;
+  height: 38px;
+  background-image: url('../images/mizzou-logo-32.svg');
+  margin-bottom: 11px;
+}
+@media print {
+  .sig-gold .logo a {
+    position: relative;
+    background: none;
+  }
+  .sig-gold .logo a:after {
+    content: url("../images/mizzou-logo-32.svg");
+    text-indent: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.sig-gold .unit {
+  margin-bottom: 5px;
+}
+.sig-gold .wordmark a {
+  width: 149px;
+  height: 16px;
+  background-image: url('../images/wordmark-32.svg');
+}
+@media print {
+  .sig-gold .wordmark a {
+    position: relative;
+    background: none;
+  }
+  .sig-gold .wordmark a:after {
+    content: url("../images/wordmark-32.svg");
+    text-indent: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.sig-gold .wordmark a:hover,
+.sig-gold .wordmark a:focus,
+.sig-gold .wordmark a:active {
+  background-position: left -16px;
+}
+.sig-gold .unit a {
+  width: 194px;
+  height: 27px;
+  background-image: url('../images/unit-name_32.svg');
+}
+.sig-gold .unit a:hover,
+.sig-gold .unit a:focus,
+.sig-gold .unit a:active {
+  background-position: left -27px;
+}
+@media print {
+  .sig-gold .unit a {
+    position: relative;
+    background: none;
+  }
+  .sig-gold .unit a:after {
+    content: url("../images/unit-name_32.svg");
+    text-indent: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.ie:before,
+.ie:after {
+  content: "";
+  display: table;
+}
+.ie:after {
+  clear: both;
+}
+.ie .logo,
+.ie .wordmark,
+.ie .unit {
+  margin: 0;
+}
+.ie .logo a {
+  display: block;
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-position: left 0;
+  background-repeat: no-repeat;
+}
+.ie .wordmark a {
+  display: block;
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-position: left 0;
+  background-repeat: no-repeat;
+}
+.ie .unit a {
+  display: block;
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-position: left 0;
+  background-repeat: no-repeat;
+}
+.ie .logo a {
+  width: 66px;
+  height: 74px;
+  background-image: url('../images/mizzou-logo-64.svg');
+  float: left;
+  margin-left: -1px;
+}
+@media print {
+  .ie .logo a {
+    position: relative;
+    background: none;
+  }
+  .ie .logo a:after {
+    content: url("../images/mizzou-logo-64.svg");
+    text-indent: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.ie .wordmark,
+.ie .unit {
+  margin-left: 85px;
+}
+.ie .wordmark a {
+  width: 243px;
+  height: 26px;
+  background-image: url('../images/wordmark-64.svg');
+}
+@media print {
+  .ie .wordmark a {
+    position: relative;
+    background: none;
+  }
+  .ie .wordmark a:after {
+    content: url("../images/wordmark-64.svg");
+    text-indent: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.ie .wordmark a:hover,
+.ie .wordmark a:focus,
+.ie .wordmark a:active {
+  background-position: left -26px;
+}
+.ie .unit a {
+  width: 404px;
+  height: 57px;
+  background-image: url('../images/unit-name_64.svg');
+}
+.ie .unit a:hover,
+.ie .unit a:focus,
+.ie .unit a:active {
+  background-position: left -57px;
+}
+@media print {
+  .ie .unit a {
+    position: relative;
+    background: none;
+  }
+  .ie .unit a:after {
+    content: url("../images/unit-name_64.svg");
+    text-indent: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.font-examples {
+  padding: 16px;
+  padding: 1rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  border: solid 0px #edebd5;
+  background-color: #f5f2f0;
+  overflow: auto;
+}
+.font-examples *:last-child {
+  margin-bottom: 0!important;
+}
+.font-examples h3 {
+  font-size: 16px;
+  font-size: 1rem;
+  margin-bottom: 0;
+  font-weight: 300;
+}
+.font-examples p {
+  letter-spacing: 1px;
+  font-size: 32px;
+  font-size: 2rem;
+}
+h2.display {
+  font-size: 40px;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-top: 32px;
+  margin-top: 2rem;
+  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
+}
+.serif {
+  font-family: "Janson", "Times New Roman", Times, serif;
+}
+.serif-sc {
+  font-family: "Janson-SC", "Janson", "Times New Roman", Times, serif;
+}
+.sans {
+  font-family: "Proxima Nova", "Arial", sans-serif;
+}
+.monospace {
+  font-family: "Menlo", "Consolas", "Courier New", monospace;
+}
+.thin {
+  font-weight: 200;
+}
+.light {
+  font-weight: 300;
+}
+.normal {
+  font-weight: 400;
+}
+.medium {
+  font-weight: 500;
+}
+.bold {
+  font-weight: 600;
+}
+.xbold {
+  font-weight: 700;
+}
+.black {
+  font-weight: 800;
+}
+.examples-wrapper {
+  padding: 16px;
+  padding: 1rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  border: solid 0px #edebd5;
+  background-color: #f5f2f0;
+  padding: 0;
+  margin: 2em 0;
+}
+.examples-wrapper *:last-child {
+  margin-bottom: 0!important;
+}
+.color-block {
+  float: left;
+  width: 33.33333333%;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 32px;
+  margin-bottom: 2rem;
+}
+.color-block.wide {
+  float: left;
+  width: 50%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.color-block.wide span {
+  height: 160px;
+  height: 10rem;
+}
+.color-block span {
+  width: 100%;
+  height: 128px;
+  height: 8rem;
+  display: block;
+  margin-bottom: 4.8px;
+  margin-bottom: 0.3rem;
+}
+.color-block figcaption {
+  font-weight: normal;
+  padding: 16px 4px;
+  padding: 1rem 0.25rem;
+}
+.color-block figcaption p {
+  margin: 0;
+  font-size: 12.8px;
+  font-size: 0.8rem;
+  font-family: "Menlo", "Consolas", "Courier New", monospace;
+  color: #900000;
+  text-align: center;
+}
+.color-block .gold {
+  background: #f1b82d;
+}
+.color-block .black {
+  background: #000;
+}
+.color-block .gold-lightest {
+  background: #fcf1d4;
+}
+.color-block .gold-lighter {
+  background: #fae5b3;
+}
+.color-block .gold-light {
+  background: #f7d583;
+}
+.color-block .gold-dark {
+  background: #d39a0e;
+}
+.color-block .gold-darker {
+  background: #ad7e0b;
+}
+.color-block .accent {
+  background: #900000;
+}
+.color-block .accent-light {
+  background: #ffecec;
+}
+.color-block .accent2 {
+  background: #318fd7;
+}
+.color-block .accent2-light {
+  background: #e4f1fa;
+}
+.color-block .accent3 {
+  background: #69901d;
+}
+.color-block .accent3-light {
+  background: #e9f6d0;
+}
+.color-block .grey-darker {
+  background: #222222;
+}
+.color-block .grey-dark {
+  background: #444444;
+}
+.color-block .grey {
+  background: #666666;
+}
+.color-block .grey-light {
+  background: #999999;
+}
+.color-block .grey-lighter {
+  background: #cccccc;
+}
+.color-block .grey-lightest {
+  background: #eeeeee;
+}
+.color-block .tan-dark {
+  background: #cac8b5;
+}
+.color-block .tan {
+  background: #edebd5;
+}
+.color-block .tan-light {
+  background: #f5f2f0;
+}
+.basic {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: #cac8b5;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+.basic:before,
+.basic:after {
+  content: "";
+  display: table;
+}
+.basic:after {
+  clear: both;
+}
+.basic p {
+  margin-bottom: 0;
+  background-color: #edebd5;
+  padding: 16px;
+  padding: 1rem;
+}
+.basic article {
+  float: left;
+  width: 66.66666667%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.basic aside {
+  float: left;
+  width: 33.33333333%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.push-pull {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: #cac8b5;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+.push-pull:before,
+.push-pull:after {
+  content: "";
+  display: table;
+}
+.push-pull:after {
+  clear: both;
+}
+.push-pull p {
+  margin-bottom: 0;
+  background-color: #edebd5;
+  padding: 16px;
+  padding: 1rem;
+}
+.push-pull .push {
+  float: left;
+  width: 75%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-left: 25%;
+}
+.push-pull .pull {
+  float: left;
+  width: 75%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-right: 25%;
+}
+.header-layer,
+.content-layer,
+.footer-layer {
+  padding: 0px 16px;
+  padding: 0rem 1rem;
+}
+.header-layer p,
+.content-layer p,
+.footer-layer p {
+  margin-bottom: 0;
+  padding: 16px;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.header-wrapper,
+.content-wrapper,
+.footer-wrapper {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.header-wrapper:before,
+.content-wrapper:before,
+.footer-wrapper:before,
+.header-wrapper:after,
+.content-wrapper:after,
+.footer-wrapper:after {
+  content: "";
+  display: table;
+}
+.header-wrapper:after,
+.content-wrapper:after,
+.footer-wrapper:after {
+  clear: both;
+}
+.header-layer {
+  background-color: #444444;
+}
+.header-layer header {
+  float: left;
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.content-layer {
+  background-color: #edebd5;
+}
+.content-layer article {
+  float: left;
+  width: 66.66666667%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.content-layer aside {
+  float: left;
+  width: 33.33333333%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.footer-layer {
+  background-color: #444444;
+  margin-bottom: 32px;
+  margin-bottom: 2rem;
+}
+.footer-layer footer {
+  float: left;
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.nested {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: #cac8b5;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+.nested:before,
+.nested:after {
+  content: "";
+  display: table;
+}
+.nested:after {
+  clear: both;
+}
+.nested p {
+  margin-bottom: 0;
+  background-color: #edebd5;
+  padding: 16px;
+  padding: 1rem;
+}
+.nested article {
+  float: left;
+  width: 66.66666667%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.nested aside {
+  float: left;
+  width: 33.33333333%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.nested .one-fourth {
+  float: left;
+  width: 25%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.nested .one-half {
+  float: left;
+  width: 50%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.nested .one-whole {
+  float: left;
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+/* @group Mixins */
+.box-example {
+  padding: 24px;
+  padding: 1.5rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  border: solid 1px #f1b82d;
+  background-color: #fcf1d4;
+}
+.box-example *:last-child {
+  margin-bottom: 0!important;
+}
+.center-me {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 300px;
+  min-width: 150px;
+  padding: 16px;
+  padding: 1rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  border: solid 0px #edebd5;
+  background-color: #f5f2f0;
+  width: 50%;
+}
+.center-me *:last-child {
+  margin-bottom: 0!important;
+}
+.img-replace-example {
+  display: block;
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  padding: 0;
+  width: 64px;
+  height: 72px;
+  background-image: url("../images/mizzou-logo-64.svg");
+}
+/* !Layout Styles */
+.main-content {
+  position: relative;
+  margin-left: 320px;
+  margin-left: 20rem;
+  max-width: 1200px;
+  min-width: 600px;
+  padding: 32px;
+  padding: 2rem;
+}
+.styleguide-nav {
+  width: 320px;
+  width: 20rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+/* !Nav Styles */
+.styleguide-nav {
+  background-color: #444444;
+  color: #eeeeee;
+  padding-top: 32px;
+  padding-top: 2rem;
+  text-align: center;
+}
+.styleguide-nav a {
+  color: #eeeeee;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+}
+.styleguide-nav a:hover,
+.styleguide-nav a:focus {
+  color: #f1b82d;
+}
+.styleguide-nav .signature {
+  padding: 0px 24px;
+  padding: 0rem 1.5rem;
+}
+.styleguide-nav .signature:before,
+.styleguide-nav .signature:after {
+  content: "";
+  display: table;
+}
+.styleguide-nav .signature:after {
+  clear: both;
+}
+.styleguide-nav .signature .logo,
+.styleguide-nav .signature .wordmark,
+.styleguide-nav .signature .unit {
+  margin: 0;
+}
+.styleguide-nav .signature .logo a {
+  display: block;
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-position: left 0;
+  background-repeat: no-repeat;
+}
+.styleguide-nav .signature .wordmark a {
+  display: block;
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-position: left 0;
+  background-repeat: no-repeat;
+}
+.styleguide-nav .signature .unit a {
+  display: block;
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-position: left 0;
+  background-repeat: no-repeat;
+}
+.styleguide-nav .signature .logo a,
+.styleguide-nav .signature .wordmark a,
+.styleguide-nav .signature .unit a {
+  margin-left: auto;
+  margin-right: auto;
+}
+.styleguide-nav .signature .logo a {
+  width: 34px;
+  height: 38px;
+  background-image: url('../images/mizzou-logo-32-stroked.svg');
+  margin-bottom: 11px;
+}
+@media print {
+  .styleguide-nav .signature .logo a {
+    position: relative;
+    background: none;
+  }
+  .styleguide-nav .signature .logo a:after {
+    content: url("../images/mizzou-logo-32.svg");
+    text-indent: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.styleguide-nav .signature .unit {
+  margin-bottom: 6px;
+}
+.styleguide-nav .signature .wordmark a {
+  width: 149px;
+  height: 16px;
+  background-image: url('../images/wordmark-32-white.svg');
+}
+@media print {
+  .styleguide-nav .signature .wordmark a {
+    position: relative;
+    background: none;
+  }
+  .styleguide-nav .signature .wordmark a:after {
+    content: url("../images/wordmark-32.svg");
+    text-indent: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.styleguide-nav .signature .wordmark a:hover,
+.styleguide-nav .signature .wordmark a:focus,
+.styleguide-nav .signature .wordmark a:active {
+  background-position: left -16px;
+}
+.styleguide-nav .signature .unit a {
+  width: 202px;
+  height: 27px;
+  background-image: url('../images/mizzou-framework_32.svg');
+}
+.styleguide-nav .signature .unit a:hover,
+.styleguide-nav .signature .unit a:focus,
+.styleguide-nav .signature .unit a:active {
+  background-position: left -27px;
+}
+@media print {
+  .styleguide-nav .signature .unit a {
+    position: relative;
+    background: none;
+  }
+  .styleguide-nav .signature .unit a:after {
+    content: url("../images/mizzou-framework_32.svg");
+    text-indent: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.styleguide-nav .signature .wordmark {
+  border-bottom: solid 1px #f1b82d;
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+}
+.styleguide-nav ol {
+  padding: 0px 0px 48px;
+  padding: 0rem 0rem 3rem;
+  margin: 0;
+  list-style: none;
+}
+.styleguide-nav ol a {
+  display: block;
+  line-height: 1.2;
+  font-size: 16px;
+  font-size: 1rem;
+  padding: 4px 24px 4px 24px;
+  padding: 0.25rem 1.5rem 0.25rem 1.5rem;
+}
+.styleguide-nav ol li.active a {
+  color: #f1b82d;
+}
+.section-nav {
+  margin: 0px 0px 24px;
+  margin: 0rem 0rem 1.5rem;
+  max-width: 1200px;
+}
+.section-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: block;
+  margin-left: 1px;
+}
+.section-nav ul:before,
+.section-nav ul:after {
+  content: "";
+  display: table;
+}
+.section-nav ul:after {
+  clear: both;
+}
+.section-nav ul li {
+  display: inline;
+}
+.section-nav ul a {
+  text-decoration: none;
+  display: block;
+  float: left;
+  padding: 8px 16px;
+  padding: 0.5rem 1rem;
+  color: #666666;
+  font-size: 14.4px;
+  font-size: 0.9rem;
+  line-height: 1;
+  background-color: #f5f2f0;
+  border: solid 1px #edebd5;
+  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
+  margin-right: 8px;
+  margin-right: 0.5rem;
+  border-radius: 3px;
+}
+.section-nav ul a:hover,
+.section-nav ul a:focus {
+  color: #900000;
+  background-color: #edebd5;
+}
+/* !Content Structure */
+footer.styleguide-footer {
+  margin-top: 64px;
+  margin-top: 4rem;
+  padding-top: 24px;
+  padding-top: 1.5rem;
+  border-top: solid 1px #f1b82d;
+  clear: both;
+}
+h1.styleguide-h1 {
+  color: #d39a0e;
+  margin: 0px 0px 16px;
+  margin: 0rem 0rem 1rem;
+  font-size: 56px;
+  font-size: 3.5rem;
+}
+h1[id] {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 25.6px;
+  font-size: 1.6rem;
+  color: #900000;
+  margin: 64px 0px 24px;
+  margin: 4rem 0rem 1.5rem;
+}
+.styleguide-block {
+  margin: 80px 0px;
+  margin: 5rem 0rem;
+}
+.styleguide-block:before,
+.styleguide-block:after {
+  content: "";
+  display: table;
+}
+.styleguide-block:after {
+  clear: both;
+}
+.styleguide-block h1 {
+  margin-top: 0;
+}
+/* !Source Code Styles */
+.codeExample,
+.codeBlock,
+.exampleOutput {
+  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
+}
+.exampleOutput {
+  padding: 16px;
+  padding: 1rem;
+  border: solid 1px #edebd5;
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+.exampleOutput:before,
+.exampleOutput:after {
+  content: "";
+  display: table;
+}
+.exampleOutput:after {
+  clear: both;
+}
