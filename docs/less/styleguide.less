@@ -60,8 +60,16 @@ styleguide-nav-wrap {
         }
     }    
     .signature {
-        .sig();
-        .sig-options(@sig-size: "32", @logo-style: "stroked", @wordmark-color: "white", @print: "yes", @center: "yes", @unit-margin: 6px, @unit-width: 202px, @unit-height: 27px, @unit-img: "mizzou-framework_32.svg");
+        .mu-unit-sig(
+            @logo-size: "32", 
+            @wordmark-color: "white", 
+            @print: "yes", 
+            @center: "yes", 
+            @unit-margin: 6px, 
+            @unit-width: 202px, 
+            @unit-height: 27px, 
+            @unit-img: "mizzou-framework_32.svg"
+        );
         .rem(padding, 0, 1.5);  
         
         .wordmark {

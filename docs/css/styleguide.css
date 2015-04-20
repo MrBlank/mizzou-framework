@@ -2296,20 +2296,14 @@ hll { background-color: #ffffcc }
 * Author:          Josh Nichols, MU Web Communications
   
 --------------------------------------------------------------*/
-.sig-default:before,
-.sig-default:after {
-  content: "";
-  display: table;
-}
-.sig-default:after {
-  clear: both;
-}
-.sig-default .logo,
-.sig-default .wordmark,
-.sig-default .unit {
+.sig-default-example .logo,
+.sig-default-example .wordmark,
+.sig-default-example .unit {
   margin: 0;
 }
-.sig-default .logo a {
+.sig-default-example .logo a,
+.sig-default-example .wordmark a,
+.sig-default-example .unit a {
   display: block;
   text-indent: 120%;
   white-space: nowrap;
@@ -2317,74 +2311,52 @@ hll { background-color: #ffffcc }
   padding: 0;
   background-position: left 0;
   background-repeat: no-repeat;
+  margin: 0;
 }
-.sig-default .wordmark a {
-  display: block;
-  text-indent: 120%;
-  white-space: nowrap;
-  overflow: hidden;
-  padding: 0;
-  background-position: left 0;
-  background-repeat: no-repeat;
-}
-.sig-default .unit a {
-  display: block;
-  text-indent: 120%;
-  white-space: nowrap;
-  overflow: hidden;
-  padding: 0;
-  background-position: left 0;
-  background-repeat: no-repeat;
-}
-.sig-default .logo a {
+.sig-default-example .logo a {
   width: 50px;
   height: 56px;
-  background-image: url('../images/mizzou-logo-48.svg');
+  background-image: url('../images/mizzou-logo-48-stroked.svg');
   float: left;
   margin-left: -1px;
+  margin-right: 0;
 }
-.sig-default .wordmark,
-.sig-default .unit {
+.sig-default-example .wordmark,
+.sig-default-example .unit {
   margin-left: 64px;
 }
-.sig-default .wordmark a {
+.sig-default-example .wordmark a {
   width: 183px;
   height: 20px;
   background-image: url('../images/wordmark-48.svg');
 }
-.sig-default .wordmark a:hover,
-.sig-default .wordmark a:focus,
-.sig-default .wordmark a:active {
+.sig-default-example .wordmark a:hover,
+.sig-default-example .wordmark a:focus,
+.sig-default-example .wordmark a:active {
   background-position: left -20px;
 }
-.sig-default .unit a {
+.sig-default-example .unit a {
   width: 284px;
   height: 40px;
   background-image: url('../images/unit-name_48.svg');
 }
-.sig-default .unit a:hover,
-.sig-default .unit a:focus,
-.sig-default .unit a:active {
+.sig-default-example .unit a:hover,
+.sig-default-example .unit a:focus,
+.sig-default-example .unit a:active {
   background-position: left -40px;
 }
-.sig-dark {
+.sig-dark-example {
   padding: 1.5em;
   background: #333;
 }
-.sig-dark:before,
-.sig-dark:after {
-  content: "";
-  display: table;
-}
-.sig-dark:after {
-  clear: both;
-}
-.sig-dark .logo,
-.sig-dark .wordmark,
-.sig-dark .unit {
+.sig-dark-example .logo,
+.sig-dark-example .wordmark,
+.sig-dark-example .unit {
   margin: 0;
 }
-.sig-dark .logo a {
+.sig-dark-example .logo a,
+.sig-dark-example .wordmark a,
+.sig-dark-example .unit a {
   display: block;
   text-indent: 120%;
   white-space: nowrap;
@@ -2392,39 +2364,23 @@ hll { background-color: #ffffcc }
   padding: 0;
   background-position: left 0;
   background-repeat: no-repeat;
+  margin: 0;
 }
-.sig-dark .wordmark a {
-  display: block;
-  text-indent: 120%;
-  white-space: nowrap;
-  overflow: hidden;
-  padding: 0;
-  background-position: left 0;
-  background-repeat: no-repeat;
-}
-.sig-dark .unit a {
-  display: block;
-  text-indent: 120%;
-  white-space: nowrap;
-  overflow: hidden;
-  padding: 0;
-  background-position: left 0;
-  background-repeat: no-repeat;
-}
-.sig-dark .logo a {
+.sig-dark-example .logo a {
   width: 66px;
   height: 74px;
   background-image: url('../images/mizzou-logo-64-stroked.svg');
   float: left;
   margin-left: -1px;
+  margin-right: 0;
 }
 @media print {
-  .sig-dark .logo a {
+  .sig-dark-example .logo a {
     position: relative;
     background: none;
   }
-  .sig-dark .logo a:after {
-    content: url("../images/mizzou-logo-64.svg");
+  .sig-dark-example .logo a:after {
+    content: url('../images/mizzou-logo-64.svg');
     text-indent: 0;
     display: block;
     position: absolute;
@@ -2432,25 +2388,25 @@ hll { background-color: #ffffcc }
     left: 0;
   }
 }
-.sig-dark .wordmark,
-.sig-dark .unit {
+.sig-dark-example .wordmark,
+.sig-dark-example .unit {
   margin-left: 85px;
 }
-.sig-dark .wordmark {
+.sig-dark-example .wordmark {
   padding-left: 2px;
 }
-.sig-dark .wordmark a {
+.sig-dark-example .wordmark a {
   width: 243px;
   height: 26px;
   background-image: url('../images/wordmark-64-white.svg');
 }
 @media print {
-  .sig-dark .wordmark a {
+  .sig-dark-example .wordmark a {
     position: relative;
     background: none;
   }
-  .sig-dark .wordmark a:after {
-    content: url("../images/wordmark-64.svg");
+  .sig-dark-example .wordmark a:after {
+    content: url('../images/wordmark-64.svg');
     text-indent: 0;
     display: block;
     position: absolute;
@@ -2458,28 +2414,28 @@ hll { background-color: #ffffcc }
     left: 0;
   }
 }
-.sig-dark .wordmark a:hover,
-.sig-dark .wordmark a:focus,
-.sig-dark .wordmark a:active {
+.sig-dark-example .wordmark a:hover,
+.sig-dark-example .wordmark a:focus,
+.sig-dark-example .wordmark a:active {
   background-position: left -26px;
 }
-.sig-dark .unit a {
+.sig-dark-example .unit a {
   width: 404px;
   height: 57px;
   background-image: url('../images/unit-name-white_64.svg');
 }
-.sig-dark .unit a:hover,
-.sig-dark .unit a:focus,
-.sig-dark .unit a:active {
+.sig-dark-example .unit a:hover,
+.sig-dark-example .unit a:focus,
+.sig-dark-example .unit a:active {
   background-position: left -57px;
 }
 @media print {
-  .sig-dark .unit a {
+  .sig-dark-example .unit a {
     position: relative;
     background: none;
   }
-  .sig-dark .unit a:after {
-    content: url("../images/unit-name-white_64.svg");
+  .sig-dark-example .unit a:after {
+    content: url('../images/unit-name-white_64.svg');
     text-indent: 0;
     display: block;
     position: absolute;
@@ -2487,24 +2443,18 @@ hll { background-color: #ffffcc }
     left: 0;
   }
 }
-.sig-gold {
+.sig-gold-responsive-example {
   padding: 1.5em;
   background: #f1b82d;
 }
-.sig-gold:before,
-.sig-gold:after {
-  content: "";
-  display: table;
-}
-.sig-gold:after {
-  clear: both;
-}
-.sig-gold .logo,
-.sig-gold .wordmark,
-.sig-gold .unit {
+.sig-gold-responsive-example .logo,
+.sig-gold-responsive-example .wordmark,
+.sig-gold-responsive-example .unit {
   margin: 0;
 }
-.sig-gold .logo a {
+.sig-gold-responsive-example .logo a,
+.sig-gold-responsive-example .wordmark a,
+.sig-gold-responsive-example .unit a {
   display: block;
   text-indent: 120%;
   white-space: nowrap;
@@ -2512,44 +2462,23 @@ hll { background-color: #ffffcc }
   padding: 0;
   background-position: left 0;
   background-repeat: no-repeat;
-}
-.sig-gold .wordmark a {
-  display: block;
-  text-indent: 120%;
-  white-space: nowrap;
-  overflow: hidden;
-  padding: 0;
-  background-position: left 0;
-  background-repeat: no-repeat;
-}
-.sig-gold .unit a {
-  display: block;
-  text-indent: 120%;
-  white-space: nowrap;
-  overflow: hidden;
-  padding: 0;
-  background-position: left 0;
-  background-repeat: no-repeat;
-}
-.sig-gold .logo a,
-.sig-gold .wordmark a,
-.sig-gold .unit a {
   margin-left: auto;
   margin-right: auto;
 }
-.sig-gold .logo a {
+.sig-gold-responsive-example .logo a {
   width: 34px;
   height: 38px;
-  background-image: url('../images/mizzou-logo-32.svg');
+  background-image: url('../images/mizzou-logo-32-stroked.svg');
+  float: none;
   margin-bottom: 11px;
 }
 @media print {
-  .sig-gold .logo a {
+  .sig-gold-responsive-example .logo a {
     position: relative;
     background: none;
   }
-  .sig-gold .logo a:after {
-    content: url("../images/mizzou-logo-32.svg");
+  .sig-gold-responsive-example .logo a:after {
+    content: url('../images/mizzou-logo-32.svg');
     text-indent: 0;
     display: block;
     position: absolute;
@@ -2557,21 +2486,25 @@ hll { background-color: #ffffcc }
     left: 0;
   }
 }
-.sig-gold .unit {
+.sig-gold-responsive-example .wordmark,
+.sig-gold-responsive-example .unit {
+  margin-left: 0;
+}
+.sig-gold-responsive-example .unit {
   margin-bottom: 5px;
 }
-.sig-gold .wordmark a {
+.sig-gold-responsive-example .wordmark a {
   width: 149px;
   height: 16px;
   background-image: url('../images/wordmark-32.svg');
 }
 @media print {
-  .sig-gold .wordmark a {
+  .sig-gold-responsive-example .wordmark a {
     position: relative;
     background: none;
   }
-  .sig-gold .wordmark a:after {
-    content: url("../images/wordmark-32.svg");
+  .sig-gold-responsive-example .wordmark a:after {
+    content: url('../images/wordmark-32.svg');
     text-indent: 0;
     display: block;
     position: absolute;
@@ -2579,28 +2512,28 @@ hll { background-color: #ffffcc }
     left: 0;
   }
 }
-.sig-gold .wordmark a:hover,
-.sig-gold .wordmark a:focus,
-.sig-gold .wordmark a:active {
+.sig-gold-responsive-example .wordmark a:hover,
+.sig-gold-responsive-example .wordmark a:focus,
+.sig-gold-responsive-example .wordmark a:active {
   background-position: left -16px;
 }
-.sig-gold .unit a {
+.sig-gold-responsive-example .unit a {
   width: 194px;
   height: 27px;
   background-image: url('../images/unit-name_32.svg');
 }
-.sig-gold .unit a:hover,
-.sig-gold .unit a:focus,
-.sig-gold .unit a:active {
+.sig-gold-responsive-example .unit a:hover,
+.sig-gold-responsive-example .unit a:focus,
+.sig-gold-responsive-example .unit a:active {
   background-position: left -27px;
 }
 @media print {
-  .sig-gold .unit a {
+  .sig-gold-responsive-example .unit a {
     position: relative;
     background: none;
   }
-  .sig-gold .unit a:after {
-    content: url("../images/unit-name_32.svg");
+  .sig-gold-responsive-example .unit a:after {
+    content: url('../images/unit-name_32.svg');
     text-indent: 0;
     display: block;
     position: absolute;
@@ -2608,20 +2541,68 @@ hll { background-color: #ffffcc }
     left: 0;
   }
 }
-.ie:before,
-.ie:after {
-  content: "";
-  display: table;
+@media screen and (max-width: 850px) {
+  .sig-gold-responsive-example .logo,
+  .sig-gold-responsive-example .wordmark,
+  .sig-gold-responsive-example .unit {
+    margin: 0;
+  }
+  .sig-gold-responsive-example .logo a,
+  .sig-gold-responsive-example .wordmark a,
+  .sig-gold-responsive-example .unit a {
+    display: block;
+    text-indent: 120%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    background-position: left 0;
+    background-repeat: no-repeat;
+    margin: 0;
+  }
+  .sig-gold-responsive-example .logo a {
+    width: 34px;
+    height: 38px;
+    background-image: url('../images/mizzou-logo-32-stroked.svg');
+    float: left;
+    margin-left: -1px;
+    margin-right: 0;
+  }
+  .sig-gold-responsive-example .wordmark,
+  .sig-gold-responsive-example .unit {
+    margin-left: 43px;
+  }
+  .sig-gold-responsive-example .unit {
+    margin-bottom: 5px;
+  }
+  .sig-gold-responsive-example .wordmark a {
+    width: 149px;
+    height: 16px;
+    background-image: url('../images/wordmark-32.svg');
+  }
+  .sig-gold-responsive-example .wordmark a:hover,
+  .sig-gold-responsive-example .wordmark a:focus,
+  .sig-gold-responsive-example .wordmark a:active {
+    background-position: left -16px;
+  }
+  .sig-gold-responsive-example .unit a {
+    width: 194px;
+    height: 27px;
+    background-image: url('../images/unit-name_32.svg');
+  }
+  .sig-gold-responsive-example .unit a:hover,
+  .sig-gold-responsive-example .unit a:focus,
+  .sig-gold-responsive-example .unit a:active {
+    background-position: left -27px;
+  }
 }
-.ie:after {
-  clear: both;
-}
-.ie .logo,
-.ie .wordmark,
-.ie .unit {
+.sig-ie-example .logo,
+.sig-ie-example .wordmark,
+.sig-ie-example .unit {
   margin: 0;
 }
-.ie .logo a {
+.sig-ie-example .logo a,
+.sig-ie-example .wordmark a,
+.sig-ie-example .unit a {
   display: block;
   text-indent: 120%;
   white-space: nowrap;
@@ -2629,39 +2610,23 @@ hll { background-color: #ffffcc }
   padding: 0;
   background-position: left 0;
   background-repeat: no-repeat;
+  margin: 0;
 }
-.ie .wordmark a {
-  display: block;
-  text-indent: 120%;
-  white-space: nowrap;
-  overflow: hidden;
-  padding: 0;
-  background-position: left 0;
-  background-repeat: no-repeat;
-}
-.ie .unit a {
-  display: block;
-  text-indent: 120%;
-  white-space: nowrap;
-  overflow: hidden;
-  padding: 0;
-  background-position: left 0;
-  background-repeat: no-repeat;
-}
-.ie .logo a {
+.sig-ie-example .logo a {
   width: 66px;
   height: 74px;
-  background-image: url('../images/mizzou-logo-64.svg');
+  background-image: url('../images/mizzou-logo-64-stroked.svg');
   float: left;
   margin-left: -1px;
+  margin-right: 0;
 }
 @media print {
-  .ie .logo a {
+  .sig-ie-example .logo a {
     position: relative;
     background: none;
   }
-  .ie .logo a:after {
-    content: url("../images/mizzou-logo-64.svg");
+  .sig-ie-example .logo a:after {
+    content: url('../images/mizzou-logo-64.svg');
     text-indent: 0;
     display: block;
     position: absolute;
@@ -2669,22 +2634,22 @@ hll { background-color: #ffffcc }
     left: 0;
   }
 }
-.ie .wordmark,
-.ie .unit {
+.sig-ie-example .wordmark,
+.sig-ie-example .unit {
   margin-left: 85px;
 }
-.ie .wordmark a {
+.sig-ie-example .wordmark a {
   width: 243px;
   height: 26px;
   background-image: url('../images/wordmark-64.svg');
 }
 @media print {
-  .ie .wordmark a {
+  .sig-ie-example .wordmark a {
     position: relative;
     background: none;
   }
-  .ie .wordmark a:after {
-    content: url("../images/wordmark-64.svg");
+  .sig-ie-example .wordmark a:after {
+    content: url('../images/wordmark-64.svg');
     text-indent: 0;
     display: block;
     position: absolute;
@@ -2692,28 +2657,28 @@ hll { background-color: #ffffcc }
     left: 0;
   }
 }
-.ie .wordmark a:hover,
-.ie .wordmark a:focus,
-.ie .wordmark a:active {
+.sig-ie-example .wordmark a:hover,
+.sig-ie-example .wordmark a:focus,
+.sig-ie-example .wordmark a:active {
   background-position: left -26px;
 }
-.ie .unit a {
+.sig-ie-example .unit a {
   width: 404px;
   height: 57px;
   background-image: url('../images/unit-name_64.svg');
 }
-.ie .unit a:hover,
-.ie .unit a:focus,
-.ie .unit a:active {
+.sig-ie-example .unit a:hover,
+.sig-ie-example .unit a:focus,
+.sig-ie-example .unit a:active {
   background-position: left -57px;
 }
 @media print {
-  .ie .unit a {
+  .sig-ie-example .unit a {
     position: relative;
     background: none;
   }
-  .ie .unit a:after {
-    content: url("../images/unit-name_64.svg");
+  .sig-ie-example .unit a:after {
+    content: url('../images/unit-name_64.svg');
     text-indent: 0;
     display: block;
     position: absolute;
@@ -3174,49 +3139,21 @@ h2.display {
   padding: 0px 24px;
   padding: 0rem 1.5rem;
 }
-.styleguide-nav .signature:before,
-.styleguide-nav .signature:after {
-  content: "";
-  display: table;
-}
-.styleguide-nav .signature:after {
-  clear: both;
-}
 .styleguide-nav .signature .logo,
 .styleguide-nav .signature .wordmark,
 .styleguide-nav .signature .unit {
   margin: 0;
 }
-.styleguide-nav .signature .logo a {
-  display: block;
-  text-indent: 120%;
-  white-space: nowrap;
-  overflow: hidden;
-  padding: 0;
-  background-position: left 0;
-  background-repeat: no-repeat;
-}
-.styleguide-nav .signature .wordmark a {
-  display: block;
-  text-indent: 120%;
-  white-space: nowrap;
-  overflow: hidden;
-  padding: 0;
-  background-position: left 0;
-  background-repeat: no-repeat;
-}
-.styleguide-nav .signature .unit a {
-  display: block;
-  text-indent: 120%;
-  white-space: nowrap;
-  overflow: hidden;
-  padding: 0;
-  background-position: left 0;
-  background-repeat: no-repeat;
-}
 .styleguide-nav .signature .logo a,
 .styleguide-nav .signature .wordmark a,
 .styleguide-nav .signature .unit a {
+  display: block;
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-position: left 0;
+  background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
 }
@@ -3224,6 +3161,7 @@ h2.display {
   width: 34px;
   height: 38px;
   background-image: url('../images/mizzou-logo-32-stroked.svg');
+  float: none;
   margin-bottom: 11px;
 }
 @media print {
@@ -3232,13 +3170,17 @@ h2.display {
     background: none;
   }
   .styleguide-nav .signature .logo a:after {
-    content: url("../images/mizzou-logo-32.svg");
+    content: url('../images/mizzou-logo-32.svg');
     text-indent: 0;
     display: block;
     position: absolute;
     top: 0;
     left: 0;
   }
+}
+.styleguide-nav .signature .wordmark,
+.styleguide-nav .signature .unit {
+  margin-left: 0;
 }
 .styleguide-nav .signature .unit {
   margin-bottom: 6px;
@@ -3254,7 +3196,7 @@ h2.display {
     background: none;
   }
   .styleguide-nav .signature .wordmark a:after {
-    content: url("../images/wordmark-32.svg");
+    content: url('../images/wordmark-32.svg');
     text-indent: 0;
     display: block;
     position: absolute;
@@ -3283,7 +3225,7 @@ h2.display {
     background: none;
   }
   .styleguide-nav .signature .unit a:after {
-    content: url("../images/mizzou-framework_32.svg");
+    content: url('../images/mizzou-framework_32.svg');
     text-indent: 0;
     display: block;
     position: absolute;

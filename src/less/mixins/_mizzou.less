@@ -16,49 +16,11 @@
 
 //! Mizzou Signature 
 
-// Default general styles
-
-.sig() {
-    .clearfix();
-    
-    .logo,
-    .wordmark,
-    .unit {
-        margin: 0;
-    }
-    
-    .logo {
-        
-        a {
-            .img-replace();
-            background-position: left 0;
-            background-repeat: no-repeat;
-        }
-    }
-    .wordmark { 
-        
-        a {
-            .img-replace();
-            background-position: left 0;
-            background-repeat: no-repeat;
-            // Sizing and background image is custom to each site. Add these in your stylesheet.
-        }
-    }
-    .unit {
-        
-        a {
-            .img-replace();
-            background-position: left 0;
-            background-repeat: no-repeat;
-        }
-    }
-}
-
 // Options
 
-.sig-options (
-    @sig-size:          "48", 
-    @logo-style:        "none", 
+.mu-unit-sig (
+    @logo-size:         "48", 
+    @logo-style:        "stroked", 
     @wordmark-color:    "black", 
     @wordmark-indent:   0, 
     @print:             "no", 
@@ -67,18 +29,33 @@
     @unit-width, 
     @unit-height, 
     @unit-img
-    ) {
-       
-    & when (@sig-size = "32") {
+    ){
+    
+    .logo,
+    .wordmark,
+    .unit {
+        margin: 0;
+    }
+    
+    .logo a,
+    .wordmark a,
+    .unit a {
         
-        .logo a,
-        .wordmark a,
-        .unit a {
-            & when (@center = "yes") {
-                margin-left: auto;
-                margin-right: auto;
-            }
+        .img-replace();
+        background-position: left 0;
+        background-repeat: no-repeat;
+        
+        & when (@center = "no") {
+            margin: 0;
         }
+        & when (@center = "yes") {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+       
+    & when (@logo-size = "32") {
+        
         .logo a { 
             width: 34px;
             height: 38px;
@@ -95,8 +72,10 @@
             & when (@center = "no") {
                 float: left;
                 margin-left: -1px;
+                margin-right: 0;
             }
             & when (@center = "yes") {
+                float: none;
                 margin-bottom: 11px; // Clear space
             }
         }
@@ -104,6 +83,9 @@
         .unit {
             & when (@center = "no") {
                 margin-left: 43px; // 11px clear
+            }
+            & when (@center = "yes") {
+                margin-left: 0;    
             }
         } 
         .wordmark { 
@@ -154,16 +136,8 @@
         }
     }
     
-    & when (@sig-size = "48") { // Defualt
-        
-        .logo a,
-        .wordmark a,
-        .unit a {
-            & when (@center = "yes") {
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
+    & when (@logo-size = "48") { // Default
+
         .logo a { 
             width: 50px;
             height: 56px;
@@ -180,8 +154,10 @@
             & when (@center = "no") {
                 float: left;
                 margin-left: -1px;
+                margin-right: 0;
             }
             & when (@center = "yes") {
+                float: none;
                 margin-bottom: 16px; // Clear space
             }
         }
@@ -189,6 +165,9 @@
         .unit {
             & when (@center = "no") {
                 margin-left: 64px; // 16px clear
+            }
+            & when (@center = "yes") {
+                margin-left: 0;    
             }
         }
         .wordmark {
@@ -238,16 +217,8 @@
         }        
     }
     
-    & when (@sig-size = "64") {
-        
-        .logo a,
-        .wordmark a,
-        .unit a {
-            & when (@center = "yes") {
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
+    & when (@logo-size = "64") {
+
         .logo a { 
             width: 66px;
             height: 74px;
@@ -264,8 +235,10 @@
             & when (@center = "no") {
                 float: left;
                 margin-left: -1px;
+                margin-right: 0;
             }
             & when (@center = "yes") {
+                float: none;
                 margin-bottom: 21px; // Clear space
             }
         }
@@ -273,6 +246,9 @@
         .unit {
             & when (@center = "no") {
                 margin-left: 85px; // 21px clear
+            }
+            & when (@center = "yes") {
+                margin-left: 0;    
             }
         }
         .wordmark {
@@ -332,7 +308,7 @@
         background: none;
         
         &:after {
-            content: url("@{img}");
+            content: url('@{img}');
             text-indent: 0;
             display: block;
             position: absolute;
@@ -349,21 +325,17 @@ title: Unit Signature Mixin
 name: 03_unit-sig_01
 category: Unit Signatures
 ---
-The `.sig()` mixin sets the base styles for all signatures.
-
-The `.sig-options()` mixin has a set of variables that can be passed to it to define size, 
+The `.mu-unit-sig()` mixin has a set of variables that can be passed to it to define size, 
 style and printing options. This is also useful in resetting options for media queries. 
-The `.sig()` mixin does not need to be reset.
-
-These are the options:
+Below are the mixin options.
 
 ```
-@sig-size:          "64" // Default 
-@sig-size:          "48"
-@sig-size:          "32"
+@logo-size:          "64" // Default 
+@logo-size:          "48"
+@logo-size:          "32"
 
-@logo-style:        "none" // Default 
-@logo-style:        "stroked"
+@logo-style:        "stroked" // Default 
+@logo-style:        "none"
 
 @wordmark-color:    "black" // Default 
 @wordmark-color:    "white"
@@ -382,9 +354,7 @@ These are the options:
 
 ```
 These unit variables set the options for the custom unit name image. Every site will 
-have a unique unit name. Images for these are not part of the framework. 
-
-**All three variables are required.**
+have a unique unit name. Images for these are not part of the framework. **All three variables are required.**
 
 ```
 @unit-width:        100px // Use px units
@@ -402,51 +372,84 @@ name: 03_unit-sig_02
 category: Unit Signatures
 ---
 
+## Default example
+
 ```html_example
-<div class="sig-default">
+<div class="sig-default-example">
     <p class="logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
-    <h1 class="unit"><a href="http://missouri.edu">Of&#64257;ce of Programs</a></h1>
+    <h1 class="unit"><a href="http://missouri.edu">Office of Programs</a></h1>
     <h2 class="wordmark"><a href="http://missouri.edu">University of Missouri</a></h2>
 </div>
 ```
 ```
-.sig-default {
-    .sig();
-    .sig-options(@unit-width: 284px, @unit-height: 40px, @unit-img: "unit-name_48.svg");
+.sig-default-example {
+    .mu-unit-sig(
+        @unit-width: 284px, 
+        @unit-height: 40px, 
+        @unit-img: "unit-name_48.svg"
+    );
 }
 ```
+## Dark background example with options
+
 The MU logo with a stroke around it should be used on signatures with a dark background.
 
 ```html_example
-<div class="sig-dark">
+<div class="sig-dark-example">
     <p class="logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
-    <h1 class="unit"><a href="http://missouri.edu">Of&#64257;ce of Programs</a></h1>
+    <h1 class="unit"><a href="http://missouri.edu">Office of Programs</a></h1>
     <h2 class="wordmark"><a href="http://missouri.edu">University of Missouri</a></h2>
 </div>
 ```
 ```
-.sig-dark {
+.sig-dark-example {
     padding: 1.5em;
     background: #333;
-    .sig();
-    .sig-options(@sig-size: "64", @logo-style: "stroked", @wordmark-color: "white", @wordmark-indent: 2px, @print: "yes", @unit-width: 404px, @unit-height: 57px, @unit-img: "unit-name-white_64.svg");
+    .mu-unit-sig(
+        @logo-size: "64", 
+        @wordmark-color: "white", 
+        @wordmark-indent: 2px, 
+        @print: "yes", 
+        @unit-width: 404px, 
+        @unit-height: 57px, 
+        @unit-img: "unit-name-white_64.svg"
+    );
 }
 ```
 
+## Gold example with media query change
+
 ```html_example
-<div class="sig-gold">
+<div class="sig-gold-responsive-example">
     <p class="logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
-    <h1 class="unit"><a href="http://missouri.edu">Of&#64257;ce of Programs</a></h1>
+    <h1 class="unit"><a href="http://missouri.edu">Office of Programs</a></h1>
     <h2 class="wordmark"><a href="http://missouri.edu">University of Missouri</a></h2>
 </div>
 ```
 ```
-.sig-gold {
+.sig-gold-responsive-example {
     padding: 1.5em;
     background: @gold;
-    .sig();
-    .sig-options(@sig-size: "32", @print: "yes", @center: "yes", @unit-margin: 5px, @unit-width: 194px, @unit-height: 27px, @unit-img: "unit-name_32.svg");
-} 
+    .mu-unit-sig(
+        @logo-size: "32", 
+        @print: "yes", 
+        @center: "yes", 
+        @unit-margin: 5px, 
+        @unit-width: 194px, 
+        @unit-height: 27px, 
+        @unit-img: "unit-name_32.svg"
+    );
+    
+    @media screen and (max-width: 850px){
+        .mu-unit-sig(
+            @logo-size: "32", 
+            @unit-margin: 5px, 
+            @unit-width: 194px, 
+            @unit-height: 27px, 
+            @unit-img: "unit-name_32.svg"
+        );
+    }
+}  
 ```
 
 */

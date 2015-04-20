@@ -31,11 +31,11 @@
   
 --------------------------------------------------------------*/
 .ie .logo a {
-  background-image: url('../images/mizzou-logo-64.png');
+  background-image: url('../images/mizzou-logo-64-stroked.png');
 }
 @media print {
   .ie .logo a:after {
-    content: url("../images/mizzou-logo-64.png");
+    content: url('../images/mizzou-logo-64.png');
   }
 }
 .ie .wordmark a {
@@ -43,7 +43,7 @@
 }
 @media print {
   .ie .wordmark a:after {
-    content: url("../images/wordmark-64.png");
+    content: url('../images/wordmark-64.png');
   }
 }
 .ie .unit a {
@@ -54,7 +54,7 @@
 }
 @media print {
   .signature .logo a:after {
-    content: url("../images/mizzou-logo-32.png");
+    content: url('../images/mizzou-logo-32.png');
   }
 }
 .signature .wordmark a {
@@ -62,7 +62,7 @@
 }
 @media print {
   .signature .wordmark a:after {
-    content: url("../images/wordmark-32.png");
+    content: url('../images/wordmark-32.png');
   }
 }
 .signature .unit a {

@@ -13,15 +13,15 @@
 
 // Mizzou Logo - PNG fallbacks
     
-.sig-options-ie (
-    @sig-size: "48", 
-    @logo-style: "none", 
+.mu-unit-sig-ie (
+    @logo-size: "48", 
+    @logo-style: "stroked",
     @wordmark-color: "black", 
     @print: "no", 
     @unit-img
     ) {
        
-    & when (@sig-size = "32") {
+    & when (@logo-size = "32") {
         
         .logo a { 
             
@@ -53,7 +53,7 @@
         }
     }
     
-    & when (@sig-size = "48") { // Defualt
+    & when (@logo-size = "48") { // Defualt
         
         .logo a { 
             
@@ -84,7 +84,7 @@
         }       
     }
     
-    & when (@sig-size = "64") {
+    & when (@logo-size = "64") {
         
         .logo a { 
             
@@ -123,7 +123,7 @@
     @media print {
         
         &:after {
-            content: url("@{img}");
+            content: url('@{img}');
         }   
     }
 }
@@ -135,17 +135,14 @@ name: 03_unit-sig_10
 category: Unit Signatures
 ---
 
-There are PNG fallback mixins for browsers that do not support SVG images. When needed, use the 
-`.sig-options-ie()` mixin in your IE specific stylesheet to override the SVG image with a PNG version. 
+There is a PNG fallback mixin for browsers that do not support SVG images. When needed, use the 
+`.mu-unit-sig-ie()` mixin in your IE specific stylesheet to override the SVG image with a PNG version. 
 
-`.sig-options-ie()` must be used in conjunction with the `.sig()` and `.sig-options()` mixins 
-and uses some of the same variables set in `.sig-options()`.
-
-
-These must be set again if used in `.sig-options()`.
+`.mu-unit-sig-ie()` must be used in conjunction with the `.mu-unit-sig()`. The variables below must be 
+set again if used in `.mu-unit-sig()`.
 
 ```
-@sig-size 
+@logo-size 
 @logo-style 
 @wordmark-color 
 @print
@@ -154,21 +151,30 @@ These must be set again if used in `.sig-options()`.
 ```
 
 ```html_example
-<div class="ie">
+<div class="sig-ie-example">
     <p class="logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
     <h1 class="unit"><a href="http://missouri.edu">Of&#64257;ce of Programs</a></h1>
     <h2 class="wordmark"><a href="http://missouri.edu">University of Missouri</a></h2>
 </div>
 ```
 ```
-.ie {
-    .sig(); 
-    .sig-options(@sig-size: "64", @print: "yes", @unit-width: 404px, @unit-height: 57px, @unit-img: "unit-name_64.svg");
+.sig-ie-example {
+    .mu-unit-sig(
+        @logo-size: "64", 
+        @print: "yes", 
+        @unit-width: 404px, 
+        @unit-height: 57px, 
+        @unit-img: "unit-name_64.svg"
+    );
 }
  
-// Override for IE8 in your IE8 stylesheet
-.ie {
-    .sig-options-ie(@sig-size: "64", @print: "yes", @unit-img: "unit-name_64.png"); 
+// Override for IE8 only stylesheet
+.sig-ie-example {
+    .mu-unit-sig-ie(
+        @logo-size: "64", 
+        @print: "yes", 
+        @unit-img: "unit-name_64.png"
+    ); 
 }
 ```
 */

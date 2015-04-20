@@ -44,16 +44,16 @@
         
         
     <a id="content"></a><h1 id="03_unit-sig_01" class="styleguide">Unit Signature Mixin</h1>
-<p class="styleguide">The <code class="styleguide">.sig()</code> mixin sets the base styles for all signatures.</p><p class="styleguide">The <code class="styleguide">.sig-options()</code> mixin has a set of variables that can be passed to it to define size, 
+<p class="styleguide">The <code class="styleguide">.mu-unit-sig()</code> mixin has a set of variables that can be passed to it to define size, 
 style and printing options. This is also useful in resetting options for media queries. 
-The <code class="styleguide">.sig()</code> mixin does not need to be reset.</p><p class="styleguide">These are the options:</p><div class="codeBlock">
+Below are the mixin options.</p><div class="codeBlock">
   <div class="highlight">
-    <pre>@sig-size:          "64" // Default 
-@sig-size:          "48"
-@sig-size:          "32"
+    <pre>@logo-size:          "64" // Default 
+@logo-size:          "48"
+@logo-size:          "32"
 
-@logo-style:        "none" // Default 
-@logo-style:        "stroked"
+@logo-style:        "stroked" // Default 
+@logo-style:        "none"
 
 @wordmark-color:    "black" // Default 
 @wordmark-color:    "white"
@@ -71,7 +71,7 @@ The <code class="styleguide">.sig()</code> mixin does not need to be reset.</p><
 @unit-margin:       2px // Use a unit value to add bottom margin to unit name</pre>
   </div>
 </div><p class="styleguide">These unit variables set the options for the custom unit name image. Every site will 
-have a unique unit name. Images for these are not part of the framework. </p><p class="styleguide"><strong>All three variables are required.</strong></p><div class="codeBlock">
+have a unique unit name. Images for these are not part of the framework. <strong>All three variables are required.</strong></p><div class="codeBlock">
   <div class="highlight">
     <pre>@unit-width:        100px // Use px units
 @unit-height:       25px
@@ -79,20 +79,22 @@ have a unique unit name. Images for these are not part of the framework. </p><p 
   </div>
 </div>
 <h1 id="03_unit-sig_02" class="styleguide">Unit Signature Examples</h1>
+
+<h2>Default example</h2>
 <div class="codeExample">
   <div class="exampleOutput">
-    <div class="sig-default">
+    <div class="sig-default-example">
     <p class="logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
-    <h1 class="unit"><a href="http://missouri.edu">Of&#64257;ce of Programs</a></h1>
+    <h1 class="unit"><a href="http://missouri.edu">Office of Programs</a></h1>
     <h2 class="wordmark"><a href="http://missouri.edu">University of Missouri</a></h2>
 </div>
 
   </div>
   <div class="codeBlock">
     <div class="highlight">
-      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sig-default"</span><span class="nt">&gt;</span>
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sig-default-example"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"logo"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://missouri.edu"</span><span class="nt">&gt;</span>Mizzou Logo<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
-    <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"unit"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://missouri.edu"</span><span class="nt">&gt;</span>Of<span class="ni">&amp;#64257;</span>ce of Programs<span class="nt">&lt;/a&gt;&lt;/h1&gt;</span>
+    <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"unit"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://missouri.edu"</span><span class="nt">&gt;</span>Office of Programs<span class="nt">&lt;/a&gt;&lt;/h1&gt;</span>
     <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"wordmark"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://missouri.edu"</span><span class="nt">&gt;</span>University of Missouri<span class="nt">&lt;/a&gt;&lt;/h2&gt;</span>
 <span class="nt">&lt;/div&gt;</span></pre>
     </div>
@@ -100,25 +102,30 @@ have a unique unit name. Images for these are not part of the framework. </p><p 
 </div>
 <div class="codeBlock">
   <div class="highlight">
-    <pre>.sig-default {
-    .sig();
-    .sig-options(@unit-width: 284px, @unit-height: 40px, @unit-img: "unit-name_48.svg");
+    <pre>.sig-default-example {
+    .mu-unit-sig(
+        @unit-width: 284px, 
+        @unit-height: 40px, 
+        @unit-img: "unit-name_48.svg"
+    );
 }</pre>
   </div>
-</div><p class="styleguide">The MU logo with a stroke around it should be used on signatures with a dark background.</p><div class="codeExample">
+</div>
+<h2>Dark background example with options</h2>
+<p class="styleguide">The MU logo with a stroke around it should be used on signatures with a dark background.</p><div class="codeExample">
   <div class="exampleOutput">
-    <div class="sig-dark">
+    <div class="sig-dark-example">
     <p class="logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
-    <h1 class="unit"><a href="http://missouri.edu">Of&#64257;ce of Programs</a></h1>
+    <h1 class="unit"><a href="http://missouri.edu">Office of Programs</a></h1>
     <h2 class="wordmark"><a href="http://missouri.edu">University of Missouri</a></h2>
 </div>
 
   </div>
   <div class="codeBlock">
     <div class="highlight">
-      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sig-dark"</span><span class="nt">&gt;</span>
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sig-dark-example"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"logo"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://missouri.edu"</span><span class="nt">&gt;</span>Mizzou Logo<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
-    <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"unit"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://missouri.edu"</span><span class="nt">&gt;</span>Of<span class="ni">&amp;#64257;</span>ce of Programs<span class="nt">&lt;/a&gt;&lt;/h1&gt;</span>
+    <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"unit"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://missouri.edu"</span><span class="nt">&gt;</span>Office of Programs<span class="nt">&lt;/a&gt;&lt;/h1&gt;</span>
     <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"wordmark"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://missouri.edu"</span><span class="nt">&gt;</span>University of Missouri<span class="nt">&lt;/a&gt;&lt;/h2&gt;</span>
 <span class="nt">&lt;/div&gt;</span></pre>
     </div>
@@ -126,27 +133,36 @@ have a unique unit name. Images for these are not part of the framework. </p><p 
 </div>
 <div class="codeBlock">
   <div class="highlight">
-    <pre>.sig-dark {
+    <pre>.sig-dark-example {
     padding: 1.5em;
     background: #333;
-    .sig();
-    .sig-options(@sig-size: "64", @logo-style: "stroked", @wordmark-color: "white", @wordmark-indent: 2px, @print: "yes", @unit-width: 404px, @unit-height: 57px, @unit-img: "unit-name-white_64.svg");
+    .mu-unit-sig(
+        @logo-size: "64", 
+        @wordmark-color: "white", 
+        @wordmark-indent: 2px, 
+        @print: "yes", 
+        @unit-width: 404px, 
+        @unit-height: 57px, 
+        @unit-img: "unit-name-white_64.svg"
+    );
 }</pre>
   </div>
-</div><div class="codeExample">
+</div>
+<h2>Gold example with media query change</h2>
+<div class="codeExample">
   <div class="exampleOutput">
-    <div class="sig-gold">
+    <div class="sig-gold-responsive-example">
     <p class="logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
-    <h1 class="unit"><a href="http://missouri.edu">Of&#64257;ce of Programs</a></h1>
+    <h1 class="unit"><a href="http://missouri.edu">Office of Programs</a></h1>
     <h2 class="wordmark"><a href="http://missouri.edu">University of Missouri</a></h2>
 </div>
 
   </div>
   <div class="codeBlock">
     <div class="highlight">
-      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sig-gold"</span><span class="nt">&gt;</span>
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sig-gold-responsive-example"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"logo"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://missouri.edu"</span><span class="nt">&gt;</span>Mizzou Logo<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
-    <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"unit"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://missouri.edu"</span><span class="nt">&gt;</span>Of<span class="ni">&amp;#64257;</span>ce of Programs<span class="nt">&lt;/a&gt;&lt;/h1&gt;</span>
+    <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"unit"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://missouri.edu"</span><span class="nt">&gt;</span>Office of Programs<span class="nt">&lt;/a&gt;&lt;/h1&gt;</span>
     <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"wordmark"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://missouri.edu"</span><span class="nt">&gt;</span>University of Missouri<span class="nt">&lt;/a&gt;&lt;/h2&gt;</span>
 <span class="nt">&lt;/div&gt;</span></pre>
     </div>
@@ -154,20 +170,37 @@ have a unique unit name. Images for these are not part of the framework. </p><p 
 </div>
 <div class="codeBlock">
   <div class="highlight">
-    <pre>.sig-gold {
+    <pre>.sig-gold-responsive-example {
     padding: 1.5em;
     background: @gold;
-    .sig();
-    .sig-options(@sig-size: "32", @print: "yes", @center: "yes", @unit-margin: 5px, @unit-width: 194px, @unit-height: 27px, @unit-img: "unit-name_32.svg");
+    .mu-unit-sig(
+        @logo-size: "32", 
+        @print: "yes", 
+        @center: "yes", 
+        @unit-margin: 5px, 
+        @unit-width: 194px, 
+        @unit-height: 27px, 
+        @unit-img: "unit-name_32.svg"
+    );
+
+    @media screen and (max-width: 850px){
+        .mu-unit-sig(
+            @logo-size: "32", 
+            @unit-margin: 5px, 
+            @unit-width: 194px, 
+            @unit-height: 27px, 
+            @unit-img: "unit-name_32.svg"
+        );
+    }
 }</pre>
   </div>
 </div>
 <h1 id="03_unit-sig_10" class="styleguide">Unit Signature IE8 Fallback</h1>
-<p class="styleguide">There are PNG fallback mixins for browsers that do not support SVG images. When needed, use the 
-<code class="styleguide">.sig-options-ie()</code> mixin in your IE specific stylesheet to override the SVG image with a PNG version. </p><p class="styleguide"><code class="styleguide">.sig-options-ie()</code> must be used in conjunction with the <code class="styleguide">.sig()</code> and <code class="styleguide">.sig-options()</code> mixins 
-and uses some of the same variables set in <code class="styleguide">.sig-options()</code>.</p><p class="styleguide">These must be set again if used in <code class="styleguide">.sig-options()</code>.</p><div class="codeBlock">
+<p class="styleguide">There is a PNG fallback mixin for browsers that do not support SVG images. When needed, use the 
+<code class="styleguide">.mu-unit-sig-ie()</code> mixin in your IE specific stylesheet to override the SVG image with a PNG version. </p><p class="styleguide"><code class="styleguide">.mu-unit-sig-ie()</code> must be used in conjunction with the <code class="styleguide">.mu-unit-sig()</code>. The variables below must be 
+set again if used in <code class="styleguide">.mu-unit-sig()</code>.</p><div class="codeBlock">
   <div class="highlight">
-    <pre>@sig-size 
+    <pre>@logo-size 
 @logo-style 
 @wordmark-color 
 @print
@@ -175,7 +208,7 @@ and uses some of the same variables set in <code class="styleguide">.sig-options
   </div>
 </div><div class="codeExample">
   <div class="exampleOutput">
-    <div class="ie">
+    <div class="sig-ie-example">
     <p class="logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
     <h1 class="unit"><a href="http://missouri.edu">Of&#64257;ce of Programs</a></h1>
     <h2 class="wordmark"><a href="http://missouri.edu">University of Missouri</a></h2>
@@ -184,7 +217,7 @@ and uses some of the same variables set in <code class="styleguide">.sig-options
   </div>
   <div class="codeBlock">
     <div class="highlight">
-      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ie"</span><span class="nt">&gt;</span>
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sig-ie-example"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"logo"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://missouri.edu"</span><span class="nt">&gt;</span>Mizzou Logo<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
     <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"unit"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://missouri.edu"</span><span class="nt">&gt;</span>Of<span class="ni">&amp;#64257;</span>ce of Programs<span class="nt">&lt;/a&gt;&lt;/h1&gt;</span>
     <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"wordmark"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://missouri.edu"</span><span class="nt">&gt;</span>University of Missouri<span class="nt">&lt;/a&gt;&lt;/h2&gt;</span>
@@ -194,14 +227,23 @@ and uses some of the same variables set in <code class="styleguide">.sig-options
 </div>
 <div class="codeBlock">
   <div class="highlight">
-    <pre>.ie {
-    .sig(); 
-    .sig-options(@sig-size: "64", @print: "yes", @unit-width: 404px, @unit-height: 57px, @unit-img: "unit-name_64.svg");
+    <pre>.sig-ie-example {
+    .mu-unit-sig(
+        @logo-size: "64", 
+        @print: "yes", 
+        @unit-width: 404px, 
+        @unit-height: 57px, 
+        @unit-img: "unit-name_64.svg"
+    );
 }
 
-// Override for IE8 in your IE8 stylesheet
-.ie {
-    .sig-options-ie(@sig-size: "64", @print: "yes", @unit-img: "unit-name_64.png"); 
+// Override for IE8 only stylesheet
+.sig-ie-example {
+    .mu-unit-sig-ie(
+        @logo-size: "64", 
+        @print: "yes", 
+        @unit-img: "unit-name_64.png"
+    ); 
 }</pre>
   </div>
 </div>        <footer class="styleguide-footer">
@@ -224,12 +266,6 @@ and uses some of the same variables set in <code class="styleguide">.sig-options
                 
                     
                     <li><a href="introduction.html">Introduction</a></li>
-                    
-                    
-                
-                
-                    
-                    <li><a href="guidelines.html">Guidelines</a></li>
                     
                     
                 

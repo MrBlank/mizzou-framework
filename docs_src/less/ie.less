@@ -11,8 +11,18 @@
 
 .ie {
     // Override for IE8 
-    .sig-options-ie(@sig-size: "64", @print: "yes", @unit-img: "unit-name_64.png"); 
+    .mu-unit-sig-ie(
+        @logo-size: "64", 
+        @print: "yes", 
+        @unit-img: "unit-name_64.png"
+    ); 
 }
 .signature { 
-    .sig-options-ie(@sig-size: "32", @logo-style: "stroked", @wordmark-color: "white", @print: "yes", @unit-img: "mizzou-framework_32.svg");
+    .mu-unit-sig-ie(
+        @logo-size: "32", 
+        @logo-style: "stroked", 
+        @wordmark-color: "white", 
+        @print: "yes", 
+        @unit-img: "mizzou-framework_32.svg"
+    );
 }
