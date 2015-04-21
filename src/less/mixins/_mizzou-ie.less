@@ -11,76 +11,96 @@
   
 --------------------------------------------------------------*/
 
-// Mizzou Logo - PNG fallbacks
-    
-.mu-unit-sig-ie (
-    @logo-size: "48", 
-    @logo-style: "stroked",
-    @wordmark-color: "black", 
-    @print: "no", 
-    @unit-img
+//! MU Signatures - PNG fallback
+
+.mu-sig-ie (
+    @logo-size:         "32", 
+    @logo-style:        "stroked",
+    @wordmark-color:    "black", 
+    @print:             "no", 
     ) {
-       
-    & when (@logo-size = "32") {
+        
+    & when (@logo-size = "24") { // Defualt
         
         .logo a { 
             
             & when (@logo-style = "none") {
-                background-image: url('@{img-path}/mizzou-logo-32.png');
+                background-image: url('@{img-path}/mu-logo-24.png');
             }
             & when (@logo-style = "stroked") {
-                background-image: url('@{img-path}/mizzou-logo-32-stroked.png');
+                background-image: url('@{img-path}/mu-logo-24-stroked.png');
             }                
             & when ( @print = "yes" ) {
-                .print-image('@{img-path}/mizzou-logo-32.png');
+                .print-image('@{img-path}/mu-logo-24.png');
             }
         }
         .wordmark a {
             
             & when (@wordmark-color = "black") {
-                background-image: url('@{img-path}/wordmark-32.png');
+                background-image: url('@{img-path}/mu-wordmark-24.png');
             }
             & when (@wordmark-color = "white") {
-                background-image: url('@{img-path}/wordmark-32-white.png');
+                background-image: url('@{img-path}/mu-wordmark-24-white.png');
             }
             
             & when (@print = "yes") {
-                .print-image('@{img-path}/wordmark-32.png');
+                .print-image('@{img-path}/mu-wordmark-24.png');
             }
         }
-        .unit a {
-            background-image: url('@{img-path}/@{unit-img}');
-        }
     }
-    
-    & when (@logo-size = "48") { // Defualt
+    & when (@logo-size = "32") { // Defualt
         
         .logo a { 
             
             & when (@logo-style = "none") {
-                background-image: url('@{img-path}/mizzou-logo-48.png');
+                background-image: url('@{img-path}/mu-logo-32.png');
             }
             & when (@logo-style = "stroked") {
-                background-image: url('@{img-path}/mizzou-logo-48-stroked.png');
+                background-image: url('@{img-path}/mu-logo-32-stroked.png');
+            }                
+            & when ( @print = "yes" ) {
+                .print-image('@{img-path}/mu-logo-32.png');
+            }
+        }
+        .wordmark a {
+            
+            & when (@wordmark-color = "black") {
+                background-image: url('@{img-path}/mu-wordmark-32.png');
+            }
+            & when (@wordmark-color = "white") {
+                background-image: url('@{img-path}/mu-wordmark-32-white.png');
+            }
+            
+            & when (@print = "yes") {
+                .print-image('@{img-path}/mu-wordmark-32.png');
+            }
+        }
+    }
+    & when (@logo-size = "48") { 
+        
+        .logo a { 
+            
+            & when (@logo-style = "none") {
+                background-image: url('@{img-path}/mu-logo-48.png');
+            }
+            & when (@logo-style = "stroked") {
+                background-image: url('@{img-path}/mu-logo-48-stroked.png');
             }                
             & when (@print = "yes") {
-                .print-image('@{img-path}/mizzou-logo-48.png');
+                .print-image('@{img-path}/mu-logo-48.png');
             }
         }
         .wordmark a {
             
             & when (@wordmark-color = "black") { 
-                background-image: url('@{img-path}/wordmark-48.png');
+                background-image: url('@{img-path}/unit-wordmark-48.png');
             }
             & when (@wordmark-color = "white") { 
-                background-image: url('@{img-path}/wordmark-48-white.png');
+                background-image: url('@{img-path}/unit-wordmark-48-white.png');
             }
             & when (@print = "yes") {
-                .print-image('@{img-path}/wordmark-48.png');
+                .print-image('@{img-path}/unit-wordmark-48.png');
             }
-        } 
-        .unit a {
-            background-image: url('@{img-path}/@{unit-img}');
         }       
     }
     
@@ -89,29 +109,181 @@
         .logo a { 
             
             & when (@logo-style = "none") {
-                background-image: url('@{img-path}/mizzou-logo-64.png');
+                background-image: url('@{img-path}/mu-logo-64.png');
             }
             & when (@logo-style = "stroked") {
-                background-image: url('@{img-path}/mizzou-logo-64-stroked.png');
+                background-image: url('@{img-path}/mu-logo-64-stroked.png');
             }
             & when (@print = "yes") {
-                .print-image('@{img-path}/mizzou-logo-64.png');
+                .print-image('@{img-path}/mu-logo-64.png');
             }
         }
         .wordmark a {
             
             & when (@wordmark-color = "black") {
-                background-image: url('@{img-path}/wordmark-64.png');
+                background-image: url('@{img-path}/unit-wordmark-64.png');
             }
             & when (@wordmark-color = "white") {
-                background-image: url('@{img-path}/wordmark-64-white.png');
+                background-image: url('@{img-path}/unit-wordmark-64-white.png');
             }              
             & when (@print = "yes") {
-                .print-image('@{img-path}/wordmark-64.png');
+                .print-image('@{img-path}/unit-wordmark-64.png');
+            }
+        }
+    }
+    
+}
+
+
+
+/*doc
+---
+title: MU Signature IE8 Fallback 
+name: 03_mu-sig_10
+category: MU Signatures
+---
+
+There is a PNG fallback mixin for browsers that do not support SVG images. When needed, use the 
+`.mu-sig-ie()` mixin in your IE specific stylesheet to override the SVG image with a PNG version. 
+
+`.mu-sig-ie()` must be used in conjunction with the `.mu-sig()`. The variables below must be 
+set again if used in `.mu-sig()`.
+
+```
+@logo-size 
+@logo-style 
+@wordmark-color 
+@print
+
+```
+
+```html_example
+<div class="mu-sig-ie-example">
+    <p class="logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
+    <h1 class="wordmark"><a href="http://missouri.edu">University of Missouri</a></h1>
+</div>
+```
+```
+.mu-sig-ie-example {
+    .mu-sig(
+        @logo-size: "64", 
+        @print: "yes" 
+    );
+}
+ 
+// Override for IE8 only stylesheet
+.mu-sig-ie-example {
+    .mu-sig-ie(
+        @logo-size: "64", 
+        @print: "yes" 
+    ); 
+}
+```
+*/
+
+
+//! Unit Signatures - PNG fallbacks
+    
+.mu-unit-sig-ie (
+    @logo-size:         "48", 
+    @logo-style:        "stroked",
+    @wordmark-color:    "black", 
+    @print:             "no", 
+    @unit-img,
+    @unit-img-print:    @unit-img
+    ) {
+       
+    & when (@logo-size = "32") {
+        
+        .logo a { 
+            
+            & when (@logo-style = "none") {
+                background-image: url('@{img-path}/mu-logo-32.png');
+            }
+            & when (@logo-style = "stroked") {
+                background-image: url('@{img-path}/mu-logo-32-stroked.png');
+            }                
+            & when ( @print = "yes" ) {
+                .print-image('@{img-path}/mu-logo-32.png');
+            }
+        }
+        .wordmark a {
+            
+            & when (@wordmark-color = "black") {
+                background-image: url('@{img-path}/unit-wordmark-32.png');
+            }
+            & when (@wordmark-color = "white") {
+                background-image: url('@{img-path}/unit-wordmark-32-white.png');
+            }
+            
+            & when (@print = "yes") {
+                .print-image('@{img-path}/unit-wordmark-32.png');
             }
         }
         .unit a {
-            background-image: url('@{img-path}/@{unit-img}');
+            background-image: url('@{img-path}/@{unit-img-print}');
+        }
+    }
+    
+    & when (@logo-size = "48") { // Defualt
+        
+        .logo a { 
+            
+            & when (@logo-style = "none") {
+                background-image: url('@{img-path}/mu-logo-48.png');
+            }
+            & when (@logo-style = "stroked") {
+                background-image: url('@{img-path}/mu-logo-48-stroked.png');
+            }                
+            & when (@print = "yes") {
+                .print-image('@{img-path}/mu-logo-48.png');
+            }
+        }
+        .wordmark a {
+            
+            & when (@wordmark-color = "black") { 
+                background-image: url('@{img-path}/unit-wordmark-48.png');
+            }
+            & when (@wordmark-color = "white") { 
+                background-image: url('@{img-path}/unit-wordmark-48-white.png');
+            }
+            & when (@print = "yes") {
+                .print-image('@{img-path}/unit-wordmark-48.png');
+            }
+        } 
+        .unit a {
+            background-image: url('@{img-path}/@{unit-img-print}');
+        }       
+    }
+    
+    & when (@logo-size = "64") {
+        
+        .logo a { 
+            
+            & when (@logo-style = "none") {
+                background-image: url('@{img-path}/mu-logo-64.png');
+            }
+            & when (@logo-style = "stroked") {
+                background-image: url('@{img-path}/mu-logo-64-stroked.png');
+            }
+            & when (@print = "yes") {
+                .print-image('@{img-path}/mu-logo-64.png');
+            }
+        }
+        .wordmark a {
+            
+            & when (@wordmark-color = "black") {
+                background-image: url('@{img-path}/unit-wordmark-64.png');
+            }
+            & when (@wordmark-color = "white") {
+                background-image: url('@{img-path}/unit-wordmark-64-white.png');
+            }              
+            & when (@print = "yes") {
+                .print-image('@{img-path}/unit-wordmark-64.png');
+            }
+        }
+        .unit a {
+            background-image: url('@{img-path}/@{unit-img-print}');
         }
     }
 }    
@@ -147,6 +319,7 @@ set again if used in `.mu-unit-sig()`.
 @wordmark-color 
 @print
 @unit-img // Required
+@unit-img-print // Defaults to @unit-img
 
 ```
 
@@ -164,7 +337,7 @@ set again if used in `.mu-unit-sig()`.
         @print: "yes", 
         @unit-width: 404px, 
         @unit-height: 57px, 
-        @unit-img: "unit-name_64.svg"
+        @unit-img: "unit-name_64.svg",
     );
 }
  
@@ -173,7 +346,7 @@ set again if used in `.mu-unit-sig()`.
     .mu-unit-sig-ie(
         @logo-size: "64", 
         @print: "yes", 
-        @unit-img: "unit-name_64.png"
+        @unit-img: "unit-name_64.png",
     ); 
 }
 ```

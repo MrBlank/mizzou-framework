@@ -6,13 +6,52 @@
   
 --------------------------------------------------------------*/
 
+//! MU Signatures
+
+.mu-sig-default-example {
+    .mu-sig();
+}
+
+.mu-sig-dark-example {
+    padding: 1.5em;
+    background: #333;
+    .mu-sig(
+        @logo-size: "48",  
+        @wordmark-color: "white", 
+        @print: "yes" 
+    );
+}
+
+.mu-sig-gold-responsive-example {
+    padding: 1.5em;
+    background: @gold;
+    .mu-sig(
+        @logo-size: "32", 
+        @print: "yes", 
+        @center: "yes" 
+    );
+    
+    @media screen and (max-width: 850px){
+        .mu-sig(
+            @logo-size: "32", 
+        );
+    }
+} 
+
+.mu-sig-ie-example {
+    .mu-sig(
+        @logo-size: "64", 
+        @print: "yes" 
+    );
+}
+
 //! Mizzou Signatures
 
 .sig-default-example {
     .mu-unit-sig(
         @unit-width: 284px, 
         @unit-height: 40px, 
-        @unit-img: "unit-name_48.svg"
+        @unit-img: "unit-name_48.svg",
     );
 }
 
@@ -26,7 +65,8 @@
         @print: "yes", 
         @unit-width: 404px, 
         @unit-height: 57px, 
-        @unit-img: "unit-name-white_64.svg"
+        @unit-img: "unit-name-white_64.svg",
+        @unit-img-print: "unit-name_64.svg"
     );
 }
 
@@ -40,7 +80,7 @@
         @unit-margin: 5px, 
         @unit-width: 194px, 
         @unit-height: 27px, 
-        @unit-img: "unit-name_32.svg"
+        @unit-img: "unit-name_32.svg",
     );
     
     @media screen and (max-width: 850px){
@@ -49,7 +89,7 @@
             @unit-margin: 5px, 
             @unit-width: 194px, 
             @unit-height: 27px, 
-            @unit-img: "unit-name_32.svg"
+            @unit-img: "unit-name_32.svg",
         );
     }
 } 
@@ -60,7 +100,7 @@
         @print: "yes", 
         @unit-width: 404px, 
         @unit-height: 57px, 
-        @unit-img: "unit-name_64.svg"
+        @unit-img: "unit-name_64.svg",
     );
 }
 

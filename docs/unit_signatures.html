@@ -48,8 +48,8 @@
 style and printing options. This is also useful in resetting options for media queries. 
 Below are the mixin options.</p><div class="codeBlock">
   <div class="highlight">
-    <pre>@logo-size:          "64" // Default 
-@logo-size:          "48"
+    <pre>@logo-size:          "64" 
+@logo-size:          "48" // Default
 @logo-size:          "32"
 
 @logo-style:        "stroked" // Default 
@@ -70,12 +70,14 @@ Below are the mixin options.</p><div class="codeBlock">
 @unit-margin:       0 // Default
 @unit-margin:       2px // Use a unit value to add bottom margin to unit name</pre>
   </div>
-</div><p class="styleguide">These unit variables set the options for the custom unit name image. Every site will 
-have a unique unit name. Images for these are not part of the framework. <strong>All three variables are required.</strong></p><div class="codeBlock">
+</div><p class="styleguide">The unit variables below set the options for the custom unit name image. Every site will 
+have a unique unit name. Images for these are not part of the framework. <strong>All variables 
+Except <code class="styleguide">@unit-img-print</code> are required.</strong></p><div class="codeBlock">
   <div class="highlight">
     <pre>@unit-width:        100px // Use px units
 @unit-height:       25px
-@unit-image:        "image-file-name.svg" // Place image in images folder</pre>
+@unit-image:        "image-file-name.svg" // Place image in images folder
+@unit-img-print:    "image-file-name-print.svg" // Defaults to @unit-image</pre>
   </div>
 </div>
 <h1 id="03_unit-sig_02" class="styleguide">Unit Signature Examples</h1>
@@ -106,13 +108,13 @@ have a unique unit name. Images for these are not part of the framework. <strong
     .mu-unit-sig(
         @unit-width: 284px, 
         @unit-height: 40px, 
-        @unit-img: "unit-name_48.svg"
+        @unit-img: "unit-name_48.svg",
     );
 }</pre>
   </div>
 </div>
 <h2>Dark background example with options</h2>
-<p class="styleguide">The MU logo with a stroke around it should be used on signatures with a dark background.</p><div class="codeExample">
+<p class="styleguide">The MU logo with a stroke around it should be used on signatures with a colored background.</p><div class="codeExample">
   <div class="exampleOutput">
     <div class="sig-dark-example">
     <p class="logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
@@ -137,13 +139,14 @@ have a unique unit name. Images for these are not part of the framework. <strong
     padding: 1.5em;
     background: #333;
     .mu-unit-sig(
-        @logo-size: "64", 
+        @logo-size: "64",  
         @wordmark-color: "white", 
         @wordmark-indent: 2px, 
         @print: "yes", 
         @unit-width: 404px, 
         @unit-height: 57px, 
-        @unit-img: "unit-name-white_64.svg"
+        @unit-img: "unit-name-white_64.svg",
+        @unit-img-print: "unit-name_64.svg"
     );
 }</pre>
   </div>
@@ -180,7 +183,7 @@ have a unique unit name. Images for these are not part of the framework. <strong
         @unit-margin: 5px, 
         @unit-width: 194px, 
         @unit-height: 27px, 
-        @unit-img: "unit-name_32.svg"
+        @unit-img: "unit-name_32.svg",
     );
 
     @media screen and (max-width: 850px){
@@ -189,7 +192,7 @@ have a unique unit name. Images for these are not part of the framework. <strong
             @unit-margin: 5px, 
             @unit-width: 194px, 
             @unit-height: 27px, 
-            @unit-img: "unit-name_32.svg"
+            @unit-img: "unit-name_32.svg",
         );
     }
 }</pre>
@@ -204,7 +207,8 @@ set again if used in <code class="styleguide">.mu-unit-sig()</code>.</p><div cla
 @logo-style 
 @wordmark-color 
 @print
-@unit-img // Required</pre>
+@unit-img // Required
+@unit-img-print // Defaults to @unit-img</pre>
   </div>
 </div><div class="codeExample">
   <div class="exampleOutput">
@@ -233,7 +237,7 @@ set again if used in <code class="styleguide">.mu-unit-sig()</code>.</p><div cla
         @print: "yes", 
         @unit-width: 404px, 
         @unit-height: 57px, 
-        @unit-img: "unit-name_64.svg"
+        @unit-img: "unit-name_64.svg",
     );
 }
 
@@ -242,7 +246,7 @@ set again if used in <code class="styleguide">.mu-unit-sig()</code>.</p><div cla
     .mu-unit-sig-ie(
         @logo-size: "64", 
         @print: "yes", 
-        @unit-img: "unit-name_64.png"
+        @unit-img: "unit-name_64.png",
     ); 
 }</pre>
   </div>
@@ -266,6 +270,12 @@ set again if used in <code class="styleguide">.mu-unit-sig()</code>.</p><div cla
                 
                     
                     <li><a href="introduction.html">Introduction</a></li>
+                    
+                    
+                
+                
+                    
+                    <li><a href="mu_signatures.html">MU Signatures</a></li>
                     
                     
                 

@@ -30,39 +30,99 @@
     Autoprefixer - https://github.com/ai/autoprefixer
   
 --------------------------------------------------------------*/
-.ie .logo a {
-  background-image: url('../images/mizzou-logo-64-stroked.png');
+/*doc
+---
+title: MU Signature IE8 Fallback 
+name: 03_mu-sig_10
+category: MU Signatures
+---
+
+There is a PNG fallback mixin for browsers that do not support SVG images. When needed, use the 
+`.mu-sig-ie()` mixin in your IE specific stylesheet to override the SVG image with a PNG version. 
+
+`.mu-sig-ie()` must be used in conjunction with the `.mu-sig()`. The variables below must be 
+set again if used in `.mu-sig()`.
+
+```
+@logo-size 
+@logo-style 
+@wordmark-color 
+@print
+
+```
+
+```html_example
+<div class="mu-sig-ie-example">
+    <p class="logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
+    <h1 class="wordmark"><a href="http://missouri.edu">University of Missouri</a></h1>
+</div>
+```
+```
+.mu-sig-ie-example {
+    .mu-sig(
+        @logo-size: "64", 
+        @print: "yes" 
+    );
+}
+ 
+// Override for IE8 only stylesheet
+.mu-sig-ie-example {
+    .mu-sig-ie(
+        @logo-size: "64", 
+        @print: "yes" 
+    ); 
+}
+```
+*/
+.sig-ie-example .logo a {
+  background-image: url('../images/mu-logo-64-stroked.png');
 }
 @media print {
-  .ie .logo a:after {
-    content: url('../images/mizzou-logo-64.png');
+  .sig-ie-example .logo a:after {
+    content: url('../images/mu-logo-64.png');
   }
 }
-.ie .wordmark a {
-  background-image: url('../images/wordmark-64.png');
+.sig-ie-example .wordmark a {
+  background-image: url('../images/unit-wordmark-64.png');
 }
 @media print {
-  .ie .wordmark a:after {
-    content: url('../images/wordmark-64.png');
+  .sig-ie-example .wordmark a:after {
+    content: url('../images/unit-wordmark-64.png');
   }
 }
-.ie .unit a {
+.sig-ie-example .unit a {
   background-image: url('../images/unit-name_64.png');
 }
+.mu-sig-ie-example .logo a {
+  background-image: url('../images/mu-logo-64-stroked.png');
+}
+@media print {
+  .mu-sig-ie-example .logo a:after {
+    content: url('../images/mu-logo-64.png');
+  }
+}
+.mu-sig-ie-example .wordmark a {
+  background-image: url('../images/unit-wordmark-64.png');
+}
+@media print {
+  .mu-sig-ie-example .wordmark a:after {
+    content: url('../images/unit-wordmark-64.png');
+  }
+}
 .signature .logo a {
-  background-image: url('../images/mizzou-logo-32-stroked.png');
+  background-image: url('../images/mu-logo-32-stroked.png');
 }
 @media print {
   .signature .logo a:after {
-    content: url('../images/mizzou-logo-32.png');
+    content: url('../images/mu-logo-32.png');
   }
 }
 .signature .wordmark a {
-  background-image: url('../images/wordmark-32-white.png');
+  background-image: url('../images/unit-wordmark-32-white.png');
 }
 @media print {
   .signature .wordmark a:after {
-    content: url('../images/wordmark-32.png');
+    content: url('../images/unit-wordmark-32.png');
   }
 }
 .signature .unit a {

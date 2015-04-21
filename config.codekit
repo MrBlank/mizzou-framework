@@ -119,6 +119,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/docs\/mu_signatures.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/docs\/mu_signatures.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/docs\/print.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -224,6 +233,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/docs_src\/images\/mizzou-framework-white_32.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3321,
+		"inputAbbreviatedPath": "\/docs_src\/images\/mizzou-framework-white_32.png",
+		"outputAbbreviatedPath": "\/docs_src\/images\/mizzou-framework-white_32.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/docs_src\/images\/mizzou-framework_32.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -235,68 +255,178 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/docs_src\/images\/mizzou-logo-32-stroked.png": {
+	"\/docs_src\/images\/mu-logo-24-stroked.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 894,
-		"inputAbbreviatedPath": "\/docs_src\/images\/mizzou-logo-32-stroked.png",
-		"outputAbbreviatedPath": "\/docs_src\/images\/mizzou-logo-32-stroked.png",
+		"initialSize": 719,
+		"inputAbbreviatedPath": "\/docs_src\/images\/mu-logo-24-stroked.png",
+		"outputAbbreviatedPath": "\/docs_src\/images\/mu-logo-24-stroked.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/docs_src\/images\/mizzou-logo-32.png": {
+	"\/docs_src\/images\/mu-logo-24.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 567,
+		"inputAbbreviatedPath": "\/docs_src\/images\/mu-logo-24.png",
+		"outputAbbreviatedPath": "\/docs_src\/images\/mu-logo-24.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/docs_src\/images\/mu-logo-32-stroked.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 871,
+		"inputAbbreviatedPath": "\/docs_src\/images\/mu-logo-32-stroked.png",
+		"outputAbbreviatedPath": "\/docs_src\/images\/mu-logo-32-stroked.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/docs_src\/images\/mu-logo-32.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 683,
-		"inputAbbreviatedPath": "\/docs_src\/images\/mizzou-logo-32.png",
-		"outputAbbreviatedPath": "\/docs_src\/images\/mizzou-logo-32.png",
+		"inputAbbreviatedPath": "\/docs_src\/images\/mu-logo-32.png",
+		"outputAbbreviatedPath": "\/docs_src\/images\/mu-logo-32.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/docs_src\/images\/mizzou-logo-48-stroked.png": {
+	"\/docs_src\/images\/mu-logo-48-stroked.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 1232,
-		"inputAbbreviatedPath": "\/docs_src\/images\/mizzou-logo-48-stroked.png",
-		"outputAbbreviatedPath": "\/docs_src\/images\/mizzou-logo-48-stroked.png",
+		"initialSize": 1224,
+		"inputAbbreviatedPath": "\/docs_src\/images\/mu-logo-48-stroked.png",
+		"outputAbbreviatedPath": "\/docs_src\/images\/mu-logo-48-stroked.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/docs_src\/images\/mizzou-logo-48.png": {
+	"\/docs_src\/images\/mu-logo-48.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 1020,
-		"inputAbbreviatedPath": "\/docs_src\/images\/mizzou-logo-48.png",
-		"outputAbbreviatedPath": "\/docs_src\/images\/mizzou-logo-48.png",
+		"inputAbbreviatedPath": "\/docs_src\/images\/mu-logo-48.png",
+		"outputAbbreviatedPath": "\/docs_src\/images\/mu-logo-48.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/docs_src\/images\/mizzou-logo-64-stroked.png": {
+	"\/docs_src\/images\/mu-logo-64-stroked.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 1598,
-		"inputAbbreviatedPath": "\/docs_src\/images\/mizzou-logo-64-stroked.png",
-		"outputAbbreviatedPath": "\/docs_src\/images\/mizzou-logo-64-stroked.png",
+		"initialSize": 1579,
+		"inputAbbreviatedPath": "\/docs_src\/images\/mu-logo-64-stroked.png",
+		"outputAbbreviatedPath": "\/docs_src\/images\/mu-logo-64-stroked.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/docs_src\/images\/mizzou-logo-64.png": {
+	"\/docs_src\/images\/mu-logo-64.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 1298,
-		"inputAbbreviatedPath": "\/docs_src\/images\/mizzou-logo-64.png",
-		"outputAbbreviatedPath": "\/docs_src\/images\/mizzou-logo-64.png",
+		"inputAbbreviatedPath": "\/docs_src\/images\/mu-logo-64.png",
+		"outputAbbreviatedPath": "\/docs_src\/images\/mu-logo-64.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/docs_src\/images\/mu-wordmark-24-white.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2778,
+		"inputAbbreviatedPath": "\/docs_src\/images\/mu-wordmark-24-white.png",
+		"outputAbbreviatedPath": "\/docs_src\/images\/mu-wordmark-24-white.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/docs_src\/images\/mu-wordmark-24.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2601,
+		"inputAbbreviatedPath": "\/docs_src\/images\/mu-wordmark-24.png",
+		"outputAbbreviatedPath": "\/docs_src\/images\/mu-wordmark-24.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/docs_src\/images\/mu-wordmark-32-white.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3706,
+		"inputAbbreviatedPath": "\/docs_src\/images\/mu-wordmark-32-white.png",
+		"outputAbbreviatedPath": "\/docs_src\/images\/mu-wordmark-32-white.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/docs_src\/images\/mu-wordmark-32.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3455,
+		"inputAbbreviatedPath": "\/docs_src\/images\/mu-wordmark-32.png",
+		"outputAbbreviatedPath": "\/docs_src\/images\/mu-wordmark-32.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/docs_src\/images\/mu-wordmark-48-white.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6172,
+		"inputAbbreviatedPath": "\/docs_src\/images\/mu-wordmark-48-white.png",
+		"outputAbbreviatedPath": "\/docs_src\/images\/mu-wordmark-48-white.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/docs_src\/images\/mu-wordmark-48.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5874,
+		"inputAbbreviatedPath": "\/docs_src\/images\/mu-wordmark-48.png",
+		"outputAbbreviatedPath": "\/docs_src\/images\/mu-wordmark-48.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/docs_src\/images\/mu-wordmark-64-white.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9362,
+		"inputAbbreviatedPath": "\/docs_src\/images\/mu-wordmark-64-white.png",
+		"outputAbbreviatedPath": "\/docs_src\/images\/mu-wordmark-64-white.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/docs_src\/images\/mu-wordmark-64.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/docs_src\/images\/mu-wordmark-64.png",
+		"outputAbbreviatedPath": "\/docs_src\/images\/mu-wordmark-64.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -323,68 +453,68 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/docs_src\/images\/wordmark-32-white.png": {
+	"\/docs_src\/images\/unit-wordmark-32-white.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 2476,
-		"inputAbbreviatedPath": "\/docs_src\/images\/wordmark-32-white.png",
-		"outputAbbreviatedPath": "\/docs_src\/images\/wordmark-32-white.png",
+		"initialSize": 2493,
+		"inputAbbreviatedPath": "\/docs_src\/images\/unit-wordmark-32-white.png",
+		"outputAbbreviatedPath": "\/docs_src\/images\/unit-wordmark-32-white.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/docs_src\/images\/wordmark-32.png": {
+	"\/docs_src\/images\/unit-wordmark-32.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 2347,
-		"inputAbbreviatedPath": "\/docs_src\/images\/wordmark-32.png",
-		"outputAbbreviatedPath": "\/docs_src\/images\/wordmark-32.png",
+		"initialSize": 2245,
+		"inputAbbreviatedPath": "\/docs_src\/images\/unit-wordmark-32.png",
+		"outputAbbreviatedPath": "\/docs_src\/images\/unit-wordmark-32.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/docs_src\/images\/wordmark-48-white.png": {
+	"\/docs_src\/images\/unit-wordmark-48-white.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 2981,
-		"inputAbbreviatedPath": "\/docs_src\/images\/wordmark-48-white.png",
-		"outputAbbreviatedPath": "\/docs_src\/images\/wordmark-48-white.png",
+		"inputAbbreviatedPath": "\/docs_src\/images\/unit-wordmark-48-white.png",
+		"outputAbbreviatedPath": "\/docs_src\/images\/unit-wordmark-48-white.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/docs_src\/images\/wordmark-48.png": {
+	"\/docs_src\/images\/unit-wordmark-48.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 2895,
-		"inputAbbreviatedPath": "\/docs_src\/images\/wordmark-48.png",
-		"outputAbbreviatedPath": "\/docs_src\/images\/wordmark-48.png",
+		"initialSize": 2852,
+		"inputAbbreviatedPath": "\/docs_src\/images\/unit-wordmark-48.png",
+		"outputAbbreviatedPath": "\/docs_src\/images\/unit-wordmark-48.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/docs_src\/images\/wordmark-64-white.png": {
+	"\/docs_src\/images\/unit-wordmark-64-white.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 4219,
-		"inputAbbreviatedPath": "\/docs_src\/images\/wordmark-64-white.png",
-		"outputAbbreviatedPath": "\/docs_src\/images\/wordmark-64-white.png",
+		"inputAbbreviatedPath": "\/docs_src\/images\/unit-wordmark-64-white.png",
+		"outputAbbreviatedPath": "\/docs_src\/images\/unit-wordmark-64-white.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/docs_src\/images\/wordmark-64.png": {
+	"\/docs_src\/images\/unit-wordmark-64.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 4101,
-		"inputAbbreviatedPath": "\/docs_src\/images\/wordmark-64.png",
-		"outputAbbreviatedPath": "\/docs_src\/images\/wordmark-64.png",
+		"initialSize": 4019,
+		"inputAbbreviatedPath": "\/docs_src\/images\/unit-wordmark-64.png",
+		"outputAbbreviatedPath": "\/docs_src\/images\/unit-wordmark-64.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

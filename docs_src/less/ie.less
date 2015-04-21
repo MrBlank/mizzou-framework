@@ -9,20 +9,27 @@
 @import '../../src/less/vars/_vars.less';
 @import '../../src/less/mixins/_mizzou-ie.less';
 
-.ie {
-    // Override for IE8 
+.sig-ie-example {
     .mu-unit-sig-ie(
         @logo-size: "64", 
         @print: "yes", 
-        @unit-img: "unit-name_64.png"
+        @unit-img: "unit-name_64.png",
     ); 
 }
+.mu-sig-ie-example {
+    .mu-sig-ie(
+        @logo-size: "64", 
+        @print: "yes" 
+    ); 
+}
+
 .signature { 
     .mu-unit-sig-ie(
         @logo-size: "32", 
         @logo-style: "stroked", 
         @wordmark-color: "white", 
         @print: "yes", 
-        @unit-img: "mizzou-framework_32.svg"
+        @unit-img: "mizzou-framework-white_32.svg",
+        @unit-img-print: "mizzou-framework_32.svg"
     );
 }

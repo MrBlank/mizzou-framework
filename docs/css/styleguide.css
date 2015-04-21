@@ -1120,6 +1120,107 @@ category: Buttons
     - Make versions with just the university of MO next to logo.
   
 --------------------------------------------------------------*/
+/*doc
+---
+title: MU Signature Mixin 
+name: 02_mu-sig_01
+category: MU Signatures
+---
+The `.mu-sig()` mixin has a set of variables that can be passed to it to define size, 
+style and printing options. This is also useful in resetting options for media queries. 
+Below are the mixin options.
+
+```
+@logo-size:          "64"  
+@logo-size:          "48"
+@logo-size:          "32" // Default
+@logo-size:          "24"
+
+@logo-style:        "stroked" // Default 
+@logo-style:        "none"
+
+@wordmark-color:    "black" // Default 
+@wordmark-color:    "white"
+
+@print:             "no" // Default
+@print:             "yes"
+
+@center:            "no" // Default
+@center:            "yes"
+
+```
+*/
+/*doc
+---
+title: MU Signature Examples
+name: 03_mu-sig_02
+category: MU Signatures
+---
+
+## Default example
+
+```html_example
+<div class="mu-sig-default-example">
+    <p class="logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
+    <h1 class="wordmark"><a href="http://missouri.edu">University of Missouri</a></h1>
+</div>
+```
+```
+.mu-sig-default-example {
+    .mu-sig();
+}
+```
+
+## Dark background example with options
+
+The MU logo with a stroke around it should be used on signatures with a colored background.
+
+```html_example
+<div class="mu-sig-dark-example">
+    <p class="logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
+    <h1 class="wordmark"><a href="http://missouri.edu">University of Missouri</a></h1>
+</div>
+```
+```
+.mu-sig-dark-example {
+    padding: 1.5em;
+    background: #333;
+    .mu-sig(
+        @logo-size: "48",  
+        @wordmark-color: "white", 
+        @print: "yes" 
+    );
+}
+```
+
+## Gold example with media query change
+
+```html_example
+<div class="mu-sig-gold-responsive-example">
+    <p class="logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
+    <h1 class="wordmark"><a href="http://missouri.edu">University of Missouri</a></h1>
+</div>
+```
+```
+.mu-sig-gold-responsive-example {
+    padding: 1.5em;
+    background: @gold;
+    .mu-sig(
+        @logo-size: "32", 
+        @print: "yes", 
+        @center: "yes" 
+    );
+    
+    @media screen and (max-width: 850px){
+        .mu-sig(
+            @logo-size: "32", 
+        );
+    }
+}  
+```
+
+
+*/
 /*! GENERAL TAG STYLES */
 /*--------------------------------------------------------------
   
@@ -2296,6 +2397,296 @@ hll { background-color: #ffffcc }
 * Author:          Josh Nichols, MU Web Communications
   
 --------------------------------------------------------------*/
+.mu-sig-default-example {
+  min-height: 38px;
+}
+.mu-sig-default-example .logo,
+.mu-sig-default-example .wordmark {
+  margin: 0;
+}
+.mu-sig-default-example .logo a,
+.mu-sig-default-example .wordmark a {
+  display: block;
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-position: left 0;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+.mu-sig-default-example .logo a {
+  width: 34px;
+  height: 38px;
+  background-image: url('../images/mu-logo-32-stroked.svg');
+  float: left;
+  margin-left: -1px;
+  margin-right: 0;
+}
+.mu-sig-default-example .wordmark {
+  margin-left: 43px;
+  padding-top: 7px;
+}
+.mu-sig-default-example .wordmark a {
+  width: 229px;
+  height: 27px;
+  background-image: url('../images/mu-wordmark-32.svg');
+}
+.mu-sig-default-example .wordmark a:hover,
+.mu-sig-default-example .wordmark a:focus,
+.mu-sig-default-example .wordmark a:active {
+  background-position: left -27px;
+}
+.mu-sig-dark-example {
+  padding: 1.5em;
+  background: #333;
+  min-height: 56px;
+}
+.mu-sig-dark-example .logo,
+.mu-sig-dark-example .wordmark {
+  margin: 0;
+}
+.mu-sig-dark-example .logo a,
+.mu-sig-dark-example .wordmark a {
+  display: block;
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-position: left 0;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+.mu-sig-dark-example .logo a {
+  width: 50px;
+  height: 56px;
+  background-image: url('../images/mu-logo-48-stroked.svg');
+  float: left;
+  margin-left: -1px;
+  margin-right: 0;
+}
+@media print {
+  .mu-sig-dark-example .logo a {
+    position: relative;
+    background: none;
+  }
+  .mu-sig-dark-example .logo a:after {
+    content: url('../images/mu-logo-48.svg');
+    text-indent: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.mu-sig-dark-example .wordmark {
+  margin-left: 64px;
+  padding-top: 9px;
+}
+.mu-sig-dark-example .wordmark a {
+  width: 334px;
+  height: 39px;
+  background-image: url('../images/mu-wordmark-48-white.svg');
+}
+@media print {
+  .mu-sig-dark-example .wordmark a {
+    position: relative;
+    background: none;
+  }
+  .mu-sig-dark-example .wordmark a:after {
+    content: url('../images/mu-wordmark-48.svg');
+    text-indent: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.mu-sig-dark-example .wordmark a:hover,
+.mu-sig-dark-example .wordmark a:focus,
+.mu-sig-dark-example .wordmark a:active {
+  background-position: left -39px;
+}
+.mu-sig-gold-responsive-example {
+  padding: 1.5em;
+  background: #f1b82d;
+  min-height: 38px;
+}
+.mu-sig-gold-responsive-example .logo,
+.mu-sig-gold-responsive-example .wordmark {
+  margin: 0;
+}
+.mu-sig-gold-responsive-example .logo a,
+.mu-sig-gold-responsive-example .wordmark a {
+  display: block;
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-position: left 0;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mu-sig-gold-responsive-example .logo a {
+  width: 34px;
+  height: 38px;
+  background-image: url('../images/mu-logo-32-stroked.svg');
+  float: none;
+  margin-bottom: 11px;
+}
+@media print {
+  .mu-sig-gold-responsive-example .logo a {
+    position: relative;
+    background: none;
+  }
+  .mu-sig-gold-responsive-example .logo a:after {
+    content: url('../images/mu-logo-32.svg');
+    text-indent: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.mu-sig-gold-responsive-example .wordmark {
+  margin-left: 0;
+  padding-top: 0;
+}
+.mu-sig-gold-responsive-example .wordmark a {
+  width: 229px;
+  height: 27px;
+  background-image: url('../images/mu-wordmark-32.svg');
+}
+@media print {
+  .mu-sig-gold-responsive-example .wordmark a {
+    position: relative;
+    background: none;
+  }
+  .mu-sig-gold-responsive-example .wordmark a:after {
+    content: url('../images/mu-wordmark-32.svg');
+    text-indent: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.mu-sig-gold-responsive-example .wordmark a:hover,
+.mu-sig-gold-responsive-example .wordmark a:focus,
+.mu-sig-gold-responsive-example .wordmark a:active {
+  background-position: left -27px;
+}
+@media screen and (max-width: 850px) {
+  .mu-sig-gold-responsive-example {
+    min-height: 38px;
+  }
+  .mu-sig-gold-responsive-example .logo,
+  .mu-sig-gold-responsive-example .wordmark {
+    margin: 0;
+  }
+  .mu-sig-gold-responsive-example .logo a,
+  .mu-sig-gold-responsive-example .wordmark a {
+    display: block;
+    text-indent: 120%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    background-position: left 0;
+    background-repeat: no-repeat;
+    margin: 0;
+  }
+  .mu-sig-gold-responsive-example .logo a {
+    width: 34px;
+    height: 38px;
+    background-image: url('../images/mu-logo-32-stroked.svg');
+    float: left;
+    margin-left: -1px;
+    margin-right: 0;
+  }
+  .mu-sig-gold-responsive-example .wordmark {
+    margin-left: 43px;
+    padding-top: 7px;
+  }
+  .mu-sig-gold-responsive-example .wordmark a {
+    width: 229px;
+    height: 27px;
+    background-image: url('../images/mu-wordmark-32.svg');
+  }
+  .mu-sig-gold-responsive-example .wordmark a:hover,
+  .mu-sig-gold-responsive-example .wordmark a:focus,
+  .mu-sig-gold-responsive-example .wordmark a:active {
+    background-position: left -27px;
+  }
+}
+.mu-sig-ie-example {
+  min-height: 74px;
+}
+.mu-sig-ie-example .logo,
+.mu-sig-ie-example .wordmark {
+  margin: 0;
+}
+.mu-sig-ie-example .logo a,
+.mu-sig-ie-example .wordmark a {
+  display: block;
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-position: left 0;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+.mu-sig-ie-example .logo a {
+  width: 66px;
+  height: 74px;
+  background-image: url('../images/mu-logo-64-stroked.svg');
+  float: left;
+  margin-left: -1px;
+  margin-right: 0;
+}
+@media print {
+  .mu-sig-ie-example .logo a {
+    position: relative;
+    background: none;
+  }
+  .mu-sig-ie-example .logo a:after {
+    content: url('../images/mu-logo-64.svg');
+    text-indent: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.mu-sig-ie-example .wordmark {
+  margin-left: 87px;
+  padding-top: 12px;
+}
+.mu-sig-ie-example .wordmark a {
+  width: 478px;
+  height: 56px;
+  background-image: url('../images/mu-wordmark-64.svg');
+}
+@media print {
+  .mu-sig-ie-example .wordmark a {
+    position: relative;
+    background: none;
+  }
+  .mu-sig-ie-example .wordmark a:after {
+    content: url('../images/mu-wordmark-64.svg');
+    text-indent: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.mu-sig-ie-example .wordmark a:hover,
+.mu-sig-ie-example .wordmark a:focus,
+.mu-sig-ie-example .wordmark a:active {
+  background-position: left -56px;
+}
 .sig-default-example .logo,
 .sig-default-example .wordmark,
 .sig-default-example .unit {
@@ -2316,7 +2707,7 @@ hll { background-color: #ffffcc }
 .sig-default-example .logo a {
   width: 50px;
   height: 56px;
-  background-image: url('../images/mizzou-logo-48-stroked.svg');
+  background-image: url('../images/mu-logo-48-stroked.svg');
   float: left;
   margin-left: -1px;
   margin-right: 0;
@@ -2328,7 +2719,7 @@ hll { background-color: #ffffcc }
 .sig-default-example .wordmark a {
   width: 183px;
   height: 20px;
-  background-image: url('../images/wordmark-48.svg');
+  background-image: url('../images/unit-wordmark-48.svg');
 }
 .sig-default-example .wordmark a:hover,
 .sig-default-example .wordmark a:focus,
@@ -2369,7 +2760,7 @@ hll { background-color: #ffffcc }
 .sig-dark-example .logo a {
   width: 66px;
   height: 74px;
-  background-image: url('../images/mizzou-logo-64-stroked.svg');
+  background-image: url('../images/mu-logo-64-stroked.svg');
   float: left;
   margin-left: -1px;
   margin-right: 0;
@@ -2380,7 +2771,7 @@ hll { background-color: #ffffcc }
     background: none;
   }
   .sig-dark-example .logo a:after {
-    content: url('../images/mizzou-logo-64.svg');
+    content: url('../images/mu-logo-64.svg');
     text-indent: 0;
     display: block;
     position: absolute;
@@ -2398,7 +2789,7 @@ hll { background-color: #ffffcc }
 .sig-dark-example .wordmark a {
   width: 243px;
   height: 26px;
-  background-image: url('../images/wordmark-64-white.svg');
+  background-image: url('../images/unit-wordmark-64-white.svg');
 }
 @media print {
   .sig-dark-example .wordmark a {
@@ -2406,7 +2797,7 @@ hll { background-color: #ffffcc }
     background: none;
   }
   .sig-dark-example .wordmark a:after {
-    content: url('../images/wordmark-64.svg');
+    content: url('../images/unit-wordmark-64.svg');
     text-indent: 0;
     display: block;
     position: absolute;
@@ -2435,7 +2826,7 @@ hll { background-color: #ffffcc }
     background: none;
   }
   .sig-dark-example .unit a:after {
-    content: url('../images/unit-name-white_64.svg');
+    content: url('../images/unit-name_64.svg');
     text-indent: 0;
     display: block;
     position: absolute;
@@ -2468,7 +2859,7 @@ hll { background-color: #ffffcc }
 .sig-gold-responsive-example .logo a {
   width: 34px;
   height: 38px;
-  background-image: url('../images/mizzou-logo-32-stroked.svg');
+  background-image: url('../images/mu-logo-32-stroked.svg');
   float: none;
   margin-bottom: 11px;
 }
@@ -2478,7 +2869,7 @@ hll { background-color: #ffffcc }
     background: none;
   }
   .sig-gold-responsive-example .logo a:after {
-    content: url('../images/mizzou-logo-32.svg');
+    content: url('../images/mu-logo-32.svg');
     text-indent: 0;
     display: block;
     position: absolute;
@@ -2496,7 +2887,7 @@ hll { background-color: #ffffcc }
 .sig-gold-responsive-example .wordmark a {
   width: 149px;
   height: 16px;
-  background-image: url('../images/wordmark-32.svg');
+  background-image: url('../images/unit-wordmark-32.svg');
 }
 @media print {
   .sig-gold-responsive-example .wordmark a {
@@ -2504,7 +2895,7 @@ hll { background-color: #ffffcc }
     background: none;
   }
   .sig-gold-responsive-example .wordmark a:after {
-    content: url('../images/wordmark-32.svg');
+    content: url('../images/unit-wordmark-32.svg');
     text-indent: 0;
     display: block;
     position: absolute;
@@ -2562,7 +2953,7 @@ hll { background-color: #ffffcc }
   .sig-gold-responsive-example .logo a {
     width: 34px;
     height: 38px;
-    background-image: url('../images/mizzou-logo-32-stroked.svg');
+    background-image: url('../images/mu-logo-32-stroked.svg');
     float: left;
     margin-left: -1px;
     margin-right: 0;
@@ -2577,7 +2968,7 @@ hll { background-color: #ffffcc }
   .sig-gold-responsive-example .wordmark a {
     width: 149px;
     height: 16px;
-    background-image: url('../images/wordmark-32.svg');
+    background-image: url('../images/unit-wordmark-32.svg');
   }
   .sig-gold-responsive-example .wordmark a:hover,
   .sig-gold-responsive-example .wordmark a:focus,
@@ -2615,7 +3006,7 @@ hll { background-color: #ffffcc }
 .sig-ie-example .logo a {
   width: 66px;
   height: 74px;
-  background-image: url('../images/mizzou-logo-64-stroked.svg');
+  background-image: url('../images/mu-logo-64-stroked.svg');
   float: left;
   margin-left: -1px;
   margin-right: 0;
@@ -2626,7 +3017,7 @@ hll { background-color: #ffffcc }
     background: none;
   }
   .sig-ie-example .logo a:after {
-    content: url('../images/mizzou-logo-64.svg');
+    content: url('../images/mu-logo-64.svg');
     text-indent: 0;
     display: block;
     position: absolute;
@@ -2641,7 +3032,7 @@ hll { background-color: #ffffcc }
 .sig-ie-example .wordmark a {
   width: 243px;
   height: 26px;
-  background-image: url('../images/wordmark-64.svg');
+  background-image: url('../images/unit-wordmark-64.svg');
 }
 @media print {
   .sig-ie-example .wordmark a {
@@ -2649,7 +3040,7 @@ hll { background-color: #ffffcc }
     background: none;
   }
   .sig-ie-example .wordmark a:after {
-    content: url('../images/wordmark-64.svg');
+    content: url('../images/unit-wordmark-64.svg');
     text-indent: 0;
     display: block;
     position: absolute;
@@ -3160,7 +3551,7 @@ h2.display {
 .styleguide-nav .signature .logo a {
   width: 34px;
   height: 38px;
-  background-image: url('../images/mizzou-logo-32-stroked.svg');
+  background-image: url('../images/mu-logo-32-stroked.svg');
   float: none;
   margin-bottom: 11px;
 }
@@ -3170,7 +3561,7 @@ h2.display {
     background: none;
   }
   .styleguide-nav .signature .logo a:after {
-    content: url('../images/mizzou-logo-32.svg');
+    content: url('../images/mu-logo-32.svg');
     text-indent: 0;
     display: block;
     position: absolute;
@@ -3188,7 +3579,7 @@ h2.display {
 .styleguide-nav .signature .wordmark a {
   width: 149px;
   height: 16px;
-  background-image: url('../images/wordmark-32-white.svg');
+  background-image: url('../images/unit-wordmark-32-white.svg');
 }
 @media print {
   .styleguide-nav .signature .wordmark a {
@@ -3196,7 +3587,7 @@ h2.display {
     background: none;
   }
   .styleguide-nav .signature .wordmark a:after {
-    content: url('../images/wordmark-32.svg');
+    content: url('../images/unit-wordmark-32.svg');
     text-indent: 0;
     display: block;
     position: absolute;
@@ -3212,7 +3603,7 @@ h2.display {
 .styleguide-nav .signature .unit a {
   width: 202px;
   height: 27px;
-  background-image: url('../images/mizzou-framework_32.svg');
+  background-image: url('../images/mizzou-framework-white_32.svg');
 }
 .styleguide-nav .signature .unit a:hover,
 .styleguide-nav .signature .unit a:focus,
