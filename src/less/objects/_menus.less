@@ -1,0 +1,121 @@
+.menu-horizontal {
+    background-color: @gold-light;
+    .clearfix();
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        .rem(margin, 0, 0, -.9, 0);
+    }
+    li {
+        margin: 0;
+        float: left;
+        
+        a {
+            display: inline-block;
+            text-decoration: none;
+            .rem(font-size, 1);
+            line-height: 1.2;
+            .rem(padding, .75, .9);
+            font-weight: @font-bold;
+        }
+        
+        // hover and current page    
+        & a:hover,
+        & a:focus,
+        &.current-menu-item > a,
+        &.current-page-ancestor > a {
+            background-color: @gold-lightest;
+        }
+    }
+}
+
+
+/*doc
+---
+title: Menu Horizontal
+name: objects_01
+category: Objects
+---
+
+```html_example
+<div class="menu-horizontal">
+    <ul>
+        <li><a href="#">Item One</a></li>
+        <li class="current-menu-item"><a href="#">Item Two</a></li>
+        <li><a href="#">Item Three</a></li>
+        <li><a href="#">Item Four</a></li>
+        <li><a href="#">Item Five</a></li>
+    </ul>
+</div>
+
+```
+*/
+
+
+
+.menu-vertical {
+    background-color: @gold-light;
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        margin: 0;
+        
+        a {
+            display: block;
+            text-decoration: none;
+            .rem(font-size, 1);
+            line-height: 1.2;
+            .rem(padding, .5, 1);
+            font-weight: @font-bold;
+        }
+        
+        // hover and current page    
+        & a:hover,
+        & a:focus,
+        &.current-menu-item > a,
+        &.current-page-ancestor > a {
+            background-color: @gold-lightest;
+        }
+    }
+    
+    ul ul {
+                
+        li a {
+            font-weight: @font-normal;
+            .rem(padding-left, 2);
+        }
+        
+    } 
+}
+
+/*doc
+---
+title: Menu Vertical
+name: objects_02
+category: Objects
+---
+
+```html_example
+<div class="menu-vertical">
+    <ul>
+        <li><a href="#">Item One</a></li>
+        <li class="current-menu-item"><a href="#">Item Two</a>
+            <ul>
+                <li><a href="#">Item One</a></li>
+                <li><a href="#">Item Two</a></li>
+                <li><a href="#">Item Three</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Item Three</a></li>
+        <li><a href="#">Item Four</a></li>
+        <li><a href="#">Item Five</a></li>
+    </ul>
+</div>
+```
+
+*/

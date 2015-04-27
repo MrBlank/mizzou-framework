@@ -1,5 +1,4 @@
 // We need a front-end that matches the search field styles in the Mizzou Framework.
-// I'm importing them here.
 
 #search {
 
@@ -55,7 +54,7 @@
 		overflow: hidden;
 	}
 	b {
-		color: @accent;
+		color: @red;
 	}
 	h3 b {
 		background-color: @gold-light;
@@ -75,5 +74,56 @@
 	}
 }
 .search-string {
-	color: @accent;
+	color: @red;
 }
+
+
+
+
+/*doc
+---
+title: Search Results 
+name: objects_04
+category: Objects
+---
+
+Search results styles based on the <abbr title="Google Search Appliance">GSA</abbr> frontend `proxystylesheet: wc_basic`.
+
+```html_example
+<div class="search-meta">
+   <h3>Search results</h3>
+   <p class="meta-result">Results <b>81&#8211;90</b> of about <b>191000</b> for &#8220;<b class="search-string">mizzou</b>&#8221;</p>
+</div>
+<ul class="search-results">
+   <li>
+      <h3 class="title">
+         <a href="http://mizzoulife.missouri.edu/staff/">Staff Directory - <b>Mizzou</b> Life</a>
+      </h3>
+      <p class="excerpt"><b>...</b> The support and greek unity at <b>Mizzou</b> is beyond anything I could have every<br> imagined, and I am proud to be able to say I am a part of it. <b>...</b>  </p>
+      <small class="source">http://mizzoulife.missouri.edu/staff/&#160;&#8212;&#160;159k</small>
+   </li>
+   <li>
+      <h3 class="title">
+         <a href="http://mizzoulife.missouri.edu/asb/">Alternative Breaks - <b>Mizzou</b> Life</a>
+      </h3>
+      <p class="excerpt"><b>...</b> <b>Mizzou</b> Alternative Breaks is a group of 800+ students who travel to various<br> locations all across the nation in groups of 10-12 to spend their week <b>...</b>  </p>
+      <small class="source">http://mizzoulife.missouri.edu/asb/&#160;&#8212;&#160;31k</small>
+   </li>
+   <li>
+      <h3 class="title">
+         <a href="http://mizzouweekly.missouri.edu/classifieds/index.php">Classifieds | <b>Mizzou</b> Weekly | University of Missouri</a>
+      </h3>
+      <p class="excerpt"><b>...</b> Classifieds. <b>Mizzou</b> Weekly Classifieds. <b>...</b> <b>Mizzou</b> Weekly 407 Reynolds Alumni<br> Center Columbia, MO 65211 mizzouweekly@missouri.edu. <b>...</b>  </p>
+      <small class="source">http://mizzouweekly.missouri.edu/classifieds/index.php&#160;&#8212;&#160;6k</small>
+   </li>
+   <li>
+      <h3 class="title">
+         <a href="http://mizzouweekly.missouri.edu/advertise/index.php">Advertising | <b>Mizzou</b> Weekly | University of Missouri</a>
+      </h3>
+      <p class="excerpt"><b>...</b> In the event of an error by <b>Mizzou</b> Weekly, the maximum liability is limited<br> to the ad charges. <b>Mizzou</b> Weekly website advertisers <b>...</b>  </p>
+      <small class="source">http://mizzouweekly.missouri.edu/advertise/index.php&#160;&#8212;&#160;9k</small>
+   </li>
+</ul>
+
+```
+*/

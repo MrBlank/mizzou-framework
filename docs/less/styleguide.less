@@ -93,8 +93,6 @@ styleguide-nav-wrap {
         li {
             
             &.active a {
-                //background-color: @gold;
-                //color: @grey-darker;
                 color: @gold;
             }
         }   
@@ -104,15 +102,12 @@ styleguide-nav-wrap {
 .section-nav {
     .rem(margin, 0, 0, 1.5);
     max-width: @max-width;
-    //.rem(padding, 0, 0, .5);
     
     ul {
         padding: 0;
         margin: 0;
         list-style: none;
         display: block;
-        //border: solid 1px @gold-light;
-        //background-color: @gold-lightest;
         margin-left: 1px;
         .clearfix();
         
@@ -124,20 +119,19 @@ styleguide-nav-wrap {
             display: block;
             float: left;
             .rem(padding, .5, 1);
-            color: @grey;
+            color: @grey-lightest; //@grey;
             .rem(font-size, .9);
             line-height: 1;
-            background-color: @tan-light;
-            border: solid 1px @tan;
-            //margin-left: -1px;
+            background-color: @grey-dark;//@tan-light;
+            //border: solid 1px @tan;
             .rem(margin-bottom, .5em);
             .rem(margin-right, .5em);
             border-radius: 3px;
+            .font-smoothing();
             
             &:hover,
             &:focus {
-                color: @accent;
-                background-color: @tan;
+                color: @gold;
             }
         }
     }
@@ -155,7 +149,7 @@ footer.styleguide-footer {
 
 h1.styleguide-h1 { // Category titles
     color: @gold-dark; 
-    .rem(margin, 0, 0, 1);
+    .rem(margin, 0, 0, 2);
     .rem(font-size, 3.5);
 }
 

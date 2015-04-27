@@ -297,10 +297,10 @@ style and printing options. This is also useful in resetting options for media q
 Below are the mixin options.
 
 ```
-@logo-size:          "64"  
-@logo-size:          "48"
-@logo-size:          "32" // Default
-@logo-size:          "24"
+@logo-size:         "64"  
+@logo-size:         "48"
+@logo-size:         "32" // Default
+@logo-size:         "24"
 
 @logo-style:        "stroked" // Default 
 @logo-style:        "none"
@@ -315,6 +315,7 @@ Below are the mixin options.
 @center:            "yes"
 
 ```
+
 */
 
 /*doc
@@ -340,7 +341,8 @@ category: MU Signatures
 
 ## Dark background example with options
 
-The MU logo with a stroke around it should be used on signatures with a colored background.
+The MU logo with a stroke around it should be used on signatures with a colored background. See section
+1.2 of the Graphic Identity Standards at [identity.missouri.edu](http://identity.missouri.edu/).
 
 ```html_example
 <div class="mu-sig-dark-example">
@@ -475,7 +477,7 @@ The MU logo with a stroke around it should be used on signatures with a colored 
         }
         .wordmark a {
             width: 149px;
-            height: 16px;
+            height: 17px;
             
             & when (@wordmark-color = "black") {
                 background-image: url('@{img-path}/unit-wordmark-32.svg');
@@ -491,7 +493,7 @@ The MU logo with a stroke around it should be used on signatures with a colored 
             &:hover,
             &:focus,
             &:active {
-                background-position: left -16px;
+                background-position: left -17px;
             }
         }
         .unit-name();
@@ -718,6 +720,16 @@ Except `@unit-img-print` are required.**
 
 ```
 
+> ## Unit Name Image Creation
+> 
+> University units may not create new logos. Unit signatures have a carefully defined relationship 
+> among the logo, the unit and division names, and the university wordmark. **For this reason, do not 
+> attempt to re-create any part of a unit signature.** To obtain unit name graphics, contact the Division 
+> of Marketing & Communications at [identity@missouri.edu](mailto:identity@missouri.edu). See section
+> 1.4 of the Graphic Identity Standards at [identity.missouri.edu](http://identity.missouri.edu/).
+> 
+> When designing for a small phone screen, the max-width the unit name can be is 245px wide.
+
 */
 
 /*doc
@@ -747,7 +759,8 @@ category: Unit Signatures
 ```
 ## Dark background example with options
 
-The MU logo with a stroke around it should be used on signatures with a colored background.
+The MU logo with a stroke around it should be used on signatures with a colored background. See section
+1.2 of the Graphic Identity Standards at [identity.missouri.edu](http://identity.missouri.edu/).
 
 ```html_example
 <div class="sig-dark-example">

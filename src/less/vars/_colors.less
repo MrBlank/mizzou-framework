@@ -27,20 +27,30 @@
 @tan:               #edebd5;
 @tan-light:         #f5f2f0;
 
-@accent:            #900000; // #920000?
-@accent-light:      lighten(@accent, 68%);
-@accent2:           #318fd7;
-@accent2-light:     lighten(@accent2, 42%);
-@accent2-dark:      darken(@accent2, 18%);
-@accent3:           #69901d;
-@accent3-light:     lighten(@accent3, 55%);
+@red:               #900000; // #920000?
+@red-light:         lighten(@red, 68%);
+@red-dark:           darken(@red, 10%);
+
+@orange:            #BD5C2C;
+@orange-light:      lighten(@orange, 45%);
+@orange-dark:        darken(@orange, 14%);
+
+@green:             #69901D;
+@green-light:       lighten(@green, 55%);
+@green-dark:         darken(@green, 11%);
+
+@blue:              #318fd7;
+@blue-light:        lighten(@blue, 42%);
+@blue-dark:          darken(@blue, 20%);
+
 
 // In use ... Should I eliminate these to simplify?
 
+@accent:                        @red;
 @color-text:                    @grey-darker;
 @color-background:              @white;
 @color-link:                    @black;
-@color-link-hover:              @accent;
+@color-link-hover:              @red;
 @color-hr:                      @grey-lighter;
 @color-box-bg:                  @tan-light;
 @color-box-border:              @tan;
@@ -49,9 +59,9 @@
 @color-abbr:                    @grey-lighter;
 @color-mark:                    @gold-lighter;
 @color-help:                    @grey-light;
-@color-form-error-message:      @accent;
-@color-form-error-bg:           @accent-light;
-@color-form-error-border:       @accent;
+@color-form-error-message:      @red;
+@color-form-error-bg:           @red-light;
+@color-form-error-border:       @red;
 @color-form-field-border:       @grey-lighter;
 @color-table-cell-border:       @grey-lighter;
 @color-table-cell-stripe:       @grey-lightest;
@@ -59,7 +69,7 @@
 
 /*doc
 ---
-title: Mizzou&#8217;s Colors
+title: Mizzou’s Colors
 name: 04_colors-01
 category: Colors
 ---
@@ -204,7 +214,7 @@ These are a little warmer than the neutral greys.
 
 /*doc
 ---
-title: Accents and Alerts
+title: Accents
 name: 04_colors-03
 category: Colors
 ---
@@ -212,41 +222,80 @@ category: Colors
 Use accents sparingly. These are mostly used with form alerts.            
 
 <figure class="color-block">
-    <span class="accent"></span>
+    <span class="red-light"></span>
     <figcaption>
-        <p class="color-name">@accent</p>
+        <p class="color-name">@red-light</p>
     </figcaption>
 </figure>
 <figure class="color-block">
-    <span class="accent2"></span>
+    <span class="red"></span>
     <figcaption>
-        <p class="color-name">@accent2</p>
+        <p class="color-name">@red</p>
     </figcaption>
 </figure>
 <figure class="color-block">
-    <span class="accent3"></span>
+    <span class="red-dark"></span>
     <figcaption>
-        <p class="color-name">@accent3</p>
+        <p class="color-name">@red-dark</p>
     </figcaption>
 </figure>
 
 <figure class="color-block">
-    <span class="accent-light"></span>
+    <span class="orange-light"></span>
     <figcaption>
-        <p class="color-name">@accent-light</p>
+        <p class="color-name">@orange-light</p>
     </figcaption>
 </figure>
 <figure class="color-block">
-    <span class="accent2-light"></span>
+    <span class="orange"></span>
     <figcaption>
-        <p class="color-name">@accent2-light</p>
+        <p class="color-name">@orange</p>
     </figcaption>
 </figure>
 <figure class="color-block">
-    <span class="accent3-light"></span>
+    <span class="orange-dark"></span>
     <figcaption>
-        <p class="color-name">@accent3-light</p>
+        <p class="color-name">@orange-dark</p>
     </figcaption>
 </figure>
+
+<figure class="color-block">
+    <span class="green-light"></span>
+    <figcaption>
+        <p class="color-name">@green-light</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="green"></span>
+    <figcaption>
+        <p class="color-name">@green</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="green-dark"></span>
+    <figcaption>
+        <p class="color-name">@green-dark</p>
+    </figcaption>
+</figure>
+
+<figure class="color-block">
+    <span class="blue-light"></span>
+    <figcaption>
+        <p class="color-name">@blue-light</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="blue"></span>
+    <figcaption>
+        <p class="color-name">@blue</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="blue-dark"></span>
+    <figcaption>
+        <p class="color-name">@blue-dark</p>
+    </figcaption>
+</figure>
+
 
 */

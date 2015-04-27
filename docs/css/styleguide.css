@@ -831,9 +831,9 @@ category: Mixins & Helper Classes
 ```
 .img-replace-example {
     .img-replace();
-    width: 64px;
-    height: 72px;
-    background-image: url("@{img-path}/mizzou-logo-64.svg");
+    width: 66px;
+    height: 74px;
+    background-image: url("@{img-path}/mu-logo-64.svg");
 }
 ```
 
@@ -880,6 +880,9 @@ Used in the `.box()` mixin.
 }
 .text-right {
   text-align: right;
+}
+.clear {
+  clear: both;
 }
 .dquo {
   margin-left: -0.3em;
@@ -1131,10 +1134,10 @@ style and printing options. This is also useful in resetting options for media q
 Below are the mixin options.
 
 ```
-@logo-size:          "64"  
-@logo-size:          "48"
-@logo-size:          "32" // Default
-@logo-size:          "24"
+@logo-size:         "64"  
+@logo-size:         "48"
+@logo-size:         "32" // Default
+@logo-size:         "24"
 
 @logo-style:        "stroked" // Default 
 @logo-style:        "none"
@@ -1149,6 +1152,7 @@ Below are the mixin options.
 @center:            "yes"
 
 ```
+
 */
 /*doc
 ---
@@ -1173,7 +1177,8 @@ category: MU Signatures
 
 ## Dark background example with options
 
-The MU logo with a stroke around it should be used on signatures with a colored background.
+The MU logo with a stroke around it should be used on signatures with a colored background. See section
+1.2 of the Graphic Identity Standards at [identity.missouri.edu](http://identity.missouri.edu/).
 
 ```html_example
 <div class="mu-sig-dark-example">
@@ -1477,6 +1482,12 @@ category: Block Elements
 <p>Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue.</p>
 ```
 */
+blockquote,
+.like-blockquote {
+  padding: 16px;
+  padding: 1rem;
+  background-color: #fcf1d4;
+}
 blockquote p,
 .like-blockquote p {
   font-size: inherit;
@@ -1490,6 +1501,7 @@ blockquote.pull-quote,
   font-size: 24px;
   font-size: 1.5rem;
   font-family: "Janson", "Times New Roman", Times, serif;
+  background-color: transparent;
 }
 blockquote.pull-quote .attribution,
 .like-blockquote.pull-quote .attribution {
@@ -2199,6 +2211,95 @@ caption {
   margin-bottom: 0.5rem;
   text-align: left;
 }
+.menu-horizontal {
+  background-color: #f7d583;
+}
+.menu-horizontal:before,
+.menu-horizontal:after {
+  content: "";
+  display: table;
+}
+.menu-horizontal:after {
+  clear: both;
+}
+.menu-horizontal ul {
+  list-style: none;
+  padding: 0;
+  margin: 0px 0px -14.4px 0px;
+  margin: 0rem 0rem -0.9rem 0rem;
+}
+.menu-horizontal li {
+  margin: 0;
+  float: left;
+}
+.menu-horizontal li a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.2;
+  padding: 12px 14.4px;
+  padding: 0.75rem 0.9rem;
+  font-weight: 600;
+}
+.menu-horizontal li a:hover,
+.menu-horizontal li a:focus,
+.menu-horizontal li.current-menu-item > a,
+.menu-horizontal li.current-page-ancestor > a {
+  background-color: #fcf1d4;
+}
+/*doc
+---
+title: Menu Horizontal
+name: objects_01
+category: Objects
+---
+
+```html_example
+<div class="menu-horizontal">
+    <ul>
+        <li><a href="#">Item One</a></li>
+        <li class="current-menu-item"><a href="#">Item Two</a></li>
+        <li><a href="#">Item Three</a></li>
+        <li><a href="#">Item Four</a></li>
+        <li><a href="#">Item Five</a></li>
+    </ul>
+</div>
+
+```
+*/
+.menu-vertical {
+  background-color: #f7d583;
+}
+.menu-vertical ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu-vertical li {
+  margin: 0;
+}
+.menu-vertical li a {
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.2;
+  padding: 8px 16px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+.menu-vertical li a:hover,
+.menu-vertical li a:focus,
+.menu-vertical li.current-menu-item > a,
+.menu-vertical li.current-page-ancestor > a {
+  background-color: #fcf1d4;
+}
+.menu-vertical ul ul li a {
+  font-weight: 400;
+  padding-left: 32px;
+  padding-left: 2rem;
+}
 #search .search-wrap {
   margin-left: 0!important;
 }
@@ -2266,10 +2367,6 @@ caption {
 .search-string {
   color: #900000;
 }
-.pagination-wrapper {
-  border-top: solid 1px #f1b82d;
-  padding-top: 1.5em;
-}
 .pagination {
   clear: both;
   list-style: none;
@@ -2291,7 +2388,8 @@ caption {
   font-weight: 400;
   border-radius: 3px;
   background-color: #f7d583;
-  min-width: 2.8em;
+  min-width: 44.8px;
+  min-width: 2.8rem;
 }
 .pagination li a:hover,
 .pagination li a:focus {
@@ -2301,10 +2399,11 @@ caption {
   background-color: transparent;
 }
 .pagination li.current a {
-  background: #111;
-  color: #eee !important;
+  background: #444444;
+  color: #eeeeee !important;
   text-shadow: 0 0 0 transparent;
-  border-color: #111;
+  border-color: #444444;
+  -webkit-font-smoothing: antialiased;
 }
 @media print {
   /*! PRINT STYLES */
@@ -2886,7 +2985,7 @@ hll { background-color: #ffffcc }
 }
 .sig-gold-responsive-example .wordmark a {
   width: 149px;
-  height: 16px;
+  height: 17px;
   background-image: url('../images/unit-wordmark-32.svg');
 }
 @media print {
@@ -2906,7 +3005,7 @@ hll { background-color: #ffffcc }
 .sig-gold-responsive-example .wordmark a:hover,
 .sig-gold-responsive-example .wordmark a:focus,
 .sig-gold-responsive-example .wordmark a:active {
-  background-position: left -16px;
+  background-position: left -17px;
 }
 .sig-gold-responsive-example .unit a {
   width: 194px;
@@ -2967,13 +3066,13 @@ hll { background-color: #ffffcc }
   }
   .sig-gold-responsive-example .wordmark a {
     width: 149px;
-    height: 16px;
+    height: 17px;
     background-image: url('../images/unit-wordmark-32.svg');
   }
   .sig-gold-responsive-example .wordmark a:hover,
   .sig-gold-responsive-example .wordmark a:focus,
   .sig-gold-responsive-example .wordmark a:active {
-    background-position: left -16px;
+    background-position: left -17px;
   }
   .sig-gold-responsive-example .unit a {
     width: 194px;
@@ -3216,23 +3315,41 @@ h2.display {
 .color-block .gold-darker {
   background: #ad7e0b;
 }
-.color-block .accent {
+.color-block .red {
   background: #900000;
 }
-.color-block .accent-light {
+.color-block .red-light {
   background: #ffecec;
 }
-.color-block .accent2 {
+.color-block .red-dark {
+  background: #5d0000;
+}
+.color-block .orange {
+  background: #bd5c2c;
+}
+.color-block .orange-light {
+  background: #f6e2d8;
+}
+.color-block .orange-dark {
+  background: #83401f;
+}
+.color-block .blue {
   background: #318fd7;
 }
-.color-block .accent2-light {
+.color-block .blue-light {
   background: #e4f1fa;
 }
-.color-block .accent3 {
+.color-block .blue-dark {
+  background: #1a5888;
+}
+.color-block .green {
   background: #69901d;
 }
-.color-block .accent3-light {
+.color-block .green-light {
   background: #e9f6d0;
+}
+.color-block .green-dark {
+  background: #476114;
 }
 .color-block .grey-darker {
   background: #222222;
@@ -3485,9 +3602,9 @@ h2.display {
   overflow: hidden;
   background-repeat: no-repeat;
   padding: 0;
-  width: 64px;
-  height: 72px;
-  background-image: url("../images/mizzou-logo-64.svg");
+  width: 66px;
+  height: 74px;
+  background-image: url("../images/mu-logo-64.svg");
 }
 /* !Layout Styles */
 .main-content {
@@ -3578,7 +3695,7 @@ h2.display {
 }
 .styleguide-nav .signature .wordmark a {
   width: 149px;
-  height: 16px;
+  height: 17px;
   background-image: url('../images/unit-wordmark-32-white.svg');
 }
 @media print {
@@ -3598,7 +3715,7 @@ h2.display {
 .styleguide-nav .signature .wordmark a:hover,
 .styleguide-nav .signature .wordmark a:focus,
 .styleguide-nav .signature .wordmark a:active {
-  background-position: left -16px;
+  background-position: left -17px;
 }
 .styleguide-nav .signature .unit a {
   width: 202px;
@@ -3675,22 +3792,21 @@ h2.display {
   float: left;
   padding: 8px 16px;
   padding: 0.5rem 1rem;
-  color: #666666;
+  color: #eeeeee;
   font-size: 14.4px;
   font-size: 0.9rem;
   line-height: 1;
-  background-color: #f5f2f0;
-  border: solid 1px #edebd5;
+  background-color: #444444;
   margin-bottom: 8px;
   margin-bottom: 0.5rem;
   margin-right: 8px;
   margin-right: 0.5rem;
   border-radius: 3px;
+  -webkit-font-smoothing: antialiased;
 }
 .section-nav ul a:hover,
 .section-nav ul a:focus {
-  color: #900000;
-  background-color: #edebd5;
+  color: #f1b82d;
 }
 /* !Content Structure */
 footer.styleguide-footer {
@@ -3703,8 +3819,8 @@ footer.styleguide-footer {
 }
 h1.styleguide-h1 {
   color: #d39a0e;
-  margin: 0px 0px 16px;
-  margin: 0rem 0rem 1rem;
+  margin: 0px 0px 32px;
+  margin: 0rem 0rem 2rem;
   font-size: 56px;
   font-size: 3.5rem;
 }

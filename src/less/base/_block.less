@@ -119,6 +119,9 @@ category: Block Elements
 blockquote, 
 .like-blockquote {
     
+    .rem(padding, 1);
+    background-color: @gold-lightest;
+    
     p {
         font-size: inherit;
     }
@@ -130,6 +133,7 @@ blockquote,
     &.pull-quote {
         .rem(font-size, 1.5);
         font-family: @font-serif;
+        background-color: transparent;
         
         .attribution {
             .rem(font-size, 1.2);
