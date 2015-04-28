@@ -710,6 +710,9 @@ th {
 * Version:          1.2
   
 --------------------------------------------------------------*/
+@-o-viewport {
+  width: device-width;
+}
 @viewport {
   width: device-width;
 }
@@ -724,6 +727,235 @@ th {
 * Version:          1.2
   
 --------------------------------------------------------------*/
+/*doc
+---
+title: Mizzou’s Colors
+name: 04_colors-01
+category: Colors
+---
+
+MU&#8217;s offical colors are black and MU gold.
+
+
+<figure class="color-block wide">
+    <span class="gold"></span>
+    <figcaption>
+        <p class="color-name">@gold (#f1b82d)</p>
+    </figcaption>
+</figure>
+
+<figure class="color-block wide">
+    <span class="black"></span>
+    <figcaption>
+        <p class="color-name">@black (#00000)</p>
+    </figcaption>
+</figure>
+
+
+*/
+/*doc
+---
+title: Variations
+name: 04_colors-02
+category: Colors
+---
+
+## Golds
+
+<figure class="color-block">
+    <span class="gold-lightest"></span>
+    <figcaption>
+        <p class="color-name">@gold-lightest</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="gold-lighter"></span>
+    <figcaption>
+        <p class="color-name">@gold-lighter</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="gold-light"></span>
+    <figcaption>
+        <p class="color-name">@gold-light</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="gold"></span>
+    <figcaption>
+        <p class="color-name">@gold</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="gold-dark"></span>
+    <figcaption>
+        <p class="color-name">@gold-dark</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="gold-darker"></span>
+    <figcaption>
+        <p class="color-name">@gold-darker</p>
+    </figcaption>
+</figure>
+
+## Greys
+
+<figure class="color-block">
+    <span class="grey-lightest"></span>
+    <figcaption>
+        <p class="color-name">@grey-lightest</p>
+    </figcaption>
+</figure>
+
+<figure class="color-block">
+    <span class="grey-lighter"></span>
+    <figcaption>
+        <p class="color-name">@grey-lighter</p>
+    </figcaption>
+</figure>
+
+<figure class="color-block">
+    <span class="grey-light"></span>
+    <figcaption>
+        <p class="color-name">@grey-light</p>
+    </figcaption>
+</figure>
+
+<figure class="color-block">
+    <span class="grey"></span>
+    <figcaption>
+        <p class="color-name">@grey</p>
+    </figcaption>
+</figure>
+
+<figure class="color-block">
+    <span class="grey-dark"></span>
+    <figcaption>
+        <p class="color-name">@grey-dark</p>
+    </figcaption>
+</figure>
+
+<figure class="color-block">
+    <span class="grey-darker"></span>
+    <figcaption>
+        <p class="color-name">@grey-darker</p>
+    </figcaption>
+</figure>
+
+## Tans
+
+These are a little warmer than the neutral greys.
+    
+<figure class="color-block">
+    <span class="tan-light"></span>
+    <figcaption>
+        <p class="color-name">@tan-light</p>
+    </figcaption>
+</figure>
+
+<figure class="color-block">
+    <span class="tan"></span>
+    <figcaption>
+        <p class="color-name">@tan</p>
+    </figcaption>
+</figure>
+
+<figure class="color-block">
+    <span class="tan-dark"></span>
+    <figcaption>
+        <p class="color-name">@tan-dark</p>
+    </figcaption>
+</figure>
+
+*/
+/*doc
+---
+title: Accents
+name: 04_colors-03
+category: Colors
+---
+
+Use accents sparingly. These are mostly used with form alerts.            
+
+<figure class="color-block">
+    <span class="red-light"></span>
+    <figcaption>
+        <p class="color-name">@red-light</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="red"></span>
+    <figcaption>
+        <p class="color-name">@red</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="red-dark"></span>
+    <figcaption>
+        <p class="color-name">@red-dark</p>
+    </figcaption>
+</figure>
+
+<figure class="color-block">
+    <span class="orange-light"></span>
+    <figcaption>
+        <p class="color-name">@orange-light</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="orange"></span>
+    <figcaption>
+        <p class="color-name">@orange</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="orange-dark"></span>
+    <figcaption>
+        <p class="color-name">@orange-dark</p>
+    </figcaption>
+</figure>
+
+<figure class="color-block">
+    <span class="green-light"></span>
+    <figcaption>
+        <p class="color-name">@green-light</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="green"></span>
+    <figcaption>
+        <p class="color-name">@green</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="green-dark"></span>
+    <figcaption>
+        <p class="color-name">@green-dark</p>
+    </figcaption>
+</figure>
+
+<figure class="color-block">
+    <span class="blue-light"></span>
+    <figcaption>
+        <p class="color-name">@blue-light</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="blue"></span>
+    <figcaption>
+        <p class="color-name">@blue</p>
+    </figcaption>
+</figure>
+<figure class="color-block">
+    <span class="blue-dark"></span>
+    <figcaption>
+        <p class="color-name">@blue-dark</p>
+    </figcaption>
+</figure>
+
+
+*/
 /*! TYPE VARIABLES */
 /*--------------------------------------------------------------
   
@@ -732,6 +964,113 @@ th {
 * Version:          1.2
   
 --------------------------------------------------------------*/
+/*doc
+---
+title: Type Variables
+name: 05_typography_01
+category: Typography
+---
+
+```
+@font-base:         16;
+@font-line-height:  1.5;
+
+@font-serif:        "Janson", "Times New Roman", Times, serif;
+@font-serif-sc:     "Janson-SC", "Janson", "Times New Roman", Times, serif;
+@font-sans:         "Proxima Nova", "Arial", sans-serif;
+@font-monospace:    "Menlo", "Consolas","Courier New", monospace; 
+
+@font-base-family:  @font-sans;
+
+@font-thin:         200; 
+@font-light:        300; 
+@font-normal:       400;
+@font-medium:       500;
+@font-bold:         600;
+@font-xbold:        700;
+@font-black:        800;
+```
+
+*/
+/*doc
+---
+title: Licensing
+name: 05_typography_02
+category: Typography
+---
+
+> ## Important
+> 
+> Licensed fonts require embedding and are like software. Do not distribute licensed fonts. Only embed the font weights you need. Too many will increase page weight and slow down site rendering.
+
+*/
+/*doc
+---
+title: Proxima Nova
+name: 05_typography_03
+category: Typography
+---
+
+MU’s core websites use Proxima Nova as the san-serif typeface. <a href="http://www.fontspring.com/fonts/mark-simonson-studio/proxima-nova">Requires a license</a> or a <a href="https://typekit.com/fonts/proxima-nova">Typekit account</a>.
+
+<div class="font-examples">
+    <h3>Thin (200)</h3>
+    <p class="light">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
+    <h3>Light (300)</h3>
+    <p class="light">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
+    <h3>Roman (400)</h3>
+    <p class="normal">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
+    <h3>Medium (500)</h3>
+    <p class="medium">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
+    <h3>Bold (600)</h3>
+    <p class="bold">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
+    <h3>Extra Bold (700)</h3>
+    <p class="xbold">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
+    <h3>Black (800)</h3>
+    <p class="black">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
+</div>
+
+*/
+/*doc
+---
+title: Janson
+name: 05_typography_04
+category: Typography
+---
+
+MU’s official typeface is Janson and is primarily use with the MU logo signature. <a href="http://www.myfonts.com/fonts/urw/janson/">Requires a license</a> and a tracking `@import` link that is unique to a specific font kit.
+
+*Do not use Janson to create a signature.*
+
+<div class="font-examples">
+    <h3>Light (300)</h3>
+    <p class="serif light">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
+    <h3>Roman (400)</h3>
+    <p class="serif normal">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
+    <h3>Medium (500)</h3>
+    <p class="serif medium">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
+    <h3>Bold (600)</h3>
+    <p class="serif bold">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
+    <h3>Small Caps (400, no italics)</h3>
+    <p class="serif-sc">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
+</div>
+
+*/
+/*doc
+---
+title: Monospace
+name: 05_typography_05
+category: Typography
+---
+
+Standard monospaced system font that’s primarily used for code examples.
+
+<div class="font-examples">
+    <h3>Normal (400)</h3>
+    <p class="monospace">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
+</div>
+
+*/
 /*! MEDIA VARIABLES */
 /*--------------------------------------------------------------
   
@@ -1045,6 +1384,28 @@ category: REM Mixins
  * @param int @value3 (Optional) Pixel value 3
  * @param int @value4 (Optional) Pixel value 4
  */
+/*doc
+---
+title: Pixels to REMs
+name: rem_03
+category: REM Mixins
+---
+
+`.px-to-rem()` takes a given property and up to four pixel values, separated by a comma, and creates REM-sized equivalents.
+
+## Examples
+
+    .px-to-rem(margin-left, 32);
+    .px-to-rem(padding, 32, 0);
+
+... which, assuming HTML has a font-size of 18px, will output the following:
+
+    margin-left: 32px;
+    margin-left: 2rem; 
+    padding: 32px 0;
+    padding: 2rem 0; 
+
+*/
 /*! GRID MIXINS */
 /*--------------------------------------------------------------
 
@@ -1053,6 +1414,313 @@ category: REM Mixins
 * Version:      3.2
      
 --------------------------------------------------------------*/
+/*doc
+---
+title: Grid Setup
+name: grid-01
+category: Grid Mixin
+---
+
+This grd system assumes you have `box-sizing` set to `border-box` on elements that use these mixins.
+
+## Columns
+
+This mixin takes a given fraction, and generates a column. The gutter is created from padding. 
+
+    .grid-column(1, 2);
+
+... which will output the following:
+
+    float: left
+    width: 50%;
+
+Parameter options:
+   
+    @x                  Numerator
+    @y                  Denominator
+    @padding-left       (Optional) Padding left for the column (defaults to 0.5rem)
+    @padding-right      (Optional) Padding right for the column (defaults to 0.5rem)
+    @float-direction    (Optional) How to float the column (defaults to left)
+
+## Rows
+
+To create rows, add this mixin to the colum container. It adds left and right padding so 
+outer padding is consistant with the column gutters.
+
+    .grid-row();
+
+Parameter options:
+
+     @padding-left      (Optional) Padding left for the row (defaults to 0.5rem)
+     @padding-right     (Optional) Padding right for the row (defaults to 0.5rem)
+
+
+## Push and Pull
+
+You can add optional left and right margins to push and pull columns. It works like the 
+`grid-pad-column()` mixin and takes a given fraction to calculate the margin.
+
+    .grid-push(1, 6)    // Adds left margin 1/6 of the parent's width
+    .grid-pull(1, 6)    // Adds right margin 1/6 of the parent's width
+
+Parameter options:
+   
+    @x                  Numerator
+    @y                  Denominator
+
+_Note: This grid system only works for IE8+. It requires `box-sizing: border-box;` compatibility on the columns._
+
+_Note: Other styles are added to the examples below to show the column structures._
+
+*/
+/*doc
+---
+title: Basic Use
+name: grid-02
+category: Grid Mixin
+---
+
+A basic 2-column layout. The content area is 2/3 the page width and the aside is 1/3.   
+
+```html_example
+<div class="basic">
+    <article>
+        <p>Content</p>
+        <p>&#160</p>
+        <p>&#160</p>
+    </article>
+    <aside>
+        <p>Aside</p>
+        <p>&#160</p>
+    </aside>
+</div>
+```
+```
+.basic {
+    .grid-row();
+    background-color: @tan-dark;
+    .rem(margin-bottom, 1.5);
+
+    p {
+        margin-bottom: 0;
+        background-color: @tan;
+        .rem(padding, 1);
+    }
+    article {
+        .grid-column(2, 3);
+    }
+    aside {
+        .grid-column(1, 3);
+    }
+}
+```
+*/
+/*doc
+---
+title: Push and Pull Examples
+name: grid-03
+category: Grid Mixin
+---
+
+```html_example
+<div class="push-pull">
+    <div class="push">
+        <p>Push Column 3</p>
+        <p>&#160</p>
+    </div>
+</div>
+<div class="push-pull">
+    <div class="pull">
+        <p>Pull Column 3</p>
+        <p>&#160</p>
+    </div>
+</div>
+```
+```
+.push-pull {
+    .grid-row();
+    background-color: @tan-dark;
+    .rem(margin-bottom, 1.5);
+
+    p {
+        margin-bottom: 0;
+        background-color: @tan;
+        .rem(padding, 1);
+    }
+    .push {
+        .grid-column(3, 4);
+        .grid-push(1, 4);
+    }
+    .pull {
+        .grid-column(3, 4);
+        .grid-pull(1, 4);
+    }
+}
+```
+*/
+/*doc
+---
+title: Layered Page Structure
+name: grid-04
+category: Grid Mixin
+---
+
+Here is an example of a page with full-width layers of color.
+
+```html_example
+<div class="header-layer">
+    <div class="header-wrapper">
+        <header>
+            <p>Header</p>
+        </header>
+    </div>
+</div>
+<div class="content-layer">
+    <div class="content-wrapper">
+        <article>
+            <p>Content</p>
+            <p>&#160</p>
+            <p>&#160</p>
+        </article>
+        <aside>
+            <p>Aside</p>
+            <p>&#160</p>
+        </aside>
+    </div>
+</div>
+<div class="footer-layer">
+    <div class="footer-wrapper">
+        <footer>
+            <p>Footer</p>
+        </footer>
+    </div>
+</div>   
+```
+```
+.header-layer,
+.content-layer,
+.footer-layer {
+    .rem(padding, 0, 1);
+
+    p {
+        margin-bottom: 0;
+        .rem(padding, 1);
+        background-color: fade(#fff, 50%);
+    }
+}
+.header-wrapper,
+.content-wrapper,
+.footer-wrapper {
+    .grid-row();
+}
+.header-layer2 {
+    background-color: @grey-dark;
+
+    header {
+        .grid-column(1, 1);
+    }
+}
+.content-layer {
+    background-color: @tan;
+
+    article {
+        .grid-column(4, 6);
+    }
+    aside {
+        .grid-column(2, 6);
+    }   
+}
+.footer-layer {
+    background-color: @grey-dark;
+    .rem(margin-bottom, 2);
+
+    footer {
+        .grid-column(1 ,1);
+    }
+}
+
+```
+*/
+/*doc
+---
+title: Nested Columns
+name: grid-05
+category: Grid Mixin
+---
+
+Remove left and right padding from either the parent column or the nested columns to prevent 
+padding from doubling up around the parent. In this case the padding was removed from the 
+`article` element.
+
+```html_example
+<div class="nested">
+    <article>
+        <div class="one-whole">
+            <p>100% Wide</p>
+        </div>
+        <hr class="space">
+        <div class="one-half">
+            <p>50% Wide</p>
+            <p>&#160</p>
+        </div>
+        <div class="one-half">
+            <p>50% Wide</p>
+            <p>&#160</p>
+        </div>
+        <hr class="space">
+        <div class="one-fourth">
+            <p>25% Wide</p>
+            <p>&#160</p>
+        </div>
+        <div class="one-fourth">
+            <p>25% Wide</p>
+            <p>&#160</p>
+        </div>
+        <div class="one-fourth">
+            <p>25% Wide</p>
+            <p>&#160</p>
+        </div>
+        <div class="one-fourth">
+            <p>25% Wide</p>
+            <p>&#160</p>
+        </div>
+    </article>
+    <aside>
+        <p>Aside</p>
+        <p>&#160</p>
+        <p>&#160</p>
+    </aside>
+</div>
+```
+```
+.nested {
+    .grid-row();
+    background-color: @tan-dark;
+    .rem(margin-bottom, 1.5);
+
+    p {
+        margin-bottom: 0;
+        background-color: @tan;
+        .rem(padding, 1);
+    }
+    article {
+        .grid-column(2, 3, 0, 0);
+    }
+    aside {
+        .grid-column(1, 3);
+    }
+    .one-fourth {
+        .grid-column(1, 4);
+    }
+    .one-half {
+        .grid-column(1, 2);
+    }
+    .one-whole {
+        .grid-column(1, 1); 
+    }
+}
+```
+*/
 /*! BUTTON STYLES */
 /*--------------------------------------------------------------
   
@@ -1108,6 +1776,27 @@ category: Buttons
 .button.outline {
   background-color: transparent;
 }
+/*doc
+---
+title: Link Buttons
+name: buttons-02
+category: Buttons
+---
+
+These are inline styles applied to anchor tags. Sizes are set in EMs so it can inherit 
+it's parent element's size properties.
+
+```html_example
+<p>
+    <a class="button" href="#">Link Button&#160;&#8250;</a> &#160; 
+    <a class="button outline" href="#">Link Button Outline&#160;&#8250;</a>
+</p>
+<p style="font-size: 1.6rem">
+    <a class="button" href="#">A big ’ol Button&#160;&#8250;</a> &#160; 
+    <a class="button outline" href="#">A big ’ol Button Outline&#160;&#8250;</a>
+</p>
+```
+*/
 /*! MIZZOU BRAND STYLES */
 /*--------------------------------------------------------------
   
@@ -1224,6 +1913,153 @@ The MU logo with a stroke around it should be used on signatures with a colored 
 }  
 ```
 
+
+*/
+/*doc
+---
+title: Unit Signature Mixin 
+name: 03_unit-sig_01
+category: Unit Signatures
+---
+The `.mu-unit-sig()` mixin has a set of variables that can be passed to it to define size, 
+style and printing options. This is also useful in resetting options for media queries. 
+Below are the mixin options.
+
+```
+@logo-size:          "64" 
+@logo-size:          "48" // Default
+@logo-size:          "32"
+
+@logo-style:        "stroked" // Default 
+@logo-style:        "none"
+
+@wordmark-color:    "black" // Default 
+@wordmark-color:    "white"
+
+@wordmark-indent:   0 // Default
+@wordmark-indent:   2px // Use a unit value to add left margin to wordmark
+
+@print:             "no" // Default
+@print:             "yes"
+
+@center:            "no" // Default
+@center:            "yes"
+
+@unit-margin:       0 // Default
+@unit-margin:       2px // Use a unit value to add bottom margin to unit name
+
+```
+The unit variables below set the options for the custom unit name image. Every site will 
+have a unique unit name. Images for these are not part of the framework. **All variables 
+Except `@unit-img-print` are required.**
+
+```
+@unit-width:        100px // Use px units
+@unit-height:       25px
+@unit-image:        "image-file-name.svg" // Place image in images folder
+@unit-img-print:    "image-file-name-print.svg" // Defaults to @unit-image
+
+```
+
+> ## Unit Name Image Creation
+> 
+> University units may not create new logos. Unit signatures have a carefully defined relationship 
+> among the logo, the unit and division names, and the university wordmark. **For this reason, do not 
+> attempt to re-create any part of a unit signature.** To obtain unit name graphics, contact the Division 
+> of Marketing & Communications at [identity@missouri.edu](mailto:identity@missouri.edu). See section
+> 1.4 of the Graphic Identity Standards at [identity.missouri.edu](http://identity.missouri.edu/).
+> 
+> When designing for a small phone screen, the max-width the unit name can be is 245px wide.
+
+*/
+/*doc
+---
+title: Unit Signature Examples
+name: 03_unit-sig_02
+category: Unit Signatures
+---
+
+## Default example
+
+```html_example
+<div class="sig-default-example">
+    <p class="logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
+    <h1 class="unit"><a href="http://missouri.edu">Office of Programs</a></h1>
+    <h2 class="wordmark"><a href="http://missouri.edu">University of Missouri</a></h2>
+</div>
+```
+```
+.sig-default-example {
+    .mu-unit-sig(
+        @unit-width: 284px, 
+        @unit-height: 40px, 
+        @unit-img: "unit-name_48.svg",
+    );
+}
+```
+## Dark background example with options
+
+The MU logo with a stroke around it should be used on signatures with a colored background. See section
+1.2 of the Graphic Identity Standards at [identity.missouri.edu](http://identity.missouri.edu/).
+
+```html_example
+<div class="sig-dark-example">
+    <p class="logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
+    <h1 class="unit"><a href="http://missouri.edu">Office of Programs</a></h1>
+    <h2 class="wordmark"><a href="http://missouri.edu">University of Missouri</a></h2>
+</div>
+```
+```
+.sig-dark-example {
+    padding: 1.5em;
+    background: #333;
+    .mu-unit-sig(
+        @logo-size: "64",  
+        @wordmark-color: "white", 
+        @wordmark-indent: 2px, 
+        @print: "yes", 
+        @unit-width: 404px, 
+        @unit-height: 57px, 
+        @unit-img: "unit-name-white_64.svg",
+        @unit-img-print: "unit-name_64.svg"
+    );
+}
+```
+
+## Gold example with media query change
+
+```html_example
+<div class="sig-gold-responsive-example">
+    <p class="logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
+    <h1 class="unit"><a href="http://missouri.edu">Office of Programs</a></h1>
+    <h2 class="wordmark"><a href="http://missouri.edu">University of Missouri</a></h2>
+</div>
+```
+```
+.sig-gold-responsive-example {
+    padding: 1.5em;
+    background: @gold;
+    .mu-unit-sig(
+        @logo-size: "32", 
+        @print: "yes", 
+        @center: "yes", 
+        @unit-margin: 5px, 
+        @unit-width: 194px, 
+        @unit-height: 27px, 
+        @unit-img: "unit-name_32.svg",
+    );
+    
+    @media screen and (max-width: 850px){
+        .mu-unit-sig(
+            @logo-size: "32", 
+            @unit-margin: 5px, 
+            @unit-width: 194px, 
+            @unit-height: 27px, 
+            @unit-img: "unit-name_32.svg",
+        );
+    }
+}  
+```
 
 */
 /*! GENERAL TAG STYLES */
@@ -1355,6 +2191,20 @@ sub {
 mark {
   background: #fae5b3;
 }
+/*doc
+---
+title: Others
+name: inline-other
+category: Inline Elements
+---
+
+```html_example
+<p><abbr title="College of Agriculture, Food, and Natural Resources">CAFNR</abbr> is an abbreviation</p>
+<p>The mark tag is a great way to <mark>highlight something</mark></p>
+<p>Here is an inline piece of code: <code>$var = "foo"</code></p>
+<p>The event is on the 4<sup>th</sup> of July and will include H<sub>2</sub>O</p>
+```
+*/
 /*! BLOCK LEVEL TAG STYLES */
 /*--------------------------------------------------------------
   
@@ -1660,6 +2510,27 @@ figcaption *:last-child {
 figcaption p {
   font-size: inherit;
 }
+/*doc
+---
+title: Images and Figures
+name: figures-images
+category: Block Elements
+---
+
+## Images
+
+Examples of images and alignment. Mention max-width 100% on all images by default.
+
+
+## Standard Figure
+
+```html_example 
+<figure>
+    <img src="http://placehold.it/150x150" alt="Placeholder" />
+    <figcaption><p>Image caption.</p></figcaption>
+</figure>
+```
+*/
 /*! LIST STYLES */
 /*--------------------------------------------------------------
   
@@ -1734,6 +2605,216 @@ dd {
   margin-bottom: 16px;
   margin-bottom: 1rem;
 }
+/*doc
+---
+title: Unordered List
+name: lists_01
+category: List Elements
+---
+
+```html_example
+<ul>
+    <li>Bulleted Item</li>
+    <li>Bulleted Item
+        <ul>
+            <li>Nested Bulleted Item</li>
+            <li>Nested Bulleted Item</li>
+        </ul>
+    </li>
+    <li>Bulleted Item
+        <ol>
+            <li>Nested Numbered Item</li>
+            <li>Nested Numbered Item</li>
+        </ol>
+    </li>
+</ul>
+```
+
+*/
+/*doc
+---
+title: Ordered List
+name: lists_02
+category: List Elements
+---
+
+```html_example
+<ol>
+    <li>Numbered Item</li>
+    <li>Numbered Item
+        <ol>
+            <li>Nested Numbered Item</li>
+            <li>Nested Numbered Item</li>
+        </ol>
+    </li>
+    <li>Numbered Item
+        <ul>
+            <li>Nested Bulleted Item</li>
+            <li>Nested Bulleted Item</li>
+        </ul>
+    </li>
+</ol>
+```
+
+*/
+/*doc
+---
+title: Spaced-Out
+name: lists_03
+category: List Elements
+---
+
+```html_example
+<ul class="list-spaced">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ul>
+
+<ol class="list-spaced">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ol>
+```
+
+*/
+/*doc
+---
+title: Square Bullets
+name: lists_04
+category: List Elements
+---
+
+```html_example
+<ul class="list-square">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ul>
+```
+
+*/
+/*doc
+---
+title: Disc Bullets
+name: lists_05
+category: List Elements
+---
+
+```html_example
+<ul class="list-disc">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ul>
+```
+
+*/
+/*doc
+---
+title: Circle Bullets
+name: lists_06
+category: List Elements
+---
+
+```html_example
+<ul class="list-circle">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ul>
+```
+
+*/
+/*doc
+---
+title: Decimal Numbers
+name: lists_07
+category: List Elements
+---
+
+```html_example
+<ol class="list-decimal">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ol>
+```
+
+*/
+/*doc
+---
+title: Lowercase Alpha
+name: lists_08
+category: List Elements
+---
+
+```html_example
+<ol class="list-lower-alpha">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ol>
+```
+
+*/
+/*doc
+---
+title: Uppercase Alpha
+name: lists_09
+category: List Elements
+---
+
+```html_example
+<ol class="list-upper-alpha">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ol>
+```
+
+*/
+/*doc
+---
+title: Lowercase Roman
+name: lists_10
+category: List Elements
+---
+
+```html_example
+<ol class="list-lower-roman">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ol>
+```
+
+*/
+/*doc
+---
+title: Uppercase Roman
+name: lists_11
+category: List Elements
+---
+
+```html_example
+<ol class="list-upper-roman">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ol>
+```
+
+*/
+/*doc
+---
+title: Definition List
+name: lists_12
+category: List Elements
+---
+
+```html_example
+<dl>
+    <dt>Definition</dt>
+    <dd>This is the definition.</dd>
+    
+    <dt>Definition</dt>
+    <dd>This is the definition.</dd>
+</dl>
+```
+
+*/
 /*! FORM STYLES */
 /*--------------------------------------------------------------
   
@@ -2151,6 +3232,25 @@ input.search-button:focus {
 input.search-button::-moz-focus-inner {
   border: 0;
 }
+/*doc
+---
+title: Search Field
+name: forms-search
+category: Form Elements
+---
+
+This will expand to fill the width of its parent container. Sizes are set in EMs so it can inherit 
+it's parent element's size properties.
+
+```html_example
+<form> 
+	<div class="search-container">
+		<input title="search field" class="search-field" type="text"> 
+		<input title="submit search" class="search-button" type="submit" value="Search">
+	</div>
+</form>
+```
+*/
 /*! TABLE STYLES */
 /*--------------------------------------------------------------
   
@@ -2211,6 +3311,73 @@ caption {
   margin-bottom: 0.5rem;
   text-align: left;
 }
+/*doc
+---
+title: With Top Headers
+name: tables-01
+category: Tables
+---
+
+```html_example
+<table summary="An example table">
+    <caption>A Basic Table With Top Headers</caption>
+    <thead>
+        <tr>
+            <th scope="col">Header 1</th>
+            <th scope="col">Header 2</th>
+            <th scope="col">Header 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="stripe">
+            <td>Column 1</td>
+            <td>Column 2 with longer text</td>
+            <td>Column 3</td>
+        </tr>
+        <tr>
+            <td>Column 1</td>
+            <td>Column 2</td>
+            <td>Column 3</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">A place for footnote-like content.</td>
+        </tr>
+    </tfoot>
+</table>
+```
+*/
+/*doc
+---
+title: With Left Headers
+name: tables-02
+category: Tables
+---
+
+```html_example
+<table summary="Test summary">
+    <caption>A Basic Table With Left Headers</caption>
+    <tbody>
+        <tr>
+            <th scope="row">Header 1</th>
+            <td>Column 1 with longer text</td>
+            <td>Column 2</td>
+        </tr>
+        <tr>
+            <th scope="row">Header 2</th>
+            <td>Column 1</td>
+            <td>Column 2</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">A place for footnote-like content.</td>
+        </tr>
+    </tfoot>
+</table>
+```
+*/
 .menu-horizontal {
   background-color: #f7d583;
 }
@@ -2300,6 +3467,32 @@ category: Objects
   padding-left: 32px;
   padding-left: 2rem;
 }
+/*doc
+---
+title: Menu Vertical
+name: objects_02
+category: Objects
+---
+
+```html_example
+<div class="menu-vertical">
+    <ul>
+        <li><a href="#">Item One</a></li>
+        <li class="current-menu-item"><a href="#">Item Two</a>
+            <ul>
+                <li><a href="#">Item One</a></li>
+                <li><a href="#">Item Two</a></li>
+                <li><a href="#">Item Three</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Item Three</a></li>
+        <li><a href="#">Item Four</a></li>
+        <li><a href="#">Item Five</a></li>
+    </ul>
+</div>
+```
+
+*/
 #search .search-wrap {
   margin-left: 0!important;
 }
@@ -2367,6 +3560,53 @@ category: Objects
 .search-string {
   color: #900000;
 }
+/*doc
+---
+title: Search Results 
+name: objects_04
+category: Objects
+---
+
+Search results styles based on the <abbr title="Google Search Appliance">GSA</abbr> frontend `proxystylesheet: wc_basic`.
+
+```html_example
+<div class="search-meta">
+   <h3>Search results</h3>
+   <p class="meta-result">Results <b>81&#8211;90</b> of about <b>191000</b> for &#8220;<b class="search-string">mizzou</b>&#8221;</p>
+</div>
+<ul class="search-results">
+   <li>
+      <h3 class="title">
+         <a href="http://mizzoulife.missouri.edu/staff/">Staff Directory - <b>Mizzou</b> Life</a>
+      </h3>
+      <p class="excerpt"><b>...</b> The support and greek unity at <b>Mizzou</b> is beyond anything I could have every<br> imagined, and I am proud to be able to say I am a part of it. <b>...</b>  </p>
+      <small class="source">http://mizzoulife.missouri.edu/staff/&#160;&#8212;&#160;159k</small>
+   </li>
+   <li>
+      <h3 class="title">
+         <a href="http://mizzoulife.missouri.edu/asb/">Alternative Breaks - <b>Mizzou</b> Life</a>
+      </h3>
+      <p class="excerpt"><b>...</b> <b>Mizzou</b> Alternative Breaks is a group of 800+ students who travel to various<br> locations all across the nation in groups of 10-12 to spend their week <b>...</b>  </p>
+      <small class="source">http://mizzoulife.missouri.edu/asb/&#160;&#8212;&#160;31k</small>
+   </li>
+   <li>
+      <h3 class="title">
+         <a href="http://mizzouweekly.missouri.edu/classifieds/index.php">Classifieds | <b>Mizzou</b> Weekly | University of Missouri</a>
+      </h3>
+      <p class="excerpt"><b>...</b> Classifieds. <b>Mizzou</b> Weekly Classifieds. <b>...</b> <b>Mizzou</b> Weekly 407 Reynolds Alumni<br> Center Columbia, MO 65211 mizzouweekly@missouri.edu. <b>...</b>  </p>
+      <small class="source">http://mizzouweekly.missouri.edu/classifieds/index.php&#160;&#8212;&#160;6k</small>
+   </li>
+   <li>
+      <h3 class="title">
+         <a href="http://mizzouweekly.missouri.edu/advertise/index.php">Advertising | <b>Mizzou</b> Weekly | University of Missouri</a>
+      </h3>
+      <p class="excerpt"><b>...</b> In the event of an error by <b>Mizzou</b> Weekly, the maximum liability is limited<br> to the ad charges. <b>Mizzou</b> Weekly website advertisers <b>...</b>  </p>
+      <small class="source">http://mizzouweekly.missouri.edu/advertise/index.php&#160;&#8212;&#160;9k</small>
+   </li>
+</ul>
+
+```
+*/
 .pagination {
   clear: both;
   list-style: none;
@@ -2405,6 +3645,58 @@ category: Objects
   border-color: #444444;
   -webkit-font-smoothing: antialiased;
 }
+/*doc
+---
+title: Pagination 
+name: objects_03
+category: Objects
+---
+
+Pagination markup is based on Wordpress and the <abbr title="Google Search Appliance">GSA</abbr> frontend’s `proxystylesheet: wc_basic` output.
+
+```html_example
+<h3>Result pages</h3>
+<ul class="pagination">
+  <li>
+     <a class="pagination-previous" href="/search?q=mizzou&amp;start=70">&#171;&#160;Prev</a>
+  </li>
+  <li>…</li>
+  <li>
+     <a class="page" href="/search?q=mizzou&amp;start=40">5</a>
+  </li>
+  <li>
+     <a class="page" href="/search?q=mizzou&amp;start=50">6</a>
+  </li>
+  <li>
+     <a class="page" href="/search?q=mizzou&amp;start=60">7</a>
+  </li>
+  <li>
+     <a class="page" href="/search?q=mizzou&amp;start=70">8</a>
+  </li>
+  <li class="current">
+     <a class="page" href="/search?q=mizzou&amp;start=80">9</a>
+  </li>
+  <li>
+     <a class="page" href="/search?q=mizzou&amp;start=90">10</a>
+  </li>
+  <li>
+     <a class="page" href="/search?q=mizzou&amp;start=100">11</a>
+  </li>
+  <li>
+     <a class="page" href="/search?q=mizzou&amp;start=110">12</a>
+  </li>
+  <li>
+     <a class="page" href="/search?q=mizzou&amp;start=120">13</a>
+  </li>
+  <li>…</li>
+  <li>
+     <a class="pagination-next" href="/search?q=mizzou&amp;start=90">Next&#160;&#187;</a>
+  </li>
+</ul>
+
+```
+
+*/
 @media print {
   /*! PRINT STYLES */
   /*--------------------------------------------------------------
@@ -2425,6 +3717,25 @@ category: Objects
   html {
     font-size: 11pt!important;
   }
+  /*doc
+---
+title: Print Reset
+name: print
+category: Print
+---
+
+The `_print.less` stylesheet does the following to all elements on the page to help with printer compatibility:
+
+* Makes text black
+* Makes borders black
+* Removes backgrand images
+* Makes background colors white
+
+It also overrides the base font size and sets it to 11px on the `html` tag.
+
+Individual sites will need a separate set of rules to hide unnecessary block level elements and make fine-tuned adjustments.
+
+*/
 }
 // Copied from Github
 
@@ -2759,7 +4070,7 @@ hll { background-color: #ffffcc }
   }
 }
 .mu-sig-ie-example .wordmark {
-  margin-left: 87px;
+  margin-left: 85px;
   padding-top: 12px;
 }
 .mu-sig-ie-example .wordmark a {
@@ -3606,6 +4917,7 @@ h2.display {
   height: 74px;
   background-image: url("../images/mu-logo-64.svg");
 }
+/* @end */
 /* !Layout Styles */
 .main-content {
   position: relative;
