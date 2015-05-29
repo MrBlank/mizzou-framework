@@ -5,5 +5,5 @@
   "ignore": [
     "docs_src/fonts"
   ],
-  "private": true
+  "private": "true"
 }
