@@ -1,0 +1,9 @@
+{
+  "name": "mizzou_framework",
+  "version": "1",
+  "main": "src/less",
+  "ignore": [
+    "docs_src/fonts"
+  ],
+  "private": true
+}
