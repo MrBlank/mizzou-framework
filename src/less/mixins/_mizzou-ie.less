@@ -4,7 +4,7 @@
   
 * Site:             Mizzou Web Style Guide
 * Author:           Josh Nichols, MU Web Communications
-* Version:          1
+* Version:          1.1
 * Dependancies: 
     
     Autoprefixer - https://github.com/ai/autoprefixer
@@ -220,9 +220,7 @@ set again if used in `.mu-sig()`.
                 .print-image('@{img-path}/unit-wordmark-32.png');
             }
         }
-        .unit a {
-            background-image: url('@{img-path}/@{unit-img-print}');
-        }
+        .unit-name();
     }
     
     & when (@logo-size = "48") { // Defualt
@@ -251,9 +249,7 @@ set again if used in `.mu-sig()`.
                 .print-image('@{img-path}/unit-wordmark-48.png');
             }
         } 
-        .unit a {
-            background-image: url('@{img-path}/@{unit-img-print}');
-        }       
+        .unit-name();      
     }
     
     & when (@logo-size = "64") {
@@ -282,11 +278,22 @@ set again if used in `.mu-sig()`.
                 .print-image('@{img-path}/unit-wordmark-64.png');
             }
         }
-        .unit a {
-            background-image: url('@{img-path}/@{unit-img-print}');
+        .unit-name();
+    }
+} 
+
+.unit-name() {
+    
+    .unit a {
+        background-image: url('@{img-path}/@{unit-img}');
+
+        & when (@print = "yes") {
+            .print-image('@{img-path}/@{unit-img-print}');
         }
     }
-}    
+    
+}
+   
 
 //! Replaces background image with content selector and after pseudo element for printing
 
