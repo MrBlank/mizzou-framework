@@ -1802,7 +1802,7 @@ it's parent element's size properties.
   
 * Site:             Mizzou Web Style Guide
 * Author:           Josh Hughes, Josh Nichols, MU Web Communications
-* Version:          1.5
+* Version:          1.6
 * Dependancies: 
     
     Autoprefixer - https://github.com/ai/autoprefixer
@@ -2011,7 +2011,8 @@ The MU logo with a stroke around it should be used on signatures with a colored 
 ```
 ```
 .sig-dark-example {
-    padding: 1.5em;
+    padding: 1em;
+    .clearfix();
     background: #333;
     .mu-unit-sig(
         @logo-size: "64",  
@@ -3828,6 +3829,7 @@ hll { background-color: #ffffcc }
 .mu-sig-default-example .logo a {
   width: 34px;
   height: 38px;
+  margin-bottom: 10px;
   background-image: url('../images/mu-logo-32-stroked.svg');
   float: left;
   margin-left: -1px;
@@ -3848,9 +3850,17 @@ hll { background-color: #ffffcc }
   background-position: left -27px;
 }
 .mu-sig-dark-example {
-  padding: 1.5em;
+  padding: 1em;
   background: #333;
   min-height: 56px;
+}
+.mu-sig-dark-example:before,
+.mu-sig-dark-example:after {
+  content: "";
+  display: table;
+}
+.mu-sig-dark-example:after {
+  clear: both;
 }
 .mu-sig-dark-example .logo,
 .mu-sig-dark-example .wordmark {
@@ -3870,6 +3880,7 @@ hll { background-color: #ffffcc }
 .mu-sig-dark-example .logo a {
   width: 50px;
   height: 56px;
+  margin-bottom: 15px;
   background-image: url('../images/mu-logo-48-stroked.svg');
   float: left;
   margin-left: -1px;
@@ -3941,9 +3952,9 @@ hll { background-color: #ffffcc }
 .mu-sig-gold-responsive-example .logo a {
   width: 34px;
   height: 38px;
+  margin-bottom: 10px;
   background-image: url('../images/mu-logo-32-stroked.svg');
   float: none;
-  margin-bottom: 11px;
 }
 @media print {
   .mu-sig-gold-responsive-example .logo a {
@@ -4009,6 +4020,7 @@ hll { background-color: #ffffcc }
   .mu-sig-gold-responsive-example .logo a {
     width: 34px;
     height: 38px;
+    margin-bottom: 10px;
     background-image: url('../images/mu-logo-32-stroked.svg');
     float: left;
     margin-left: -1px;
@@ -4050,6 +4062,7 @@ hll { background-color: #ffffcc }
 .mu-sig-ie-example .logo a {
   width: 66px;
   height: 74px;
+  margin-bottom: 20px;
   background-image: url('../images/mu-logo-64-stroked.svg');
   float: left;
   margin-left: -1px;
@@ -4117,6 +4130,7 @@ hll { background-color: #ffffcc }
 .sig-default-example .logo a {
   width: 50px;
   height: 56px;
+  margin-bottom: 15px;
   background-image: url('../images/mu-logo-48-stroked.svg');
   float: left;
   margin-left: -1px;
@@ -4170,6 +4184,7 @@ hll { background-color: #ffffcc }
 .sig-dark-example .logo a {
   width: 66px;
   height: 74px;
+  margin-bottom: 20px;
   background-image: url('../images/mu-logo-64-stroked.svg');
   float: left;
   margin-left: -1px;
@@ -4269,9 +4284,9 @@ hll { background-color: #ffffcc }
 .sig-gold-responsive-example .logo a {
   width: 34px;
   height: 38px;
+  margin-bottom: 10px;
   background-image: url('../images/mu-logo-32-stroked.svg');
   float: none;
-  margin-bottom: 11px;
 }
 @media print {
   .sig-gold-responsive-example .logo a {
@@ -4363,6 +4378,7 @@ hll { background-color: #ffffcc }
   .sig-gold-responsive-example .logo a {
     width: 34px;
     height: 38px;
+    margin-bottom: 10px;
     background-image: url('../images/mu-logo-32-stroked.svg');
     float: left;
     margin-left: -1px;
@@ -4416,6 +4432,7 @@ hll { background-color: #ffffcc }
 .sig-ie-example .logo a {
   width: 66px;
   height: 74px;
+  margin-bottom: 20px;
   background-image: url('../images/mu-logo-64-stroked.svg');
   float: left;
   margin-left: -1px;
@@ -4980,9 +4997,9 @@ h2.display {
 .styleguide-nav .signature .logo a {
   width: 34px;
   height: 38px;
+  margin-bottom: 10px;
   background-image: url('../images/mu-logo-32-stroked.svg');
   float: none;
-  margin-bottom: 11px;
 }
 @media print {
   .styleguide-nav .signature .logo a {

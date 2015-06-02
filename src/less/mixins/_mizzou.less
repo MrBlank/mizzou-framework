@@ -3,7 +3,7 @@
   
 * Site:             Mizzou Web Style Guide
 * Author:           Josh Hughes, Josh Nichols, MU Web Communications
-* Version:          1.5
+* Version:          1.6
 * Dependancies: 
     
     Autoprefixer - https://github.com/ai/autoprefixer
@@ -52,6 +52,7 @@
         .logo a { 
             width: 26px;
             height: 29px;
+            margin-bottom: 7px; // Clear space 8px - 1px border
             
             & when (@logo-style = "none") {
                 background-image: url('@{img-path}/mu-logo-24.svg');
@@ -69,7 +70,6 @@
             }
             & when (@center = "yes") {
                 float: none;
-                margin-bottom: 8px; // Clear space
             }
         }
         .wordmark {            
@@ -112,6 +112,7 @@
         .logo a { 
             width: 34px;
             height: 38px;
+            margin-bottom: 10px; // Clear space 11px - 1px border
             
             & when (@logo-style = "none") {
                 background-image: url('@{img-path}/mu-logo-32.svg');
@@ -129,7 +130,6 @@
             }
             & when (@center = "yes") {
                 float: none;
-                margin-bottom: 11px; // Clear space
             }
         }
         .wordmark {
@@ -171,6 +171,7 @@
         .logo a { 
             width: 50px;
             height: 56px;
+            margin-bottom: 15px; // Clear space 16px - 1px border
             
             & when (@logo-style = "none") {
                 background-image: url('@{img-path}/mu-logo-48.svg');
@@ -188,7 +189,6 @@
             }
             & when (@center = "yes") {
                 float: none;
-                margin-bottom: 16px; // Clear space
             }
         }
         .wordmark {
@@ -230,6 +230,7 @@
         .logo a { 
             width: 66px;
             height: 74px;
+            margin-bottom: 20px; // Clear space 21px - 1px border
             
             & when (@logo-style = "none") {
                 background-image: url('@{img-path}/mu-logo-64.svg');
@@ -247,7 +248,6 @@
             }
             & when (@center = "yes") {
                 float: none;
-                margin-bottom: 21px; // Clear space
             }
         }
         .wordmark {
@@ -436,6 +436,7 @@ The MU logo with a stroke around it should be used on signatures with a colored 
         .logo a { 
             width: 34px;
             height: 38px;
+            margin-bottom: 10px; // Clear space 11px - 1px border
             
             & when (@logo-style = "none") {
                 background-image: url('@{img-path}/mu-logo-32.svg');
@@ -453,7 +454,6 @@ The MU logo with a stroke around it should be used on signatures with a colored 
             }
             & when (@center = "yes") {
                 float: none;
-                margin-bottom: 11px; // Clear space
             }
         }
         .wordmark,
@@ -504,6 +504,7 @@ The MU logo with a stroke around it should be used on signatures with a colored 
         .logo a { 
             width: 50px;
             height: 56px;
+            margin-bottom: 15px; // Clear space 16px - 1px border
             
             & when (@logo-style = "none") {
                 background-image: url('@{img-path}/mu-logo-48.svg');
@@ -521,7 +522,6 @@ The MU logo with a stroke around it should be used on signatures with a colored 
             }
             & when (@center = "yes") {
                 float: none;
-                margin-bottom: 16px; // Clear space
             }
         }
         .wordmark,
@@ -571,6 +571,7 @@ The MU logo with a stroke around it should be used on signatures with a colored 
         .logo a { 
             width: 66px;
             height: 74px;
+            margin-bottom: 20px; // Clear space 21px - 1px border
             
             & when (@logo-style = "none") {
                 background-image: url('@{img-path}/mu-logo-64.svg');
@@ -588,7 +589,6 @@ The MU logo with a stroke around it should be used on signatures with a colored 
             }
             & when (@center = "yes") {
                 float: none;
-                margin-bottom: 21px; // Clear space
             }
         }
         .wordmark,
@@ -771,7 +771,8 @@ The MU logo with a stroke around it should be used on signatures with a colored 
 ```
 ```
 .sig-dark-example {
-    padding: 1.5em;
+    padding: 1em;
+    .clearfix();
     background: #333;
     .mu-unit-sig(
         @logo-size: "64",  
