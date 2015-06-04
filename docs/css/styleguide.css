@@ -114,19 +114,19 @@
   font-weight: 500;
   font-style: italic;
 }
-/* Bold 600 */
+/* Bold 700 */
 @font-face {
   font-family: 'Janson';
   src: url('../fonts/2AB5F1_6_0.eot');
   src: url('../fonts/2AB5F1_6_0.eot?#iefix') format('embedded-opentype'), url('../fonts/2AB5F1_6_0.woff') format('woff'), url('../fonts/2AB5F1_6_0.ttf') format('truetype');
-  font-weight: 600;
+  font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: 'Janson';
   src: url('../fonts/2AB5F1_2_0.eot');
   src: url('../fonts/2AB5F1_2_0.eot?#iefix') format('embedded-opentype'), url('../fonts/2AB5F1_2_0.woff') format('woff'), url('../fonts/2AB5F1_2_0.ttf') format('truetype');
-  font-weight: 600;
+  font-weight: 700;
   font-style: italic;
 }
 /* Smallcaps 400 */
@@ -170,106 +170,121 @@
 /* Thin 200 */
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../fonts/ProximaNova-Thin-webfont.eot');
-  src: url('../fonts/ProximaNova-Thin-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Thin-webfont.woff') format('woff'), url('../fonts/ProximaNova-Thin-webfont.ttf') format('truetype');
+  src: url('../fonts/proximanova-thin-webfont.eot');
+  src: url('../fonts/proximanova-thin-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-thin-webfont.woff2') format('woff2'), url('../fonts/proximanova-thin-webfont.woff') format('woff'), url('../fonts/proximanova-thin-webfont.ttf') format('truetype');
   font-weight: 200;
   font-style: normal;
 }
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../fonts/ProximaNova-ThinIt-webfont.eot');
-  src: url('../fonts/ProximaNova-ThinIt-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-ThinIt-webfont.woff') format('woff'), url('../fonts/ProximaNova-ThinIt-webfont.ttf') format('truetype');
+  src: url('../fonts/proximanova-thinit-webfont.eot');
+  src: url('../fonts/proximanova-thinit-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-thinit-webfont.woff2') format('woff2'), url('../fonts/proximanova-thinit-webfont.woff') format('woff'), url('../fonts/proximanova-thinit-webfont.ttf') format('truetype');
   font-weight: 200;
   font-style: italic;
 }
 /* Light 300 */
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../fonts/ProximaNova-Light-webfont.eot');
-  src: url('../fonts/ProximaNova-Light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Light-webfont.woff') format('woff'), url('../fonts/ProximaNova-Light-webfont.ttf') format('truetype');
+  src: url('../fonts/proximanova-light-webfont.eot');
+  src: url('../fonts/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-light-webfont.woff2') format('woff2'), url('../fonts/proximanova-light-webfont.woff') format('woff'), url('../fonts/proximanova-light-webfont.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../fonts/ProximaNova-LightIt-webfont.eot');
-  src: url('../fonts/ProximaNova-LightIt-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-LightIt-webfont.woff') format('woff'), url('../fonts/ProximaNova-LightIt-webfont.ttf') format('truetype');
+  src: url('../fonts/proximanova-lightit-webfont.eot');
+  src: url('../fonts/proximanova-lightit-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-lightit-webfont.woff2') format('woff2'), url('../fonts/proximanova-lightit-webfont.woff') format('woff'), url('../fonts/proximanova-lightit-webfont.ttf') format('truetype');
   font-weight: 300;
   font-style: italic;
 }
 /* Regular 400 */
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../fonts/ProximaNova-Reg-webfont.eot');
-  src: url('../fonts/ProximaNova-Reg-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Reg-webfont.woff') format('woff'), url('../fonts/ProximaNova-Reg-webfont.ttf') format('truetype');
+  src: url('../fonts/proximanova-regular-webfont.eot');
+  src: url('../fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-regular-webfont.woff2') format('woff2'), url('../fonts/proximanova-regular-webfont.woff') format('woff'), url('../fonts/proximanova-regular-webfont.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../fonts/ProximaNova-RegIt-webfont.eot');
-  src: url('../fonts/ProximaNova-RegIt-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-RegIt-webfont.woff') format('woff'), url('../fonts/ProximaNova-RegIt-webfont.ttf') format('truetype');
+  src: url('../fonts/proximanova-regularit-webfont.eot');
+  src: url('../fonts/proximanova-regularit-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-regularit-webfont.woff2') format('woff2'), url('../fonts/proximanova-regularit-webfont.woff') format('woff'), url('../fonts/proximanova-regularit-webfont.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
 }
-/* Semibold 500 */
+/* Medium 500 */
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../fonts/ProximaNova-Sbold-webfont.eot');
-  src: url('../fonts/ProximaNova-Sbold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Sbold-webfont.woff') format('woff'), url('../fonts/ProximaNova-Sbold-webfont.ttf') format('truetype');
+  src: url('../fonts/proximanova-medium-webfont.eot');
+  src: url('../fonts/proximanova-medium-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-medium-webfont.woff2') format('woff2'), url('../fonts/proximanova-medium-webfont.woff') format('woff'), url('../fonts/proximanova-medium-webfont.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../fonts/ProximaNova-SboldIt-webfont.eot');
-  src: url('../fonts/ProximaNova-SboldIt-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-SboldIt-webfont.woff') format('woff'), url('../fonts/ProximaNova-SboldIt-webfont.ttf') format('truetype');
+  src: url('../fonts/proximanova-mediumit-webfont.eot');
+  src: url('../fonts/proximanova-mediumit-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-mediumit-webfont.woff2') format('woff2'), url('../fonts/proximanova-mediumit-webfont.woff') format('woff'), url('../fonts/proximanova-mediumit-webfont.ttf') format('truetype');
   font-weight: 500;
   font-style: italic;
 }
-/* Bold 600 */
+/* Semibold 600 */
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../fonts/ProximaNova-Bold-webfont.eot');
-  src: url('../fonts/ProximaNova-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Bold-webfont.woff') format('woff'), url('../fonts/ProximaNova-Bold-webfont.ttf') format('truetype');
+  src: url('../fonts/proximanova-semibold-webfont.eot');
+  src: url('../fonts/proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-semibold-webfont.woff2') format('woff2'), url('../fonts/proximanova-semibold-webfont.woff') format('woff'), url('../fonts/proximanova-semibold-webfont.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../fonts/ProximaNova-BoldIt-webfont.eot');
-  src: url('../fonts/ProximaNova-BoldIt-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-BoldIt-webfont.woff') format('woff'), url('../fonts/ProximaNova-BoldIt-webfont.ttf') format('truetype');
+  src: url('../fonts/proximanova-semiboldit-webfont.eot');
+  src: url('../fonts/proximanova-semiboldit-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-semiboldit-webfont.woff2') format('woff2'), url('../fonts/proximanova-semiboldit-webfont.woff') format('woff'), url('../fonts/proximanova-semiboldit-webfont.ttf') format('truetype');
   font-weight: 600;
   font-style: italic;
 }
-/* Extra Bold 700 */
+/* Bold 700 */
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../fonts/ProximaNova-Xbold-webfont.eot');
-  src: url('../fonts/ProximaNova-Xbold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Xbold-webfont.woff') format('woff'), url('../fonts/ProximaNova-Xbold-webfont.ttf') format('truetype');
+  src: url('../fonts/proximanova-bold-webfont.eot');
+  src: url('../fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-bold-webfont.woff2') format('woff2'), url('../fonts/proximanova-bold-webfont.woff') format('woff'), url('../fonts/proximanova-bold-webfont.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../fonts/ProximaNova-XboldIt-webfont.eot');
-  src: url('../fonts/ProximaNova-XboldIt-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-XboldIt-webfont.woff') format('woff'), url('../fonts/ProximaNova-XboldIt-webfont.ttf') format('truetype');
+  src: url('../fonts/proximanova-boldit-webfont.eot');
+  src: url('../fonts/proximanova-boldit-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-boldit-webfont.woff2') format('woff2'), url('../fonts/proximanova-boldit-webfont.woff') format('woff'), url('../fonts/proximanova-boldit-webfont.ttf') format('truetype');
   font-weight: 700;
   font-style: italic;
 }
-/* Black 800 */
+/* Extra Bold 800 */
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../fonts/ProximaNova-Black-webfont.eot');
-  src: url('../fonts/ProximaNova-Black-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Black-webfont.woff') format('woff'), url('../fonts/ProximaNova-Black-webfont.ttf') format('truetype');
+  src: url('../fonts/proximanova-extrabld-webfont.eot');
+  src: url('../fonts/proximanova-extrabld-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-extrabld-webfont.woff2') format('woff2'), url('../fonts/proximanova-extrabld-webfont.woff') format('woff'), url('../fonts/proximanova-extrabld-webfont.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../fonts/ProximaNova-BlackIt-webfont.eot');
-  src: url('../fonts/ProximaNova-BlackIt-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-BlackIt-webfont.woff') format('woff'), url('../fonts/ProximaNova-BlackIt-webfont.ttf') format('truetype');
+  src: url('../fonts/proximanova-extrabldit-webfont.eot');
+  src: url('../fonts/proximanova-extrabldit-webfont?#iefix') format('embedded-opentype'), url('../fonts/proximanova-extrabldit-webfont.woff2') format('woff2'), url('../fonts/proximanova-extrabldit-webfont.woff') format('woff'), url('../fonts/proximanova-extrabldit-webfont.ttf') format('truetype');
   font-weight: 800;
+  font-style: italic;
+}
+/* Black 900 */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/proximanova-black-webfont.eot');
+  src: url('../fonts/proximanova-black-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-black-webfont.woff2') format('woff2'), url('../fonts/proximanova-black-webfont.woff') format('woff'), url('../fonts/proximanova-black-webfont.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/proximanova-blackit-webfont.eot');
+  src: url('../fonts/proximanova-blackit-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-blackit-webfont.woff2') format('woff2'), url('../fonts/proximanova-blackit-webfont.woff') format('woff'), url('../fonts/proximanova-blackit-webfont.ttf') format('truetype');
+  font-weight: 900;
   font-style: italic;
 }
 /*! STYLES */
@@ -986,9 +1001,10 @@ category: Typography
 @font-light:        300; 
 @font-normal:       400;
 @font-medium:       500;
-@font-bold:         600;
-@font-xbold:        700;
-@font-black:        800;
+@font-semibold:     600;
+@font-bold:         700;
+@font-xbold:        800;
+@font-black:        900;
 ```
 
 */
@@ -1015,18 +1031,20 @@ MU’s core websites use Proxima Nova as the san-serif typeface. <a href="http:/
 
 <div class="font-examples">
     <h3>Thin (200)</h3>
-    <p class="light">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
+    <p class="thin">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
     <h3>Light (300)</h3>
     <p class="light">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
     <h3>Roman (400)</h3>
     <p class="normal">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
     <h3>Medium (500)</h3>
     <p class="medium">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
-    <h3>Bold (600)</h3>
+    <h3>Semibold (600)</h3>
+    <p class="semibold">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
+     <h3>Bold (700)</h3>
     <p class="bold">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
-    <h3>Extra Bold (700)</h3>
+    <h3>Extra Bold (800)</h3>
     <p class="xbold">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
-    <h3>Black (800)</h3>
+    <h3>Black (900)</h3>
     <p class="black">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
 </div>
 
@@ -1049,7 +1067,7 @@ MU’s official typeface is Janson and is primarily use with the MU logo signat
     <p class="serif normal">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
     <h3>Medium (500)</h3>
     <p class="serif medium">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
-    <h3>Bold (600)</h3>
+    <h3>Bold (700)</h3>
     <p class="serif bold">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
     <h3>Small Caps (400, no italics)</h3>
     <p class="serif-sc">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789</p>
@@ -1234,7 +1252,7 @@ Used in the `.box()` mixin.
   text-transform: uppercase;
 }
 .dropcap {
-  font-weight: 600;
+  font-weight: 700;
   float: left;
   display: block;
   line-height: .7;
@@ -2257,7 +2275,7 @@ h2,
   font-size: 22.4px;
   font-size: 1.4rem;
   line-height: 1.2;
-  font-weight: 600;
+  font-weight: 700;
 }
 h3,
 .like-h3 {
@@ -2270,7 +2288,7 @@ h4,
 .like-h4 {
   font-size: 19.2px;
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 h5,
 .like-h5 {
@@ -2846,7 +2864,7 @@ legend {
   font-size: 22.4px;
   font-size: 1.4rem;
   line-height: 1.2;
-  font-weight: 600;
+  font-weight: 700;
 }
 .field {
   padding-top: 8px;
@@ -3306,7 +3324,7 @@ caption {
   margin-bottom: 1.5rem;
   font-size: 19.2px;
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0;
   margin-bottom: 8px;
   margin-bottom: 0.5rem;
@@ -3408,7 +3426,7 @@ category: Tables
   line-height: 1.2;
   padding: 12px 14.4px;
   padding: 0.75rem 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 .menu-horizontal li a:hover,
 .menu-horizontal li a:focus,
@@ -3455,7 +3473,7 @@ category: Objects
   line-height: 1.2;
   padding: 8px 16px;
   padding: 0.5rem 1rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 .menu-vertical li a:hover,
 .menu-vertical li a:focus,
@@ -4561,14 +4579,17 @@ h2.display {
 .medium {
   font-weight: 500;
 }
-.bold {
+.semibold {
   font-weight: 600;
 }
-.xbold {
+.bold {
   font-weight: 700;
 }
-.black {
+.xbold {
   font-weight: 800;
+}
+.black {
+  font-weight: 900;
 }
 .examples-wrapper {
   padding: 16px;
@@ -5155,7 +5176,7 @@ h1.styleguide-h1 {
 }
 h1[id] {
   display: inline-block;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 25.6px;
   font-size: 1.6rem;
   color: #900000;
