@@ -4,7 +4,7 @@
   
 * Site:             Mizzou Web Style Guide
 * Author:           Josh Nichols, MU Web Communications
-* Version:          1.1
+* Version:          1.2
 * Dependancies: 
     
     Autoprefixer - https://github.com/ai/autoprefixer
@@ -220,7 +220,7 @@ set again if used in `.mu-sig()`.
                 .print-image('@{img-path}/unit-wordmark-32.png');
             }
         }
-        .unit-name();
+        .unit-name-ie();
     }
     
     & when (@logo-size = "48") { // Defualt
@@ -249,7 +249,7 @@ set again if used in `.mu-sig()`.
                 .print-image('@{img-path}/unit-wordmark-48.png');
             }
         } 
-        .unit-name();      
+        .unit-name-ie();      
     }
     
     & when (@logo-size = "64") {
@@ -278,11 +278,11 @@ set again if used in `.mu-sig()`.
                 .print-image('@{img-path}/unit-wordmark-64.png');
             }
         }
-        .unit-name();
+        .unit-name-ie();
     }
 } 
 
-.unit-name() {
+.unit-name-ie() {
     
     .unit a {
         background-image: url('@{img-path}/@{unit-img}');
@@ -333,7 +333,7 @@ set again if used in `.mu-unit-sig()`.
 ```html_example
 <div class="sig-ie-example">
     <p class="logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
-    <h1 class="unit"><a href="http://missouri.edu">Of&#64257;ce of Programs</a></h1>
+    <h1 class="unit"><a href="http://missouri.edu">Offce of Programs</a></h1>
     <h2 class="wordmark"><a href="http://missouri.edu">University of Missouri</a></h2>
 </div>
 ```
@@ -344,7 +344,7 @@ set again if used in `.mu-unit-sig()`.
         @print: "yes", 
         @unit-width: 404px, 
         @unit-height: 57px, 
-        @unit-img: "unit-name_64.svg",
+        @unit-img: "unit-name_64.svg"
     );
 }
  
@@ -353,7 +353,7 @@ set again if used in `.mu-unit-sig()`.
     .mu-unit-sig-ie(
         @logo-size: "64", 
         @print: "yes", 
-        @unit-img: "unit-name_64.png",
+        @unit-img: "unit-name_64.png"
     ); 
 }
 ```
