@@ -1,0 +1,27 @@
+# Enable gzip compression
+AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript image/svg+xml
+
+# Disable IE compatibility mode
+Header set X-UA-Compatible "IE=edge,chrome=1"
+
+# Block access to login page from all external addresses
+<Files wp-login.php>
+    order deny,allow
+    deny from all
+    allow from 128.206.
+    allow from 161.130.
+    allow from 10.7.
+    allow from 10.8.
+</Files>
+
+# Completely disable XML-RPC
+<Files xmlrpc.php>
+    order deny,allow
+    deny from all
+</Files>
+
+# @see https://www.owasp.org/index.php/List_of_useful_HTTP_headers
+<IfModule mod_headers.c> 
+    Header set X-XSS-Protection "1; mode=block" 
+    Header set X-Content-Type-Options nosniff
+</IfModule>
