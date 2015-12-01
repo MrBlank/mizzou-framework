@@ -1,2 +1,4 @@
-docs/fonts
-docs_src/fonts
+.DS_Store
+assets
+bower_components
+node_modules
