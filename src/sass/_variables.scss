@@ -85,8 +85,8 @@ $blue-dark:          darken($blue, 20%);
 $accent:                        $red;
 $color-text:                    $grey-darker;
 $color-background:              $white;
-$color-link:                    $black;
-$color-link-hover:              $red;
+$color-link:                    $red;
+$color-link-hover:              $black;
 $color-hr:                      $grey-lighter;
 $color-box-bg:                  $tan-light;
 $color-box-border:              $tan;
@@ -111,17 +111,17 @@ $color-table-cell-header:       $gold-lightest;
 // Default font path
 $font-path:         '../fonts';
 
-$font-sans-serif:           proxima-nova, Helvetica, Arial, sans-serif;
+$font-sans-serif:           'Proxima Nova', Arial, sans-serif;
 $font-serif:                Georgia, 'Times New Roman', Times, serif;
 $font-monospace:            Consolas, Monaco, 'Andale Mono', monospace;
 
 $font-base:         16;
 $font-line-height:  1.5;
 
-$font-serif:        "Janson", "Times New Roman", Times, serif;
-$font-serif-sc:     "Janson-SC", "Janson", "Times New Roman", Times, serif;
-$font-sans:         "Proxima Nova", "Arial", sans-serif;
-$font-monospace:    "Menlo", "Consolas","Courier New", monospace; 
+$font-serif:        'Janson', 'Times New Roman', Times, serif;
+$font-serif-sc:     'Janson-SC', 'Janson', 'Times New Roman', Times, serif;
+$font-sans:         'Proxima Nova', 'Arial', sans-serif;
+$font-monospace:    'Menlo', 'Consolas','Courier New', monospace; 
 
 $font-base-family:  $font-sans;
 

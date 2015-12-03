@@ -1,4 +1,5 @@
 @import "../sass/_variables";
+@import "../sass/_font-proxima-nova";
 @import "../sass/_base-mixins"; 
 @import "../sass/_base"; 
 
@@ -19,4 +20,9 @@ article
 footer 
 {
     margin-bottom: 1em;
+    
+    p 
+    {
+        line-height: ($font-line-height * .8);
+    }
 } 

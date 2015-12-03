@@ -358,7 +358,7 @@ hr
     @include standard-margin();
     clear: both;
     border: 0;
-    border-bottom: 1px solid $color-light-grey2;
+    border-bottom: 1px solid $gold-light;
     
     &.rule--dashed
     {
@@ -533,14 +533,14 @@ var
 
 a
 {
-    color: $color-brownish-red;
+    color: $color-link;
     text-decoration: underline;
     
     &:hover,
     &:focus,
     &:active
     {
-        color: #000;
+        color: $color-link-hover;
     }
 }
 
@@ -577,6 +577,10 @@ sub
 mark
 {
     background: $color-light-tan2;
+}
+small 
+{
+    font-size: (($font-base * .8) * 1px);
 }
 
 /* @end */
