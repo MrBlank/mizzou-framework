@@ -1,0 +1,71 @@
+/**
+ * Mizzou Framework - Sass: Base Mixins
+ *
+ * Requires: variables.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+ 
+/* @group Placeholder Selectors */
+
+// Apply on a container to have that container enclose floated elements.
+@mixin clear-fix()
+{
+    &:before,
+    &:after
+    {
+        content: ' ';
+        display: table;
+    }
+    
+    &:after
+    {
+        clear: both;
+    }
+}
+
+// Set's a default margin of 16px on the bottom, except for the last child of the container
+@mixin standard-margin()
+{
+    margin: 0 0 16px 0;
+    
+    &:last-child
+    {
+        margin-bottom: 0;
+    }
+}
+
+// Center align an image or figure.
+@mixin align-center()
+{
+    margin: 0 auto 16px auto;
+    text-align: center;
+}
+
+// Left align an image or figure.
+@mixin align-left()
+{
+    margin: 0 16px 16px 0;
+    float: left;
+    display: block;
+}
+
+// Right align an image or figure.
+@mixin align-right()
+{
+    margin: 0 0 16px 16px;
+    float: right;
+    display: block;
+}
+
+// Ignore set widths and heights for images, so they work well with responsive containers
+@mixin flexible-image()
+{
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+/* @end */

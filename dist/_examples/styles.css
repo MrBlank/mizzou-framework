@@ -1,0 +1,482 @@
+/**
+ * Mizzou Framework - Sass: Variables
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+/* @group Colors */
+/* @end */
+/* @group Fonts */
+/* @end */
+/* @group Images */
+/* @end */
+/* @group Media Queries */
+/* @end */
+/* @group Viewport */
+/* @end */
+/**
+ * Mizzou Framework - Sass: Base Mixins
+ *
+ * Requires: variables.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+/* @group Placeholder Selectors */
+/* @end */
+/**
+ * Mizzou Framework - Sass: Base
+ *
+ * Requires: variables.scss, base-mixins.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+/* @group Viewport */
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@viewport {
+  width: device-width; }
+
+/* @end */
+/* @group General Settings / Major Containers */
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+*[tabindex="-1"] {
+  outline: none; }
+
+article,
+aside,
+audio,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+video {
+  display: block;
+  margin: 0;
+  padding: 0; }
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  background: #2b2b2b;
+  font-family: proxima-nova, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  min-width: 320px; }
+  @media print {
+    html {
+      background: #fff; } }
+
+body {
+  background: #fff;
+  color: #333;
+  margin: 0; }
+  @media print {
+    body {
+      padding: 16px;
+      background: #fff; } }
+
+/* @end */
+/* @group Text Format */
+b,
+strong,
+.bold {
+  font-weight: 600; }
+
+i,
+em,
+.italic {
+  font-style: italic; }
+  i em,
+  em em,
+  .italic em {
+    font-style: normal; }
+
+u {
+  text-decoration: none; }
+
+/* @end */
+/* @group Headings and Paragraphs */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.like-h1,
+.like-h2,
+.like-h3,
+.like-h4,
+caption,
+.like-h5,
+.like-h6 {
+  margin: 0 0 16px 0;
+  font-weight: 600;
+  color: #000; }
+  h1:last-child,
+  h2:last-child,
+  h3:last-child,
+  h4:last-child,
+  h5:last-child,
+  h6:last-child,
+  .like-h1:last-child,
+  .like-h2:last-child,
+  .like-h3:last-child,
+  .like-h4:last-child,
+  caption:last-child,
+  .like-h5:last-child,
+  .like-h6:last-child {
+    margin-bottom: 0; }
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  h6 a,
+  .like-h1 a,
+  .like-h2 a,
+  .like-h3 a,
+  .like-h4 a, caption a,
+  .like-h5 a,
+  .like-h6 a {
+    text-decoration: none; }
+
+h1,
+.like-h1 {
+  font-size: 30px;
+  line-height: 1.2; }
+  @media screen and (min-width: 624px) {
+    h1,
+    .like-h1 {
+      font-size: 48px;
+      font-weight: 300; } }
+
+h2,
+.like-h2 {
+  font-size: 21px;
+  line-height: 1.4; }
+  @media screen and (min-width: 624px) {
+    h2,
+    .like-h2 {
+      font-size: 32px;
+      line-height: 1.2; } }
+
+h3,
+.like-h3 {
+  font-size: 18px;
+  line-height: 1.4; }
+  @media screen and (min-width: 624px) {
+    h3,
+    .like-h3 {
+      font-size: 24px; } }
+
+h4,
+.like-h4,
+caption {
+  font-size: 16px; }
+  @media screen and (min-width: 624px) {
+    h4,
+    .like-h4,
+    caption {
+      font-size: 20px; } }
+
+h5,
+h6,
+.like-h5,
+.like-h6 {
+  color: #7d7d7d;
+  font-size: 16px; }
+
+h6,
+.like-h6 {
+  font-style: italic; }
+
+p {
+  margin: 0 0 16px 0; }
+  p:last-child {
+    margin-bottom: 0; }
+
+/* @end */
+/* @group Images, Figures, and Video */
+img {
+  border: 0;
+  max-width: 100%;
+  width: auto;
+  height: auto; }
+
+figure,
+.alignnone,
+.alignleft,
+.aligncenter,
+.alignright {
+  margin: 0 0 16px 0;
+  max-width: 100%; }
+  figure:last-child,
+  .alignnone:last-child,
+  .alignleft:last-child,
+  .aligncenter:last-child,
+  .alignright:last-child {
+    margin-bottom: 0; }
+
+figcaption {
+  font-weight: 600;
+  font-size: 14px; }
+  figcaption p {
+    font-size: inherit; }
+
+@media screen and (min-width: 464px) {
+  figure.left,
+  .alignleft {
+    margin: 0 16px 16px 0;
+    float: left;
+    display: block;
+    max-width: 400px; } }
+
+figure.center,
+.aligncenter {
+  margin: 0 auto 16px auto;
+  text-align: center; }
+
+@media screen and (min-width: 464px) {
+  figure.right,
+  .alignright {
+    margin: 0 0 16px 16px;
+    float: right;
+    display: block;
+    max-width: 400px; } }
+
+iframe {
+  border: 0;
+  clear: both; }
+
+.video {
+  margin: 0 0 16px 0;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden; }
+  .video:last-child {
+    margin-bottom: 0; }
+  .video.video--4x3 {
+    padding-bottom: 75%; }
+  .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+/* @end */
+/* @group Blockquotes */
+blockquote,
+.like-blockquote {
+  margin: 0 0 16px 0; }
+  blockquote:last-child,
+  .like-blockquote:last-child {
+    margin-bottom: 0; }
+  blockquote p,
+  .like-blockquote p {
+    font-size: inherit;
+    margin: 0; }
+
+/* @end */
+/* @group Addresses */
+address {
+  font-style: normal; }
+
+/* @end */
+/* @group Horizontal Rules */
+hr {
+  margin: 0 0 16px 0;
+  clear: both;
+  border: 0;
+  border-bottom: 1px solid #d7d7d7; }
+  hr:last-child {
+    margin-bottom: 0; }
+  hr.rule--dashed {
+    border-style: dashed; }
+
+/* @end */
+/* @group Lists */
+ul,
+ol {
+  margin: 0 0 16px 0; }
+  ul:last-child,
+  ol:last-child {
+    margin-bottom: 0; }
+  ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
+    margin-bottom: 0; }
+
+li li,
+li p {
+  font-size: inherit; }
+
+dl,
+dd {
+  margin: 0 0 16px 0; }
+  dl:last-child,
+  dd:last-child {
+    margin-bottom: 0; }
+
+dt {
+  font-weight: 600; }
+
+/* @end */
+/* @group Forms */
+form,
+fieldset {
+  margin: 0 0 16px 0; }
+  form:last-child,
+  fieldset:last-child {
+    margin-bottom: 0; }
+
+fieldset,
+legend {
+  padding: 0;
+  border: 0; }
+
+input[type='text'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='url'],
+input[type='email'],
+textarea {
+  margin: 0;
+  padding: 4px;
+  border: 1px solid #d7d7d7;
+  font-size: 100%;
+  font-family: inherit;
+  color: #333;
+  border-radius: 0;
+  box-shadow: inset 0 0 4px fade(#d7d7d7, 75%);
+  display: block;
+  -webkit-appearance: none; }
+
+input[type='submit'],
+input[type='reset'],
+input[type='button'],
+button {
+  vertical-align: top;
+  cursor: pointer; }
+  input[type='submit']::-moz-focus-inner,
+  input[type='reset']::-moz-focus-inner,
+  input[type='button']::-moz-focus-inner,
+  button::-moz-focus-inner {
+    border: 0;
+    padding: 0; }
+
+/* @end */
+/* @group Tables */
+table {
+  margin: 0 0 16px 0;
+  border-collapse: collapse;
+  border-spacing: 0; }
+  table:last-child {
+    margin-bottom: 0; }
+
+th,
+td {
+  border: 1px solid #d7d7d7;
+  text-align: left; }
+
+th,
+td {
+  vertical-align: top;
+  padding: 4px 8px; }
+
+th[scope='col'] {
+  border-bottom-width: 2px; }
+
+th[scope='row'] {
+  border-right-width: 2px; }
+
+tfoot th,
+tfoot td {
+  font-size: 14px;
+  border: 0; }
+
+caption {
+  margin: 0 0 8px 0;
+  text-align: left; }
+
+/* @end */
+/* @group Code and Preformatted Text */
+pre,
+code,
+var {
+  font-family: "Menlo", "Consolas", "Courier New", monospace;
+  font-size: 14px;
+  white-space: pre-wrap; }
+
+var {
+  font-weight: bold;
+  font-style: normal; }
+
+/* @end */
+/* @group Links */
+a {
+  color: #930;
+  text-decoration: underline; }
+  a:hover, a:focus, a:active {
+    color: #000; }
+
+/* @end */
+/* @group Marks and Notations */
+abbr,
+acronym {
+  border-bottom: 1px dotted #d7d7d7;
+  cursor: help; }
+
+sub,
+sup {
+  position: relative;
+  font-size: 0.75em;
+  line-height: 0;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+mark {
+  background: #fbe9bf; }
+
+/* @end */
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto 1em;
+  padding: 1em; }
+
+header {
+  margin-bottom: 1em; }
+
+article {
+  margin-bottom: 1em; }
+
+footer {
+  margin-bottom: 1em; }

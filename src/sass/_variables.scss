@@ -1,0 +1,185 @@
+/**
+ * Mizzou Framework - Sass: Variables
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+
+/* @group Colors */
+
+// Tans and Golds
+$color-light-tan:           #fcf1d5;
+$color-light-tan2:          #fbe9bf;
+$color-light-gold:          #f5cf7a;
+$color-gold:                #f5c358;
+$color-mizzou-gold:         #f1b82d;
+$color-dark-gold:           #e7a92e;
+$color-dark-gold2:          #cb8f17;
+
+// Greys
+$color-light-grey:          #f5f5f5;
+$color-light-grey2:         #d7d7d7;
+$color-light-grey3:         #7d7d7d;
+$color-dark-grey:           #333;
+$color-dark-grey2:          #2b2b2b;
+$color-dark-grey3:          #0b0b0b;
+$color-light-warm-grey:     #dbd5cd;
+$color-warm-grey:           #8f8884;
+
+// Browns
+$color-orangeish-brown:     #de6835;
+$color-light-brown:         #bd5c2c;
+$color-light-brown2:        #bd4d1f;
+$color-brownish-red:        #930;
+$color-red:                 #900000;
+$color-dark-red:            #5d0000;
+
+// Other Accent Colors
+$color-pink:                #f4e5e5;
+$color-light-blue:          #e4f1fa;
+$color-blue:                #318fd7;
+$color-dark-blue:           #1c5e90;
+$color-light-green:         #ebf4e9;
+$color-green:               #3f8f26;
+$color-dark-green:          #2d671b;
+    
+$gold:              #f1b82d; // Mizzou Gold
+$gold-darker:       darken($gold, 20%);
+$gold-dark:         darken($gold, 12%);
+$gold-light:        lighten($gold, 18%);
+$gold-lighter:      lighten($gold, 28%);
+$gold-lightest:     lighten($gold, 35%);
+
+$black:             #000;
+$grey-darker:       lighten(#000, 13.5%); // #222
+$grey-dark:         lighten(#000, 26.5%); // #444
+$grey:              lighten(#000, 40%);   // #666
+$grey-light:        lighten(#000, 60%);   // #999
+$grey-lighter:      lighten(#000, 80%);   // #ccc
+$grey-lightest:     lighten(#000, 93.5%); // #ededed
+$white:             #fff;
+
+$tan-dark:          #cac8b5;
+$tan:               #edebd5;
+$tan-light:         #f5f2f0;
+
+$red:               #900000; // #920000?
+$red-light:         lighten($red, 68%);
+$red-dark:           darken($red, 10%);
+
+$orange:            #BD5C2C;
+$orange-light:      lighten($orange, 45%);
+$orange-dark:        darken($orange, 14%);
+
+$green:             #69901D;
+$green-light:       lighten($green, 55%);
+$green-dark:         darken($green, 11%);
+
+$blue:              #318fd7;
+$blue-light:        lighten($blue, 42%);
+$blue-dark:          darken($blue, 20%);
+
+// In use ... Should we eliminate these to simplify?
+
+$accent:                        $red;
+$color-text:                    $grey-darker;
+$color-background:              $white;
+$color-link:                    $black;
+$color-link-hover:              $red;
+$color-hr:                      $grey-lighter;
+$color-box-bg:                  $tan-light;
+$color-box-border:              $tan;
+$color-code-bg:                 $tan-light;
+$color-code-border:             $tan;
+$color-abbr:                    $grey-lighter;
+$color-mark:                    $gold-lighter;
+$color-help:                    $grey-light;
+$color-form-error-message:      $red;
+$color-form-error-bg:           $red-light;
+$color-form-error-border:       $red;
+$color-form-field-border:       $grey-lighter;
+$color-table-cell-border:       $grey-lighter;
+$color-table-cell-stripe:       $grey-lightest;
+$color-table-cell-header:       $gold-lightest;
+
+/* @end */
+
+ 
+/* @group Fonts */
+
+// Default font path
+$font-path:         '../fonts';
+
+$font-sans-serif:           proxima-nova, Helvetica, Arial, sans-serif;
+$font-serif:                Georgia, 'Times New Roman', Times, serif;
+$font-monospace:            Consolas, Monaco, 'Andale Mono', monospace;
+
+$font-base:         16;
+$font-line-height:  1.5;
+
+$font-serif:        "Janson", "Times New Roman", Times, serif;
+$font-serif-sc:     "Janson-SC", "Janson", "Times New Roman", Times, serif;
+$font-sans:         "Proxima Nova", "Arial", sans-serif;
+$font-monospace:    "Menlo", "Consolas","Courier New", monospace; 
+
+$font-base-family:  $font-sans;
+
+$font-thin:         200; 
+$font-light:        300; 
+$font-normal:       400;
+$font-medium:       500;
+$font-semibold:     600;
+$font-bold:         700;
+$font-xbold:        800;
+$font-black:        900;
+
+/* @end */
+
+
+/* @group Images */
+
+// Default image path
+$image-path:                '../images';
+
+// Whether to make images flexible by default
+$use-flexible-images:       true;
+$inset-image-width:         400px;
+
+/* @end */
+
+
+/* @group Media Queries */
+    
+// Maybe only cover 2x and leave query vars to individual sites?
+
+$query-384:                 'screen and (min-width: 384px)';
+$query-464:                 'screen and (min-width: 464px)';
+$query-544:                 'screen and (min-width: 544px)';
+$query-624:                 'screen and (min-width: 624px)';
+$query-704:                 'screen and (min-width: 704px)';
+$query-784:                 'screen and (min-width: 784px)';
+$query-864:                 'screen and (min-width: 864px)';
+$query-944:                 'screen and (min-width: 944px)';
+
+$mq-medium:         'screen and (max-width: 950px)'; 
+$mq-small:          'screen and (max-width: 800px)';
+$mq-tiny:           'screen and (max-width: 400px)'; 
+$mq-2x:             'only screen and (-webkit-min-device-pixel-ratio: 1.5),only screen and (min--moz-device-pixel-ratio: 1.5),only screen and (min-device-pixel-ratio: 1.5)'; 
+
+// Media query at which certain text styles are enlarged (set to false to disable)
+$query-larger-text:         $query-624;
+
+// Media query at which left/right aligned images are inset
+$query-inset-images:        $query-464;
+
+/* @end */
+
+
+/* @group Viewport */
+
+// Viewport width
+$viewport-width:            device-width;
+
+/* @end */
+
