@@ -69,3 +69,36 @@
 }
 
 /* @end */
+
+/**
+ * Image replacement technique. Offsets the element text and sets a background image
+ *
+ * @param string $filename (Optional) Filename of the image. Defaults to 'none'
+ * @param unit $width (Optional) Width of the image. Defaults to 'none'
+ * @param unit $height (Optional) Height of the image. Defaults to 'none'
+ */
+@mixin replace-with-image(
+    $filename:      'none',
+    $width:         'none',
+    $height:        'none'
+)
+{
+    display: block;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    background-repeat: no-repeat;
+    
+    @if ($filename != 'none') {
+        background-image: url('{$image-path}/{$filename}');
+    }
+    
+    @if ($width != 'none') {
+        width: $width;
+    }
+    
+    @if ($height != 'none') {
+        height: $height;
+    }
+}

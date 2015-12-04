@@ -1,0 +1,82 @@
+@import "../sass/_variables";
+@import "../sass/_base-mixins"; 
+@import "../sass/_mizzou-signature"; 
+
+
+
+.wrapper div
+{
+    margin-bottom: 6em;
+    padding: 1em;
+}
+
+.uni-sig-extra-small 
+{
+    @include mu-sig(
+        $size: 'extra-small',
+        $print: 'true'
+    );
+}
+
+.uni-sig-extra-small-center 
+{
+    @include mu-sig(
+        $size: 'extra-small',
+        $center: 'true'
+    );
+}
+
+.uni-sig-small 
+{
+    @include mu-sig(
+        $print: 'true'
+    );
+    background-color: $gold;
+}
+
+.uni-sig-small-center 
+{
+    @include mu-sig(
+        $size: 'small',
+        $print: 'true',
+        $center: 'true',
+        $wordmark-color: 'white'
+    );
+    background-color: #222;
+}
+
+.uni-sig-medium 
+{
+    @include mu-sig(
+        $size: 'medium',
+        $print: 'true'
+    );
+}
+
+.uni-sig-medium-center 
+{
+    @include mu-sig(
+        $size: 'medium',
+        $print: 'true',
+        $center: 'true'
+    );
+}
+
+.uni-sig-large 
+{
+    @include mu-sig(
+        $size: 'large',
+        $wordmark-color: 'white'
+    );
+    background-color: #222;
+}
+
+.uni-sig-large-center 
+{
+    @include mu-sig(
+        $size: 'large',
+        $print: 'true',
+        $center: 'true'
+    );
+    background-color: $gold;
+}

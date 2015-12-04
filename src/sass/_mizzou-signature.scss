@@ -1,0 +1,422 @@
+/**
+ * Mizzou Framework - Sass: Mizzou Signatures
+ *
+ * Requires: base-mixins.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+
+/* @group MU Signatures */
+    
+/**
+ * Sets up a university signature
+ *
+ * @param string $size (Optional) Signature size. Can be 'extra-small', 'small', 'medium', or 'large'. Defaults to 'small'
+ * @param string $wordmark-color (Optional) Text color. Can be black or white. Defaults to black
+ * @param boolean $print (Optional) Whether to set the images up for printing. Defaults to false
+ * @param boolean $center (Optional) Whether to center the signature. Defaults to false
+ */
+
+@mixin mu-sig(
+    $size:             'small', // extra-small, small, medium, or large 
+    $wordmark-color:   'black', // black or white
+    $print:            'false', // false or true
+    $center:           'false' // false or true
+) 
+{
+    // Set names
+    $logo-filename: 'mu-logo-#{$size}.svg';
+    $wordmark-filename: 'mu-wordmark-#{$wordmark-color}-#{$size}.svg';
+    
+    // Set dimensions
+    @if ($size == 'large') {
+        $logo-width: 66px;
+        $logo-height: 74px;
+        $logo-space: 20px;
+        $wordmark-width: 478px;
+        $wordmark-height: 56px;
+        $wordmark-top: 14px;
+    } 
+    @if ($size == 'medium') {
+        $logo-width: 50px;
+        $logo-height: 56px;
+        $logo-space: 15px;
+        $wordmark-width: 334px;
+        $wordmark-height: 39px;
+        $wordmark-top: 10px;
+    } 
+    @if ($size == 'small')  {
+        $logo-width: 34px;
+        $logo-height: 38px;
+        $logo-space: 10px;
+        $wordmark-width: 229px;
+        $wordmark-height: 27px;
+        $wordmark-top: 8px;
+    } 
+    @if ($size == 'extra-small') {
+        $logo-width: 26px;
+        $logo-height: 29px;
+        $logo-space: 7px;
+        $wordmark-width: 177px;
+        $wordmark-height: 21px;
+        $wordmark-top: 5px;
+    }
+     
+    @if ($center != 'true') {
+        @include clear-fix(); // Keeps parent container at least as tall as the logo if it is not centered.
+    }
+        
+    .logo,
+    .wordmark 
+    {
+        margin: 0; // Overrides default <h1> and <p> margins. 
+    }
+    .logo a,
+    .wordmark a 
+    {
+        @include replace-with-image();
+        background-position: left 0; 
+        
+        @if ($center == 'true') {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @if ($center == 'false') {
+            margin: 0;
+        }
+    }
+    .logo a 
+    { 
+        width: $logo-width;
+        height: $logo-height;
+        background-image: url('#{$image-path}/#{$logo-filename}');
+        
+        @if ($center == 'true') {
+            margin-bottom: $logo-space; // Clear space - 1px rule
+        }
+        @if ($center == 'false') {
+            float: left;
+            margin-left: -1px; // For alignment with 1px rule on image
+        }
+        @if ($print == 'true') {
+            @include print-image('#{$image-path}/#{$logo-filename}');
+        }
+    }
+    .wordmark 
+    {            
+        @if ($center == 'false') {
+            margin-left: ($logo-width + $logo-space);
+            padding-top: $wordmark-top; 
+        }
+    } 
+    .wordmark a 
+    {
+        width: $wordmark-width;
+        height: $wordmark-height;
+        background-image: url('#{$image-path}/#{$wordmark-filename}');
+        
+        @if ($print = 'yes') {
+            $wordmark-color: 'black'; // Print needs to be the black version always
+            @include print-image('#{$image-path}/#{$wordmark-filename}'); 
+        }
+        &:hover,
+        &:focus,
+        &:active {
+            background-position: left (-$wordmark-height);
+        }
+    }
+}
+
+/* @end */
+
+
+/* @group Unit Signatures */
+
+/* 
+@mixin mu-unit-sig (
+    $unit-width, 
+    $unit-height, 
+    $unit-img,
+    $unit-margin:       0,
+    $unit-img-print:    $unit-img,
+    $logo-size:         '48', 
+    $logo-style:        'stroked', 
+    $wordmark-color:    'black', 
+    $wordmark-indent:   0, 
+    $print:             'no', 
+    $center:            'no'
+    )
+{
+    
+    .logo,
+    .wordmark,
+    .unit 
+    {
+        margin: 0;
+    }
+    
+    .logo a,
+    .wordmark a,
+    .unit a 
+    {
+        @include replace-with-image();
+        background-position: left 0;
+        
+        @if ($center == 'no') {
+            margin: 0;
+        }
+        @if ($center == 'yes') {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+      
+    & when (@logo-size = "32") {
+        
+        .logo a { 
+            width: 34px;
+            height: 38px;
+            margin-bottom: 10px; // Clear space 11px - 1px border
+            
+            & when (@logo-style = "none") {
+                background-image: url('@{img-path}/mu-logo-32.svg');
+            }
+            & when (@logo-style = "stroked") {
+                background-image: url('@{img-path}/mu-logo-32-stroked.svg');
+            }                
+            & when ( @print = "yes" ) {
+                .print-image('@{img-path}/mu-logo-32.svg');
+            }
+            & when (@center = "no") {
+                float: left;
+                margin-left: -1px;
+                margin-right: 0;
+            }
+            & when (@center = "yes") {
+                float: none;
+            }
+        }
+        .wordmark,
+        .unit {
+            & when (@center = "no") {
+                margin-left: 43px; // 11px clear
+            }
+            & when (@center = "yes") {
+                margin-left: 0;    
+            }
+        } 
+        .wordmark { 
+            & when not (@wordmark-indent = 0) {
+                padding-left: @wordmark-indent;
+            }
+        }
+        .unit {
+            & when not (@unit-margin = 0) {
+                margin-bottom: @unit-margin;
+            }
+        }
+        .wordmark a {
+            width: 149px;
+            height: 17px;
+            
+            & when (@wordmark-color = "black") {
+                background-image: url('@{img-path}/unit-wordmark-32.svg');
+            }
+            & when (@wordmark-color = "white") {
+                background-image: url('@{img-path}/unit-wordmark-32-white.svg');
+            }
+            
+            & when (@print = "yes") {
+                .print-image('@{img-path}/unit-wordmark-32.svg');
+            }
+        
+            &:hover,
+            &:focus,
+            &:active {
+                background-position: left -17px;
+            }
+        }
+        .unit-name();
+    }
+    
+    & when (@logo-size = "48") { // Default
+
+        .logo a { 
+            width: 50px;
+            height: 56px;
+            margin-bottom: 15px; // Clear space 16px - 1px border
+            
+            & when (@logo-style = "none") {
+                background-image: url('@{img-path}/mu-logo-48.svg');
+            }
+            & when (@logo-style = "stroked") {
+                background-image: url('@{img-path}/mu-logo-48-stroked.svg');
+            }                
+            & when (@print = "yes") {
+                .print-image('@{img-path}/mu-logo-48.svg');
+            }
+            & when (@center = "no") {
+                float: left;
+                margin-left: -1px;
+                margin-right: 0;
+            }
+            & when (@center = "yes") {
+                float: none;
+            }
+        }
+        .wordmark,
+        .unit {
+            & when (@center = "no") {
+                margin-left: 64px; // 16px clear
+            }
+            & when (@center = "yes") {
+                margin-left: 0;    
+            }
+        }
+        .wordmark {
+            & when not (@wordmark-indent = 0) {
+                padding-left: @wordmark-indent;
+            }
+        }
+        .unit {
+            & when not (@unit-margin = 0) {
+                margin-bottom: @unit-margin;
+            }
+        }   
+        .wordmark a {
+            width: 183px;
+            height: 20px;
+            
+            & when (@wordmark-color = "black") { 
+                background-image: url('@{img-path}/unit-wordmark-48.svg');
+            }
+            & when (@wordmark-color = "white") { 
+                background-image: url('@{img-path}/unit-wordmark-48-white.svg');
+            }
+            & when (@print = "yes") {
+                .print-image('@{img-path}/unit-wordmark-48.svg');
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-position: left -20px;
+            }
+        }
+        .unit-name();       
+    }
+    
+    & when (@logo-size = "64") {
+
+        .logo a { 
+            width: 66px;
+            height: 74px;
+            margin-bottom: 20px; // Clear space 21px - 1px border
+            
+            & when (@logo-style = "none") {
+                background-image: url('@{img-path}/mu-logo-64.svg');
+            }
+            & when (@logo-style = "stroked") {
+                background-image: url('@{img-path}/mu-logo-64-stroked.svg');
+            }
+            & when (@print = "yes") {
+                .print-image('@{img-path}/mu-logo-64.svg');
+            }
+            & when (@center = "no") {
+                float: left;
+                margin-left: -1px;
+                margin-right: 0;
+            }
+            & when (@center = "yes") {
+                float: none;
+            }
+        }
+        .wordmark,
+        .unit {
+            & when (@center = "no") {
+                margin-left: 85px; // 21px clear
+            }
+            & when (@center = "yes") {
+                margin-left: 0;    
+            }
+        }
+        .wordmark {
+            & when not (@wordmark-indent = 0) { 
+                padding-left: @wordmark-indent;
+            }
+        }
+        .unit {
+            & when not (@unit-margin = 0) {
+                margin-bottom: @unit-margin;
+            }
+        }
+        .wordmark a {
+            width: 243px;
+            height: 26px;
+            
+            & when (@wordmark-color = "black") {
+                background-image: url('@{img-path}/unit-wordmark-64.svg');
+            }
+            & when (@wordmark-color = "white") {
+                background-image: url('@{img-path}/unit-wordmark-64-white.svg');
+            }              
+            & when (@print = "yes") {
+                .print-image('@{img-path}/unit-wordmark-64.svg');
+            }
+            
+            &:hover,
+            &:focus,
+            &:active {
+                background-position: left -26px;
+            }
+        }
+        .unit-name();
+    }
+}
+
+.unit-name() {
+    
+    .unit a {
+        width: @unit-width;
+        height: @unit-height;
+        background-image: url('@{img-path}/@{unit-img}');
+        
+        &:hover,
+        &:focus,
+        &:active {
+            background-position: left -(@unit-height);
+        }
+        & when (@print = "yes") {
+            .print-image('@{img-path}/@{unit-img-print}');
+        }
+    }
+    
+}*/
+
+/* @end */
+
+
+/* @group Signature Print */
+
+// Replaces background image with content selector and after pseudo element for printing
+
+@mixin print-image ($image) {
+    
+    @media print {
+        position: relative;
+        background: none;
+        
+        &:after {
+            content: url('#{$image}');
+            text-indent: 0;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }   
+    }
+}
+
+/* @end */

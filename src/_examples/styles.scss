@@ -2,6 +2,19 @@
 @import "../sass/_font-proxima-nova";
 @import "../sass/_base-mixins"; 
 @import "../sass/_base"; 
+@import "../sass/_mizzou-signature"; 
+
+
+
+// Branding 
+
+.mu-sig
+{
+    @include mu-sig(
+        $print: 'true'
+    );
+    padding-bottom: 1em;
+}
 
 .wrapper 
 {

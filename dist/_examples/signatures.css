@@ -1,0 +1,741 @@
+/**
+ * Mizzou Framework - Sass: Variables
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+/* @group Colors */
+/* @end */
+/* @group Fonts */
+/* @end */
+/* @group Images */
+/* @end */
+/* @group Media Queries */
+/* @end */
+/* @group Viewport */
+/* @end */
+/**
+ * Mizzou Framework - Sass: Base Mixins
+ *
+ * Requires: variables.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+/* @group Placeholder Selectors */
+/* @end */
+/**
+ * Image replacement technique. Offsets the element text and sets a background image
+ *
+ * @param string $filename (Optional) Filename of the image. Defaults to 'none'
+ * @param unit $width (Optional) Width of the image. Defaults to 'none'
+ * @param unit $height (Optional) Height of the image. Defaults to 'none'
+ */
+/**
+ * Mizzou Framework - Sass: Mizzou Signatures
+ *
+ * Requires: base-mixins.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+/* @group MU Signatures */
+/**
+ * Sets up a university signature
+ *
+ * @param string $size (Optional) Signature size. Can be 'extra-small', 'small', 'medium', or 'large'. Defaults to 'small'
+ * @param string $wordmark-color (Optional) Text color. Can be black or white. Defaults to black
+ * @param boolean $print (Optional) Whether to set the images up for printing. Defaults to false
+ * @param boolean $center (Optional) Whether to center the signature. Defaults to false
+ */
+/* @end */
+/* @group Unit Signatures */
+/* 
+@mixin mu-unit-sig (
+    $unit-width, 
+    $unit-height, 
+    $unit-img,
+    $unit-margin:       0,
+    $unit-img-print:    $unit-img,
+    $logo-size:         '48', 
+    $logo-style:        'stroked', 
+    $wordmark-color:    'black', 
+    $wordmark-indent:   0, 
+    $print:             'no', 
+    $center:            'no'
+    )
+{
+    
+    .logo,
+    .wordmark,
+    .unit 
+    {
+        margin: 0;
+    }
+    
+    .logo a,
+    .wordmark a,
+    .unit a 
+    {
+        @include replace-with-image();
+        background-position: left 0;
+        
+        @if ($center == 'no') {
+            margin: 0;
+        }
+        @if ($center == 'yes') {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+      
+    & when (@logo-size = "32") {
+        
+        .logo a { 
+            width: 34px;
+            height: 38px;
+            margin-bottom: 10px; // Clear space 11px - 1px border
+            
+            & when (@logo-style = "none") {
+                background-image: url('@{img-path}/mu-logo-32.svg');
+            }
+            & when (@logo-style = "stroked") {
+                background-image: url('@{img-path}/mu-logo-32-stroked.svg');
+            }                
+            & when ( @print = "yes" ) {
+                .print-image('@{img-path}/mu-logo-32.svg');
+            }
+            & when (@center = "no") {
+                float: left;
+                margin-left: -1px;
+                margin-right: 0;
+            }
+            & when (@center = "yes") {
+                float: none;
+            }
+        }
+        .wordmark,
+        .unit {
+            & when (@center = "no") {
+                margin-left: 43px; // 11px clear
+            }
+            & when (@center = "yes") {
+                margin-left: 0;    
+            }
+        } 
+        .wordmark { 
+            & when not (@wordmark-indent = 0) {
+                padding-left: @wordmark-indent;
+            }
+        }
+        .unit {
+            & when not (@unit-margin = 0) {
+                margin-bottom: @unit-margin;
+            }
+        }
+        .wordmark a {
+            width: 149px;
+            height: 17px;
+            
+            & when (@wordmark-color = "black") {
+                background-image: url('@{img-path}/unit-wordmark-32.svg');
+            }
+            & when (@wordmark-color = "white") {
+                background-image: url('@{img-path}/unit-wordmark-32-white.svg');
+            }
+            
+            & when (@print = "yes") {
+                .print-image('@{img-path}/unit-wordmark-32.svg');
+            }
+        
+            &:hover,
+            &:focus,
+            &:active {
+                background-position: left -17px;
+            }
+        }
+        .unit-name();
+    }
+    
+    & when (@logo-size = "48") { // Default
+
+        .logo a { 
+            width: 50px;
+            height: 56px;
+            margin-bottom: 15px; // Clear space 16px - 1px border
+            
+            & when (@logo-style = "none") {
+                background-image: url('@{img-path}/mu-logo-48.svg');
+            }
+            & when (@logo-style = "stroked") {
+                background-image: url('@{img-path}/mu-logo-48-stroked.svg');
+            }                
+            & when (@print = "yes") {
+                .print-image('@{img-path}/mu-logo-48.svg');
+            }
+            & when (@center = "no") {
+                float: left;
+                margin-left: -1px;
+                margin-right: 0;
+            }
+            & when (@center = "yes") {
+                float: none;
+            }
+        }
+        .wordmark,
+        .unit {
+            & when (@center = "no") {
+                margin-left: 64px; // 16px clear
+            }
+            & when (@center = "yes") {
+                margin-left: 0;    
+            }
+        }
+        .wordmark {
+            & when not (@wordmark-indent = 0) {
+                padding-left: @wordmark-indent;
+            }
+        }
+        .unit {
+            & when not (@unit-margin = 0) {
+                margin-bottom: @unit-margin;
+            }
+        }   
+        .wordmark a {
+            width: 183px;
+            height: 20px;
+            
+            & when (@wordmark-color = "black") { 
+                background-image: url('@{img-path}/unit-wordmark-48.svg');
+            }
+            & when (@wordmark-color = "white") { 
+                background-image: url('@{img-path}/unit-wordmark-48-white.svg');
+            }
+            & when (@print = "yes") {
+                .print-image('@{img-path}/unit-wordmark-48.svg');
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-position: left -20px;
+            }
+        }
+        .unit-name();       
+    }
+    
+    & when (@logo-size = "64") {
+
+        .logo a { 
+            width: 66px;
+            height: 74px;
+            margin-bottom: 20px; // Clear space 21px - 1px border
+            
+            & when (@logo-style = "none") {
+                background-image: url('@{img-path}/mu-logo-64.svg');
+            }
+            & when (@logo-style = "stroked") {
+                background-image: url('@{img-path}/mu-logo-64-stroked.svg');
+            }
+            & when (@print = "yes") {
+                .print-image('@{img-path}/mu-logo-64.svg');
+            }
+            & when (@center = "no") {
+                float: left;
+                margin-left: -1px;
+                margin-right: 0;
+            }
+            & when (@center = "yes") {
+                float: none;
+            }
+        }
+        .wordmark,
+        .unit {
+            & when (@center = "no") {
+                margin-left: 85px; // 21px clear
+            }
+            & when (@center = "yes") {
+                margin-left: 0;    
+            }
+        }
+        .wordmark {
+            & when not (@wordmark-indent = 0) { 
+                padding-left: @wordmark-indent;
+            }
+        }
+        .unit {
+            & when not (@unit-margin = 0) {
+                margin-bottom: @unit-margin;
+            }
+        }
+        .wordmark a {
+            width: 243px;
+            height: 26px;
+            
+            & when (@wordmark-color = "black") {
+                background-image: url('@{img-path}/unit-wordmark-64.svg');
+            }
+            & when (@wordmark-color = "white") {
+                background-image: url('@{img-path}/unit-wordmark-64-white.svg');
+            }              
+            & when (@print = "yes") {
+                .print-image('@{img-path}/unit-wordmark-64.svg');
+            }
+            
+            &:hover,
+            &:focus,
+            &:active {
+                background-position: left -26px;
+            }
+        }
+        .unit-name();
+    }
+}
+
+.unit-name() {
+    
+    .unit a {
+        width: @unit-width;
+        height: @unit-height;
+        background-image: url('@{img-path}/@{unit-img}');
+        
+        &:hover,
+        &:focus,
+        &:active {
+            background-position: left -(@unit-height);
+        }
+        & when (@print = "yes") {
+            .print-image('@{img-path}/@{unit-img-print}');
+        }
+    }
+    
+}*/
+/* @end */
+/* @group Signature Print */
+/* @end */
+.wrapper div {
+  margin-bottom: 6em;
+  padding: 1em; }
+
+.uni-sig-extra-small:before, .uni-sig-extra-small:after {
+  content: ' ';
+  display: table; }
+
+.uni-sig-extra-small:after {
+  clear: both; }
+
+.uni-sig-extra-small .logo,
+.uni-sig-extra-small .wordmark {
+  margin: 0; }
+
+.uni-sig-extra-small .logo a,
+.uni-sig-extra-small .wordmark a {
+  display: block;
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: left 0;
+  margin: 0; }
+
+.uni-sig-extra-small .logo a {
+  width: 26px;
+  height: 29px;
+  background-image: url("../images/mu-logo-extra-small.svg");
+  float: left;
+  margin-left: -1px; }
+  @media print {
+    .uni-sig-extra-small .logo a {
+      position: relative;
+      background: none; }
+      .uni-sig-extra-small .logo a:after {
+        content: url("../images/mu-logo-extra-small.svg");
+        text-indent: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0; } }
+
+.uni-sig-extra-small .wordmark {
+  margin-left: 33px;
+  padding-top: 5px; }
+
+.uni-sig-extra-small .wordmark a {
+  width: 177px;
+  height: 21px;
+  background-image: url("../images/mu-wordmark-black-extra-small.svg"); }
+  @media print {
+    .uni-sig-extra-small .wordmark a {
+      position: relative;
+      background: none; }
+      .uni-sig-extra-small .wordmark a:after {
+        content: url("../images/mu-wordmark-black-extra-small.svg");
+        text-indent: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0; } }
+  .uni-sig-extra-small .wordmark a:hover, .uni-sig-extra-small .wordmark a:focus, .uni-sig-extra-small .wordmark a:active {
+    background-position: left -21px; }
+
+.uni-sig-extra-small-center .logo,
+.uni-sig-extra-small-center .wordmark {
+  margin: 0; }
+
+.uni-sig-extra-small-center .logo a,
+.uni-sig-extra-small-center .wordmark a {
+  display: block;
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: left 0;
+  margin-left: auto;
+  margin-right: auto; }
+
+.uni-sig-extra-small-center .logo a {
+  width: 26px;
+  height: 29px;
+  background-image: url("../images/mu-logo-extra-small.svg");
+  margin-bottom: 7px; }
+
+.uni-sig-extra-small-center .wordmark a {
+  width: 177px;
+  height: 21px;
+  background-image: url("../images/mu-wordmark-black-extra-small.svg"); }
+  @media print {
+    .uni-sig-extra-small-center .wordmark a {
+      position: relative;
+      background: none; }
+      .uni-sig-extra-small-center .wordmark a:after {
+        content: url("../images/mu-wordmark-black-extra-small.svg");
+        text-indent: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0; } }
+  .uni-sig-extra-small-center .wordmark a:hover, .uni-sig-extra-small-center .wordmark a:focus, .uni-sig-extra-small-center .wordmark a:active {
+    background-position: left -21px; }
+
+.uni-sig-small {
+  background-color: #f1b82d; }
+  .uni-sig-small:before, .uni-sig-small:after {
+    content: ' ';
+    display: table; }
+  .uni-sig-small:after {
+    clear: both; }
+  .uni-sig-small .logo,
+  .uni-sig-small .wordmark {
+    margin: 0; }
+  .uni-sig-small .logo a,
+  .uni-sig-small .wordmark a {
+    display: block;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: left 0;
+    margin: 0; }
+  .uni-sig-small .logo a {
+    width: 34px;
+    height: 38px;
+    background-image: url("../images/mu-logo-small.svg");
+    float: left;
+    margin-left: -1px; }
+    @media print {
+      .uni-sig-small .logo a {
+        position: relative;
+        background: none; }
+        .uni-sig-small .logo a:after {
+          content: url("../images/mu-logo-small.svg");
+          text-indent: 0;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0; } }
+  .uni-sig-small .wordmark {
+    margin-left: 44px;
+    padding-top: 8px; }
+  .uni-sig-small .wordmark a {
+    width: 229px;
+    height: 27px;
+    background-image: url("../images/mu-wordmark-black-small.svg"); }
+    @media print {
+      .uni-sig-small .wordmark a {
+        position: relative;
+        background: none; }
+        .uni-sig-small .wordmark a:after {
+          content: url("../images/mu-wordmark-black-small.svg");
+          text-indent: 0;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0; } }
+    .uni-sig-small .wordmark a:hover, .uni-sig-small .wordmark a:focus, .uni-sig-small .wordmark a:active {
+      background-position: left -27px; }
+
+.uni-sig-small-center {
+  background-color: #222; }
+  .uni-sig-small-center .logo,
+  .uni-sig-small-center .wordmark {
+    margin: 0; }
+  .uni-sig-small-center .logo a,
+  .uni-sig-small-center .wordmark a {
+    display: block;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: left 0;
+    margin-left: auto;
+    margin-right: auto; }
+  .uni-sig-small-center .logo a {
+    width: 34px;
+    height: 38px;
+    background-image: url("../images/mu-logo-small.svg");
+    margin-bottom: 10px; }
+    @media print {
+      .uni-sig-small-center .logo a {
+        position: relative;
+        background: none; }
+        .uni-sig-small-center .logo a:after {
+          content: url("../images/mu-logo-small.svg");
+          text-indent: 0;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0; } }
+  .uni-sig-small-center .wordmark a {
+    width: 229px;
+    height: 27px;
+    background-image: url("../images/mu-wordmark-white-small.svg"); }
+    @media print {
+      .uni-sig-small-center .wordmark a {
+        position: relative;
+        background: none; }
+        .uni-sig-small-center .wordmark a:after {
+          content: url("../images/mu-wordmark-white-small.svg");
+          text-indent: 0;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0; } }
+    .uni-sig-small-center .wordmark a:hover, .uni-sig-small-center .wordmark a:focus, .uni-sig-small-center .wordmark a:active {
+      background-position: left -27px; }
+
+.uni-sig-medium:before, .uni-sig-medium:after {
+  content: ' ';
+  display: table; }
+
+.uni-sig-medium:after {
+  clear: both; }
+
+.uni-sig-medium .logo,
+.uni-sig-medium .wordmark {
+  margin: 0; }
+
+.uni-sig-medium .logo a,
+.uni-sig-medium .wordmark a {
+  display: block;
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: left 0;
+  margin: 0; }
+
+.uni-sig-medium .logo a {
+  width: 50px;
+  height: 56px;
+  background-image: url("../images/mu-logo-medium.svg");
+  float: left;
+  margin-left: -1px; }
+  @media print {
+    .uni-sig-medium .logo a {
+      position: relative;
+      background: none; }
+      .uni-sig-medium .logo a:after {
+        content: url("../images/mu-logo-medium.svg");
+        text-indent: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0; } }
+
+.uni-sig-medium .wordmark {
+  margin-left: 65px;
+  padding-top: 10px; }
+
+.uni-sig-medium .wordmark a {
+  width: 334px;
+  height: 39px;
+  background-image: url("../images/mu-wordmark-black-medium.svg"); }
+  @media print {
+    .uni-sig-medium .wordmark a {
+      position: relative;
+      background: none; }
+      .uni-sig-medium .wordmark a:after {
+        content: url("../images/mu-wordmark-black-medium.svg");
+        text-indent: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0; } }
+  .uni-sig-medium .wordmark a:hover, .uni-sig-medium .wordmark a:focus, .uni-sig-medium .wordmark a:active {
+    background-position: left -39px; }
+
+.uni-sig-medium-center .logo,
+.uni-sig-medium-center .wordmark {
+  margin: 0; }
+
+.uni-sig-medium-center .logo a,
+.uni-sig-medium-center .wordmark a {
+  display: block;
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: left 0;
+  margin-left: auto;
+  margin-right: auto; }
+
+.uni-sig-medium-center .logo a {
+  width: 50px;
+  height: 56px;
+  background-image: url("../images/mu-logo-medium.svg");
+  margin-bottom: 15px; }
+  @media print {
+    .uni-sig-medium-center .logo a {
+      position: relative;
+      background: none; }
+      .uni-sig-medium-center .logo a:after {
+        content: url("../images/mu-logo-medium.svg");
+        text-indent: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0; } }
+
+.uni-sig-medium-center .wordmark a {
+  width: 334px;
+  height: 39px;
+  background-image: url("../images/mu-wordmark-black-medium.svg"); }
+  @media print {
+    .uni-sig-medium-center .wordmark a {
+      position: relative;
+      background: none; }
+      .uni-sig-medium-center .wordmark a:after {
+        content: url("../images/mu-wordmark-black-medium.svg");
+        text-indent: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0; } }
+  .uni-sig-medium-center .wordmark a:hover, .uni-sig-medium-center .wordmark a:focus, .uni-sig-medium-center .wordmark a:active {
+    background-position: left -39px; }
+
+.uni-sig-large {
+  background-color: #222; }
+  .uni-sig-large:before, .uni-sig-large:after {
+    content: ' ';
+    display: table; }
+  .uni-sig-large:after {
+    clear: both; }
+  .uni-sig-large .logo,
+  .uni-sig-large .wordmark {
+    margin: 0; }
+  .uni-sig-large .logo a,
+  .uni-sig-large .wordmark a {
+    display: block;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: left 0;
+    margin: 0; }
+  .uni-sig-large .logo a {
+    width: 66px;
+    height: 74px;
+    background-image: url("../images/mu-logo-large.svg");
+    float: left;
+    margin-left: -1px; }
+  .uni-sig-large .wordmark {
+    margin-left: 86px;
+    padding-top: 14px; }
+  .uni-sig-large .wordmark a {
+    width: 478px;
+    height: 56px;
+    background-image: url("../images/mu-wordmark-white-large.svg"); }
+    @media print {
+      .uni-sig-large .wordmark a {
+        position: relative;
+        background: none; }
+        .uni-sig-large .wordmark a:after {
+          content: url("../images/mu-wordmark-white-large.svg");
+          text-indent: 0;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0; } }
+    .uni-sig-large .wordmark a:hover, .uni-sig-large .wordmark a:focus, .uni-sig-large .wordmark a:active {
+      background-position: left -56px; }
+
+.uni-sig-large-center {
+  background-color: #f1b82d; }
+  .uni-sig-large-center .logo,
+  .uni-sig-large-center .wordmark {
+    margin: 0; }
+  .uni-sig-large-center .logo a,
+  .uni-sig-large-center .wordmark a {
+    display: block;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: left 0;
+    margin-left: auto;
+    margin-right: auto; }
+  .uni-sig-large-center .logo a {
+    width: 66px;
+    height: 74px;
+    background-image: url("../images/mu-logo-large.svg");
+    margin-bottom: 20px; }
+    @media print {
+      .uni-sig-large-center .logo a {
+        position: relative;
+        background: none; }
+        .uni-sig-large-center .logo a:after {
+          content: url("../images/mu-logo-large.svg");
+          text-indent: 0;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0; } }
+  .uni-sig-large-center .wordmark a {
+    width: 478px;
+    height: 56px;
+    background-image: url("../images/mu-wordmark-black-large.svg"); }
+    @media print {
+      .uni-sig-large-center .wordmark a {
+        position: relative;
+        background: none; }
+        .uni-sig-large-center .wordmark a:after {
+          content: url("../images/mu-wordmark-black-large.svg");
+          text-indent: 0;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0; } }
+    .uni-sig-large-center .wordmark a:hover, .uni-sig-large-center .wordmark a:focus, .uni-sig-large-center .wordmark a:active {
+      background-position: left -56px; }

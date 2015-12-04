@@ -27,18 +27,21 @@
     
 <div class="wrapper">    
     <header role="banner">
-        <h1>Base HTML Example</h1>
+        <div class="mu-sig">
+            <p class="logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
+            <h1 class="wordmark"><a href="http://missouri.edu">University of Missouri</a></h1>
+        </div>
         <hr/>
     </header>
     
     <article>
 
-        <h1 id="skip-to-content" tabindex="-1">Level 1 Heading</h1>
-        
-        <h2>Level 2 Heading</h2>
-        
+        <h1 id="skip-to-content" tabindex="-1">Base HTML Example</h1>
+
         <p>Lorem ipsum <em>emphasised text</em> dolor sit amet, <strong>strong text</strong> consectetur adipisicing elit, <abbr title="">abbreviated text</abbr> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut <q>quoted text</q> enim ad minim veniam, quis nostrud exercitation <a href="/">link text</a> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute <ins>inserted text</ins> irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat <code>code text</code> cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         
+        <h2>Level 2 Heading</h2>
+                
         <p>Suspendisse rhoncus, est ac sollicitudin viverra, leo orci sagittis massa, sed condimentum <acronym title="">acronym text</acronym> est tortor a lectus. Curabitur porta feugiat ullamcorper. Integer lacinia mi id odio faucibus eget tincidunt nisl iaculis. Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus <del>deleted text</del> sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit. Quisque vulputate dolor eget mi porta vel porta nisl pretium. Vivamus non leo magna, quis imperdiet risus. Morbi tempor risus placerat tellus imperdiet fringilla. </p>
         
         <blockquote>
@@ -60,19 +63,6 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
         ut labore et dolore magna aliqua.</p>
         
-        <h4>Code Block</h4>
-        
-        <pre><code>body 
-{ 
-    font:0.8125em/1.618 Arial, sans-serif; 
-    background-color:#fff;  
-    color:#111;
-}</code></pre>
-        
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
-        anim id est laborum.</p>
-        
         <h5>Level 5 Heading</h5>
         
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
@@ -82,6 +72,15 @@
         
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
         ut labore et dolore magna aliqua.</p>
+        
+        <h3>Code Block</h3>
+        
+        <pre><code>.selector 
+{ 
+    margin: 16px; 
+    background-color: #ededed;  
+    color: #222;
+}</code></pre>
         
         <dl>
         <dt>Definition list</dt>
@@ -97,7 +96,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
         ut labore et dolore magna aliqua.</p>
         
-        <h4>Ordered list</h4>
+        <h3>lists</h3>
         
         <ol>
 			<li>List item</li>
@@ -114,9 +113,7 @@
 				</ol>
 			</li>
 		</ol>
-								
-		<h4>Unordered list</h4>
-		
+										
 		<ul>
 			<li>List item 01</li>
 			<li>List item 02</li>
@@ -134,11 +131,7 @@
 			</li>
 		</ul>
         
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
-        ut labore et dolore magna aliqua.</p>
-        
-        
-           <h4>Tables</h4>
+           <h3>Tables</h3>
         	<table summary="Jimi Hendrix albums">
           <caption>Jimi Hendrix - albums</caption>
           <thead>
@@ -221,8 +214,9 @@
         
         <p>This is a &lt;p&gt; <code>with some code</code> inside.</p>
         
-        <hr>
         
+        <h3>Forms</h3>
+                
         <form action="#">
         <fieldset>
         <legend>Form legend</legend>
