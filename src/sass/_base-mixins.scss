@@ -11,6 +11,14 @@
 /* @group Placeholder Selectors */
 
 // Apply on a container to have that container enclose floated elements.
+
+// Maybe use this instead? http://learnlayout.com/clearfix.html
+
+/*
+    overflow: auto;
+    zoom: 1; // For IE6
+*/
+
 @mixin clear-fix()
 {
     &:before,

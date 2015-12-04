@@ -6,9 +6,84 @@
 
 .wrapper div
 {
-    margin-bottom: 6em;
-    padding: 1em;
+    margin-bottom: 3em;
+    padding: 2em;
+    border: solid 1px #222;
 }
+
+// Unit sigs
+
+.unit-sig-small 
+{
+    @include mu-unit-sig(
+        $name-width: 194px,
+        $name-height: 27px,
+        $name-margin: 3px,
+        $print: 'true'
+    );
+    background-color: $gold;
+}
+
+.unit-sig-small-center 
+{
+    @include mu-unit-sig(
+        $name-width: 194px,
+        $name-height: 27px,
+        $name-margin: 3px,
+        $size: 'small',
+        $print: 'true',
+        $center: 'true',
+        $wordmark-color: 'white'
+    );
+    background-color: #222;
+}
+
+.unit-sig-medium 
+{
+    @include mu-unit-sig(
+        $name-width: 284px,
+        $name-height: 40px,
+        $size: 'medium',
+        $print: 'true'
+    );
+}
+
+.unit-sig-medium-center 
+{
+    @include mu-unit-sig(
+        $name-width: 284px,
+        $name-height: 40px,
+        $size: 'medium',
+        $print: 'true',
+        $center: 'true'
+    );
+}
+
+.unit-sig-large 
+{
+    @include mu-unit-sig(
+        $name-width: 404px,
+        $name-height: 57px,
+        $size: 'large',
+        $wordmark-color: 'white'
+    );
+    background-color: #222;
+}
+
+.unit-sig-large-center 
+{
+    @include mu-unit-sig(
+        $name-width: 404px,
+        $name-height: 57px,
+        $size: 'large',
+        $print: 'true',
+        $center: 'true'
+    );
+    background-color: $gold;
+}
+
+
+// University sigs
 
 .uni-sig-extra-small 
 {
