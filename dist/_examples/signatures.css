@@ -71,7 +71,7 @@
  * @param boolean $center - (Optional) Whether to center the signature. Defaults to false
  */
 /* @end */
-/* @group Signature Print */
+/* @group Signature Mixins */
 /* @end */
 .wrapper div {
   margin-bottom: 3em;
@@ -85,13 +85,13 @@
     display: table; }
   .unit-sig-small:after {
     clear: both; }
-  .unit-sig-small .logo,
-  .unit-sig-small .wordmark,
-  .unit-sig-small .unit {
+  .unit-sig-small .unit-sig__logo,
+  .unit-sig-small .unit-sig__wordmark,
+  .unit-sig-small .unit-sig__unit {
     margin: 0; }
-  .unit-sig-small .logo a,
-  .unit-sig-small .wordmark a,
-  .unit-sig-small .unit a {
+  .unit-sig-small .unit-sig__logo a,
+  .unit-sig-small .unit-sig__wordmark a,
+  .unit-sig-small .unit-sig__unit a {
     display: block;
     text-indent: 200%;
     white-space: nowrap;
@@ -100,56 +100,56 @@
     background-repeat: no-repeat;
     background-position: left 0;
     margin: 0; }
-  .unit-sig-small .logo a {
+  .unit-sig-small .unit-sig__logo a {
     width: 34px;
     height: 38px;
     background-image: url("../images/mu-logo-small.svg");
     float: left;
     margin-left: -1px; }
     @media print {
-      .unit-sig-small .logo a {
+      .unit-sig-small .unit-sig__logo a {
         position: relative;
         background: none; }
-        .unit-sig-small .logo a:after {
+        .unit-sig-small .unit-sig__logo a:after {
           content: url("../images/mu-logo-small.svg");
           text-indent: 0;
           display: block;
           position: absolute;
           top: 0;
           left: 0; } }
-  .unit-sig-small .wordmark,
-  .unit-sig-small .unit {
+  .unit-sig-small .unit-sig__wordmark,
+  .unit-sig-small .unit-sig__unit {
     margin-left: 44px; }
-  .unit-sig-small .wordmark a {
+  .unit-sig-small .unit-sig__wordmark a {
     width: 149px;
     height: 17px;
     background-image: url("../images/unit-wordmark-black-small.svg");
     margin-left: 0; }
     @media print {
-      .unit-sig-small .wordmark a {
+      .unit-sig-small .unit-sig__wordmark a {
         position: relative;
         background: none; }
-        .unit-sig-small .wordmark a:after {
+        .unit-sig-small .unit-sig__wordmark a:after {
           content: url("../images/unit-wordmark-black-small.svg");
           text-indent: 0;
           display: block;
           position: absolute;
           top: 0;
           left: 0; } }
-    .unit-sig-small .wordmark a:hover, .unit-sig-small .wordmark a:focus, .unit-sig-small .wordmark a:active {
+    .unit-sig-small .unit-sig__wordmark a:hover, .unit-sig-small .unit-sig__wordmark a:focus, .unit-sig-small .unit-sig__wordmark a:active {
       background-position: left -17px; }
-  .unit-sig-small .unit a {
+  .unit-sig-small .unit-sig__unit a {
     width: 194px;
     height: 27px;
     margin-bottom: 3px;
     background-image: url("../images/unit-name-black-small.svg"); }
-    .unit-sig-small .unit a:hover, .unit-sig-small .unit a:focus, .unit-sig-small .unit a:active {
+    .unit-sig-small .unit-sig__unit a:hover, .unit-sig-small .unit-sig__unit a:focus, .unit-sig-small .unit-sig__unit a:active {
       background-position: left -27px; }
     @media print {
-      .unit-sig-small .unit a {
+      .unit-sig-small .unit-sig__unit a {
         position: relative;
         background: none; }
-        .unit-sig-small .unit a:after {
+        .unit-sig-small .unit-sig__unit a:after {
           content: url("../images/unit-name-black-small.svg");
           text-indent: 0;
           display: block;
@@ -159,13 +159,13 @@
 
 .unit-sig-small-center {
   background-color: #222; }
-  .unit-sig-small-center .logo,
-  .unit-sig-small-center .wordmark,
-  .unit-sig-small-center .unit {
+  .unit-sig-small-center .unit-sig__logo,
+  .unit-sig-small-center .unit-sig__wordmark,
+  .unit-sig-small-center .unit-sig__unit {
     margin: 0; }
-  .unit-sig-small-center .logo a,
-  .unit-sig-small-center .wordmark a,
-  .unit-sig-small-center .unit a {
+  .unit-sig-small-center .unit-sig__logo a,
+  .unit-sig-small-center .unit-sig__wordmark a,
+  .unit-sig-small-center .unit-sig__unit a {
     display: block;
     text-indent: 200%;
     white-space: nowrap;
@@ -175,51 +175,51 @@
     background-position: left 0;
     margin-left: auto;
     margin-right: auto; }
-  .unit-sig-small-center .logo a {
+  .unit-sig-small-center .unit-sig__logo a {
     width: 34px;
     height: 38px;
     background-image: url("../images/mu-logo-small.svg");
     margin-bottom: 10px; }
     @media print {
-      .unit-sig-small-center .logo a {
+      .unit-sig-small-center .unit-sig__logo a {
         position: relative;
         background: none; }
-        .unit-sig-small-center .logo a:after {
+        .unit-sig-small-center .unit-sig__logo a:after {
           content: url("../images/mu-logo-small.svg");
           text-indent: 0;
           display: block;
           position: absolute;
           top: 0;
           left: 0; } }
-  .unit-sig-small-center .wordmark a {
+  .unit-sig-small-center .unit-sig__wordmark a {
     width: 149px;
     height: 17px;
     background-image: url("../images/unit-wordmark-white-small.svg"); }
     @media print {
-      .unit-sig-small-center .wordmark a {
+      .unit-sig-small-center .unit-sig__wordmark a {
         position: relative;
         background: none; }
-        .unit-sig-small-center .wordmark a:after {
+        .unit-sig-small-center .unit-sig__wordmark a:after {
           content: url("../images/unit-wordmark-black-small.svg");
           text-indent: 0;
           display: block;
           position: absolute;
           top: 0;
           left: 0; } }
-    .unit-sig-small-center .wordmark a:hover, .unit-sig-small-center .wordmark a:focus, .unit-sig-small-center .wordmark a:active {
+    .unit-sig-small-center .unit-sig__wordmark a:hover, .unit-sig-small-center .unit-sig__wordmark a:focus, .unit-sig-small-center .unit-sig__wordmark a:active {
       background-position: left -17px; }
-  .unit-sig-small-center .unit a {
+  .unit-sig-small-center .unit-sig__unit a {
     width: 194px;
     height: 27px;
     margin-bottom: 3px;
     background-image: url("../images/unit-name-white-small.svg"); }
-    .unit-sig-small-center .unit a:hover, .unit-sig-small-center .unit a:focus, .unit-sig-small-center .unit a:active {
+    .unit-sig-small-center .unit-sig__unit a:hover, .unit-sig-small-center .unit-sig__unit a:focus, .unit-sig-small-center .unit-sig__unit a:active {
       background-position: left -27px; }
     @media print {
-      .unit-sig-small-center .unit a {
+      .unit-sig-small-center .unit-sig__unit a {
         position: relative;
         background: none; }
-        .unit-sig-small-center .unit a:after {
+        .unit-sig-small-center .unit-sig__unit a:after {
           content: url("../images/unit-name-black-small.svg");
           text-indent: 0;
           display: block;
@@ -234,14 +234,14 @@
 .unit-sig-medium:after {
   clear: both; }
 
-.unit-sig-medium .logo,
-.unit-sig-medium .wordmark,
-.unit-sig-medium .unit {
+.unit-sig-medium .unit-sig__logo,
+.unit-sig-medium .unit-sig__wordmark,
+.unit-sig-medium .unit-sig__unit {
   margin: 0; }
 
-.unit-sig-medium .logo a,
-.unit-sig-medium .wordmark a,
-.unit-sig-medium .unit a {
+.unit-sig-medium .unit-sig__logo a,
+.unit-sig-medium .unit-sig__wordmark a,
+.unit-sig-medium .unit-sig__unit a {
   display: block;
   text-indent: 200%;
   white-space: nowrap;
@@ -251,17 +251,17 @@
   background-position: left 0;
   margin: 0; }
 
-.unit-sig-medium .logo a {
+.unit-sig-medium .unit-sig__logo a {
   width: 50px;
   height: 56px;
   background-image: url("../images/mu-logo-medium.svg");
   float: left;
   margin-left: -1px; }
   @media print {
-    .unit-sig-medium .logo a {
+    .unit-sig-medium .unit-sig__logo a {
       position: relative;
       background: none; }
-      .unit-sig-medium .logo a:after {
+      .unit-sig-medium .unit-sig__logo a:after {
         content: url("../images/mu-logo-medium.svg");
         text-indent: 0;
         display: block;
@@ -269,41 +269,41 @@
         top: 0;
         left: 0; } }
 
-.unit-sig-medium .wordmark,
-.unit-sig-medium .unit {
+.unit-sig-medium .unit-sig__wordmark,
+.unit-sig-medium .unit-sig__unit {
   margin-left: 65px; }
 
-.unit-sig-medium .wordmark a {
+.unit-sig-medium .unit-sig__wordmark a {
   width: 183px;
   height: 20px;
   background-image: url("../images/unit-wordmark-black-medium.svg");
   margin-left: 0; }
   @media print {
-    .unit-sig-medium .wordmark a {
+    .unit-sig-medium .unit-sig__wordmark a {
       position: relative;
       background: none; }
-      .unit-sig-medium .wordmark a:after {
+      .unit-sig-medium .unit-sig__wordmark a:after {
         content: url("../images/unit-wordmark-black-medium.svg");
         text-indent: 0;
         display: block;
         position: absolute;
         top: 0;
         left: 0; } }
-  .unit-sig-medium .wordmark a:hover, .unit-sig-medium .wordmark a:focus, .unit-sig-medium .wordmark a:active {
+  .unit-sig-medium .unit-sig__wordmark a:hover, .unit-sig-medium .unit-sig__wordmark a:focus, .unit-sig-medium .unit-sig__wordmark a:active {
     background-position: left -20px; }
 
-.unit-sig-medium .unit a {
+.unit-sig-medium .unit-sig__unit a {
   width: 284px;
   height: 40px;
   margin-bottom: 0;
   background-image: url("../images/unit-name-black-medium.svg"); }
-  .unit-sig-medium .unit a:hover, .unit-sig-medium .unit a:focus, .unit-sig-medium .unit a:active {
+  .unit-sig-medium .unit-sig__unit a:hover, .unit-sig-medium .unit-sig__unit a:focus, .unit-sig-medium .unit-sig__unit a:active {
     background-position: left -40px; }
   @media print {
-    .unit-sig-medium .unit a {
+    .unit-sig-medium .unit-sig__unit a {
       position: relative;
       background: none; }
-      .unit-sig-medium .unit a:after {
+      .unit-sig-medium .unit-sig__unit a:after {
         content: url("../images/unit-name-black-medium.svg");
         text-indent: 0;
         display: block;
@@ -311,14 +311,14 @@
         top: 0;
         left: 0; } }
 
-.unit-sig-medium-center .logo,
-.unit-sig-medium-center .wordmark,
-.unit-sig-medium-center .unit {
+.unit-sig-medium-center .unit-sig__logo,
+.unit-sig-medium-center .unit-sig__wordmark,
+.unit-sig-medium-center .unit-sig__unit {
   margin: 0; }
 
-.unit-sig-medium-center .logo a,
-.unit-sig-medium-center .wordmark a,
-.unit-sig-medium-center .unit a {
+.unit-sig-medium-center .unit-sig__logo a,
+.unit-sig-medium-center .unit-sig__wordmark a,
+.unit-sig-medium-center .unit-sig__unit a {
   display: block;
   text-indent: 200%;
   white-space: nowrap;
@@ -329,16 +329,16 @@
   margin-left: auto;
   margin-right: auto; }
 
-.unit-sig-medium-center .logo a {
+.unit-sig-medium-center .unit-sig__logo a {
   width: 50px;
   height: 56px;
   background-image: url("../images/mu-logo-medium.svg");
   margin-bottom: 15px; }
   @media print {
-    .unit-sig-medium-center .logo a {
+    .unit-sig-medium-center .unit-sig__logo a {
       position: relative;
       background: none; }
-      .unit-sig-medium-center .logo a:after {
+      .unit-sig-medium-center .unit-sig__logo a:after {
         content: url("../images/mu-logo-medium.svg");
         text-indent: 0;
         display: block;
@@ -346,36 +346,36 @@
         top: 0;
         left: 0; } }
 
-.unit-sig-medium-center .wordmark a {
+.unit-sig-medium-center .unit-sig__wordmark a {
   width: 183px;
   height: 20px;
   background-image: url("../images/unit-wordmark-black-medium.svg"); }
   @media print {
-    .unit-sig-medium-center .wordmark a {
+    .unit-sig-medium-center .unit-sig__wordmark a {
       position: relative;
       background: none; }
-      .unit-sig-medium-center .wordmark a:after {
+      .unit-sig-medium-center .unit-sig__wordmark a:after {
         content: url("../images/unit-wordmark-black-medium.svg");
         text-indent: 0;
         display: block;
         position: absolute;
         top: 0;
         left: 0; } }
-  .unit-sig-medium-center .wordmark a:hover, .unit-sig-medium-center .wordmark a:focus, .unit-sig-medium-center .wordmark a:active {
+  .unit-sig-medium-center .unit-sig__wordmark a:hover, .unit-sig-medium-center .unit-sig__wordmark a:focus, .unit-sig-medium-center .unit-sig__wordmark a:active {
     background-position: left -20px; }
 
-.unit-sig-medium-center .unit a {
+.unit-sig-medium-center .unit-sig__unit a {
   width: 284px;
   height: 40px;
   margin-bottom: 0;
   background-image: url("../images/unit-name-black-medium.svg"); }
-  .unit-sig-medium-center .unit a:hover, .unit-sig-medium-center .unit a:focus, .unit-sig-medium-center .unit a:active {
+  .unit-sig-medium-center .unit-sig__unit a:hover, .unit-sig-medium-center .unit-sig__unit a:focus, .unit-sig-medium-center .unit-sig__unit a:active {
     background-position: left -40px; }
   @media print {
-    .unit-sig-medium-center .unit a {
+    .unit-sig-medium-center .unit-sig__unit a {
       position: relative;
       background: none; }
-      .unit-sig-medium-center .unit a:after {
+      .unit-sig-medium-center .unit-sig__unit a:after {
         content: url("../images/unit-name-black-medium.svg");
         text-indent: 0;
         display: block;
@@ -390,13 +390,13 @@
     display: table; }
   .unit-sig-large:after {
     clear: both; }
-  .unit-sig-large .logo,
-  .unit-sig-large .wordmark,
-  .unit-sig-large .unit {
+  .unit-sig-large .unit-sig__logo,
+  .unit-sig-large .unit-sig__wordmark,
+  .unit-sig-large .unit-sig__unit {
     margin: 0; }
-  .unit-sig-large .logo a,
-  .unit-sig-large .wordmark a,
-  .unit-sig-large .unit a {
+  .unit-sig-large .unit-sig__logo a,
+  .unit-sig-large .unit-sig__wordmark a,
+  .unit-sig-large .unit-sig__unit a {
     display: block;
     text-indent: 200%;
     white-space: nowrap;
@@ -405,45 +405,45 @@
     background-repeat: no-repeat;
     background-position: left 0;
     margin: 0; }
-  .unit-sig-large .logo a {
+  .unit-sig-large .unit-sig__logo a {
     width: 66px;
     height: 74px;
     background-image: url("../images/mu-logo-large.svg");
     float: left;
     margin-left: -1px; }
-  .unit-sig-large .wordmark,
-  .unit-sig-large .unit {
+  .unit-sig-large .unit-sig__wordmark,
+  .unit-sig-large .unit-sig__unit {
     margin-left: 86px; }
-  .unit-sig-large .wordmark a {
+  .unit-sig-large .unit-sig__wordmark a {
     width: 243px;
     height: 26px;
     background-image: url("../images/unit-wordmark-white-large.svg");
     margin-left: 0; }
     @media print {
-      .unit-sig-large .wordmark a {
+      .unit-sig-large .unit-sig__wordmark a {
         position: relative;
         background: none; }
-        .unit-sig-large .wordmark a:after {
+        .unit-sig-large .unit-sig__wordmark a:after {
           content: url("../images/unit-wordmark-black-large.svg");
           text-indent: 0;
           display: block;
           position: absolute;
           top: 0;
           left: 0; } }
-    .unit-sig-large .wordmark a:hover, .unit-sig-large .wordmark a:focus, .unit-sig-large .wordmark a:active {
+    .unit-sig-large .unit-sig__wordmark a:hover, .unit-sig-large .unit-sig__wordmark a:focus, .unit-sig-large .unit-sig__wordmark a:active {
       background-position: left -26px; }
-  .unit-sig-large .unit a {
+  .unit-sig-large .unit-sig__unit a {
     width: 404px;
     height: 57px;
     margin-bottom: 0;
     background-image: url("../images/unit-name-white-large.svg"); }
-    .unit-sig-large .unit a:hover, .unit-sig-large .unit a:focus, .unit-sig-large .unit a:active {
+    .unit-sig-large .unit-sig__unit a:hover, .unit-sig-large .unit-sig__unit a:focus, .unit-sig-large .unit-sig__unit a:active {
       background-position: left -57px; }
     @media print {
-      .unit-sig-large .unit a {
+      .unit-sig-large .unit-sig__unit a {
         position: relative;
         background: none; }
-        .unit-sig-large .unit a:after {
+        .unit-sig-large .unit-sig__unit a:after {
           content: url("../images/unit-name-black-large.svg");
           text-indent: 0;
           display: block;
@@ -453,13 +453,13 @@
 
 .unit-sig-large-center {
   background-color: #f1b82d; }
-  .unit-sig-large-center .logo,
-  .unit-sig-large-center .wordmark,
-  .unit-sig-large-center .unit {
+  .unit-sig-large-center .unit-sig__logo,
+  .unit-sig-large-center .unit-sig__wordmark,
+  .unit-sig-large-center .unit-sig__unit {
     margin: 0; }
-  .unit-sig-large-center .logo a,
-  .unit-sig-large-center .wordmark a,
-  .unit-sig-large-center .unit a {
+  .unit-sig-large-center .unit-sig__logo a,
+  .unit-sig-large-center .unit-sig__wordmark a,
+  .unit-sig-large-center .unit-sig__unit a {
     display: block;
     text-indent: 200%;
     white-space: nowrap;
@@ -469,51 +469,51 @@
     background-position: left 0;
     margin-left: auto;
     margin-right: auto; }
-  .unit-sig-large-center .logo a {
+  .unit-sig-large-center .unit-sig__logo a {
     width: 66px;
     height: 74px;
     background-image: url("../images/mu-logo-large.svg");
     margin-bottom: 20px; }
     @media print {
-      .unit-sig-large-center .logo a {
+      .unit-sig-large-center .unit-sig__logo a {
         position: relative;
         background: none; }
-        .unit-sig-large-center .logo a:after {
+        .unit-sig-large-center .unit-sig__logo a:after {
           content: url("../images/mu-logo-large.svg");
           text-indent: 0;
           display: block;
           position: absolute;
           top: 0;
           left: 0; } }
-  .unit-sig-large-center .wordmark a {
+  .unit-sig-large-center .unit-sig__wordmark a {
     width: 243px;
     height: 26px;
     background-image: url("../images/unit-wordmark-black-large.svg"); }
     @media print {
-      .unit-sig-large-center .wordmark a {
+      .unit-sig-large-center .unit-sig__wordmark a {
         position: relative;
         background: none; }
-        .unit-sig-large-center .wordmark a:after {
+        .unit-sig-large-center .unit-sig__wordmark a:after {
           content: url("../images/unit-wordmark-black-large.svg");
           text-indent: 0;
           display: block;
           position: absolute;
           top: 0;
           left: 0; } }
-    .unit-sig-large-center .wordmark a:hover, .unit-sig-large-center .wordmark a:focus, .unit-sig-large-center .wordmark a:active {
+    .unit-sig-large-center .unit-sig__wordmark a:hover, .unit-sig-large-center .unit-sig__wordmark a:focus, .unit-sig-large-center .unit-sig__wordmark a:active {
       background-position: left -26px; }
-  .unit-sig-large-center .unit a {
+  .unit-sig-large-center .unit-sig__unit a {
     width: 404px;
     height: 57px;
     margin-bottom: 0;
     background-image: url("../images/unit-name-black-large.svg"); }
-    .unit-sig-large-center .unit a:hover, .unit-sig-large-center .unit a:focus, .unit-sig-large-center .unit a:active {
+    .unit-sig-large-center .unit-sig__unit a:hover, .unit-sig-large-center .unit-sig__unit a:focus, .unit-sig-large-center .unit-sig__unit a:active {
       background-position: left -57px; }
     @media print {
-      .unit-sig-large-center .unit a {
+      .unit-sig-large-center .unit-sig__unit a {
         position: relative;
         background: none; }
-        .unit-sig-large-center .unit a:after {
+        .unit-sig-large-center .unit-sig__unit a:after {
           content: url("../images/unit-name-black-large.svg");
           text-indent: 0;
           display: block;
@@ -528,12 +528,12 @@
 .uni-sig-extra-small:after {
   clear: both; }
 
-.uni-sig-extra-small .logo,
-.uni-sig-extra-small .wordmark {
+.uni-sig-extra-small .mu-sig__logo,
+.uni-sig-extra-small .mu-sig__wordmark {
   margin: 0; }
 
-.uni-sig-extra-small .logo a,
-.uni-sig-extra-small .wordmark a {
+.uni-sig-extra-small .mu-sig__logo a,
+.uni-sig-extra-small .mu-sig__wordmark a {
   display: block;
   text-indent: 200%;
   white-space: nowrap;
@@ -543,17 +543,17 @@
   background-position: left 0;
   margin: 0; }
 
-.uni-sig-extra-small .logo a {
+.uni-sig-extra-small .mu-sig__logo a {
   width: 26px;
   height: 29px;
   background-image: url("../images/mu-logo-extra-small.svg");
   float: left;
   margin-left: -1px; }
   @media print {
-    .uni-sig-extra-small .logo a {
+    .uni-sig-extra-small .mu-sig__logo a {
       position: relative;
       background: none; }
-      .uni-sig-extra-small .logo a:after {
+      .uni-sig-extra-small .mu-sig__logo a:after {
         content: url("../images/mu-logo-extra-small.svg");
         text-indent: 0;
         display: block;
@@ -561,34 +561,34 @@
         top: 0;
         left: 0; } }
 
-.uni-sig-extra-small .wordmark {
+.uni-sig-extra-small .mu-sig__wordmark {
   margin-left: 33px;
   padding-top: 6px; }
 
-.uni-sig-extra-small .wordmark a {
+.uni-sig-extra-small .mu-sig__wordmark a {
   width: 177px;
   height: 21px;
   background-image: url("../images/mu-wordmark-black-extra-small.svg"); }
   @media print {
-    .uni-sig-extra-small .wordmark a {
+    .uni-sig-extra-small .mu-sig__wordmark a {
       position: relative;
       background: none; }
-      .uni-sig-extra-small .wordmark a:after {
+      .uni-sig-extra-small .mu-sig__wordmark a:after {
         content: url("../images/mu-wordmark-black-extra-small.svg");
         text-indent: 0;
         display: block;
         position: absolute;
         top: 0;
         left: 0; } }
-  .uni-sig-extra-small .wordmark a:hover, .uni-sig-extra-small .wordmark a:focus, .uni-sig-extra-small .wordmark a:active {
+  .uni-sig-extra-small .mu-sig__wordmark a:hover, .uni-sig-extra-small .mu-sig__wordmark a:focus, .uni-sig-extra-small .mu-sig__wordmark a:active {
     background-position: left -21px; }
 
-.uni-sig-extra-small-center .logo,
-.uni-sig-extra-small-center .wordmark {
+.uni-sig-extra-small-center .mu-sig__logo,
+.uni-sig-extra-small-center .mu-sig__wordmark {
   margin: 0; }
 
-.uni-sig-extra-small-center .logo a,
-.uni-sig-extra-small-center .wordmark a {
+.uni-sig-extra-small-center .mu-sig__logo a,
+.uni-sig-extra-small-center .mu-sig__wordmark a {
   display: block;
   text-indent: 200%;
   white-space: nowrap;
@@ -599,28 +599,28 @@
   margin-left: auto;
   margin-right: auto; }
 
-.uni-sig-extra-small-center .logo a {
+.uni-sig-extra-small-center .mu-sig__logo a {
   width: 26px;
   height: 29px;
   background-image: url("../images/mu-logo-extra-small.svg");
   margin-bottom: 7px; }
 
-.uni-sig-extra-small-center .wordmark a {
+.uni-sig-extra-small-center .mu-sig__wordmark a {
   width: 177px;
   height: 21px;
   background-image: url("../images/mu-wordmark-black-extra-small.svg"); }
   @media print {
-    .uni-sig-extra-small-center .wordmark a {
+    .uni-sig-extra-small-center .mu-sig__wordmark a {
       position: relative;
       background: none; }
-      .uni-sig-extra-small-center .wordmark a:after {
+      .uni-sig-extra-small-center .mu-sig__wordmark a:after {
         content: url("../images/mu-wordmark-black-extra-small.svg");
         text-indent: 0;
         display: block;
         position: absolute;
         top: 0;
         left: 0; } }
-  .uni-sig-extra-small-center .wordmark a:hover, .uni-sig-extra-small-center .wordmark a:focus, .uni-sig-extra-small-center .wordmark a:active {
+  .uni-sig-extra-small-center .mu-sig__wordmark a:hover, .uni-sig-extra-small-center .mu-sig__wordmark a:focus, .uni-sig-extra-small-center .mu-sig__wordmark a:active {
     background-position: left -21px; }
 
 .uni-sig-small {
@@ -630,11 +630,11 @@
     display: table; }
   .uni-sig-small:after {
     clear: both; }
-  .uni-sig-small .logo,
-  .uni-sig-small .wordmark {
+  .uni-sig-small .mu-sig__logo,
+  .uni-sig-small .mu-sig__wordmark {
     margin: 0; }
-  .uni-sig-small .logo a,
-  .uni-sig-small .wordmark a {
+  .uni-sig-small .mu-sig__logo a,
+  .uni-sig-small .mu-sig__wordmark a {
     display: block;
     text-indent: 200%;
     white-space: nowrap;
@@ -643,51 +643,51 @@
     background-repeat: no-repeat;
     background-position: left 0;
     margin: 0; }
-  .uni-sig-small .logo a {
+  .uni-sig-small .mu-sig__logo a {
     width: 34px;
     height: 38px;
     background-image: url("../images/mu-logo-small.svg");
     float: left;
     margin-left: -1px; }
     @media print {
-      .uni-sig-small .logo a {
+      .uni-sig-small .mu-sig__logo a {
         position: relative;
         background: none; }
-        .uni-sig-small .logo a:after {
+        .uni-sig-small .mu-sig__logo a:after {
           content: url("../images/mu-logo-small.svg");
           text-indent: 0;
           display: block;
           position: absolute;
           top: 0;
           left: 0; } }
-  .uni-sig-small .wordmark {
+  .uni-sig-small .mu-sig__wordmark {
     margin-left: 44px;
     padding-top: 9px; }
-  .uni-sig-small .wordmark a {
+  .uni-sig-small .mu-sig__wordmark a {
     width: 229px;
     height: 27px;
     background-image: url("../images/mu-wordmark-black-small.svg"); }
     @media print {
-      .uni-sig-small .wordmark a {
+      .uni-sig-small .mu-sig__wordmark a {
         position: relative;
         background: none; }
-        .uni-sig-small .wordmark a:after {
+        .uni-sig-small .mu-sig__wordmark a:after {
           content: url("../images/mu-wordmark-black-small.svg");
           text-indent: 0;
           display: block;
           position: absolute;
           top: 0;
           left: 0; } }
-    .uni-sig-small .wordmark a:hover, .uni-sig-small .wordmark a:focus, .uni-sig-small .wordmark a:active {
+    .uni-sig-small .mu-sig__wordmark a:hover, .uni-sig-small .mu-sig__wordmark a:focus, .uni-sig-small .mu-sig__wordmark a:active {
       background-position: left -27px; }
 
 .uni-sig-small-center {
   background-color: #222; }
-  .uni-sig-small-center .logo,
-  .uni-sig-small-center .wordmark {
+  .uni-sig-small-center .mu-sig__logo,
+  .uni-sig-small-center .mu-sig__wordmark {
     margin: 0; }
-  .uni-sig-small-center .logo a,
-  .uni-sig-small-center .wordmark a {
+  .uni-sig-small-center .mu-sig__logo a,
+  .uni-sig-small-center .mu-sig__wordmark a {
     display: block;
     text-indent: 200%;
     white-space: nowrap;
@@ -697,38 +697,38 @@
     background-position: left 0;
     margin-left: auto;
     margin-right: auto; }
-  .uni-sig-small-center .logo a {
+  .uni-sig-small-center .mu-sig__logo a {
     width: 34px;
     height: 38px;
     background-image: url("../images/mu-logo-small.svg");
     margin-bottom: 10px; }
     @media print {
-      .uni-sig-small-center .logo a {
+      .uni-sig-small-center .mu-sig__logo a {
         position: relative;
         background: none; }
-        .uni-sig-small-center .logo a:after {
+        .uni-sig-small-center .mu-sig__logo a:after {
           content: url("../images/mu-logo-small.svg");
           text-indent: 0;
           display: block;
           position: absolute;
           top: 0;
           left: 0; } }
-  .uni-sig-small-center .wordmark a {
+  .uni-sig-small-center .mu-sig__wordmark a {
     width: 229px;
     height: 27px;
     background-image: url("../images/mu-wordmark-white-small.svg"); }
     @media print {
-      .uni-sig-small-center .wordmark a {
+      .uni-sig-small-center .mu-sig__wordmark a {
         position: relative;
         background: none; }
-        .uni-sig-small-center .wordmark a:after {
+        .uni-sig-small-center .mu-sig__wordmark a:after {
           content: url("../images/mu-wordmark-black-small.svg");
           text-indent: 0;
           display: block;
           position: absolute;
           top: 0;
           left: 0; } }
-    .uni-sig-small-center .wordmark a:hover, .uni-sig-small-center .wordmark a:focus, .uni-sig-small-center .wordmark a:active {
+    .uni-sig-small-center .mu-sig__wordmark a:hover, .uni-sig-small-center .mu-sig__wordmark a:focus, .uni-sig-small-center .mu-sig__wordmark a:active {
       background-position: left -27px; }
 
 .uni-sig-medium:before, .uni-sig-medium:after {
@@ -738,12 +738,12 @@
 .uni-sig-medium:after {
   clear: both; }
 
-.uni-sig-medium .logo,
-.uni-sig-medium .wordmark {
+.uni-sig-medium .mu-sig__logo,
+.uni-sig-medium .mu-sig__wordmark {
   margin: 0; }
 
-.uni-sig-medium .logo a,
-.uni-sig-medium .wordmark a {
+.uni-sig-medium .mu-sig__logo a,
+.uni-sig-medium .mu-sig__wordmark a {
   display: block;
   text-indent: 200%;
   white-space: nowrap;
@@ -753,17 +753,17 @@
   background-position: left 0;
   margin: 0; }
 
-.uni-sig-medium .logo a {
+.uni-sig-medium .mu-sig__logo a {
   width: 50px;
   height: 56px;
   background-image: url("../images/mu-logo-medium.svg");
   float: left;
   margin-left: -1px; }
   @media print {
-    .uni-sig-medium .logo a {
+    .uni-sig-medium .mu-sig__logo a {
       position: relative;
       background: none; }
-      .uni-sig-medium .logo a:after {
+      .uni-sig-medium .mu-sig__logo a:after {
         content: url("../images/mu-logo-medium.svg");
         text-indent: 0;
         display: block;
@@ -771,34 +771,34 @@
         top: 0;
         left: 0; } }
 
-.uni-sig-medium .wordmark {
+.uni-sig-medium .mu-sig__wordmark {
   margin-left: 65px;
   padding-top: 11px; }
 
-.uni-sig-medium .wordmark a {
+.uni-sig-medium .mu-sig__wordmark a {
   width: 334px;
   height: 39px;
   background-image: url("../images/mu-wordmark-black-medium.svg"); }
   @media print {
-    .uni-sig-medium .wordmark a {
+    .uni-sig-medium .mu-sig__wordmark a {
       position: relative;
       background: none; }
-      .uni-sig-medium .wordmark a:after {
+      .uni-sig-medium .mu-sig__wordmark a:after {
         content: url("../images/mu-wordmark-black-medium.svg");
         text-indent: 0;
         display: block;
         position: absolute;
         top: 0;
         left: 0; } }
-  .uni-sig-medium .wordmark a:hover, .uni-sig-medium .wordmark a:focus, .uni-sig-medium .wordmark a:active {
+  .uni-sig-medium .mu-sig__wordmark a:hover, .uni-sig-medium .mu-sig__wordmark a:focus, .uni-sig-medium .mu-sig__wordmark a:active {
     background-position: left -39px; }
 
-.uni-sig-medium-center .logo,
-.uni-sig-medium-center .wordmark {
+.uni-sig-medium-center .mu-sig__logo,
+.uni-sig-medium-center .mu-sig__wordmark {
   margin: 0; }
 
-.uni-sig-medium-center .logo a,
-.uni-sig-medium-center .wordmark a {
+.uni-sig-medium-center .mu-sig__logo a,
+.uni-sig-medium-center .mu-sig__wordmark a {
   display: block;
   text-indent: 200%;
   white-space: nowrap;
@@ -809,16 +809,16 @@
   margin-left: auto;
   margin-right: auto; }
 
-.uni-sig-medium-center .logo a {
+.uni-sig-medium-center .mu-sig__logo a {
   width: 50px;
   height: 56px;
   background-image: url("../images/mu-logo-medium.svg");
   margin-bottom: 15px; }
   @media print {
-    .uni-sig-medium-center .logo a {
+    .uni-sig-medium-center .mu-sig__logo a {
       position: relative;
       background: none; }
-      .uni-sig-medium-center .logo a:after {
+      .uni-sig-medium-center .mu-sig__logo a:after {
         content: url("../images/mu-logo-medium.svg");
         text-indent: 0;
         display: block;
@@ -826,22 +826,22 @@
         top: 0;
         left: 0; } }
 
-.uni-sig-medium-center .wordmark a {
+.uni-sig-medium-center .mu-sig__wordmark a {
   width: 334px;
   height: 39px;
   background-image: url("../images/mu-wordmark-black-medium.svg"); }
   @media print {
-    .uni-sig-medium-center .wordmark a {
+    .uni-sig-medium-center .mu-sig__wordmark a {
       position: relative;
       background: none; }
-      .uni-sig-medium-center .wordmark a:after {
+      .uni-sig-medium-center .mu-sig__wordmark a:after {
         content: url("../images/mu-wordmark-black-medium.svg");
         text-indent: 0;
         display: block;
         position: absolute;
         top: 0;
         left: 0; } }
-  .uni-sig-medium-center .wordmark a:hover, .uni-sig-medium-center .wordmark a:focus, .uni-sig-medium-center .wordmark a:active {
+  .uni-sig-medium-center .mu-sig__wordmark a:hover, .uni-sig-medium-center .mu-sig__wordmark a:focus, .uni-sig-medium-center .mu-sig__wordmark a:active {
     background-position: left -39px; }
 
 .uni-sig-large {
@@ -851,11 +851,11 @@
     display: table; }
   .uni-sig-large:after {
     clear: both; }
-  .uni-sig-large .logo,
-  .uni-sig-large .wordmark {
+  .uni-sig-large .mu-sig__logo,
+  .uni-sig-large .mu-sig__wordmark {
     margin: 0; }
-  .uni-sig-large .logo a,
-  .uni-sig-large .wordmark a {
+  .uni-sig-large .mu-sig__logo a,
+  .uni-sig-large .mu-sig__wordmark a {
     display: block;
     text-indent: 200%;
     white-space: nowrap;
@@ -864,40 +864,40 @@
     background-repeat: no-repeat;
     background-position: left 0;
     margin: 0; }
-  .uni-sig-large .logo a {
+  .uni-sig-large .mu-sig__logo a {
     width: 66px;
     height: 74px;
     background-image: url("../images/mu-logo-large.svg");
     float: left;
     margin-left: -1px; }
-  .uni-sig-large .wordmark {
+  .uni-sig-large .mu-sig__wordmark {
     margin-left: 86px;
     padding-top: 14px; }
-  .uni-sig-large .wordmark a {
+  .uni-sig-large .mu-sig__wordmark a {
     width: 478px;
     height: 56px;
     background-image: url("../images/mu-wordmark-white-large.svg"); }
     @media print {
-      .uni-sig-large .wordmark a {
+      .uni-sig-large .mu-sig__wordmark a {
         position: relative;
         background: none; }
-        .uni-sig-large .wordmark a:after {
+        .uni-sig-large .mu-sig__wordmark a:after {
           content: url("../images/mu-wordmark-black-large.svg");
           text-indent: 0;
           display: block;
           position: absolute;
           top: 0;
           left: 0; } }
-    .uni-sig-large .wordmark a:hover, .uni-sig-large .wordmark a:focus, .uni-sig-large .wordmark a:active {
+    .uni-sig-large .mu-sig__wordmark a:hover, .uni-sig-large .mu-sig__wordmark a:focus, .uni-sig-large .mu-sig__wordmark a:active {
       background-position: left -56px; }
 
 .uni-sig-large-center {
   background-color: #f1b82d; }
-  .uni-sig-large-center .logo,
-  .uni-sig-large-center .wordmark {
+  .uni-sig-large-center .mu-sig__logo,
+  .uni-sig-large-center .mu-sig__wordmark {
     margin: 0; }
-  .uni-sig-large-center .logo a,
-  .uni-sig-large-center .wordmark a {
+  .uni-sig-large-center .mu-sig__logo a,
+  .uni-sig-large-center .mu-sig__wordmark a {
     display: block;
     text-indent: 200%;
     white-space: nowrap;
@@ -907,36 +907,36 @@
     background-position: left 0;
     margin-left: auto;
     margin-right: auto; }
-  .uni-sig-large-center .logo a {
+  .uni-sig-large-center .mu-sig__logo a {
     width: 66px;
     height: 74px;
     background-image: url("../images/mu-logo-large.svg");
     margin-bottom: 20px; }
     @media print {
-      .uni-sig-large-center .logo a {
+      .uni-sig-large-center .mu-sig__logo a {
         position: relative;
         background: none; }
-        .uni-sig-large-center .logo a:after {
+        .uni-sig-large-center .mu-sig__logo a:after {
           content: url("../images/mu-logo-large.svg");
           text-indent: 0;
           display: block;
           position: absolute;
           top: 0;
           left: 0; } }
-  .uni-sig-large-center .wordmark a {
+  .uni-sig-large-center .mu-sig__wordmark a {
     width: 478px;
     height: 56px;
     background-image: url("../images/mu-wordmark-black-large.svg"); }
     @media print {
-      .uni-sig-large-center .wordmark a {
+      .uni-sig-large-center .mu-sig__wordmark a {
         position: relative;
         background: none; }
-        .uni-sig-large-center .wordmark a:after {
+        .uni-sig-large-center .mu-sig__wordmark a:after {
           content: url("../images/mu-wordmark-black-large.svg");
           text-indent: 0;
           display: block;
           position: absolute;
           top: 0;
           left: 0; } }
-    .uni-sig-large-center .wordmark a:hover, .uni-sig-large-center .wordmark a:focus, .uni-sig-large-center .wordmark a:active {
+    .uni-sig-large-center .mu-sig__wordmark a:hover, .uni-sig-large-center .mu-sig__wordmark a:focus, .uni-sig-large-center .mu-sig__wordmark a:active {
       background-position: left -56px; }

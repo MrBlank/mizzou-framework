@@ -27,8 +27,9 @@
 ) 
 {
     // Set names
-    $logo-filename: 'mu-logo-#{$size}.svg';
-    $wordmark-filename: 'mu-wordmark-#{$wordmark-color}-#{$size}.svg'; 
+    $logo-filename:             'mu-logo-#{$size}.svg';
+    $wordmark-filename:         'mu-wordmark-#{$wordmark-color}-#{$size}.svg'; 
+    $wordmark-filename-print:   'mu-wordmark-black-#{$size}.svg'; // Print uses the black version
     
     // Set dimensions
     @if ($size == 'large') {
@@ -68,57 +69,36 @@
         @include clear-fix(); // Keeps parent container at least as tall as the logo if it is not centered.
     }
             
-    .logo,
-    .wordmark 
+    .mu-sig__logo,
+    .mu-sig__wordmark 
     {
         margin: 0; // Overrides default <h1> and <p> margins. 
     }
-    .logo a,
-    .wordmark a 
+    .mu-sig__logo a,
+    .mu-sig__wordmark a 
     {
-        @include replace-with-image();
-        background-position: left 0; 
-        
-        @if ($center == 'true') {
-            margin-left: auto;
-            margin-right: auto;
-        }
-        @if ($center == 'false') {
-            margin: 0;
-        }
+        @include base-element-styles($center);
     }
-    .logo a 
+    .mu-sig__logo a 
     { 
-        width: $logo-width;
-        height: $logo-height;
-        background-image: url('#{$image-path}/#{$logo-filename}');
-        
-        @if ($center == 'true') {
-            margin-bottom: $logo-space; // Clear space - 1px rule
-        }
-        @if ($center == 'false') {
-            float: left;
-            margin-left: -1px; // For alignment with 1px rule on image
-        }
-        @if ($print == 'true') {
-            @include print-image('#{$image-path}/#{$logo-filename}');
-        }
+        @include logo-styles($logo-width, $logo-height, $logo-filename, $logo-space, $center, $print)
+
     }
-    .wordmark 
+    .mu-sig__wordmark 
     {            
         @if ($center == 'false') {
             margin-left: ($logo-width + $logo-space);
             padding-top: $wordmark-top; 
         }
     } 
-    .wordmark a 
+    .mu-sig__wordmark a 
     {
         width: $wordmark-width;
         height: $wordmark-height;
         background-image: url('#{$image-path}/#{$wordmark-filename}');
         
         @if ($print = 'true') {
-            @include print-image('#{$image-path}/mu-wordmark-black-#{$size}.svg'); // Print needs to be the black version always
+            @include print-image('#{$image-path}/#{$wordmark-filename-print}'); // Print needs to be the black version always
         }
         &:hover,
         &:focus,
@@ -160,9 +140,10 @@
 ) 
 {
     // Set names
-    $logo-filename:         'mu-logo-#{$size}.svg';
-    $unit-name-filename:    '#{$name-prefix}-#{$wordmark-color}-#{$size}.svg';
-    $wordmark-filename:     'unit-wordmark-#{$wordmark-color}-#{$size}.svg';
+    $logo-filename:             'mu-logo-#{$size}.svg';
+    $unit-name-filename:        '#{$name-prefix}-#{$wordmark-color}-#{$size}.svg';
+    $wordmark-filename:         'unit-wordmark-#{$wordmark-color}-#{$size}.svg';
+    $wordmark-filename-print:   'unit-wordmark-black-#{$size}.svg';
     
     // Set dimensions
     @if ($size == 'large') {
@@ -186,57 +167,34 @@
         $wordmark-width: 149px;
         $wordmark-height: 17px;
     }
-    
     @if ($center == 'false') {
         @include clear-fix(); // Keeps parent container at least as tall as the logo if it is not centered.
     }
     
-    .logo,
-    .wordmark,
-    .unit 
+    .unit-sig__logo,
+    .unit-sig__wordmark,
+    .unit-sig__unit 
     {
         margin: 0; // Overrides default <h1>, <h2> and <p> margins.
     }
-    .logo a,
-    .wordmark a,
-    .unit a 
+    .unit-sig__logo a,
+    .unit-sig__wordmark a,
+    .unit-sig__unit a 
     {
-        @include replace-with-image();
-        background-position: left 0;
-        
-        @if ($center == 'false') {
-            margin: 0;
-        }
-        @if ($center == 'true') {
-            margin-left: auto;
-            margin-right: auto;
-        }
+        @include base-element-styles($center);
     }
-    .logo a 
+    .unit-sig__logo a 
     { 
-        width: $logo-width;
-        height: $logo-height;
-        background-image: url('#{$image-path}/#{$logo-filename}');
-        
-        @if ($center == 'true') {
-            margin-bottom: $logo-space; // Clear space - 1px rule
-        }
-        @if ($center == 'false') {
-            float: left;
-            margin-left: -1px; // For alignment with 1px rule on image
-        }
-        @if ($print == 'true') {
-            @include print-image('#{$image-path}/#{$logo-filename}');
-        }
+        @include logo-styles($logo-width, $logo-height, $logo-filename, $logo-space, $center, $print)
     }
-    .wordmark,
-    .unit 
+    .unit-sig__wordmark,
+    .unit-sig__unit 
     {            
         @if ($center == 'false') {
             margin-left: ($logo-width + $logo-space);
         }
     } 
-    .wordmark a 
+    .unit-sig__wordmark a 
     {
         width: $wordmark-width;
         height: $wordmark-height;
@@ -245,9 +203,8 @@
         @if ($center == 'false') {
             margin-left: $wordmark-indent;
         }
-        
         @if ($print = 'true') {
-            @include print-image('#{$image-path}/unit-wordmark-black-#{$size}.svg'); // Print needs to be the black version always
+            @include print-image('#{$image-path}/#{$wordmark-filename-print}'); // Print needs to be the black version always
         }
         &:hover,
         &:focus,
@@ -255,7 +212,7 @@
             background-position: left (-$wordmark-height);
         }
     }
-    .unit a {
+    .unit-sig__unit a {
         width: $name-width;
         height: $name-height;
         margin-bottom: $name-margin;
@@ -275,12 +232,48 @@
 /* @end */
 
 
-/* @group Signature Print */
+/* @group Signature Mixins */
+
+// Sets base styles both types of signatures use
+
+@mixin base-element-styles($center) 
+{ 
+    @include replace-with-image();
+    background-position: left 0;
+    
+    @if ($center == 'false') {
+        margin: 0;
+    }
+    @if ($center == 'true') {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+// Sets styles for MU logo both types of signatures use
+
+@mixin logo-styles($logo-width, $logo-height, $logo-filename, $logo-space, $center, $print) 
+{
+    width: $logo-width;
+    height: $logo-height;
+    background-image: url('#{$image-path}/#{$logo-filename}');
+    
+    @if ($center == 'true') {
+        margin-bottom: $logo-space; // Clear space - 1px rule
+    }
+    @if ($center == 'false') {
+        float: left;
+        margin-left: -1px; // For alignment with 1px rule on image
+    }
+    @if ($print == 'true') {
+        @include print-image('#{$image-path}/#{$logo-filename}');
+    }
+}
 
 // Replaces background image with content selector and after pseudo element for printing
 
-@mixin print-image ($image) {
-    
+@mixin print-image($image) 
+{
     @media print {
         position: relative;
         background: none;
@@ -292,7 +285,7 @@
             position: absolute;
             top: 0;
             left: 0;
-        }   
+        }
     }
 }
 

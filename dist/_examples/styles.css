@@ -670,7 +670,7 @@ small {
  * @param boolean $center - (Optional) Whether to center the signature. Defaults to false
  */
 /* @end */
-/* @group Signature Print */
+/* @group Signature Mixins */
 /* @end */
 .mu-sig {
   padding-bottom: 1em; }
@@ -679,11 +679,11 @@ small {
     display: table; }
   .mu-sig:after {
     clear: both; }
-  .mu-sig .logo,
-  .mu-sig .wordmark {
+  .mu-sig .mu-sig__logo,
+  .mu-sig .mu-sig__wordmark {
     margin: 0; }
-  .mu-sig .logo a,
-  .mu-sig .wordmark a {
+  .mu-sig .mu-sig__logo a,
+  .mu-sig .mu-sig__wordmark a {
     display: block;
     text-indent: 200%;
     white-space: nowrap;
@@ -692,42 +692,42 @@ small {
     background-repeat: no-repeat;
     background-position: left 0;
     margin: 0; }
-  .mu-sig .logo a {
+  .mu-sig .mu-sig__logo a {
     width: 34px;
     height: 38px;
     background-image: url("../images/mu-logo-small.svg");
     float: left;
     margin-left: -1px; }
     @media print {
-      .mu-sig .logo a {
+      .mu-sig .mu-sig__logo a {
         position: relative;
         background: none; }
-        .mu-sig .logo a:after {
+        .mu-sig .mu-sig__logo a:after {
           content: url("../images/mu-logo-small.svg");
           text-indent: 0;
           display: block;
           position: absolute;
           top: 0;
           left: 0; } }
-  .mu-sig .wordmark {
+  .mu-sig .mu-sig__wordmark {
     margin-left: 44px;
     padding-top: 9px; }
-  .mu-sig .wordmark a {
+  .mu-sig .mu-sig__wordmark a {
     width: 229px;
     height: 27px;
     background-image: url("../images/mu-wordmark-black-small.svg"); }
     @media print {
-      .mu-sig .wordmark a {
+      .mu-sig .mu-sig__wordmark a {
         position: relative;
         background: none; }
-        .mu-sig .wordmark a:after {
+        .mu-sig .mu-sig__wordmark a:after {
           content: url("../images/mu-wordmark-black-small.svg");
           text-indent: 0;
           display: block;
           position: absolute;
           top: 0;
           left: 0; } }
-    .mu-sig .wordmark a:hover, .mu-sig .wordmark a:focus, .mu-sig .wordmark a:active {
+    .mu-sig .mu-sig__wordmark a:hover, .mu-sig .mu-sig__wordmark a:focus, .mu-sig .mu-sig__wordmark a:active {
       background-position: left -27px; }
 
 .wrapper {
