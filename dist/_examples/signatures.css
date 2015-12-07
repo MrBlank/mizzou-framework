@@ -9,9 +9,9 @@
 /* @end */
 /* @group Fonts */
 /* @end */
-/* @group Images */
+/* @group Standard Measurements */
 /* @end */
-/* @group Media Queries */
+/* @group Images */
 /* @end */
 /* @group Viewport */
 /* @end */
@@ -79,12 +79,21 @@
   border: solid 1px #222; }
 
 .unit-sig-small {
+  overflow: auto;
+  /* Old way
+    &:before,
+    &:after
+    {
+        content: ' ';
+        display: table;
+    }
+    
+    &:after
+    {
+        clear: both;
+    }
+    */
   background-color: #f1b82d; }
-  .unit-sig-small:before, .unit-sig-small:after {
-    content: ' ';
-    display: table; }
-  .unit-sig-small:after {
-    clear: both; }
   .unit-sig-small .unit-sig__logo,
   .unit-sig-small .unit-sig__wordmark,
   .unit-sig-small .unit-sig__unit {
@@ -227,89 +236,92 @@
           top: 0;
           left: 0; } }
 
-.unit-sig-medium:before, .unit-sig-medium:after {
-  content: ' ';
-  display: table; }
-
-.unit-sig-medium:after {
-  clear: both; }
-
-.unit-sig-medium .unit-sig__logo,
-.unit-sig-medium .unit-sig__wordmark,
-.unit-sig-medium .unit-sig__unit {
-  margin: 0; }
-
-.unit-sig-medium .unit-sig__logo a,
-.unit-sig-medium .unit-sig__wordmark a,
-.unit-sig-medium .unit-sig__unit a {
-  display: block;
-  text-indent: 200%;
-  white-space: nowrap;
-  overflow: hidden;
-  padding: 0;
-  background-repeat: no-repeat;
-  background-position: left 0;
-  margin: 0; }
-
-.unit-sig-medium .unit-sig__logo a {
-  width: 50px;
-  height: 56px;
-  background-image: url("../images/mu-logo-medium.svg");
-  float: left;
-  margin-left: -1px; }
-  @media print {
-    .unit-sig-medium .unit-sig__logo a {
-      position: relative;
-      background: none; }
-      .unit-sig-medium .unit-sig__logo a:after {
-        content: url("../images/mu-logo-medium.svg");
-        text-indent: 0;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0; } }
-
-.unit-sig-medium .unit-sig__wordmark,
-.unit-sig-medium .unit-sig__unit {
-  margin-left: 65px; }
-
-.unit-sig-medium .unit-sig__wordmark a {
-  width: 183px;
-  height: 20px;
-  background-image: url("../images/unit-wordmark-black-medium.svg");
-  margin-left: 0; }
-  @media print {
-    .unit-sig-medium .unit-sig__wordmark a {
-      position: relative;
-      background: none; }
-      .unit-sig-medium .unit-sig__wordmark a:after {
-        content: url("../images/unit-wordmark-black-medium.svg");
-        text-indent: 0;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0; } }
-  .unit-sig-medium .unit-sig__wordmark a:hover, .unit-sig-medium .unit-sig__wordmark a:focus, .unit-sig-medium .unit-sig__wordmark a:active {
-    background-position: left -20px; }
-
-.unit-sig-medium .unit-sig__unit a {
-  width: 284px;
-  height: 40px;
-  margin-bottom: 0;
-  background-image: url("../images/unit-name-black-medium.svg"); }
-  .unit-sig-medium .unit-sig__unit a:hover, .unit-sig-medium .unit-sig__unit a:focus, .unit-sig-medium .unit-sig__unit a:active {
-    background-position: left -40px; }
-  @media print {
-    .unit-sig-medium .unit-sig__unit a {
-      position: relative;
-      background: none; }
-      .unit-sig-medium .unit-sig__unit a:after {
-        content: url("../images/unit-name-black-medium.svg");
-        text-indent: 0;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0; } }
+.unit-sig-medium {
+  overflow: auto;
+  /* Old way
+    &:before,
+    &:after
+    {
+        content: ' ';
+        display: table;
+    }
+    
+    &:after
+    {
+        clear: both;
+    }
+    */ }
+  .unit-sig-medium .unit-sig__logo,
+  .unit-sig-medium .unit-sig__wordmark,
+  .unit-sig-medium .unit-sig__unit {
+    margin: 0; }
+  .unit-sig-medium .unit-sig__logo a,
+  .unit-sig-medium .unit-sig__wordmark a,
+  .unit-sig-medium .unit-sig__unit a {
+    display: block;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: left 0;
+    margin: 0; }
+  .unit-sig-medium .unit-sig__logo a {
+    width: 50px;
+    height: 56px;
+    background-image: url("../images/mu-logo-medium.svg");
+    float: left;
+    margin-left: -1px; }
+    @media print {
+      .unit-sig-medium .unit-sig__logo a {
+        position: relative;
+        background: none; }
+        .unit-sig-medium .unit-sig__logo a:after {
+          content: url("../images/mu-logo-medium.svg");
+          text-indent: 0;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0; } }
+  .unit-sig-medium .unit-sig__wordmark,
+  .unit-sig-medium .unit-sig__unit {
+    margin-left: 65px; }
+  .unit-sig-medium .unit-sig__wordmark a {
+    width: 183px;
+    height: 20px;
+    background-image: url("../images/unit-wordmark-black-medium.svg");
+    margin-left: 0; }
+    @media print {
+      .unit-sig-medium .unit-sig__wordmark a {
+        position: relative;
+        background: none; }
+        .unit-sig-medium .unit-sig__wordmark a:after {
+          content: url("../images/unit-wordmark-black-medium.svg");
+          text-indent: 0;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0; } }
+    .unit-sig-medium .unit-sig__wordmark a:hover, .unit-sig-medium .unit-sig__wordmark a:focus, .unit-sig-medium .unit-sig__wordmark a:active {
+      background-position: left -20px; }
+  .unit-sig-medium .unit-sig__unit a {
+    width: 284px;
+    height: 40px;
+    margin-bottom: 0;
+    background-image: url("../images/unit-name-black-medium.svg"); }
+    .unit-sig-medium .unit-sig__unit a:hover, .unit-sig-medium .unit-sig__unit a:focus, .unit-sig-medium .unit-sig__unit a:active {
+      background-position: left -40px; }
+    @media print {
+      .unit-sig-medium .unit-sig__unit a {
+        position: relative;
+        background: none; }
+        .unit-sig-medium .unit-sig__unit a:after {
+          content: url("../images/unit-name-black-medium.svg");
+          text-indent: 0;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0; } }
 
 .unit-sig-medium-center .unit-sig__logo,
 .unit-sig-medium-center .unit-sig__wordmark,
@@ -384,12 +396,21 @@
         left: 0; } }
 
 .unit-sig-large {
+  overflow: auto;
+  /* Old way
+    &:before,
+    &:after
+    {
+        content: ' ';
+        display: table;
+    }
+    
+    &:after
+    {
+        clear: both;
+    }
+    */
   background-color: #222; }
-  .unit-sig-large:before, .unit-sig-large:after {
-    content: ' ';
-    display: table; }
-  .unit-sig-large:after {
-    clear: both; }
   .unit-sig-large .unit-sig__logo,
   .unit-sig-large .unit-sig__wordmark,
   .unit-sig-large .unit-sig__unit {
@@ -521,67 +542,71 @@
           top: 0;
           left: 0; } }
 
-.uni-sig-extra-small:before, .uni-sig-extra-small:after {
-  content: ' ';
-  display: table; }
-
-.uni-sig-extra-small:after {
-  clear: both; }
-
-.uni-sig-extra-small .mu-sig__logo,
-.uni-sig-extra-small .mu-sig__wordmark {
-  margin: 0; }
-
-.uni-sig-extra-small .mu-sig__logo a,
-.uni-sig-extra-small .mu-sig__wordmark a {
-  display: block;
-  text-indent: 200%;
-  white-space: nowrap;
-  overflow: hidden;
-  padding: 0;
-  background-repeat: no-repeat;
-  background-position: left 0;
-  margin: 0; }
-
-.uni-sig-extra-small .mu-sig__logo a {
-  width: 26px;
-  height: 29px;
-  background-image: url("../images/mu-logo-extra-small.svg");
-  float: left;
-  margin-left: -1px; }
-  @media print {
-    .uni-sig-extra-small .mu-sig__logo a {
-      position: relative;
-      background: none; }
-      .uni-sig-extra-small .mu-sig__logo a:after {
-        content: url("../images/mu-logo-extra-small.svg");
-        text-indent: 0;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0; } }
-
-.uni-sig-extra-small .mu-sig__wordmark {
-  margin-left: 33px;
-  padding-top: 6px; }
-
-.uni-sig-extra-small .mu-sig__wordmark a {
-  width: 177px;
-  height: 21px;
-  background-image: url("../images/mu-wordmark-black-extra-small.svg"); }
-  @media print {
-    .uni-sig-extra-small .mu-sig__wordmark a {
-      position: relative;
-      background: none; }
-      .uni-sig-extra-small .mu-sig__wordmark a:after {
-        content: url("../images/mu-wordmark-black-extra-small.svg");
-        text-indent: 0;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0; } }
-  .uni-sig-extra-small .mu-sig__wordmark a:hover, .uni-sig-extra-small .mu-sig__wordmark a:focus, .uni-sig-extra-small .mu-sig__wordmark a:active {
-    background-position: left -21px; }
+.uni-sig-extra-small {
+  overflow: auto;
+  /* Old way
+    &:before,
+    &:after
+    {
+        content: ' ';
+        display: table;
+    }
+    
+    &:after
+    {
+        clear: both;
+    }
+    */ }
+  .uni-sig-extra-small .mu-sig__logo,
+  .uni-sig-extra-small .mu-sig__wordmark {
+    margin: 0; }
+  .uni-sig-extra-small .mu-sig__logo a,
+  .uni-sig-extra-small .mu-sig__wordmark a {
+    display: block;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: left 0;
+    margin: 0; }
+  .uni-sig-extra-small .mu-sig__logo a {
+    width: 26px;
+    height: 29px;
+    background-image: url("../images/mu-logo-extra-small.svg");
+    float: left;
+    margin-left: -1px; }
+    @media print {
+      .uni-sig-extra-small .mu-sig__logo a {
+        position: relative;
+        background: none; }
+        .uni-sig-extra-small .mu-sig__logo a:after {
+          content: url("../images/mu-logo-extra-small.svg");
+          text-indent: 0;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0; } }
+  .uni-sig-extra-small .mu-sig__wordmark {
+    margin-left: 33px;
+    padding-top: 6px; }
+  .uni-sig-extra-small .mu-sig__wordmark a {
+    width: 177px;
+    height: 21px;
+    background-image: url("../images/mu-wordmark-black-extra-small.svg"); }
+    @media print {
+      .uni-sig-extra-small .mu-sig__wordmark a {
+        position: relative;
+        background: none; }
+        .uni-sig-extra-small .mu-sig__wordmark a:after {
+          content: url("../images/mu-wordmark-black-extra-small.svg");
+          text-indent: 0;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0; } }
+    .uni-sig-extra-small .mu-sig__wordmark a:hover, .uni-sig-extra-small .mu-sig__wordmark a:focus, .uni-sig-extra-small .mu-sig__wordmark a:active {
+      background-position: left -21px; }
 
 .uni-sig-extra-small-center .mu-sig__logo,
 .uni-sig-extra-small-center .mu-sig__wordmark {
@@ -624,12 +649,21 @@
     background-position: left -21px; }
 
 .uni-sig-small {
+  overflow: auto;
+  /* Old way
+    &:before,
+    &:after
+    {
+        content: ' ';
+        display: table;
+    }
+    
+    &:after
+    {
+        clear: both;
+    }
+    */
   background-color: #f1b82d; }
-  .uni-sig-small:before, .uni-sig-small:after {
-    content: ' ';
-    display: table; }
-  .uni-sig-small:after {
-    clear: both; }
   .uni-sig-small .mu-sig__logo,
   .uni-sig-small .mu-sig__wordmark {
     margin: 0; }
@@ -731,67 +765,71 @@
     .uni-sig-small-center .mu-sig__wordmark a:hover, .uni-sig-small-center .mu-sig__wordmark a:focus, .uni-sig-small-center .mu-sig__wordmark a:active {
       background-position: left -27px; }
 
-.uni-sig-medium:before, .uni-sig-medium:after {
-  content: ' ';
-  display: table; }
-
-.uni-sig-medium:after {
-  clear: both; }
-
-.uni-sig-medium .mu-sig__logo,
-.uni-sig-medium .mu-sig__wordmark {
-  margin: 0; }
-
-.uni-sig-medium .mu-sig__logo a,
-.uni-sig-medium .mu-sig__wordmark a {
-  display: block;
-  text-indent: 200%;
-  white-space: nowrap;
-  overflow: hidden;
-  padding: 0;
-  background-repeat: no-repeat;
-  background-position: left 0;
-  margin: 0; }
-
-.uni-sig-medium .mu-sig__logo a {
-  width: 50px;
-  height: 56px;
-  background-image: url("../images/mu-logo-medium.svg");
-  float: left;
-  margin-left: -1px; }
-  @media print {
-    .uni-sig-medium .mu-sig__logo a {
-      position: relative;
-      background: none; }
-      .uni-sig-medium .mu-sig__logo a:after {
-        content: url("../images/mu-logo-medium.svg");
-        text-indent: 0;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0; } }
-
-.uni-sig-medium .mu-sig__wordmark {
-  margin-left: 65px;
-  padding-top: 11px; }
-
-.uni-sig-medium .mu-sig__wordmark a {
-  width: 334px;
-  height: 39px;
-  background-image: url("../images/mu-wordmark-black-medium.svg"); }
-  @media print {
-    .uni-sig-medium .mu-sig__wordmark a {
-      position: relative;
-      background: none; }
-      .uni-sig-medium .mu-sig__wordmark a:after {
-        content: url("../images/mu-wordmark-black-medium.svg");
-        text-indent: 0;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0; } }
-  .uni-sig-medium .mu-sig__wordmark a:hover, .uni-sig-medium .mu-sig__wordmark a:focus, .uni-sig-medium .mu-sig__wordmark a:active {
-    background-position: left -39px; }
+.uni-sig-medium {
+  overflow: auto;
+  /* Old way
+    &:before,
+    &:after
+    {
+        content: ' ';
+        display: table;
+    }
+    
+    &:after
+    {
+        clear: both;
+    }
+    */ }
+  .uni-sig-medium .mu-sig__logo,
+  .uni-sig-medium .mu-sig__wordmark {
+    margin: 0; }
+  .uni-sig-medium .mu-sig__logo a,
+  .uni-sig-medium .mu-sig__wordmark a {
+    display: block;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: left 0;
+    margin: 0; }
+  .uni-sig-medium .mu-sig__logo a {
+    width: 50px;
+    height: 56px;
+    background-image: url("../images/mu-logo-medium.svg");
+    float: left;
+    margin-left: -1px; }
+    @media print {
+      .uni-sig-medium .mu-sig__logo a {
+        position: relative;
+        background: none; }
+        .uni-sig-medium .mu-sig__logo a:after {
+          content: url("../images/mu-logo-medium.svg");
+          text-indent: 0;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0; } }
+  .uni-sig-medium .mu-sig__wordmark {
+    margin-left: 65px;
+    padding-top: 11px; }
+  .uni-sig-medium .mu-sig__wordmark a {
+    width: 334px;
+    height: 39px;
+    background-image: url("../images/mu-wordmark-black-medium.svg"); }
+    @media print {
+      .uni-sig-medium .mu-sig__wordmark a {
+        position: relative;
+        background: none; }
+        .uni-sig-medium .mu-sig__wordmark a:after {
+          content: url("../images/mu-wordmark-black-medium.svg");
+          text-indent: 0;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0; } }
+    .uni-sig-medium .mu-sig__wordmark a:hover, .uni-sig-medium .mu-sig__wordmark a:focus, .uni-sig-medium .mu-sig__wordmark a:active {
+      background-position: left -39px; }
 
 .uni-sig-medium-center .mu-sig__logo,
 .uni-sig-medium-center .mu-sig__wordmark {
@@ -845,12 +883,21 @@
     background-position: left -39px; }
 
 .uni-sig-large {
+  overflow: auto;
+  /* Old way
+    &:before,
+    &:after
+    {
+        content: ' ';
+        display: table;
+    }
+    
+    &:after
+    {
+        clear: both;
+    }
+    */
   background-color: #222; }
-  .uni-sig-large:before, .uni-sig-large:after {
-    content: ' ';
-    display: table; }
-  .uni-sig-large:after {
-    clear: both; }
   .uni-sig-large .mu-sig__logo,
   .uni-sig-large .mu-sig__wordmark {
     margin: 0; }

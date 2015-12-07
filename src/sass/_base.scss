@@ -16,18 +16,17 @@
 {
     width: $viewport-width;
 }
-
 @-o-viewport
 {
     width: $viewport-width;
 }
-
 @viewport
 {
     width: $viewport-width;
 }
 
 /* @end */
+
 
 /* @group General Settings / Major Containers */
 
@@ -43,7 +42,6 @@
 {
     outline: none;
 }
-
 article,
 aside,
 audio,
@@ -64,7 +62,6 @@ video
     margin: 0;
     padding: 0;
 }
-
 html
 {
     -webkit-font-smoothing: antialiased;
@@ -73,41 +70,25 @@ html
     font-family: $font-sans;
     font-size: $font-base-size + 0px;
     line-height: $font-base-line-height;
-    min-width: 320px; // Narrowest supported phone size
-    
-    @media print
-    {
-        background: #fff;
-    }
+    min-width: $base-min-width; 
 }
-
 body
 {
-    background: #fff;
-    color: $color-dark-grey;
+    background: $background-color;
+    color: $text-color;
     margin: 0;
-    
-    @media print
-    {
-        padding: 16px;
-        background: #fff;
-    }
 }
 
 /* @end */
 
+
 /* @group Text Format */
-
-@mixin bold()
-{
-    font-weight: $font-semibold; // Semibold for Proxima Nova
-}
-
+    
 b,
 strong,
 .bold
 {
-    @include bold;
+    font-weight: $font-bold-default;
 }
 
 i,
@@ -121,12 +102,12 @@ em,
         font-style: normal;
     }
 }
-
 u
 {
     text-decoration: none; // Sorry, unacceptable to use this
 }
 /* @end */
+
 
 /* @group Headings and Paragraphs */
 
@@ -143,8 +124,8 @@ h6,
 .like-h5,
 .like-h6
 {
-    @include standard-margin();
-    @include bold();
+    margin: $base-margin;
+    font-weight: $font-bold-default;
     color: #000;
     
     a
@@ -156,58 +137,28 @@ h6,
 h1,
 .like-h1
 {
-    font-size: 30px;
+    font-size: 1.875em; // 30px
     line-height: 1.2;
-    
-    @if ($query-larger-text != false) {
-        @media #{$query-larger-text}
-        {
-            font-size: 48px;
-            font-weight: 300; // Light for Proxima Nova
-        }
-    }
 }
 
 h2,
 .like-h2
 {
-    font-size: 21px;
+    font-size: 1.25em; // 21px
     line-height: 1.4;
-    
-    @if ($query-larger-text != false) {
-        @media #{$query-larger-text}
-        {
-            font-size: 32px;
-            line-height: 1.2;
-        }
-    }
 }
 
 h3,
 .like-h3
 {
-    font-size: 18px;
+    font-size: 1.125em; // 18px
     line-height: 1.4;
-    
-    @if ($query-larger-text != false) {
-        @media #{$query-larger-text}
-        {
-            font-size: 24px;
-        }
-    }
 }
 
 h4,
 .like-h4
 {
-    font-size: 16px;
-    
-    @if ($query-larger-text != false) {
-        @media #{$query-larger-text}
-        {
-            font-size: 20px;
-        }
-    }
+    font-size: 1em;
 }
 
 h5,
@@ -215,19 +166,20 @@ h6,
 .like-h5,
 .like-h6
 {
-    color: $color-light-grey3;
-    font-size: 16px;
+    color: $grey;
+    font-size: 1em;
 }
 
 h6,
 .like-h6
 {
+    color: $grey-light;
     font-style: italic;
 }
 
 p
 {
-    @include standard-margin();
+    margin: $base-margin;
 }
 
 /* @end */
@@ -249,14 +201,14 @@ figure,
 .aligncenter,
 .alignright
 {
-    @include standard-margin();
+    margin: $base-margin;
     max-width: 100%;
 }
 
 figcaption
 {
-    @include bold();
-    font-size: 14px;
+    font-weight: $font-bold-default;
+    font-size: .875em;
     
     p
     {
@@ -303,7 +255,7 @@ iframe
 .video
 {
     // Defaults to widescreen
-    @include standard-margin();
+    margin: $base-margin;
     position: relative;
     padding-bottom: 56.25%; // 16/9 aspect ratio
     height: 0;
@@ -331,12 +283,15 @@ iframe
 blockquote,
 .like-blockquote
 {
-    @include standard-margin();
-    
-    p 
+    margin: $base-margin;
+    font-style: italic;
+    font-size: 1.25em;
+    padding-left: 1em;
+    border-left: solid 1px $gold;    
+
+    &:last-child
     {
-        font-size: inherit;
-        margin: 0;
+        margin-bottom: 0;
     }
 }
 
@@ -355,7 +310,7 @@ address
 
 hr
 {
-    @include standard-margin();
+    margin: $base-margin;
     clear: both;
     border: 0;
     border-bottom: 1px solid $gold-light;
@@ -373,7 +328,7 @@ hr
 ul,
 ol
 {
-    @include standard-margin();
+    margin: $base-margin;
     
     ul,
     ol
@@ -394,12 +349,12 @@ li
 dl,
 dd
 {
-    @include standard-margin();
+    margin: $base-margin;
 }
 
 dt
 {
-    @include bold();
+    font-weight: $font-bold-default;
 }
 
 /* @end */
@@ -409,7 +364,7 @@ dt
 form,
 fieldset
 {
-    @include standard-margin();
+    margin: $base-margin;
 }
 
 fieldset,
@@ -434,12 +389,12 @@ textarea
 {
     margin: 0;
     padding: 4px;
-    border: 1px solid $color-light-grey2;
+    border: 1px solid $grey-light;
     font-size: 100%;
     font-family: inherit;
-    color: $color-dark-grey;
+    color: $grey-dark;
     border-radius: 0;
-    box-shadow: inset 0 0 4px fade($color-light-grey2, 75%);
+    box-shadow: inset 0 0 4px fade($grey-light, 75%);
     display: block;
     -webkit-appearance: none;
 }
@@ -465,7 +420,7 @@ button
 
 table
 {
-    @include standard-margin();
+    margin: $base-margin;
     border-collapse: collapse;
     border-spacing: 0;
 }
@@ -473,7 +428,7 @@ table
 th,
 td
 {
-    border: 1px solid $color-light-grey2;
+    border: 1px solid $grey-light;
     text-align: left;
 }
 
@@ -533,14 +488,14 @@ var
 
 a
 {
-    color: $color-link;
+    color: $link-color;
     text-decoration: underline;
     
     &:hover,
     &:focus,
     &:active
     {
-        color: $color-link-hover;
+        color: $link-hover-color;
     }
 }
 
@@ -551,7 +506,7 @@ a
 abbr,
 acronym
 {
-    border-bottom: 1px dotted $color-light-grey2;
+    border-bottom: 1px dotted $grey-light;
     cursor: help;
 }
 
@@ -576,11 +531,11 @@ sub
 
 mark
 {
-    background: $color-light-tan2;
+    background: $gold-lighter;
 }
 small 
 {
-    font-size: (($font-base * .8) * 1px);
+    font-size: ($font-base-size * .8px);
 }
 
 /* @end */

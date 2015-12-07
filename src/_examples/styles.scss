@@ -36,6 +36,14 @@ footer
     
     p 
     {
-        line-height: ($font-line-height * .8);
+        line-height: ($font-base-line-height * .8);
     }
 } 
+
+@media screen and (min-width: 624px)
+{
+    html 
+    {
+        font-size: 18px;
+    }    
+}

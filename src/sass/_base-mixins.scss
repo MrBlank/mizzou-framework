@@ -20,7 +20,11 @@
 */
 
 @mixin clear-fix()
-{
+{   
+    // New way. Test!
+    overflow: auto;
+    
+    /* Old way
     &:before,
     &:after
     {
@@ -32,30 +36,20 @@
     {
         clear: both;
     }
-}
-
-// Set's a default margin of 16px on the bottom, except for the last child of the container
-@mixin standard-margin()
-{
-    margin: 0 0 16px 0;
-    
-    &:last-child
-    {
-        margin-bottom: 0;
-    }
+    */
 }
 
 // Center align an image or figure.
 @mixin align-center()
 {
-    margin: 0 auto 16px auto;
+    margin: 0 auto 1em auto;
     text-align: center;
 }
 
 // Left align an image or figure.
 @mixin align-left()
 {
-    margin: 0 16px 16px 0;
+    margin: 0 1em 1em 0;
     float: left;
     display: block;
 }
@@ -63,7 +57,7 @@
 // Right align an image or figure.
 @mixin align-right()
 {
-    margin: 0 0 16px 16px;
+    margin: 0 0 1em 1em;
     float: right;
     display: block;
 }
