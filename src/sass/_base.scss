@@ -69,11 +69,11 @@ html
 {
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    background: $color-dark-grey2;
-    font-family: $font-sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    min-width: 320px;
+    background: $grey-darker;
+    font-family: $font-sans;
+    font-size: $font-base-size + 0px;
+    line-height: $font-base-line-height;
+    min-width: 320px; // Narrowest supported phone size
     
     @media print
     {
