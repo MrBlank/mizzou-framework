@@ -1,0 +1,75 @@
+/**
+ * Mizzou Framework - Sass: Print Reset
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+
+// Remove backgrounds
+// Make text and borders black
+*, 
+*:before, 
+*:after 
+{
+    background-image: none !important;
+    background-color: #fff !important;
+    color: #000 !important;
+    border-color: #000 !important;
+}
+
+// Overrrides
+html 
+{
+    font-size: 11pt !important;
+}
+
+// Links
+a, a:visited 
+{ 
+    text-decoration: underline; 
+}
+// Not a fan of URLs being printed after links. Looks bad. No one types URLs anyway.
+// a[href]:after { content: " (" attr(href) ")"; }
+// a[href^="#"]:after, a[href^="javascript:"]:after { content: ""; }
+
+// Code and Blockquotes
+pre, blockquote 
+{ 
+    page-break-inside: avoid; 
+}
+
+// Tables
+thead 
+{ 
+    display: table-header-group; 
+}
+tr 
+{ 
+    page-break-inside: avoid; 
+}
+
+// Images
+img 
+{ 
+    page-break-inside: avoid; 
+    max-width: 100%;
+}
+
+// Typography
+p,
+h1, 
+h2, 
+h3 
+{ 
+    orphans: 3; 
+    widows: 3; 
+}
+h1,
+h2, 
+h3 
+{ 
+    page-break-after: avoid; 
+}
+
+//abbr[title]:after { content: " (" attr(title) ")"; }

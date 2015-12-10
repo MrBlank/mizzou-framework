@@ -6,39 +6,61 @@
 
 
 
-// Branding 
-
-.mu-sig
+.header-layer,
+.footer-layer 
 {
-    @include mu-sig(
-        $print: 'true'
-    );
-    padding-bottom: 1em;
+    background-color: $grey-darker;
 }
-
-.wrapper 
+.wrapper-layer 
 {
-    max-width: 800px;
-    margin: 0 auto 1em;
+
+} 
+header,
+.wrapper,
+footer
+{
     padding: 1em;
-}
-header 
+    @include center-block($max-width: 800px, $min-width: $base-min-width);
+} 
+.wrapper
 {
-    margin-bottom: 1em;
+    
 }
 article 
 {
     margin-bottom: 1em;
 }
 footer 
-{
-    margin-bottom: 1em;
-    
+{   
     p 
     {
-        line-height: ($font-base-line-height * .8);
+        color: $grey-lighter;
+        line-height: ($font-base-line-height * .75);
+        
+        a 
+        {
+            color: $grey-lighter;
+            
+            &:hover,
+            &:focus,
+            &:active
+            {
+                color: $gold;
+            }
+        }
     }
 } 
+
+
+// Branding 
+
+.mu-sig
+{
+    @include mu-sig(
+        $print: 'true',
+        $color: 'white'
+    );
+}
 
 @media screen and (min-width: 624px)
 {

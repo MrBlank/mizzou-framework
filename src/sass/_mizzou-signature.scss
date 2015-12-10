@@ -14,21 +14,21 @@
  * Sets up a university signature
  *
  * @param string $size - (Optional) Signature size. Can be 'extra-small', 'small', 'medium', or 'large'. Defaults to 'small'
- * @param string $wordmark-color - (Optional) Text color. Can be black or white. Defaults to black
+ * @param string $color - (Optional) Text color. Can be black or white. Defaults to black
  * @param boolean $print - (Optional) Whether to set the images up for printing. Defaults to false
  * @param boolean $center - (Optional) Whether to center the signature. Defaults to false
  */
 
 @mixin mu-sig(
     $size:             'small', // extra-small, small, medium, or large 
-    $wordmark-color:   'black', // black or white
+    $color:   'black', // black or white
     $print:            'false', // false or true
     $center:           'false' // false or true
 ) 
 {
     // Set names
     $logo-filename:             'mu-logo-#{$size}.svg';
-    $wordmark-filename:         'mu-wordmark-#{$wordmark-color}-#{$size}.svg'; 
+    $wordmark-filename:         'mu-wordmark-#{$color}-#{$size}.svg'; 
     $wordmark-filename-print:   'mu-wordmark-black-#{$size}.svg'; // Print uses the black version
     
     // Set dimensions
@@ -67,8 +67,9 @@
      
     @if ($center == 'false') {
         @include clear-fix(); // Keeps parent container at least as tall as the logo if it is not centered.
+        margin-left: -1px; // For alignment with 1px rule on image
     }
-            
+           
     .mu-sig__logo,
     .mu-sig__wordmark 
     {
@@ -121,7 +122,7 @@
  * @param string $name-prefix - (Optional) Prefix for unit name file. Defaults to 'unit-name'
  * @param unit $name-margin - (Optional) Helps adjust space between unit name and wordmark with bottom margin. Defaults to 0
  * @param string $size - (Optional) Signature size. Can be 'small', 'medium', or 'large'. Defaults to 'small'
- * @param string $wordmark-color - (Optional) Text color. Can be 'black' or 'white'. Defaults to 'black'
+ * @param string $color - (Optional) Text color. Can be 'black' or 'white'. Defaults to 'black'
  * @param unit $wordmark-indent - (Optional) Helps left alignment with unit name when aligned left. Defaults to 0
  * @param boolean $print - (Optional) Whether to set the images up for printing. Defaults to false
  * @param boolean $center - (Optional) Whether to center the signature. Defaults to false
@@ -133,7 +134,7 @@
     $name-prefix:      'unit-name', // prefix of filename for unit name art
     $name-margin:       0, // Helps adjust space between unit name and wordmark with bottom margin
     $size:             'small', // small, medium, or large 
-    $wordmark-color:   'black', // black or white
+    $color:   'black', // black or white
     $wordmark-indent:   0, // Helps left alignment with unit name when aligned left
     $print:            'false', // false or true
     $center:           'false' // false or true
@@ -141,8 +142,8 @@
 {
     // Set names
     $logo-filename:             'mu-logo-#{$size}.svg';
-    $unit-name-filename:        '#{$name-prefix}-#{$wordmark-color}-#{$size}.svg';
-    $wordmark-filename:         'unit-wordmark-#{$wordmark-color}-#{$size}.svg';
+    $unit-name-filename:        '#{$name-prefix}-#{$color}-#{$size}.svg';
+    $wordmark-filename:         'unit-wordmark-#{$color}-#{$size}.svg';
     $wordmark-filename-print:   'unit-wordmark-black-#{$size}.svg';
     
     // Set dimensions
@@ -169,7 +170,10 @@
     }
     @if ($center == 'false') {
         @include clear-fix(); // Keeps parent container at least as tall as the logo if it is not centered.
+        margin-left: -1px; // For alignment with 1px rule on image
     }
+    
+    margin-left: -1px; // For alignment with 1px rule on image
     
     .unit-sig__logo,
     .unit-sig__wordmark,
@@ -263,29 +267,10 @@
     }
     @if ($center == 'false') {
         float: left;
-        margin-left: -1px; // For alignment with 1px rule on image
+        //margin-left: -1px; // For alignment with 1px rule on image
     }
     @if ($print == 'true') {
         @include print-image('#{$image-path}/#{$logo-filename}');
-    }
-}
-
-// Replaces background image with content selector and after pseudo element for printing
-
-@mixin print-image($image) 
-{
-    @media print {
-        position: relative;
-        background: none;
-        
-        &:after {
-            content: url('#{$image}');
-            text-indent: 0;
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
     }
 }
 

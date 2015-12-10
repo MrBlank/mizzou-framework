@@ -181,8 +181,24 @@
  */
 /* @group Placeholder Selectors */
 /*
-    overflow: auto;
-    zoom: 1; // For IE6
+The `.center-block()` mixin is a quick way to center layouts.
+
+```html_example
+<div class="center-me">
+    <p>A Centered, block-level element.</p>
+</div>
+```
+Here are the variables that can be used:
+
+```
+@max-width  
+@min-width
+
+.center-me {
+    .center-block(@bmax-width: 300px, @min-width: 150px);
+    .box();
+    width: 50%;
+}
 */
 /* @end */
 /**
@@ -192,6 +208,27 @@
  * @param unit $width (Optional) Width of the image. Defaults to 'none'
  * @param unit $height (Optional) Height of the image. Defaults to 'none'
  */
+/*
+The `.box()` mixin is good for adding empasis to an element. 
+
+```html_example
+<div class="box-example">
+    <p>A box with some added style options.</p>
+</div>
+```
+Here are the variables that can be used with their defaults:
+
+```
+@background: @color-box-bg          // Use 'none' to remove
+@padding: 1                         // This is a REM unit 
+@border-size: 0                     // Change this to add a border
+@border-color: @color-box-border 
+@border-style: solid
+
+.box-example {
+    .box(@gold-lightest, 1.5, 1px, @gold);
+}
+*/
 /**
  * Mizzou Framework - Sass: Base
  *
@@ -288,7 +325,6 @@ h6,
 caption,
 .like-h5,
 .like-h6 {
-  margin: 0 0 1em 0;
   font-weight: 600;
   color: #000; }
   h1 a,
@@ -307,17 +343,17 @@ caption,
 
 h1,
 .like-h1 {
-  font-size: 1.875em;
+  font-size: 3em;
   line-height: 1.2; }
 
 h2,
 .like-h2 {
-  font-size: 1.25em;
+  font-size: 2em;
   line-height: 1.4; }
 
 h3,
 .like-h3 {
-  font-size: 1.125em;
+  font-size: 1.5em;
   line-height: 1.4; }
 
 h4,
@@ -337,9 +373,6 @@ h6,
   color: #999;
   font-style: italic; }
 
-p {
-  margin: 0 0 1em 0; }
-
 /* @end */
 /* @group Images, Figures, and Video */
 img {
@@ -350,7 +383,6 @@ figure,
 .alignleft,
 .aligncenter,
 .alignright {
-  margin: 0 0 1em 0;
   max-width: 100%; }
 
 figcaption {
@@ -369,7 +401,6 @@ iframe {
   clear: both; }
 
 .video {
-  margin: 0 0 1em 0;
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
@@ -387,7 +418,7 @@ iframe {
 /* @group Blockquotes */
 blockquote,
 .like-blockquote {
-  margin: 0 0 1em 0;
+  margin-left: 0;
   font-style: italic;
   font-size: 1.25em;
   padding-left: 1em;
@@ -404,7 +435,6 @@ address {
 /* @end */
 /* @group Horizontal Rules */
 hr {
-  margin: 0 0 1em 0;
   clear: both;
   border: 0;
   border-bottom: 1px solid #f7d583; }
@@ -413,32 +443,21 @@ hr {
 
 /* @end */
 /* @group Lists */
-ul,
-ol {
-  margin: 0 0 1em 0; }
-  ul ul,
-  ul ol,
-  ol ul,
-  ol ol {
-    margin-bottom: 0; }
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-bottom: 0; }
 
 li li,
 li p {
   font-size: inherit; }
-
-dl,
-dd {
-  margin: 0 0 1em 0; }
 
 dt {
   font-weight: 600; }
 
 /* @end */
 /* @group Forms */
-form,
-fieldset {
-  margin: 0 0 1em 0; }
-
 fieldset,
 legend {
   padding: 0;
@@ -478,7 +497,6 @@ button {
 /* @end */
 /* @group Tables */
 table {
-  margin: 0 0 1em 0;
   border-collapse: collapse;
   border-spacing: 0; }
 
@@ -569,7 +587,7 @@ small {
  * Sets up a university signature
  *
  * @param string $size - (Optional) Signature size. Can be 'extra-small', 'small', 'medium', or 'large'. Defaults to 'small'
- * @param string $wordmark-color - (Optional) Text color. Can be black or white. Defaults to black
+ * @param string $color - (Optional) Text color. Can be black or white. Defaults to black
  * @param boolean $print - (Optional) Whether to set the images up for printing. Defaults to false
  * @param boolean $center - (Optional) Whether to center the signature. Defaults to false
  */
@@ -583,7 +601,7 @@ small {
  * @param string $name-prefix - (Optional) Prefix for unit name file. Defaults to 'unit-name'
  * @param unit $name-margin - (Optional) Helps adjust space between unit name and wordmark with bottom margin. Defaults to 0
  * @param string $size - (Optional) Signature size. Can be 'small', 'medium', or 'large'. Defaults to 'small'
- * @param string $wordmark-color - (Optional) Text color. Can be 'black' or 'white'. Defaults to 'black'
+ * @param string $color - (Optional) Text color. Can be 'black' or 'white'. Defaults to 'black'
  * @param unit $wordmark-indent - (Optional) Helps left alignment with unit name when aligned left. Defaults to 0
  * @param boolean $print - (Optional) Whether to set the images up for printing. Defaults to false
  * @param boolean $center - (Optional) Whether to center the signature. Defaults to false
@@ -591,22 +609,38 @@ small {
 /* @end */
 /* @group Signature Mixins */
 /* @end */
+.header-layer,
+.footer-layer {
+  background-color: #222; }
+
+header,
+.wrapper,
+footer {
+  padding: 1em;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  min-width: 320px; }
+
+article {
+  margin-bottom: 1em; }
+
+footer p {
+  color: #ccc;
+  line-height: 1.125; }
+  footer p a {
+    color: #ccc; }
+    footer p a:hover, footer p a:focus, footer p a:active {
+      color: #f1b82d; }
+
 .mu-sig {
-  overflow: auto;
-  /* Old way
-    &:before,
-    &:after
-    {
-        content: ' ';
-        display: table;
-    }
-    
-    &:after
-    {
-        clear: both;
-    }
-    */
-  padding-bottom: 1em; }
+  margin-left: -1px; }
+  .mu-sig:before, .mu-sig:after {
+    content: ' ';
+    display: table; }
+  .mu-sig:after {
+    clear: both; }
   .mu-sig .mu-sig__logo,
   .mu-sig .mu-sig__wordmark {
     margin: 0; }
@@ -624,8 +658,7 @@ small {
     width: 34px;
     height: 38px;
     background-image: url("../images/mu-logo-small.svg");
-    float: left;
-    margin-left: -1px; }
+    float: left; }
     @media print {
       .mu-sig .mu-sig__logo a {
         position: relative;
@@ -643,7 +676,7 @@ small {
   .mu-sig .mu-sig__wordmark a {
     width: 229px;
     height: 27px;
-    background-image: url("../images/mu-wordmark-black-small.svg"); }
+    background-image: url("../images/mu-wordmark-white-small.svg"); }
     @media print {
       .mu-sig .mu-sig__wordmark a {
         position: relative;
@@ -657,22 +690,6 @@ small {
           left: 0; } }
     .mu-sig .mu-sig__wordmark a:hover, .mu-sig .mu-sig__wordmark a:focus, .mu-sig .mu-sig__wordmark a:active {
       background-position: left -27px; }
-
-.wrapper {
-  max-width: 800px;
-  margin: 0 auto 1em;
-  padding: 1em; }
-
-header {
-  margin-bottom: 1em; }
-
-article {
-  margin-bottom: 1em; }
-
-footer {
-  margin-bottom: 1em; }
-  footer p {
-    line-height: 1.2; }
 
 @media screen and (min-width: 624px) {
   html {

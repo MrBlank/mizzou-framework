@@ -124,7 +124,7 @@ h6,
 .like-h5,
 .like-h6
 {
-    margin: $base-margin;
+    //margin: $base-margin;
     font-weight: $font-bold-default;
     color: #000;
     
@@ -137,21 +137,21 @@ h6,
 h1,
 .like-h1
 {
-    font-size: 1.875em; // 30px
+    font-size: 3em; 
     line-height: 1.2;
 }
 
 h2,
 .like-h2
 {
-    font-size: 1.25em; // 21px
+    font-size: 2em; 
     line-height: 1.4;
 }
 
 h3,
 .like-h3
 {
-    font-size: 1.125em; // 18px
+    font-size: 1.5em; 
     line-height: 1.4;
 }
 
@@ -179,7 +179,7 @@ h6,
 
 p
 {
-    margin: $base-margin;
+    //margin: $base-margin;
 }
 
 /* @end */
@@ -201,7 +201,7 @@ figure,
 .aligncenter,
 .alignright
 {
-    margin: $base-margin;
+    //margin: $base-margin;
     max-width: 100%;
 }
 
@@ -255,7 +255,7 @@ iframe
 .video
 {
     // Defaults to widescreen
-    margin: $base-margin;
+    //margin: $base-margin;
     position: relative;
     padding-bottom: 56.25%; // 16/9 aspect ratio
     height: 0;
@@ -283,7 +283,8 @@ iframe
 blockquote,
 .like-blockquote
 {
-    margin: $base-margin;
+    //margin: $base-margin;
+    margin-left: 0;
     font-style: italic;
     font-size: 1.25em;
     padding-left: 1em;
@@ -310,7 +311,7 @@ address
 
 hr
 {
-    margin: $base-margin;
+    //margin: $base-margin;
     clear: both;
     border: 0;
     border-bottom: 1px solid $gold-light;
@@ -328,7 +329,7 @@ hr
 ul,
 ol
 {
-    margin: $base-margin;
+    //margin: $base-margin;
     
     ul,
     ol
@@ -349,7 +350,7 @@ li
 dl,
 dd
 {
-    margin: $base-margin;
+    //margin: $base-margin;
 }
 
 dt
@@ -364,7 +365,7 @@ dt
 form,
 fieldset
 {
-    margin: $base-margin;
+    //margin: $base-margin;
 }
 
 fieldset,
@@ -420,7 +421,7 @@ button
 
 table
 {
-    margin: $base-margin;
+    //margin: $base-margin;
     border-collapse: collapse;
     border-spacing: 0;
 }

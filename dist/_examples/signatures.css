@@ -26,8 +26,24 @@
  */
 /* @group Placeholder Selectors */
 /*
-    overflow: auto;
-    zoom: 1; // For IE6
+The `.center-block()` mixin is a quick way to center layouts.
+
+```html_example
+<div class="center-me">
+    <p>A Centered, block-level element.</p>
+</div>
+```
+Here are the variables that can be used:
+
+```
+@max-width  
+@min-width
+
+.center-me {
+    .center-block(@bmax-width: 300px, @min-width: 150px);
+    .box();
+    width: 50%;
+}
 */
 /* @end */
 /**
@@ -37,6 +53,27 @@
  * @param unit $width (Optional) Width of the image. Defaults to 'none'
  * @param unit $height (Optional) Height of the image. Defaults to 'none'
  */
+/*
+The `.box()` mixin is good for adding empasis to an element. 
+
+```html_example
+<div class="box-example">
+    <p>A box with some added style options.</p>
+</div>
+```
+Here are the variables that can be used with their defaults:
+
+```
+@background: @color-box-bg          // Use 'none' to remove
+@padding: 1                         // This is a REM unit 
+@border-size: 0                     // Change this to add a border
+@border-color: @color-box-border 
+@border-style: solid
+
+.box-example {
+    .box(@gold-lightest, 1.5, 1px, @gold);
+}
+*/
 /**
  * Mizzou Framework - Sass: Mizzou Signatures
  *
@@ -51,7 +88,7 @@
  * Sets up a university signature
  *
  * @param string $size - (Optional) Signature size. Can be 'extra-small', 'small', 'medium', or 'large'. Defaults to 'small'
- * @param string $wordmark-color - (Optional) Text color. Can be black or white. Defaults to black
+ * @param string $color - (Optional) Text color. Can be black or white. Defaults to black
  * @param boolean $print - (Optional) Whether to set the images up for printing. Defaults to false
  * @param boolean $center - (Optional) Whether to center the signature. Defaults to false
  */
@@ -65,7 +102,7 @@
  * @param string $name-prefix - (Optional) Prefix for unit name file. Defaults to 'unit-name'
  * @param unit $name-margin - (Optional) Helps adjust space between unit name and wordmark with bottom margin. Defaults to 0
  * @param string $size - (Optional) Signature size. Can be 'small', 'medium', or 'large'. Defaults to 'small'
- * @param string $wordmark-color - (Optional) Text color. Can be 'black' or 'white'. Defaults to 'black'
+ * @param string $color - (Optional) Text color. Can be 'black' or 'white'. Defaults to 'black'
  * @param unit $wordmark-indent - (Optional) Helps left alignment with unit name when aligned left. Defaults to 0
  * @param boolean $print - (Optional) Whether to set the images up for printing. Defaults to false
  * @param boolean $center - (Optional) Whether to center the signature. Defaults to false
@@ -79,21 +116,14 @@
   border: solid 1px #222; }
 
 .unit-sig-small {
-  overflow: auto;
-  /* Old way
-    &:before,
-    &:after
-    {
-        content: ' ';
-        display: table;
-    }
-    
-    &:after
-    {
-        clear: both;
-    }
-    */
+  margin-left: -1px;
+  margin-left: -1px;
   background-color: #f1b82d; }
+  .unit-sig-small:before, .unit-sig-small:after {
+    content: ' ';
+    display: table; }
+  .unit-sig-small:after {
+    clear: both; }
   .unit-sig-small .unit-sig__logo,
   .unit-sig-small .unit-sig__wordmark,
   .unit-sig-small .unit-sig__unit {
@@ -113,8 +143,7 @@
     width: 34px;
     height: 38px;
     background-image: url("../images/mu-logo-small.svg");
-    float: left;
-    margin-left: -1px; }
+    float: left; }
     @media print {
       .unit-sig-small .unit-sig__logo a {
         position: relative;
@@ -167,6 +196,7 @@
           left: 0; } }
 
 .unit-sig-small-center {
+  margin-left: -1px;
   background-color: #222; }
   .unit-sig-small-center .unit-sig__logo,
   .unit-sig-small-center .unit-sig__wordmark,
@@ -237,20 +267,13 @@
           left: 0; } }
 
 .unit-sig-medium {
-  overflow: auto;
-  /* Old way
-    &:before,
-    &:after
-    {
-        content: ' ';
-        display: table;
-    }
-    
-    &:after
-    {
-        clear: both;
-    }
-    */ }
+  margin-left: -1px;
+  margin-left: -1px; }
+  .unit-sig-medium:before, .unit-sig-medium:after {
+    content: ' ';
+    display: table; }
+  .unit-sig-medium:after {
+    clear: both; }
   .unit-sig-medium .unit-sig__logo,
   .unit-sig-medium .unit-sig__wordmark,
   .unit-sig-medium .unit-sig__unit {
@@ -270,8 +293,7 @@
     width: 50px;
     height: 56px;
     background-image: url("../images/mu-logo-medium.svg");
-    float: left;
-    margin-left: -1px; }
+    float: left; }
     @media print {
       .unit-sig-medium .unit-sig__logo a {
         position: relative;
@@ -323,94 +345,85 @@
           top: 0;
           left: 0; } }
 
-.unit-sig-medium-center .unit-sig__logo,
-.unit-sig-medium-center .unit-sig__wordmark,
-.unit-sig-medium-center .unit-sig__unit {
-  margin: 0; }
-
-.unit-sig-medium-center .unit-sig__logo a,
-.unit-sig-medium-center .unit-sig__wordmark a,
-.unit-sig-medium-center .unit-sig__unit a {
-  display: block;
-  text-indent: 200%;
-  white-space: nowrap;
-  overflow: hidden;
-  padding: 0;
-  background-repeat: no-repeat;
-  background-position: left 0;
-  margin-left: auto;
-  margin-right: auto; }
-
-.unit-sig-medium-center .unit-sig__logo a {
-  width: 50px;
-  height: 56px;
-  background-image: url("../images/mu-logo-medium.svg");
-  margin-bottom: 15px; }
-  @media print {
-    .unit-sig-medium-center .unit-sig__logo a {
-      position: relative;
-      background: none; }
-      .unit-sig-medium-center .unit-sig__logo a:after {
-        content: url("../images/mu-logo-medium.svg");
-        text-indent: 0;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0; } }
-
-.unit-sig-medium-center .unit-sig__wordmark a {
-  width: 183px;
-  height: 20px;
-  background-image: url("../images/unit-wordmark-black-medium.svg"); }
-  @media print {
-    .unit-sig-medium-center .unit-sig__wordmark a {
-      position: relative;
-      background: none; }
-      .unit-sig-medium-center .unit-sig__wordmark a:after {
-        content: url("../images/unit-wordmark-black-medium.svg");
-        text-indent: 0;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0; } }
-  .unit-sig-medium-center .unit-sig__wordmark a:hover, .unit-sig-medium-center .unit-sig__wordmark a:focus, .unit-sig-medium-center .unit-sig__wordmark a:active {
-    background-position: left -20px; }
-
-.unit-sig-medium-center .unit-sig__unit a {
-  width: 284px;
-  height: 40px;
-  margin-bottom: 0;
-  background-image: url("../images/unit-name-black-medium.svg"); }
-  .unit-sig-medium-center .unit-sig__unit a:hover, .unit-sig-medium-center .unit-sig__unit a:focus, .unit-sig-medium-center .unit-sig__unit a:active {
-    background-position: left -40px; }
-  @media print {
-    .unit-sig-medium-center .unit-sig__unit a {
-      position: relative;
-      background: none; }
-      .unit-sig-medium-center .unit-sig__unit a:after {
-        content: url("../images/unit-name-black-medium.svg");
-        text-indent: 0;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0; } }
+.unit-sig-medium-center {
+  margin-left: -1px; }
+  .unit-sig-medium-center .unit-sig__logo,
+  .unit-sig-medium-center .unit-sig__wordmark,
+  .unit-sig-medium-center .unit-sig__unit {
+    margin: 0; }
+  .unit-sig-medium-center .unit-sig__logo a,
+  .unit-sig-medium-center .unit-sig__wordmark a,
+  .unit-sig-medium-center .unit-sig__unit a {
+    display: block;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: left 0;
+    margin-left: auto;
+    margin-right: auto; }
+  .unit-sig-medium-center .unit-sig__logo a {
+    width: 50px;
+    height: 56px;
+    background-image: url("../images/mu-logo-medium.svg");
+    margin-bottom: 15px; }
+    @media print {
+      .unit-sig-medium-center .unit-sig__logo a {
+        position: relative;
+        background: none; }
+        .unit-sig-medium-center .unit-sig__logo a:after {
+          content: url("../images/mu-logo-medium.svg");
+          text-indent: 0;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0; } }
+  .unit-sig-medium-center .unit-sig__wordmark a {
+    width: 183px;
+    height: 20px;
+    background-image: url("../images/unit-wordmark-black-medium.svg"); }
+    @media print {
+      .unit-sig-medium-center .unit-sig__wordmark a {
+        position: relative;
+        background: none; }
+        .unit-sig-medium-center .unit-sig__wordmark a:after {
+          content: url("../images/unit-wordmark-black-medium.svg");
+          text-indent: 0;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0; } }
+    .unit-sig-medium-center .unit-sig__wordmark a:hover, .unit-sig-medium-center .unit-sig__wordmark a:focus, .unit-sig-medium-center .unit-sig__wordmark a:active {
+      background-position: left -20px; }
+  .unit-sig-medium-center .unit-sig__unit a {
+    width: 284px;
+    height: 40px;
+    margin-bottom: 0;
+    background-image: url("../images/unit-name-black-medium.svg"); }
+    .unit-sig-medium-center .unit-sig__unit a:hover, .unit-sig-medium-center .unit-sig__unit a:focus, .unit-sig-medium-center .unit-sig__unit a:active {
+      background-position: left -40px; }
+    @media print {
+      .unit-sig-medium-center .unit-sig__unit a {
+        position: relative;
+        background: none; }
+        .unit-sig-medium-center .unit-sig__unit a:after {
+          content: url("../images/unit-name-black-medium.svg");
+          text-indent: 0;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0; } }
 
 .unit-sig-large {
-  overflow: auto;
-  /* Old way
-    &:before,
-    &:after
-    {
-        content: ' ';
-        display: table;
-    }
-    
-    &:after
-    {
-        clear: both;
-    }
-    */
+  margin-left: -1px;
+  margin-left: -1px;
   background-color: #222; }
+  .unit-sig-large:before, .unit-sig-large:after {
+    content: ' ';
+    display: table; }
+  .unit-sig-large:after {
+    clear: both; }
   .unit-sig-large .unit-sig__logo,
   .unit-sig-large .unit-sig__wordmark,
   .unit-sig-large .unit-sig__unit {
@@ -430,8 +443,7 @@
     width: 66px;
     height: 74px;
     background-image: url("../images/mu-logo-large.svg");
-    float: left;
-    margin-left: -1px; }
+    float: left; }
   .unit-sig-large .unit-sig__wordmark,
   .unit-sig-large .unit-sig__unit {
     margin-left: 86px; }
@@ -473,6 +485,7 @@
           left: 0; } }
 
 .unit-sig-large-center {
+  margin-left: -1px;
   background-color: #f1b82d; }
   .unit-sig-large-center .unit-sig__logo,
   .unit-sig-large-center .unit-sig__wordmark,
@@ -543,20 +556,12 @@
           left: 0; } }
 
 .uni-sig-extra-small {
-  overflow: auto;
-  /* Old way
-    &:before,
-    &:after
-    {
-        content: ' ';
-        display: table;
-    }
-    
-    &:after
-    {
-        clear: both;
-    }
-    */ }
+  margin-left: -1px; }
+  .uni-sig-extra-small:before, .uni-sig-extra-small:after {
+    content: ' ';
+    display: table; }
+  .uni-sig-extra-small:after {
+    clear: both; }
   .uni-sig-extra-small .mu-sig__logo,
   .uni-sig-extra-small .mu-sig__wordmark {
     margin: 0; }
@@ -574,8 +579,7 @@
     width: 26px;
     height: 29px;
     background-image: url("../images/mu-logo-extra-small.svg");
-    float: left;
-    margin-left: -1px; }
+    float: left; }
     @media print {
       .uni-sig-extra-small .mu-sig__logo a {
         position: relative;
@@ -649,21 +653,13 @@
     background-position: left -21px; }
 
 .uni-sig-small {
-  overflow: auto;
-  /* Old way
-    &:before,
-    &:after
-    {
-        content: ' ';
-        display: table;
-    }
-    
-    &:after
-    {
-        clear: both;
-    }
-    */
+  margin-left: -1px;
   background-color: #f1b82d; }
+  .uni-sig-small:before, .uni-sig-small:after {
+    content: ' ';
+    display: table; }
+  .uni-sig-small:after {
+    clear: both; }
   .uni-sig-small .mu-sig__logo,
   .uni-sig-small .mu-sig__wordmark {
     margin: 0; }
@@ -681,8 +677,7 @@
     width: 34px;
     height: 38px;
     background-image: url("../images/mu-logo-small.svg");
-    float: left;
-    margin-left: -1px; }
+    float: left; }
     @media print {
       .uni-sig-small .mu-sig__logo a {
         position: relative;
@@ -766,20 +761,12 @@
       background-position: left -27px; }
 
 .uni-sig-medium {
-  overflow: auto;
-  /* Old way
-    &:before,
-    &:after
-    {
-        content: ' ';
-        display: table;
-    }
-    
-    &:after
-    {
-        clear: both;
-    }
-    */ }
+  margin-left: -1px; }
+  .uni-sig-medium:before, .uni-sig-medium:after {
+    content: ' ';
+    display: table; }
+  .uni-sig-medium:after {
+    clear: both; }
   .uni-sig-medium .mu-sig__logo,
   .uni-sig-medium .mu-sig__wordmark {
     margin: 0; }
@@ -797,8 +784,7 @@
     width: 50px;
     height: 56px;
     background-image: url("../images/mu-logo-medium.svg");
-    float: left;
-    margin-left: -1px; }
+    float: left; }
     @media print {
       .uni-sig-medium .mu-sig__logo a {
         position: relative;
@@ -883,21 +869,13 @@
     background-position: left -39px; }
 
 .uni-sig-large {
-  overflow: auto;
-  /* Old way
-    &:before,
-    &:after
-    {
-        content: ' ';
-        display: table;
-    }
-    
-    &:after
-    {
-        clear: both;
-    }
-    */
+  margin-left: -1px;
   background-color: #222; }
+  .uni-sig-large:before, .uni-sig-large:after {
+    content: ' ';
+    display: table; }
+  .uni-sig-large:after {
+    clear: both; }
   .uni-sig-large .mu-sig__logo,
   .uni-sig-large .mu-sig__wordmark {
     margin: 0; }
@@ -915,8 +893,7 @@
     width: 66px;
     height: 74px;
     background-image: url("../images/mu-logo-large.svg");
-    float: left;
-    margin-left: -1px; }
+    float: left; }
   .uni-sig-large .mu-sig__wordmark {
     margin-left: 86px;
     padding-top: 14px; }

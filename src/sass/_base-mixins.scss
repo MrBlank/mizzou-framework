@@ -12,19 +12,8 @@
 
 // Apply on a container to have that container enclose floated elements.
 
-// Maybe use this instead? http://learnlayout.com/clearfix.html
-
-/*
-    overflow: auto;
-    zoom: 1; // For IE6
-*/
-
 @mixin clear-fix()
 {   
-    // New way. Test!
-    overflow: auto;
-    
-    /* Old way
     &:before,
     &:after
     {
@@ -36,7 +25,54 @@
     {
         clear: both;
     }
-    */
+}
+
+// Last child - no bottom margin
+@mixin last-child() 
+{
+    *:last-child 
+    { 
+        margin-bottom: 0 !important; 
+    }
+}
+
+/*
+The `.center-block()` mixin is a quick way to center layouts.
+
+```html_example
+<div class="center-me">
+    <p>A Centered, block-level element.</p>
+</div>
+```
+Here are the variables that can be used:
+
+```
+@max-width  
+@min-width
+
+.center-me {
+    .center-block(@bmax-width: 300px, @min-width: 150px);
+    .box();
+    width: 50%;
+}
+*/
+
+@mixin center-block (
+    $max-width: none, 
+    $min-width: none
+) 
+{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @if ($max-width != 'none') {
+        max-width: $max-width;
+    }
+    @if ($min-width != 'none') {
+        min-width: $min-width;
+    }
+    
 }
 
 // Center align an image or figure.
@@ -102,5 +138,70 @@
     
     @if ($height != 'none') {
         height: $height;
+    }
+}
+
+// Version used with Signatures. We need to pick one.
+
+// Replaces background image with content selector and after pseudo element for printing
+
+@mixin print-image($image) 
+{
+    @media print {
+        position: relative;
+        background: none;
+        
+        &:after {
+            content: url('#{$image}');
+            text-indent: 0;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+ 
+
+/*
+The `.box()` mixin is good for adding empasis to an element. 
+
+```html_example
+<div class="box-example">
+    <p>A box with some added style options.</p>
+</div>
+```
+Here are the variables that can be used with their defaults:
+
+```
+@background: @color-box-bg          // Use 'none' to remove
+@padding: 1                         // This is a REM unit 
+@border-size: 0                     // Change this to add a border
+@border-color: @color-box-border 
+@border-style: solid
+
+.box-example {
+    .box(@gold-lightest, 1.5, 1px, @gold);
+}
+*/
+
+@mixin box (
+    $background: $color-box-bg, 
+    $padding: 1, 
+    $border-size: 0px, 
+    $border-color: 
+    $color-box-border, 
+    $border-style: solid
+    ) 
+{
+    padding: $padding; 
+    margin-bottom: 1.5em; 
+    @include last-child();
+    
+    @if ($border-size != "0") {
+        border: $border-style $border-size $border-color;
+    }
+    @if ($color-box-bg != "none") {
+        background-color: $background;
     }
 }

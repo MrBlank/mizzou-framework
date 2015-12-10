@@ -33,7 +33,7 @@
         $size: 'small',
         $print: 'true',
         $center: 'true',
-        $wordmark-color: 'white'
+        $color: 'white'
     );
     background-color: #222;
 }
@@ -65,7 +65,7 @@
         $name-width: 404px,
         $name-height: 57px,
         $size: 'large',
-        $wordmark-color: 'white'
+        $color: 'white'
     );
     background-color: #222;
 }
@@ -115,7 +115,7 @@
         $size: 'small',
         $print: 'true',
         $center: 'true',
-        $wordmark-color: 'white'
+        $color: 'white'
     );
     background-color: #222;
 }
@@ -141,7 +141,7 @@
 {
     @include mu-sig(
         $size: 'large',
-        $wordmark-color: 'white'
+        $color: 'white'
     );
     background-color: #222;
 }
