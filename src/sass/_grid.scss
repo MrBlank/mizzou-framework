@@ -1,0 +1,64 @@
+/**
+ * Mizzou Framework - Sass: Grid Mixin
+ *
+ * Requires: _mixins.scss
+ *
+ * $author Josh Hughes (hughesjd$missouri.edu), Josh Nichols (nicholsjc$missouri.edu), University of Missouri
+ * $copyright 2015 Curators of the University of Missouri
+ * $version 1.00
+ */
+
+/**
+ * Takes a given fraction, and generates a floated column
+ *
+ * Example:
+ *
+ *     @include grid-column(1, 2);
+ *
+ * ... which will output the following:
+ * 
+ *     float: left
+ *     width: 50%;
+ *
+ * @param int $x Numerator
+ * @param int $y Denominator
+ * @param float $padding-left (Optional) Padding left for the column (defaults to 8px)
+ * @param float $padding-right (Optional) Padding right for the column (defaults to 8px)
+ * @param string $float-direction (Optional) How to float the column (defaults to left)
+ */
+@mixin grid-column(
+    $x, 
+    $y, 
+    $padding-left: 0.5rem, 
+    $padding-right: 0.5rem, 
+    $float-direction: left
+) 
+{    
+    float: $float-direction;
+    width: ($x * 100% / $y);
+    padding-left: $padding-left;
+    padding-right: $padding-right;
+}
+
+/**
+ * Creates a container for columns (setting padding and enclosing floats)
+ *
+ * @param float $padding-left (Optional) Padding left for the row (defaults to 8px)
+ * @param float $padding-right (Optional) Padding right for the row (defaults to 8px)
+ */
+@mixin grid-row(
+    $padding-left: 0.5rem, 
+    $padding-right: 0.5rem
+) 
+{
+    padding-left: $padding-left;
+    padding-right: $padding-right;
+    @include clear-fix();
+}
+
+@mixin grid-push($x, $y) {
+    margin-left: ($x * 100% / $y);
+}
+@mixin grid-pull($x, $y) {
+    margin-right: ($x * 100% / $y);
+}

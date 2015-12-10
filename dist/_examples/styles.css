@@ -173,7 +173,7 @@
 /**
  * Mizzou Framework - Sass: Base Mixins
  *
- * Requires: variables.scss
+ * Requires: _variables.scss
  *
  * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
  * @copyright 2015 Curators of the University of Missouri
@@ -200,6 +200,28 @@ Here are the variables that can be used:
     width: 50%;
 }
 */
+/**
+ * Sets up containing div, centered with a max-width
+ *
+ * @param unit $max-width (Optional) Width of the block. Defaults to 100%
+ * @param boolean $include-print-style (Optional) Whether to set the block to 100% for printing. Defaults to true
+ */
+/*@mixin center-block(
+    $max-width:                 100%,
+    $include-print-style:       true
+)
+{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $max-width;
+    
+    @if (($max-width != 100%) and ($include-print-style == true)) {
+        @media print
+        {
+            max-width: 100%;
+        }
+    }
+}*/
 /* @end */
 /**
  * Image replacement technique. Offsets the element text and sets a background image
@@ -232,7 +254,7 @@ Here are the variables that can be used with their defaults:
 /**
  * Mizzou Framework - Sass: Base
  *
- * Requires: variables.scss, base-mixins.scss
+ * Requires: _variables.scss, _base-mixins.scss
  *
  * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
  * @copyright 2015 Curators of the University of Missouri
@@ -349,12 +371,12 @@ h1,
 h2,
 .like-h2 {
   font-size: 2em;
-  line-height: 1.4; }
+  line-height: 1.2; }
 
 h3,
 .like-h3 {
   font-size: 1.5em;
-  line-height: 1.4; }
+  line-height: 1.3; }
 
 h4,
 .like-h4,
@@ -366,7 +388,8 @@ h6,
 .like-h5,
 .like-h6 {
   color: #666;
-  font-size: 1em; }
+  font-size: 1em;
+  margin: .5em 0; }
 
 h6,
 .like-h6 {
@@ -421,11 +444,12 @@ blockquote,
   margin-left: 0;
   font-style: italic;
   font-size: 1.25em;
+  font-weight: 300;
   padding-left: 1em;
   border-left: solid 1px #f1b82d; }
-  blockquote:last-child,
-  .like-blockquote:last-child {
-    margin-bottom: 0; }
+  blockquote *:last-child,
+  .like-blockquote *:last-child {
+    margin-bottom: 0 !important; }
 
 /* @end */
 /* @group Addresses */
@@ -573,10 +597,95 @@ small {
   font-size: 12.8px; }
 
 /* @end */
+.top {
+  margin-top: 0 !important; }
+
+.bottom {
+  margin-bottom: 0 !important; }
+
+.right {
+  float: right !important; }
+
+.left {
+  float: left !important; }
+
+.no-bold {
+  font-weight: normal; }
+
+.no-italic {
+  font-style: normal; }
+
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.clear {
+  clear: both; }
+
+.dquo {
+  margin-left: -.3em; }
+
+.quo {
+  margin-left: -.2em; }
+
+.caps {
+  font-size: 90%;
+  text-transform: uppercase; }
+
+.dropcap {
+  font-weight: 700;
+  float: left;
+  display: block;
+  line-height: .7;
+  font-size: 5.4em;
+  margin: .11em .08em 0 -.04em; }
+  .dropcap.hang {
+    margin-left: -.3em; }
+
+/*doc
+---
+title: Type Helpers
+name: zhelpers_02
+category: Mixins & Helper Classes
+---
+
+## Hanging Quotes
+
+The `.quo` and `.dquo` classes are for single quotes and double quotes, respectively. 
+They push the element to the left a little to cause the punctuation to hang into the margins.
+
+```html_example 
+<h1><span class="quo">&#8216;</span>Let these columns stand. Let them stand a thousand years.&#8217;</h1>
+<p><span class="dquo">&#8220;</span>Let these columns stand. Let them stand a thousand years. Crown them with an arch, memorial to the men who in their magnificent presence learned what life and duty are, and how to live the one and do the other. They will be to all the rallying point of future devotion and service to the university.&#8221;</p>
+```
+
+## Small Caps
+
+The `.caps` class shrinks text a little and transforms text to uppercase.
+
+```html_example 
+<p>The quarterly magazine of <span class="caps">MAA</span> is called <span class="caps">MIZZOU</span> and provides news and information about the University of Missouri</p>
+```
+
+## Dropcaps
+
+The `.dropcap` class works on an inline element, usually and span tag. Add the class `.hang` when it starts with punctuation to hang it in the margins. 
+
+```html_example 
+<p><span class="dropcap">L</span>Let these columns stand. Let them stand a thousand years. Crown them with an arch, memorial to the men who in their magnificent presence learned what life and duty are, and how to live the one and do the other. They will be to all the rallying point of future devotion and service to the university.</p>
+<p><span class="dropcap hang">&#8216;L</span>Let these columns stand. Let them stand a thousand years. Crown them with an arch, memorial to the men who in their magnificent presence learned what life and duty are, and how to live the one and do the other. They will be to all the rallying point of future devotion and service to the university.&#8217;</p>
+```
+
+*/
 /**
  * Mizzou Framework - Sass: Mizzou Signatures
  *
- * Requires: base-mixins.scss
+ * Requires: _base-mixins.scss
  *
  * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
  * @copyright 2015 Curators of the University of Missouri
@@ -609,22 +718,96 @@ small {
 /* @end */
 /* @group Signature Mixins */
 /* @end */
+/**
+ * Mizzou Framework - Sass: Grid Mixin
+ *
+ * Requires: _mixins.scss
+ *
+ * $author Josh Hughes (hughesjd$missouri.edu), Josh Nichols (nicholsjc$missouri.edu), University of Missouri
+ * $copyright 2015 Curators of the University of Missouri
+ * $version 1.00
+ */
+/**
+ * Takes a given fraction, and generates a floated column
+ *
+ * Example:
+ *
+ *     @include grid-column(1, 2);
+ *
+ * ... which will output the following:
+ * 
+ *     float: left
+ *     width: 50%;
+ *
+ * @param int $x Numerator
+ * @param int $y Denominator
+ * @param float $padding-left (Optional) Padding left for the column (defaults to 8px)
+ * @param float $padding-right (Optional) Padding right for the column (defaults to 8px)
+ * @param string $float-direction (Optional) How to float the column (defaults to left)
+ */
+/**
+ * Creates a container for columns (setting padding and enclosing floats)
+ *
+ * @param float $padding-left (Optional) Padding left for the row (defaults to 8px)
+ * @param float $padding-right (Optional) Padding right for the row (defaults to 8px)
+ */
 .header-layer,
 .footer-layer {
   background-color: #222; }
 
 header,
+footer {
+  padding: 1rem; }
+
+header,
 .wrapper,
 footer {
-  padding: 1em;
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  max-width: 800px;
+  max-width: 960px;
   min-width: 320px; }
 
-article {
+.wrapper {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; }
+  .wrapper:before, .wrapper:after {
+    content: ' ';
+    display: table; }
+  .wrapper:after {
+    clear: both; }
+  .wrapper h1 {
+    float: left;
+    width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem; }
+
+article,
+aside {
   margin-bottom: 1em; }
+
+article {
+  float: left;
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; }
+  article *:first-child {
+    margin-top: 0 !important; }
+
+aside {
+  float: left;
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; }
+  aside .box {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: solid 0px #edebd5;
+    background-color: #f5f2f0; }
+    aside .box *:first-child {
+      margin-top: 0 !important; }
+    aside .box *:last-child {
+      margin-bottom: 0 !important; }
 
 footer p {
   color: #ccc;
@@ -693,4 +876,20 @@ footer p {
 
 @media screen and (min-width: 624px) {
   html {
-    font-size: 18px; } }
+    font-size: 18px; }
+  .wrapper h1 {
+    float: left;
+    width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem; }
+  article {
+    float: left;
+    width: 66.66667%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem; }
+  aside {
+    float: left;
+    width: 33.33333%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 14.4px; } }

@@ -1,7 +1,7 @@
 /**
  * Mizzou Framework - Sass: Base Mixins
  *
- * Requires: variables.scss
+ * Requires: _variables.scss
  *
  * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
  * @copyright 2015 Curators of the University of Missouri
@@ -27,6 +27,14 @@
     }
 }
 
+// First child - no bottom margin
+@mixin first-child() 
+{
+    *:first-child 
+    { 
+        margin-top: 0 !important; 
+    }
+}
 // Last child - no bottom margin
 @mixin last-child() 
 {
@@ -74,6 +82,30 @@ Here are the variables that can be used:
     }
     
 }
+
+/**
+ * Sets up containing div, centered with a max-width
+ *
+ * @param unit $max-width (Optional) Width of the block. Defaults to 100%
+ * @param boolean $include-print-style (Optional) Whether to set the block to 100% for printing. Defaults to true
+ */
+/*@mixin center-block(
+    $max-width:                 100%,
+    $include-print-style:       true
+)
+{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $max-width;
+    
+    @if (($max-width != 100%) and ($include-print-style == true)) {
+        @media print
+        {
+            max-width: 100%;
+        }
+    }
+}*/
+
 
 // Center align an image or figure.
 @mixin align-center()
@@ -186,22 +218,23 @@ Here are the variables that can be used with their defaults:
 */
 
 @mixin box (
-    $background: $color-box-bg, 
-    $padding: 1, 
+    $background: $box-bg-color, 
+    $padding: 1rem, 
     $border-size: 0px, 
     $border-color: 
-    $color-box-border, 
+    $box-border-color, 
     $border-style: solid
     ) 
 {
     padding: $padding; 
-    margin-bottom: 1.5em; 
+    margin-bottom: 1.5rem; 
+    @include first-child();
     @include last-child();
     
     @if ($border-size != "0") {
         border: $border-style $border-size $border-color;
     }
-    @if ($color-box-bg != "none") {
+    @if ($box-bg-color != "none") {
         background-color: $background;
     }
 }
