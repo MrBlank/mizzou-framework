@@ -68,8 +68,8 @@ html
     -webkit-text-size-adjust: 100%;
     background: $grey-darker;
     font-family: $font-sans;
-    font-size: $font-base-size + 0px;
-    line-height: $font-base-line-height;
+    font-size: $font-size + 0px;
+    line-height: $font-line-height;
     min-width: $base-min-width; 
 }
 body
@@ -124,7 +124,7 @@ h6,
 .like-h5,
 .like-h6
 {
-    //margin: $base-margin;
+    margin: ($base-margin + 0em) 0;
     font-weight: $font-bold-default;
     color: #000;
     
@@ -137,13 +137,15 @@ h6,
 h1,
 .like-h1
 {
-    font-size: 3em; 
+    margin: ($base-margin * .75em) 0;
+    font-size: 2.5em; 
     line-height: 1.2;
 }
 
 h2,
 .like-h2
 {
+    margin: ($base-margin * .75em) 0;
     font-size: 2em; 
     line-height: 1.2;
 }
@@ -180,7 +182,7 @@ h6,
 
 p
 {
-    //margin: $base-margin;
+    margin: ($base-margin + 0em) 0;
 }
 
 /* @end */
@@ -202,10 +204,14 @@ figure,
 .aligncenter,
 .alignright
 {
-    //margin: $base-margin;
+    margin: ($base-margin + 0em) 0;
     max-width: 100%;
 }
-
+figure.center,
+.aligncenter
+{
+    @include align-center()
+}
 figcaption
 {
     font-weight: $font-bold-default;
@@ -214,36 +220,6 @@ figcaption
     p
     {
         font-size: inherit;
-    }
-}
-
-figure.left,
-.alignleft
-{
-    @if ($query-inset-images != false) {        
-        @media #{$query-inset-images}
-        {
-            @include align-left();
-            max-width: $inset-image-width;
-        }
-    }
-}
-
-figure.center,
-.aligncenter
-{
-    @include align-center();
-}
-
-figure.right,
-.alignright
-{
-    @if ($query-inset-images != false) {        
-        @media #{$query-inset-images}
-        {
-            @include align-right();
-            max-width: $inset-image-width;
-        }
     }
 }
 
@@ -256,7 +232,7 @@ iframe
 .video
 {
     // Defaults to widescreen
-    //margin: $base-margin;
+    margin: ($base-margin + 0em) 0;
     position: relative;
     padding-bottom: 56.25%; // 16/9 aspect ratio
     height: 0;
@@ -284,15 +260,20 @@ iframe
 blockquote,
 .like-blockquote
 {
-    //margin: $base-margin;
+    margin: ($base-margin * 2rem) 0;
     margin-left: 0;
     font-style: italic;
-    font-size: 1.25em;
+    font-size: 1.5rem;
     font-weight: $font-light;
-    padding-left: 1em;
+    padding: .5rem 2rem;
     border-left: solid 1px $gold;    
-
+    @include first-child();
     @include last-child();
+    
+    .attribution {
+        font-size: 1rem;
+        font-weight: $font-normal;
+    }
 }
 
 /* @end */
@@ -310,7 +291,7 @@ address
 
 hr
 {
-    //margin: $base-margin;
+    margin: ($base-margin + 0em) 0;
     clear: both;
     border: 0;
     border-bottom: 1px solid $gold-light;
@@ -328,7 +309,7 @@ hr
 ul,
 ol
 {
-    //margin: $base-margin;
+    margin: ($base-margin + 0em) 0;
     
     ul,
     ol
@@ -349,7 +330,7 @@ li
 dl,
 dd
 {
-    //margin: $base-margin;
+    margin: ($base-margin + 0em) 0;
 }
 
 dt
@@ -364,7 +345,7 @@ dt
 form,
 fieldset
 {
-    //margin: $base-margin;
+    margin: ($base-margin + 0em) 0;
 }
 
 fieldset,
@@ -420,7 +401,7 @@ button
 
 table
 {
-    //margin: $base-margin;
+    margin: ($base-margin + 0em) 0;
     border-collapse: collapse;
     border-spacing: 0;
 }
@@ -471,16 +452,34 @@ pre,
 code,
 var
 {
+    font-size: .875em;
     font-family: $font-monospace;
-    font-size: 14px;
+    color: black;
     white-space: pre-wrap;
 }
+pre
+{
+    padding: 1em;
+    //border: solid 1px $gold-light;
+    background-color: lighten(black, 95%);
+    
+    code 
+    {
+        background-color: transparent;
+    }
+}
+code,
+var 
+{
+    background-color: $gold-lighter;
+    padding: 0 .1875em;
+}
 
-var
+/* var
 {
     font-weight: bold;
     font-style: normal;
-}
+}*/
 
 /* @end */
 
@@ -535,7 +534,20 @@ mark
 }
 small 
 {
-    font-size: ($font-base-size * .8px);
+    font-size: ($font-size * .8px);
 }
 
 /* @end */
+
+//! Selection colors */
+
+::-moz-selection { 
+    color: #000; 
+    color: rgba(0,0,0,.85); 
+    background-color: lighten($gold, 25%); 
+}
+::selection { 
+    color: #000; 
+    color: rgba(0,0,0,.85); 
+    background-color: lighten($gold, 25%); 
+}

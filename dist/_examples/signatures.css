@@ -132,7 +132,7 @@ Here are the variables that can be used with their defaults:
 /* @end */
 /* @group Signature Mixins */
 /* @end */
-.wrapper div {
+.wrapper article div {
   margin-bottom: 3em;
   padding: 2em;
   border: solid 1px #222; }

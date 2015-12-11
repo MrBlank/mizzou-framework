@@ -56,9 +56,11 @@
     @include clear-fix();
 }
 
+/* Not really used. Delete?
 @mixin grid-push($x, $y) {
     margin-left: ($x * 100% / $y);
 }
 @mixin grid-pull($x, $y) {
     margin-right: ($x * 100% / $y);
 }
+*/

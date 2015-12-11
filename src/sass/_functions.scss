@@ -1,0 +1,57 @@
+/**
+ * Mizzou Framework - Sass: Functions
+ *
+ *  Requires: _variables.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+
+
+// Unit conversion
+
+/*
+    @function convert($value, $currentUnit, $convertUnit){}
+
+    .foo {
+       font-size: convert(16, px, percent);
+    }
+    
+    Result:
+    
+    .foo {
+       font-size: 100%;
+    }
+*/
+
+@function convert($value, $currentUnit, $convertUnit){
+    
+    @if $currentUnit == px {
+
+        @if $convertUnit == ems {
+            @return $value / $font-size + 0em;
+        }
+        @else if $convertUnit == percent {
+            @return percentage($value / 16);
+        }
+
+    } @else if $currentUnit == ems {
+
+        @if $convertUnit == px {
+            @return $value * $font-size + 0px;
+        }
+        @else if $convertUnit == percent {
+            @return percentage($value);
+        }
+
+    } @else if $currentUnit == percent {
+
+        @if $convertUnit == px {
+            @return $value * $font-size / 100 + 0px;
+        }
+        @else if $convertUnit == ems {
+            @return $value / 100 + 0em;
+        }
+    }
+}

@@ -1,0 +1,407 @@
+/**
+ * Mizzou Framework - Sass: Fonts
+ *
+ * Requires: variables.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+
+// We are only suporting .woff and .ttf formats. 
+
+/* @group Proxima Nova */
+
+/**
+ * # Notes
+ *	
+ *  - Only embed a few weights you need. Fonts add a lot of page weight.
+ *  - Font files are not included in the Mizzou Framework
+ *  - License: http://www.fontspring.com/fonts/mark-simonson-studio/proxima-nova
+ *	- MARCOM licensed pageviews: 5,000,000 Pageviews
+ *	- Purchased from fontspring.com with Webcom account
+ *	- No tracking code
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2012 Fontspring
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      Mark Simonson Studio
+ * License URL: http://www.fontspring.com/fflicense/mark-simonson-studio
+ *
+ */
+ 
+// Import using a mixin. Set booliam value to 'true' on the weights needed to import. The defaults below are all 'false'. 
+
+@mixin font-proxima-nova(
+    $thin-200:          'false',
+    $light-300:         'false',
+    $regular-400:       'false',
+    $medium-500:        'false',
+    $semibold-600:      'false',
+    $bold-700:          'false',
+    $extrabold-800:     'false',
+    $black-900:         'false'
+) 
+{
+     
+    // Thin 200
+    @if $thin-200 == 'true' {
+        
+        @font-face {
+            font-family: 'Proxima Nova';
+            src: url('#{$font-path}/proximanova-thin-webfont.woff2') format('woff2'),
+                 url('#{$font-path}/proximanova-thin-webfont.woff') format('woff'),
+                 url('#{$font-path}/proximanova-thin-webfont.ttf') format('truetype');
+            font-weight: 200;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Proxima Nova';
+            src: url('#{$font-path}/proximanova-thinit-webfont.woff2') format('woff2'),
+                 url('#{$font-path}/proximanova-thinit-webfont.woff') format('woff'),
+                 url('#{$font-path}/proximanova-thinit-webfont.ttf') format('truetype');
+            font-weight: 200;
+            font-style: italic;
+        }
+    }
+    
+    // Light 300
+    @if $light-300 == 'true' {
+        
+        @font-face {
+            font-family: 'Proxima Nova';
+            src: url('#{$font-path}/proximanova-light-webfont.woff2') format('woff2'),
+                 url('#{$font-path}/proximanova-light-webfont.woff') format('woff'),
+                 url('#{$font-path}/proximanova-light-webfont.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Proxima Nova';
+            src: url('#{$font-path}/proximanova-lightit-webfont.woff2') format('woff2'),
+                 url('#{$font-path}/proximanova-lightit-webfont.woff') format('woff'),
+                 url('#{$font-path}/proximanova-lightit-webfont.ttf') format('truetype');
+            font-weight: 300;
+            font-style: italic;
+        }
+    }
+    
+    // Regular 400
+    @if $regular-400 == 'true' {
+    
+        @font-face {
+            font-family: 'Proxima Nova';
+            src: url('#{$font-path}/proximanova-regular-webfont.woff2') format('woff2'),
+                 url('#{$font-path}/proximanova-regular-webfont.woff') format('woff'),
+                 url('#{$font-path}/proximanova-regular-webfont.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Proxima Nova';
+            src: url('#{$font-path}/proximanova-regularit-webfont.woff2') format('woff2'),
+                 url('#{$font-path}/proximanova-regularit-webfont.woff') format('woff'),
+                 url('#{$font-path}/proximanova-regularit-webfont.ttf') format('truetype');
+            font-weight: 400;
+            font-style: italic;
+        }
+    }
+    
+    // Medium 500
+    @if $medium-500 == 'true' {
+        
+        @font-face {
+            font-family: 'Proxima Nova';
+            src: url('#{$font-path}/proximanova-medium-webfont.woff2') format('woff2'),
+                 url('#{$font-path}/proximanova-medium-webfont.woff') format('woff'),
+                 url('#{$font-path}/proximanova-medium-webfont.ttf') format('truetype');
+            font-weight: 500;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Proxima Nova';
+            src: url('#{$font-path}/proximanova-mediumit-webfont.woff2') format('woff2'),
+                 url('#{$font-path}/proximanova-mediumit-webfont.woff') format('woff'),
+                 url('#{$font-path}/proximanova-mediumit-webfont.ttf') format('truetype');
+            font-weight: 500;
+            font-style: italic;
+        }
+    }
+    
+    // Semibold 600
+    @if $semibold-600 == 'true' {
+        
+        @font-face {
+            font-family: 'Proxima Nova';
+            src: url('#{$font-path}/proximanova-semibold-webfont.woff2') format('woff2'),
+                 url('#{$font-path}/proximanova-semibold-webfont.woff') format('woff'),
+                 url('#{$font-path}/proximanova-semibold-webfont.ttf') format('truetype');
+            font-weight: 600;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Proxima Nova';
+            src: url('#{$font-path}/proximanova-semiboldit-webfont.woff2') format('woff2'),
+                 url('#{$font-path}/proximanova-semiboldit-webfont.woff') format('woff'),
+                 url('#{$font-path}/proximanova-semiboldit-webfont.ttf') format('truetype');
+            font-weight: 600;
+            font-style: italic;
+        }
+    }
+    
+    // Bold 700
+    @if $bold-700 == 'true' {
+        
+        @font-face {
+            font-family: 'Proxima Nova';
+            src: url('#{$font-path}/proximanova-bold-webfont.woff2') format('woff2'),
+                 url('#{$font-path}/proximanova-bold-webfont.woff') format('woff'),
+                 url('#{$font-path}/proximanova-bold-webfont.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Proxima Nova';
+            src: url('#{$font-path}/proximanova-boldit-webfont.woff2') format('woff2'),
+                 url('#{$font-path}/proximanova-boldit-webfont.woff') format('woff'),
+                 url('#{$font-path}/proximanova-boldit-webfont.ttf') format('truetype');
+            font-weight: 700;
+            font-style: italic;
+        }
+    }
+    // Extra Bold 800
+    @if $extrabold-800 == 'true' {
+    
+        @font-face {
+            font-family: 'Proxima Nova';
+            src: url('#{$font-path}/proximanova-extrabld-webfont.woff2') format('woff2'),
+                 url('#{$font-path}/proximanova-extrabld-webfont.woff') format('woff'),
+                 url('#{$font-path}/proximanova-extrabld-webfont.ttf') format('truetype');
+            font-weight: 800;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Proxima Nova';
+            src: url('#{$font-path}/proximanova-extrabldit-webfont.woff2') format('woff2'),
+                 url('#{$font-path}/proximanova-extrabldit-webfont.woff') format('woff'),
+                 url('#{$font-path}/proximanova-extrabldit-webfont.ttf') format('truetype');
+            font-weight: 800;
+            font-style: italic;
+        }
+    }
+    // Black 900
+    @if $black-900 == 'true' {
+        
+        @font-face {
+            font-family: 'Proxima Nova';
+            src: url('#{$font-path}/proximanova-black-webfont.woff2') format('woff2'),
+                 url('#{$font-path}/proximanova-black-webfont.woff') format('woff'),
+                 url('#{$font-path}/proximanova-black-webfont.ttf') format('truetype');
+            font-weight: 900;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Proxima Nova';
+            src: url('#{$font-path}/proximanova-blackit-webfont.woff2') format('woff2'),
+                 url('#{$font-path}/proximanova-blackit-webfont.woff') format('woff'),
+                 url('#{$font-path}/proximanova-blackit-webfont.ttf') format('truetype');
+            font-weight: 900;
+            font-style: italic;
+        }
+    }
+}
+
+/* @end */
+
+
+/* @group Janson */
+    
+/**
+ *	
+ * # Notes
+ * 	
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2799089
+ * Licensed pageviews: 1,000,000
+ * Purchased from myfonts.com with Webcom account
+ * Include licence and tracking @import when embedding in a site
+ *   
+ * # Tracking 
+ *
+ * - We have limited pageviews for this font! 
+ * - Tracking ID is based on the fontkit generated at myfonts.com 
+ * - Replace the ID with the one generated from the fontkit 
+ * - To use other fontkits with fewer fonts, you must create a new one at myfonts.com and apply he new ID 
+ * 
+ */
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 3140068, 2015-12-11T15:15:55-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: JansonURW-Reg by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-t-regular/
+ * 
+ * Webfont: JansonURW-Med by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-t-medium/
+ * 
+ * Webfont: JansonURW-BolIta by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-t-bold-italic/
+ * 
+ * Webfont: JansonURW-Lig by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-t-light/
+ * 
+ * Webfont: JansonURW-MedIta by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-t-medium-italic/
+ * 
+ * Webfont: JansonURWSC-Reg by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-sc-t-regular/
+ * 
+ * Webfont: JansonURW-Bol by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-t-bold/
+ * 
+ * Webfont: JansonURW-RegIta by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-t-italic/
+ * 
+ * Webfont: JansonURW-LigIta by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-t-light-italic/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3140068
+ * Licensed pageviews: 2,020,000
+ * Webfonts copyright: (URW)++,Copyright 2006 by (URW)++ Design &amp; Development
+ * 
+ * © 2015 MyFonts Inc
+*/
+
+/**
+ * Add your tracking link for license, unique to each fontkit you build.
+ * Include when calling the mixin. Replace '{fontkit-id}' with the number.
+ * (This @import is placed at the top of compiled CSS file when compiled.)
+ *
+ * @import url("//hello.myfonts.net/count/{fontkit-id}"); 
+ *
+ */
+
+// Import using a mixin. Set booliam value to 'true' on the weights needed to import. The defaults below are all 'false'.
+
+@mixin font-janson(
+    $light-300:         'false',
+    $roman-400:         'false',
+    $medium-500:        'false',
+    $bold-700:          'false',
+    $smallcaps-400:     'false' // No bold or italic for smallcaps
+)
+{    
+    // Light 300
+    @if $light-300 == 'true' {
+        
+        @font-face {
+        	font-family: 'Janson';
+        	src: url('#{$font-path}/2FE9E4_3_0.woff2') format('woff2'),
+        	     url('#{$font-path}/2FE9E4_3_0.woff') format('woff'),
+        	     url('#{$font-path}/2FE9E4_3_0.ttf') format('truetype');
+        	font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+        	font-family: 'Janson';
+        	src: url('#{$font-path}/2FE9E4_8_0.woff2') format('woff2'),
+        	     url('#{$font-path}/2FE9E4_8_0.woff') format('woff'),
+        	     url('#{$font-path}/2FE9E4_8_0.ttf') format('truetype');
+        	font-weight: 300;
+            font-style: italic;
+        }
+    }
+       
+    // Roman 400
+    @if $roman-400 == 'true' {
+        
+        @font-face {
+        	font-family: 'Janson';
+        	src: url('#{$font-path}/2FE9E4_0_0.woff2') format('woff2'),
+        	     url('#{$font-path}/2FE9E4_0_0.woff') format('woff'),
+                 url('#{$font-path}/2FE9E4_0_0.ttf') format('truetype');
+        	font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+        	font-family: 'Janson';
+        	src: url('#{$font-path}/2FE9E4_7_0.woff2') format('woff2'),
+        	     url('#{$font-path}/2FE9E4_7_0.woff') format('woff'),
+        	     url('#{$font-path}/2FE9E4_7_0.ttf') format('truetype');
+        	font-weight: 400;
+            font-style: italic;
+        }
+    }
+        
+    // Medium 500
+    @if $medium-500 == 'true' {
+        
+        @font-face {
+        	font-family: 'Janson';
+        	src: url('#{$font-path}/2FE9E4_1_0.woff2') format('woff2'),
+        	     url('#{$font-path}/2FE9E4_1_0.woff') format('woff'),
+        	     url('#{$font-path}/2FE9E4_1_0.ttf') format('truetype');
+        	font-weight: 500;
+            font-style: normal;
+        }
+        @font-face {
+        	font-family: 'Janson';
+        	src: url('#{$font-path}/2FE9E4_4_0.woff2') format('woff2'),
+        	     url('#{$font-path}/2FE9E4_4_0.woff') format('woff'),
+        	     url('#{$font-path}/2FE9E4_4_0.ttf') format('truetype');
+        	font-weight: 500;
+            font-style: italic;
+        }
+    }
+        
+    // Bold 700
+    @if $bold-700 == 'true' {
+        
+        @font-face {
+        	font-family: 'Janson';
+        	src: url('#{$font-path}/2FE9E4_6_0.woff2') format('woff2'),
+        	     url('#{$font-path}/2FE9E4_6_0.woff') format('woff'),
+        	     url('#{$font-path}/2FE9E4_6_0.ttf') format('truetype');
+        	font-weight: 700;
+            font-style: normal
+        }
+        @font-face {
+        	font-family: 'Janson';
+        	src: url('#{$font-path}/2FE9E4_2_0.woff2') format('woff2'),
+        	     url('#{$font-path}/2FE9E4_2_0.woff') format('woff'),
+        	     url('#{$font-path}/2FE9E4_2_0.ttf') format('truetype');
+        	font-weight: 700;
+            font-style: italic;
+        }        
+    }    
+    // Smallcaps 400
+    @if $smallcaps-400 == 'true' {
+        
+        @font-face {
+        	font-family: 'Janson-SC';
+        	src: url('#{$font-path}/2FE9E4_5_0.woff2') format('woff2'),
+        	     url('#{$font-path}/2FE9E4_5_0.woff') format('woff'),
+        	     url('#{$font-path}/2FE9E4_5_0.ttf') format('truetype');
+        	font-weight: 400;
+            font-style: normal;
+        }
+    }
+}
+    
+/* @end */

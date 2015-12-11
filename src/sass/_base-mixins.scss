@@ -221,8 +221,7 @@ Here are the variables that can be used with their defaults:
     $background: $box-bg-color, 
     $padding: 1rem, 
     $border-size: 0px, 
-    $border-color: 
-    $box-border-color, 
+    $border-color: $box-border-color, 
     $border-style: solid
     ) 
 {
@@ -238,3 +237,37 @@ Here are the variables that can be used with their defaults:
         background-color: $background;
     }
 }
+
+
+
+
+// Inset images
+
+@mixin inset-images()
+{
+    figure.left,
+    .alignleft
+    {
+        @include align-left();
+        max-width: $inset-image-width;
+    }
+    figure.right,
+    .alignright
+    {
+        @include align-right();
+        max-width: $inset-image-width;
+    }
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -8,98 +8,99 @@
 
 /* @group Colors */
     
-$gold:                          #f1b82d; // Mizzou Gold
-$gold-darker:                   darken($gold, 20%);
-$gold-dark:                     darken($gold, 12%);
-$gold-light:                    lighten($gold, 18%);
-$gold-lighter:                  lighten($gold, 28%);
-$gold-lightest:                 lighten($gold, 35%);
+$gold:                          #f1b82d !default; // Mizzou Gold
+$gold-darker:                   darken($gold, 20%) !default;
+$gold-dark:                     darken($gold, 12%) !default;
+$gold-light:                    lighten($gold, 18%) !default;
+$gold-lighter:                  lighten($gold, 28%) !default;
+$gold-lightest:                 lighten($gold, 35%) !default;
 
-$grey-darker:                   #222;
-$grey-dark:                     #444;
-$grey:                          #666;
-$grey-light:                    #999;
-$grey-lighter:                  #ccc;
-$grey-lightest:                 #ededed;
+$grey-darker:                   #222 !default;
+$grey-dark:                     #444 !default;
+$grey:                          #666 !default;
+$grey-light:                    #999 !default;
+$grey-lighter:                  #ccc !default;
+$grey-lightest:                 #ededed !default;
 
-$tan-dark:                      #cac8b5;
-$tan:                           #edebd5;
-$tan-light:                     #f5f2f0;
+$tan-dark:                      #cac8b5 !default;
+$tan:                           #edebd5 !default;
+$tan-light:                     #f5f2f0 !default;
 
-$red:                           #900000;
-$red-light:                     lighten($red, 68%);
-$red-dark:                      darken($red, 10%);
+$red:                           #900000 !default;
+$red-light:                     lighten($red, 68%) !default;
+$red-dark:                      darken($red, 10%) !default;
 
-$orange:                        #bd5c2c;
-$orange-light:                  lighten($orange, 45%);
-$orange-dark:                   darken($orange, 14%);
+$orange:                        #bd5c2c !default;
+$orange-light:                  lighten($orange, 45%) !default;
+$orange-dark:                   darken($orange, 14%) !default;
 
-$green:                         #69901D;
-$green-light:                   lighten($green, 55%);
-$green-dark:                    darken($green, 11%);
+$green:                         #69901D !default;
+$green-light:                   lighten($green, 55%) !default;
+$green-dark:                    darken($green, 11%) !default;
 
-$blue:                          #318fd7;
-$blue-light:                    lighten($blue, 42%);
-$blue-dark:                     darken($blue, 20%);
+$blue:                          #318fd7 !default;
+$blue-light:                    lighten($blue, 42%) !default;
+$blue-dark:                     darken($blue, 20%) !default;
 
 // Colors by use
-$background-color:              #fff;
-$text-color:                    $grey-darker;
-$link-color:                    $red;
-$link-hover-color:              $grey-darker;
-$hr-color:                      $grey-lighter;
-$box-bg-color:                  $tan-light;
-$box-border-color:              $tan;
-$code-bg-color:                 $tan-light;
-$code-border-color:             $tan;
-$abbr-color:                    $grey-lighter;
-$mark-color:                    $gold-lighter;
-$help-color:                    $grey-light;
-$form-error-message-color:      $red;
-$form-error-bg-color:           $red-light;
-$form-error-border-color:       $red;
-$form-field-border-color:       $grey-lighter;
-$table-cell-border-color:       $grey-lighter;
-$table-cell-stripe-color:       $grey-lightest;
-$table-cell-header-color:       $gold-lightest;
+$background-color:              #fff !default;
+$text-color:                    $grey-darker !default;
+$link-color:                    $red !default;
+$link-hover-color:              $grey-darker !default;
+$hr-color:                      $grey-lighter !default;
+$box-bg-color:                  $tan-light !default;
+$box-border-color:              $tan !default;
+$code-bg-color:                 $tan-light !default;
+$code-border-color:             $tan !default;
+$abbr-color:                    $grey-lighter !default;
+$mark-color:                    $gold-lighter !default;
+$help-color:                    $grey-light !default;
+$form-error-message-color:      $red !default;
+$form-error-bg-color:           $red-light !default;
+$form-error-border-color:       $red !default;
+$form-field-border-color:       $grey-lighter !default;
+$table-cell-border-color:       $grey-lighter !default;
+$table-cell-stripe-color:       $grey-lightest !default;
+$table-cell-header-color:       $gold-lightest !default;
 
 /* @end */
 
  
 /* @group Fonts */
     
-$font-serif:                    'Janson', 'Times New Roman', Times, serif;
-$font-serif-sc:                 'Janson-SC', $font-serif;
-$font-sans:                     'Proxima Nova', 'proxima-nova', 'Arial', sans-serif; // 'Proxima Nova' is for embedded web fonts, 'proxima-nova' is for Typekit
-$font-monospace:                'Menlo', 'Consolas', 'Courier New', monospace; 
+$font-serif:                    'Janson', 'Times New Roman', Times, serif !default;
+$font-serif-sc:                 'Janson-SC', $font-serif !default;
+$font-sans:                     'Proxima Nova', 'proxima-nova', 'Arial', sans-serif !default; // 'Proxima Nova' is for embedded web fonts & desktop, 'proxima-nova' is for Typekit
+$font-monospace:                'Menlo', 'Consolas', 'Courier New', monospace !default; 
 
 // Aligns with Proxima Nova's weights
-$font-thin:                     200; 
-$font-light:                    300; 
-$font-normal:                   400;
-$font-medium:                   500;
-$font-semibold:                 600;
-$font-bold:                     700;
-$font-xbold:                    800;
-$font-black:                    900;
+$font-thin:                     200 !default; 
+$font-light:                    300 !default; 
+$font-normal:                   400 !default;
+$font-medium:                   500 !default;
+$font-semibold:                 600 !default;
+$font-bold:                     700 !default;
+$font-xbold:                    800 !default;
+$font-black:                    900 !default;
 
-$font-bold-default:             $font-semibold; // The default bold weight.
+$font-bold-default:             $font-semibold !default; // The default bold weight.
 
 // Default font path
-$font-path:                     '../fonts';
+$font-path:                     '../fonts' !default;
 
 // Base values
-$font-base-family:              $font-sans;
-$font-base-size:                16;
-$font-base-line-height:         1.5;
+$font-family:                   $font-sans !default;
+$font-size:                     16 !default;
+$font-line-height:              1.5 !default;
 
 /* @end */
 
 
 /* @group Standard Measurements */
 
-$base-margin:                   1em 0;
-$base-min-width:                320px; // Narrowest supported phone size
+$base-margin:                   1 !default;
+$base-min-width:                320px !default; // Narrowest supported phone size
+$base-max-width:                1200px !default;
 
 /* @end */
 
@@ -107,7 +108,9 @@ $base-min-width:                320px; // Narrowest supported phone size
 /* @group Images */
 
 // Default image path
-$image-path:                    '../images';
+$image-path:                    '../images' !default;
+$use-flexible-images:           false !default;
+$inset-image-width:             400px !default;
 
 /* @end */
 
@@ -115,12 +118,12 @@ $image-path:                    '../images';
 /* @group Viewport */
 
 // Viewport width
-$viewport-width:                device-width;
+$viewport-width:                device-width !default;
 
 /* @end */
 
 
 
-$use-flexible-images: false;
-$inset-image-width: 400px;
-$query-inset-images: false;
+
+
+$query-inset-images: false !default;

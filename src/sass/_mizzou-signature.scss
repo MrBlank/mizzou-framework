@@ -21,7 +21,7 @@
 
 @mixin mu-sig(
     $size:             'small', // extra-small, small, medium, or large 
-    $color:   'black', // black or white
+    $color:            'black', // black or white
     $print:            'false', // false or true
     $center:           'false' // false or true
 ) 
