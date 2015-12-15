@@ -1,4 +1,99 @@
-//! Type helpers
+/**
+ * Mizzou Framework - Sass: Helper Classes
+ *
+ * Requires: _variables.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+
+
+/* @group Lists */
+
+ul,
+ol 
+{        
+    &.list--spaced > li 
+    {
+        margin-bottom: $base-margin +0em;
+    }
+}
+
+ul.list--square 
+{
+    list-style: square;
+}
+
+ul.list--disc 
+{
+    list-style: disc;
+}
+
+ul.list--circle 
+{
+    list-style: circle;
+}
+
+ol.list--decimal 
+{
+    list-style: decimal;
+}
+
+ol.list--lower-alpha {
+    list-style: lower-alpha;
+}
+
+ol.list--upper-alpha {
+    list-style: upper-alpha;
+}
+
+ol.list--lower-roman {
+    list-style: lower-roman;
+}
+
+ol.list--upper-roman {
+    list-style: upper-roman;
+}
+ul.list--none {
+    list-style: none;
+    padding-left: 0;
+}
+
+li li,
+li p {
+    font-size: inherit;
+}
+
+/* @end */
+
+
+/* @group Horizontal Rules */
+hr
+{
+    &.rule--dashed
+    {
+        border-style: dashed;
+    }
+    &.rule--space {
+        border-color: transparent;
+        visibility: hidden;
+    }
+}
+
+/* @end */
+
+
+/* @group Others  */
+
+.clear {
+    clear: both;
+}
+
+/* @end */
+
+
+/*@ group Type helpers */
 
 .dquo 
 {
@@ -67,3 +162,5 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
 ```
 
 */
+
+/* @end */

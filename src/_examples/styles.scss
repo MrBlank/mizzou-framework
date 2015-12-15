@@ -3,15 +3,27 @@
 @import "../sass/_base-mixins"; 
 @import "../sass/_base";
 @import "../sass/_base-helpers";  
+@import "../sass/_forms"; 
+@import "../sass/_buttons"; 
 @import "../sass/_mizzou-signature"; 
 @import "../sass/_grid";
+@import "../sass/_skip-to-links";
 
+@media print 
+{
+    @import "../sass/_print";
+}
 
 @include font-proxima-nova(
     $light-300:     'true',
     $regular-400:   'true',
     $semibold-600:  'true'
 );
+
+.offset a
+{
+    @include skip-to-content();
+}
 
 .header-layer,
 .footer-layer 
@@ -50,7 +62,10 @@ aside
 article
 {
     @include grid-column(1, 1);
-    @include first-child();
+    
+    & > :first-child {
+        margin-top: 0;
+    }
 }
 aside 
 {
@@ -110,11 +125,135 @@ footer
 .mu-sig
 {
     @include mu-sig(
-        $print: 'true',
         $color: 'white'
     );
 }
+@media print 
+{
+    .mu-sig
+    {
+        @include mu-sig(
+            $size: 'large',
+            $print: 'true',
+            $color: 'black'
+        );
+    }
+}
 
+// buttons 
+
+.light-box 
+{
+    @include box(
+        $padding: ($base-margin * 1.5em),
+        $background: $grey-lightest
+    );
+}
+.dark-box 
+{
+    @include box(
+        $padding: ($base-margin * 1.5em),
+        $background: $grey-darker
+    );
+}
+
+.buttons {
+    .brown
+    {
+        @include button(
+            $size: 'small',
+            $color: 'brown'
+        );
+    }
+    
+    .gold
+    {
+        @include button(
+            $size: 'small',
+            $color: 'gold'
+        );
+    }
+    
+    .grey
+    {
+        @include button(
+            $size: 'small',
+            $color: 'grey'
+        );
+    }
+    .transparent
+    {
+        @include button(
+            $size: 'small',
+            $color: 'transparent'
+        );
+    }
+    .brown-large
+    {
+        @include button(
+            $size: 'large',
+            $color: 'brown'
+        );
+    }
+    
+    .gold-large
+    {
+        @include button(
+            $size: 'large',
+            $color: 'gold'
+        );
+    }
+    
+    .grey-large
+    {
+        @include button(
+            $size: 'large',
+            $color: 'grey'
+        );
+    }
+    .transparent-large 
+    {
+        @include button(
+            $size: 'large',
+            $color: 'transparent'
+        )    
+    }
+    
+    .dark-brown
+    {
+        @include button(
+            $size: 'small',
+            $color: 'brown',
+            $theme: 'dark'
+        );
+    }
+    
+    .dark-gold
+    {
+        @include button(
+            $size: 'small',
+            $color: 'gold',
+            $theme: 'dark'
+        );
+    }
+    
+    .dark-grey
+    {
+        @include button(
+            $size: 'small',
+            $color: 'grey',
+            $theme: 'dark'
+        );
+    }
+    .dark-transparent
+    {
+        @include button(
+            $size: 'small',
+            $color: 'transparent',
+            $theme: 'dark'
+        );
+    }
+}
 @media screen and (min-width: 700px)
 {
     html // Put these generic in boilerplate scss
@@ -157,7 +296,15 @@ footer
         {
             @include grid-column(1, 3);
         }
-    }   
+    } 
+    
+    .mu-sig
+    {
+        @include mu-sig(
+            $size: 'medium',
+            $color: 'white'
+        );
+    }
 }
 
 

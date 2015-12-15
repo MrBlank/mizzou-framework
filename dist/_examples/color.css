@@ -1,0 +1,189 @@
+/**
+ * Mizzou Framework - Sass: Variables
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+/* @group Colors */
+/* @end */
+/* @group Fonts */
+/* @end */
+/* @group Standard Measurements */
+/* @end */
+/* @group Images */
+/* @end */
+/* @group Viewport */
+/* @end */
+/**
+ * Mizzou Framework - Sass: Base Mixins
+ *
+ * Requires: _variables.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+/* @group Placeholder Selectors */
+/*
+The `.center-block()` mixin is a quick way to center layouts.
+
+```html_example
+<div class="center-me">
+    <p>A Centered, block-level element.</p>
+</div>
+```
+Here are the variables that can be used:
+
+```
+@max-width  
+@min-width
+
+.center-me {
+    .center-block(@bmax-width: 300px, @min-width: 150px);
+    .box();
+    width: 50%;
+}
+*/
+/**
+ * Sets up containing div, centered with a max-width
+ *
+ * @param unit $max-width (Optional) Width of the block. Defaults to 100%
+ * @param boolean $include-print-style (Optional) Whether to set the block to 100% for printing. Defaults to true
+ */
+/*@mixin center-block(
+    $max-width:                 100%,
+    $include-print-style:       true
+)
+{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $max-width;
+    
+    @if (($max-width != 100%) and ($include-print-style == true)) {
+        @media print
+        {
+            max-width: 100%;
+        }
+    }
+}*/
+/* @end */
+/**
+ * Image replacement technique. Offsets the element text and sets a background image
+ *
+ * @param string $filename (Optional) Filename of the image. Defaults to 'none'
+ * @param unit $width (Optional) Width of the image. Defaults to 'none'
+ * @param unit $height (Optional) Height of the image. Defaults to 'none'
+ */
+/*
+The `.box()` mixin is good for adding empasis to an element. 
+
+```html_example
+<div class="box-example">
+    <p>A box with some added style options.</p>
+</div>
+```
+Here are the variables that can be used with their defaults:
+
+```
+@background: @color-box-bg          // Use 'none' to remove
+@padding: 1                         // This is a REM unit 
+@border-size: 0                     // Change this to add a border
+@border-color: @color-box-border 
+@border-style: solid
+
+.box-example {
+    .box(@gold-lightest, 1.5, 1px, @gold);
+}
+*/
+.color-row {
+  margin-bottom: 3em; }
+  .color-row:before, .color-row:after {
+    content: ' ';
+    display: table; }
+  .color-row:after {
+    clear: both; }
+  .color-row p {
+    font-family: "source code pro", "Menlo", "Courier New", monospace;
+    font-size: .8em; }
+  .color-row .black {
+    background-color: black; }
+  .color-row .grey-darker {
+    background-color: #222; }
+  .color-row .grey-dark {
+    background-color: #444; }
+  .color-row .grey {
+    background-color: #666; }
+  .color-row .grey-light {
+    background-color: #999; }
+  .color-row .grey-lighter {
+    background-color: #ccc; }
+  .color-row .grey-lightest {
+    background-color: #ededed; }
+  .color-row .gold-darker {
+    background-color: #ad7e0c; }
+  .color-row .gold-dark {
+    background-color: #d39a0e; }
+  .color-row .gold {
+    background-color: #f1b82d; }
+  .color-row .gold-light {
+    background-color: #f7d583; }
+  .color-row .gold-lighter {
+    background-color: #fae5b3; }
+  .color-row .gold-lightest {
+    background-color: #fcf1d4; }
+  .color-row .tan-light {
+    background-color: #f5f2f0; }
+  .color-row .tan {
+    background-color: #edebd5; }
+  .color-row .tan-dark {
+    background-color: #cac8b5; }
+  .color-row .red-light {
+    background-color: #ffecec; }
+  .color-row .red {
+    background-color: #900000; }
+  .color-row .red-dark {
+    background-color: #5d0000; }
+  .color-row .orange-light {
+    background-color: #f6e2d8; }
+  .color-row .orange {
+    background-color: #bd5c2c; }
+  .color-row .orange-dark {
+    background-color: #83401f; }
+  .color-row .green-light {
+    background-color: #e9f6d0; }
+  .color-row .green {
+    background-color: #69901D; }
+  .color-row .green-dark {
+    background-color: #476114; }
+  .color-row .blue-light {
+    background-color: #e4f1fa; }
+  .color-row .blue {
+    background-color: #318fd7; }
+  .color-row .blue-dark {
+    background-color: #1a5888; }
+
+.color-primary {
+  float: left;
+  width: 33.333%;
+  padding-right: 2.5%; }
+
+.color-small {
+  float: left;
+  width: 33.333%;
+  margin-right: 0; }
+
+.color-short {
+  height: 4em;
+  margin-bottom: .5em; }
+
+.color-tall {
+  height: 8em;
+  margin-bottom: .5em; }
+
+.color-hex {
+  margin: 0; }
+
+.color-name {
+  font-weight: 600;
+  margin: 0; }

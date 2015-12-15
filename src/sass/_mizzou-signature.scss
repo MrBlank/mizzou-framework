@@ -29,7 +29,6 @@
     // Set names
     $logo-filename:             'mu-logo-#{$size}.svg';
     $wordmark-filename:         'mu-wordmark-#{$color}-#{$size}.svg'; 
-    $wordmark-filename-print:   'mu-wordmark-black-#{$size}.svg'; // Print uses the black version
     
     // Set dimensions
     @if ($size == 'large') {
@@ -86,7 +85,8 @@
 
     }
     .mu-sig__wordmark 
-    {            
+    {   
+        color: red;         
         @if ($center == 'false') {
             margin-left: ($logo-width + $logo-space);
             padding-top: $wordmark-top; 
@@ -96,15 +96,18 @@
     {
         width: $wordmark-width;
         height: $wordmark-height;
-        background-image: url('#{$image-path}/#{$wordmark-filename}');
         
-        @if ($print = 'true') {
-            @include print-image('#{$image-path}/#{$wordmark-filename-print}'); // Print needs to be the black version always
+        @if ($print == 'false') {
+            background-image: url('#{$image-path}/#{$wordmark-filename}');
+            
+            &:hover,
+            &:focus,
+            &:active {
+                background-position: left (-$wordmark-height);
+            }
         }
-        &:hover,
-        &:focus,
-        &:active {
-            background-position: left (-$wordmark-height);
+        @if ($print == 'true') {
+            @include print-image('#{$image-path}/#{$wordmark-filename}'); 
         }
     }
 }
@@ -131,16 +134,16 @@
 @mixin mu-unit-sig(
     $name-width,
     $name-height,
-    $name-prefix:      'unit-name', // prefix of filename for unit name art
+    $name-prefix:       'unit-name', // prefix of filename for unit name art
     $name-margin:       0, // Helps adjust space between unit name and wordmark with bottom margin
-    $size:             'small', // small, medium, or large 
-    $color:   'black', // black or white
+    $size:              'small', // small, medium, or large 
+    $color:             'black', // black or white
     $wordmark-indent:   0, // Helps left alignment with unit name when aligned left
-    $print:            'false', // false or true
-    $center:           'false' // false or true
+    $print:             'false', // false or true
+    $center:            'false' // false or true
 ) 
 {
-    // Set names
+    // Set filenames
     $logo-filename:             'mu-logo-#{$size}.svg';
     $unit-name-filename:        '#{$name-prefix}-#{$color}-#{$size}.svg';
     $wordmark-filename:         'unit-wordmark-#{$color}-#{$size}.svg';
@@ -202,33 +205,39 @@
     {
         width: $wordmark-width;
         height: $wordmark-height;
-        background-image: url('#{$image-path}/#{$wordmark-filename}');
         
+        @if ($print == 'false') {
+            background-image: url('#{$image-path}/#{$wordmark-filename}');
+            
+            &:hover,
+            &:focus,
+            &:active {
+                background-position: left (-$wordmark-height);
+            }
+        }
+        @if ($print == 'true') {
+            @include print-image('#{$image-path}/#{$wordmark-filename}');
+        }
         @if ($center == 'false') {
             margin-left: $wordmark-indent;
-        }
-        @if ($print = 'true') {
-            @include print-image('#{$image-path}/#{$wordmark-filename-print}'); // Print needs to be the black version always
-        }
-        &:hover,
-        &:focus,
-        &:active {
-            background-position: left (-$wordmark-height);
         }
     }
     .unit-sig__unit a {
         width: $name-width;
         height: $name-height;
         margin-bottom: $name-margin;
-        background-image: url('#{$image-path}/#{$unit-name-filename}');
         
-        &:hover,
-        &:focus,
-        &:active {
-            background-position: left (-$name-height);
+        @if ($print == 'false') {
+            background-image: url('#{$image-path}/#{$unit-name-filename}');
+            
+            &:hover,
+            &:focus,
+            &:active {
+                background-position: left (-$name-height);
+            }
         }
-        @if ($print = 'true') {
-            @include print-image('#{$image-path}/#{$name-prefix}-black-#{$size}.svg'); // Print needs to be the black version always
+        @if ($print == 'true') {
+            @include print-image('#{$image-path}/#{$unit-name-filename}');
         }
     }
 }
@@ -260,17 +269,18 @@
 {
     width: $logo-width;
     height: $logo-height;
-    background-image: url('#{$image-path}/#{$logo-filename}');
     
+    @if ($print == 'false') {
+        background-image: url('#{$image-path}/#{$logo-filename}');
+    }
+    @if ($print == 'true') {
+        @include print-image('#{$image-path}/#{$logo-filename}');
+    }
     @if ($center == 'true') {
         margin-bottom: $logo-space; // Clear space - 1px rule
     }
     @if ($center == 'false') {
         float: left;
-        //margin-left: -1px; // For alignment with 1px rule on image
-    }
-    @if ($print == 'true') {
-        @include print-image('#{$image-path}/#{$logo-filename}');
     }
 }
 

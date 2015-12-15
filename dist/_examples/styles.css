@@ -359,7 +359,10 @@ p {
 /* @end */
 /* @group Images, Figures, and Video */
 img {
-  border: 0; }
+  border: 0;
+  max-width: 100%;
+  width: auto;
+  height: auto; }
 
 figure,
 .alignnone,
@@ -410,11 +413,11 @@ blockquote,
   font-weight: 300;
   padding: .5rem 2rem;
   border-left: solid 1px #f1b82d; }
-  blockquote *:first-child,
-  .like-blockquote *:first-child {
+  blockquote > :first-child,
+  .like-blockquote > :first-child {
     margin-top: 0 !important; }
-  blockquote *:last-child,
-  .like-blockquote *:last-child {
+  blockquote > :last-child,
+  .like-blockquote > :last-child {
     margin-bottom: 0 !important; }
   blockquote .attribution,
   .like-blockquote .attribution {
@@ -433,14 +436,13 @@ hr {
   clear: both;
   border: 0;
   border-bottom: 1px solid #f7d583; }
-  hr.rule--dashed {
-    border-style: dashed; }
 
 /* @end */
 /* @group Lists */
 ul,
 ol {
-  margin: 1em 0; }
+  margin: 1em 0;
+  padding-left: 1.5em; }
   ul ul,
   ul ol,
   ol ul,
@@ -451,12 +453,15 @@ li li,
 li p {
   font-size: inherit; }
 
-dl,
-dd {
-  margin: 1em 0; }
+dl {
+  margin: 1em 0;
+  padding-left: 1.5em; }
 
 dt {
   font-weight: 600; }
+
+dd {
+  margin: 0.5em 0; }
 
 /* @end */
 /* @group Forms */
@@ -538,7 +543,7 @@ pre,
 code,
 var {
   font-size: .875em;
-  font-family: "Menlo", "Consolas", "Courier New", monospace;
+  font-family: "source code pro", "Menlo", "Courier New", monospace;
   color: black;
   white-space: pre-wrap; }
 
@@ -603,6 +608,68 @@ small {
   color: rgba(0, 0, 0, 0.85);
   background-color: #f9e0a5; }
 
+/**
+ * Mizzou Framework - Sass: Helper Classes
+ *
+ * Requires: _variables.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+/* @group Lists */
+ul.list--spaced > li,
+ol.list--spaced > li {
+  margin-bottom: 1em; }
+
+ul.list--square {
+  list-style: square; }
+
+ul.list--disc {
+  list-style: disc; }
+
+ul.list--circle {
+  list-style: circle; }
+
+ol.list--decimal {
+  list-style: decimal; }
+
+ol.list--lower-alpha {
+  list-style: lower-alpha; }
+
+ol.list--upper-alpha {
+  list-style: upper-alpha; }
+
+ol.list--lower-roman {
+  list-style: lower-roman; }
+
+ol.list--upper-roman {
+  list-style: upper-roman; }
+
+ul.list--none {
+  list-style: none;
+  padding-left: 0; }
+
+li li,
+li p {
+  font-size: inherit; }
+
+/* @end */
+/* @group Horizontal Rules */
+hr.rule--dashed {
+  border-style: dashed; }
+
+hr.rule--space {
+  border-color: transparent;
+  visibility: hidden; }
+
+/* @end */
+/* @group Others  */
+.clear {
+  clear: both; }
+
+/* @end */
+/*@ group Type helpers */
 .dquo {
   margin-left: -.3em; }
 
@@ -659,6 +726,109 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
 ```
 
 */
+/* @end */
+/**
+ * Mizzou Framework - Sass: Forms
+ *
+ * Requires: _variables.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+.form--horizontal-layout {
+  margin: 1em 0;
+  display: table;
+  width: 100%; }
+  .form--horizontal-layout .form__field {
+    display: table-row; }
+    .form--horizontal-layout .form__field.alert {
+      padding: 0; }
+    .form--horizontal-layout .form__field:after {
+      display: none; }
+    .form--horizontal-layout .form__field .form__field__label,
+    .form--horizontal-layout .form__field .form__field__control {
+      display: table-cell;
+      vertical-align: top;
+      padding: 8px; }
+    .form--horizontal-layout .form__field .form__field__label {
+      width: 184px;
+      padding-right: 16px; }
+
+.form__field {
+  margin: 1em 0;
+  padding-top: 8px; }
+  .form__field:before, .form__field:after {
+    content: ' ';
+    display: table; }
+  .form__field:after {
+    clear: both; }
+  .form__field.alert {
+    padding: 8px; }
+
+.form__field__label {
+  font-weight: 700; }
+
+.form__field__control ul {
+  list-style: none;
+  padding: 0; }
+
+.form__field__text-input.form__field__text-input--full-width {
+  width: 100%; }
+
+.alert--error .form__field__text-input {
+  border-color: #900000; }
+
+.alert--success .form__field__text-input {
+  border-color: #476114; }
+
+.form__field__help {
+  font-size: 12px;
+  margin-bottom: 0; }
+
+/**
+ * Mizzou Framework - Sass: Buttons
+ *
+ * Requires: _variables.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+.button {
+  margin-bottom: .5em;
+  display: inline-block;
+  text-align: center;
+  padding: .5em 1em .4em;
+  line-height: 1.25;
+  text-decoration: none;
+  border: solid 1px #f1b82d;
+  color: #222;
+  font-size: 1em;
+  font-weight: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  background-color: #f7d583; }
+  .button:hover, .button:focus {
+    background: #fae5b3; }
+  .button.outline {
+    background-color: transparent; }
+
+/**
+ * Sets up a button with custom attributes
+ *
+ * @param color $color-background Background color
+ * @param color $color-text Text color
+ * @param color $color-border Border color
+ * @param string $size (Optional) Text size. Can be 'small' or 'large'. Defaults to 'small'
+ * @param boolean $include-print-style (Optional) Whether to make the button black and white for printing. Defaults to true
+ */
+/**
+ * Sets up a button with common attributes
+ *
+ * @param string $size (Optional) Text size. Can be 'small' or 'large'. Defaults to 'small'
+ * @param string $color (Optional) Button color. Can be 'brown', 'gold', or 'grey'. Defaults to 'brown'
+ * @param string $theme (Optional) Color theme. Can be 'light' or 'dark'. Dark gives the button a lighter border. Defaults to 'light'
+ * @param boolean $include-print-style (Optional) Whether to make the button black and white for printing. Defaults to true
+ */
 /**
  * Mizzou Framework - Sass: Mizzou Signatures
  *
@@ -736,6 +906,60 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
     margin-right: ($x * 100% / $y);
 }
 */
+/**
+ * Mizzou Framework - Sass: Skip to Links
+ *
+ * Requires: _variables.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+/**
+ * Sets up "Skip to Content" link at the top of the document that's visible on tab
+ *
+ * @param string $theme (Optional) Color theme. Can be 'light' or 'dark'. Defaults to 'light'
+ * @param boolean $include-print-style (Optional) Whether to hide the element for printing. Defaults to true
+ */
+@media print {
+  /**
+ * Mizzou Framework - Sass: Print Reset
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+  *,
+  *:before,
+  *:after {
+    background-image: none !important;
+    background-color: #fff !important;
+    color: #000 !important;
+    border-color: #000 !important; }
+  html {
+    font-size: 11pt !important; }
+  a, a:visited {
+    text-decoration: underline; }
+  pre, blockquote {
+    page-break-inside: avoid; }
+  thead {
+    display: table-header-group; }
+  tr {
+    page-break-inside: avoid; }
+  img {
+    page-break-inside: avoid;
+    max-width: 100%; }
+  p,
+  h1,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+
 @font-face {
   font-family: 'Proxima Nova';
   src: url("../fonts/proximanova-light-webfont.woff2") format("woff2"), url("../fonts/proximanova-light-webfont.woff") format("woff"), url("../fonts/proximanova-light-webfont.ttf") format("truetype");
@@ -771,6 +995,28 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
   src: url("../fonts/proximanova-semiboldit-webfont.woff2") format("woff2"), url("../fonts/proximanova-semiboldit-webfont.woff") format("woff"), url("../fonts/proximanova-semiboldit-webfont.ttf") format("truetype");
   font-weight: 600;
   font-style: italic; }
+
+.offset a {
+  font-weight: 700;
+  position: absolute;
+  top: -5000px;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: .45em .5em .25em;
+  font-size: 20px;
+  text-align: center;
+  background: rgba(241, 184, 45, 0.9);
+  border-bottom: 1px solid #f1b82d;
+  color: #222; }
+  @media print {
+    .offset a {
+      display: none; } }
+  .offset a:focus, .offset a:active {
+    top: 0; }
 
 .header-layer,
 .footer-layer {
@@ -812,8 +1058,8 @@ article {
   width: 100%;
   padding-left: 0.5rem;
   padding-right: 0.5rem; }
-  article *:first-child {
-    margin-top: 0 !important; }
+  article > :first-child {
+    margin-top: 0; }
 
 aside {
   float: left;
@@ -825,9 +1071,9 @@ aside {
     margin-bottom: 1.5rem;
     border: solid 0px #edebd5;
     background-color: #f5f2f0; }
-    aside .box *:first-child {
+    aside .box > :first-child {
       margin-top: 0 !important; }
-    aside .box *:last-child {
+    aside .box > :last-child {
       margin-bottom: 0 !important; }
 
 .grid-3 {
@@ -843,9 +1089,9 @@ aside {
     margin-bottom: 1.5rem;
     border: solid 1px #f1b82d;
     background-color: #fcf1d4; }
-    .grid-3 .box *:first-child {
+    .grid-3 .box > :first-child {
       margin-top: 0 !important; }
-    .grid-3 .box *:last-child {
+    .grid-3 .box > :last-child {
       margin-bottom: 0 !important; }
   .grid-3 h2 {
     float: left;
@@ -891,37 +1137,363 @@ footer p {
     height: 38px;
     background-image: url("../images/mu-logo-small.svg");
     float: left; }
-    @media print {
-      .mu-sig .mu-sig__logo a {
-        position: relative;
-        background: none; }
-        .mu-sig .mu-sig__logo a:after {
-          content: url("../images/mu-logo-small.svg");
-          text-indent: 0;
-          display: block;
-          position: absolute;
-          top: 0;
-          left: 0; } }
   .mu-sig .mu-sig__wordmark {
+    color: red;
     margin-left: 44px;
     padding-top: 9px; }
   .mu-sig .mu-sig__wordmark a {
     width: 229px;
     height: 27px;
     background-image: url("../images/mu-wordmark-white-small.svg"); }
-    @media print {
-      .mu-sig .mu-sig__wordmark a {
-        position: relative;
-        background: none; }
-        .mu-sig .mu-sig__wordmark a:after {
-          content: url("../images/mu-wordmark-black-small.svg");
-          text-indent: 0;
-          display: block;
-          position: absolute;
-          top: 0;
-          left: 0; } }
     .mu-sig .mu-sig__wordmark a:hover, .mu-sig .mu-sig__wordmark a:focus, .mu-sig .mu-sig__wordmark a:active {
       background-position: left -27px; }
+
+@media print {
+  .mu-sig {
+    margin-left: -1px; }
+    .mu-sig:before, .mu-sig:after {
+      content: ' ';
+      display: table; }
+    .mu-sig:after {
+      clear: both; }
+    .mu-sig .mu-sig__logo,
+    .mu-sig .mu-sig__wordmark {
+      margin: 0; }
+    .mu-sig .mu-sig__logo a,
+    .mu-sig .mu-sig__wordmark a {
+      display: block;
+      text-indent: 200%;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 0;
+      background-repeat: no-repeat;
+      background-position: left 0;
+      margin: 0; }
+    .mu-sig .mu-sig__logo a {
+      width: 66px;
+      height: 74px;
+      position: relative;
+      background: none;
+      float: left; }
+      .mu-sig .mu-sig__logo a:after {
+        content: url("../images/mu-logo-large.svg");
+        text-indent: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0; }
+    .mu-sig .mu-sig__wordmark {
+      color: red;
+      margin-left: 86px;
+      padding-top: 14px; }
+    .mu-sig .mu-sig__wordmark a {
+      width: 478px;
+      height: 56px;
+      position: relative;
+      background: none; }
+      .mu-sig .mu-sig__wordmark a:after {
+        content: url("../images/mu-wordmark-black-large.svg");
+        text-indent: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0; } }
+
+.light-box {
+  padding: 1.5em;
+  margin-bottom: 1.5rem;
+  border: solid 0px #edebd5;
+  background-color: #ededed; }
+  .light-box > :first-child {
+    margin-top: 0 !important; }
+  .light-box > :last-child {
+    margin-bottom: 0 !important; }
+
+.dark-box {
+  padding: 1.5em;
+  margin-bottom: 1.5rem;
+  border: solid 0px #edebd5;
+  background-color: #222; }
+  .dark-box > :first-child {
+    margin-top: 0 !important; }
+  .dark-box > :last-child {
+    margin-bottom: 0 !important; }
+
+.buttons .brown {
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition-property: background, border, color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-width: 1px;
+  background: #bd5c2c;
+  color: #fff;
+  border: 1px solid #83401f;
+  font-size: 1em;
+  padding: .3333em 1em;
+  border-radius: 4px; }
+  .buttons .brown:hover, .buttons .brown:focus, .buttons .brown:active {
+    background: #83401f;
+    color: #fff;
+    border-color: #83401f; }
+
+.buttons .gold {
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition-property: background, border, color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-width: 1px;
+  background: #f7d583;
+  color: #222;
+  border: 1px solid #d39a0e;
+  font-size: 1em;
+  padding: .3333em 1em;
+  border-radius: 4px; }
+  .buttons .gold:hover, .buttons .gold:focus, .buttons .gold:active {
+    background: #fae5b3;
+    color: #222;
+    border-color: #d39a0e; }
+
+.buttons .grey {
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition-property: background, border, color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-width: 1px;
+  background: #222;
+  color: #fff;
+  border: 1px solid #000;
+  font-size: 1em;
+  padding: .3333em 1em;
+  border-radius: 4px; }
+  .buttons .grey:hover, .buttons .grey:focus, .buttons .grey:active {
+    background: black;
+    color: #f1b82d;
+    border-color: black; }
+
+.buttons .transparent {
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition-property: background, border, color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-width: 1px;
+  background: transparent;
+  color: #222;
+  border: 1px solid #d39a0e;
+  font-size: 1em;
+  padding: .3333em 1em;
+  border-radius: 4px; }
+  .buttons .transparent:hover, .buttons .transparent:focus, .buttons .transparent:active {
+    background: #fae5b3;
+    color: #222;
+    border-color: #d39a0e; }
+
+.buttons .brown-large {
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition-property: background, border, color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-width: 1px;
+  background: #bd5c2c;
+  color: #fff;
+  border: 1px solid #83401f;
+  font-size: 1.25em;
+  padding: .3333em 1em;
+  border-radius: 6px; }
+  .buttons .brown-large:hover, .buttons .brown-large:focus, .buttons .brown-large:active {
+    background: #83401f;
+    color: #fff;
+    border-color: #83401f; }
+
+.buttons .gold-large {
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition-property: background, border, color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-width: 1px;
+  background: #f7d583;
+  color: #222;
+  border: 1px solid #d39a0e;
+  font-size: 1.25em;
+  padding: .3333em 1em;
+  border-radius: 6px; }
+  .buttons .gold-large:hover, .buttons .gold-large:focus, .buttons .gold-large:active {
+    background: #fae5b3;
+    color: #222;
+    border-color: #d39a0e; }
+
+.buttons .grey-large {
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition-property: background, border, color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-width: 1px;
+  background: #222;
+  color: #fff;
+  border: 1px solid #000;
+  font-size: 1.25em;
+  padding: .3333em 1em;
+  border-radius: 6px; }
+  .buttons .grey-large:hover, .buttons .grey-large:focus, .buttons .grey-large:active {
+    background: black;
+    color: #f1b82d;
+    border-color: black; }
+
+.buttons .transparent-large {
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition-property: background, border, color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-width: 1px;
+  background: transparent;
+  color: #222;
+  border: 1px solid #d39a0e;
+  font-size: 1.25em;
+  padding: .3333em 1em;
+  border-radius: 6px; }
+  .buttons .transparent-large:hover, .buttons .transparent-large:focus, .buttons .transparent-large:active {
+    background: #fae5b3;
+    color: #222;
+    border-color: #d39a0e; }
+
+.buttons .dark-brown {
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition-property: background, border, color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-width: 1px;
+  background: #bd5c2c;
+  color: #fff;
+  border: 1px solid #83401f;
+  font-size: 1em;
+  padding: .3333em 1em;
+  border-radius: 4px; }
+  .buttons .dark-brown:hover, .buttons .dark-brown:focus, .buttons .dark-brown:active {
+    background: #83401f;
+    color: #fff;
+    border-color: #83401f; }
+
+.buttons .dark-gold {
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition-property: background, border, color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-width: 1px;
+  background: #f7d583;
+  color: #222;
+  border: 1px solid #fae5b3;
+  font-size: 1em;
+  padding: .3333em 1em;
+  border-radius: 4px; }
+  .buttons .dark-gold:hover, .buttons .dark-gold:focus, .buttons .dark-gold:active {
+    background: #fae5b3;
+    color: #222;
+    border-color: #f1b82d; }
+
+.buttons .dark-grey {
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition-property: background, border, color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-width: 1px;
+  background: #ccc;
+  color: #222;
+  border: 1px solid #ededed;
+  font-size: 1em;
+  padding: .3333em 1em;
+  border-radius: 4px; }
+  .buttons .dark-grey:hover, .buttons .dark-grey:focus, .buttons .dark-grey:active {
+    background: #ededed;
+    color: #000;
+    border-color: #fff; }
+
+.buttons .dark-transparent {
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition-property: background, border, color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-width: 1px;
+  background: transparent;
+  color: #fae5b3;
+  border: 1px solid #f7d583;
+  font-size: 1em;
+  padding: .3333em 1em;
+  border-radius: 4px; }
+  .buttons .dark-transparent:hover, .buttons .dark-transparent:focus, .buttons .dark-transparent:active {
+    background: #444;
+    color: #fae5b3;
+    border-color: #f7d583; }
 
 @media screen and (min-width: 700px) {
   html {
@@ -964,4 +1536,39 @@ footer p {
     float: left;
     width: 33.33333%;
     padding-left: 0.5rem;
-    padding-right: 0.5rem; } }
+    padding-right: 0.5rem; }
+  .mu-sig {
+    margin-left: -1px; }
+    .mu-sig:before, .mu-sig:after {
+      content: ' ';
+      display: table; }
+    .mu-sig:after {
+      clear: both; }
+    .mu-sig .mu-sig__logo,
+    .mu-sig .mu-sig__wordmark {
+      margin: 0; }
+    .mu-sig .mu-sig__logo a,
+    .mu-sig .mu-sig__wordmark a {
+      display: block;
+      text-indent: 200%;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 0;
+      background-repeat: no-repeat;
+      background-position: left 0;
+      margin: 0; }
+    .mu-sig .mu-sig__logo a {
+      width: 50px;
+      height: 56px;
+      background-image: url("../images/mu-logo-medium.svg");
+      float: left; }
+    .mu-sig .mu-sig__wordmark {
+      color: red;
+      margin-left: 65px;
+      padding-top: 11px; }
+    .mu-sig .mu-sig__wordmark a {
+      width: 334px;
+      height: 39px;
+      background-image: url("../images/mu-wordmark-white-medium.svg"); }
+      .mu-sig .mu-sig__wordmark a:hover, .mu-sig .mu-sig__wordmark a:focus, .mu-sig .mu-sig__wordmark a:active {
+        background-position: left -39px; } }

@@ -1,0 +1,81 @@
+@import "../sass/_variables";
+@import "../sass/_base-mixins";
+
+.color-row 
+{
+    @include clear-fix();
+    margin-bottom: 3em;
+    
+    p 
+    {
+        font-family: $font-monospace;
+        font-size: .8em;
+    }
+    
+    .black              { background-color: black; }
+    .grey-darker        { background-color: $grey-darker; }
+    .grey-dark          { background-color: $grey-dark; }
+    .grey               { background-color: $grey; }
+    .grey-light         { background-color: $grey-light; }
+    .grey-lighter       { background-color: $grey-lighter; }
+    .grey-lightest      { background-color: $grey-lightest; }
+    
+    .gold-darker        { background-color: $gold-darker; }
+    .gold-dark          { background-color: $gold-dark; }
+    .gold               { background-color: $gold; }
+    .gold-light         { background-color: $gold-light; }
+    .gold-lighter       { background-color: $gold-lighter; }
+    .gold-lightest      { background-color: $gold-lightest; }
+    
+    .tan-light          { background-color: $tan-light; }
+    .tan                { background-color: $tan; }
+    .tan-dark           { background-color: $tan-dark; }
+    
+    .red-light          { background-color: $red-light; }
+    .red                { background-color: $red; }
+    .red-dark           { background-color: $red-dark; }
+    
+    .orange-light       { background-color: $orange-light; }
+    .orange             { background-color: $orange; }
+    .orange-dark        { background-color: $orange-dark; }
+    
+    .green-light        { background-color: $green-light; }
+    .green              { background-color: $green; }
+    .green-dark         { background-color: $green-dark; }
+    
+    .blue-light         { background-color: $blue-light; }
+    .blue               { background-color: $blue; }
+    .blue-dark          { background-color: $blue-dark; }
+}
+
+.color-primary
+{
+    float: left;
+    width: 33.333%;
+    padding-right: 2.5%;
+}
+.color-small 
+{   
+    float: left;
+    width: 33.333%;
+    margin-right: 0;
+}
+.color-short 
+{
+    height: 4em;
+    margin-bottom: .5em;
+}
+.color-tall 
+{
+    height: 8em;
+    margin-bottom: .5em;
+}
+.color-hex 
+{
+    margin: 0;
+}
+.color-name 
+{
+    font-weight: $font-bold-default;
+    margin: 0;
+}

@@ -47,6 +47,7 @@ $background-color:              #fff !default;
 $text-color:                    $grey-darker !default;
 $link-color:                    $red !default;
 $link-hover-color:              $grey-darker !default;
+$border-color:                  $grey-darker !default;
 $hr-color:                      $grey-lighter !default;
 $box-bg-color:                  $tan-light !default;
 $box-border-color:              $tan !default;
@@ -71,7 +72,9 @@ $table-cell-header-color:       $gold-lightest !default;
 $font-serif:                    'Janson', 'Times New Roman', Times, serif !default;
 $font-serif-sc:                 'Janson-SC', $font-serif !default;
 $font-sans:                     'Proxima Nova', 'proxima-nova', 'Arial', sans-serif !default; // 'Proxima Nova' is for embedded web fonts & desktop, 'proxima-nova' is for Typekit
-$font-monospace:                'Menlo', 'Consolas', 'Courier New', monospace !default; 
+$font-monospace:                'source code pro', 'Menlo', 'Courier New', monospace !default; 
+
+$font-default:                  $font-sans;
 
 // Aligns with Proxima Nova's weights
 $font-thin:                     200 !default; 
@@ -101,6 +104,7 @@ $font-line-height:              1.5 !default;
 $base-margin:                   1 !default;
 $base-min-width:                320px !default; // Narrowest supported phone size
 $base-max-width:                1200px !default;
+$base-border-radius:            4px !default;
 
 /* @end */
 
@@ -109,7 +113,7 @@ $base-max-width:                1200px !default;
 
 // Default image path
 $image-path:                    '../images' !default;
-$use-flexible-images:           false !default;
+$use-flexible-images:           true !default;
 $inset-image-width:             400px !default;
 
 /* @end */

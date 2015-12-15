@@ -1,0 +1,93 @@
+/**
+ * Mizzou Framework - Sass: Forms
+ *
+ * Requires: _variables.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+ 
+ // Horizontal layout for form
+.form--horizontal-layout
+{
+    margin: ($base-margin + 0em) 0;
+    display: table;
+    width: 100%;
+    
+    .form__field
+    {
+        display: table-row;
+        
+        &.alert
+        {
+            padding: 0;
+        }
+        
+        &:after
+        {
+            display: none; // Overrides a setting by %clear-fix
+        }
+        
+        .form__field__label,
+        .form__field__control
+        {
+            display: table-cell;
+            vertical-align: top;
+            padding: 8px;
+        }
+        
+        .form__field__label
+        {
+            width: 184px;
+            padding-right: 16px;
+        }
+    }
+}
+
+.form__field
+{
+    @include clear-fix();
+    margin: ($base-margin + 0em) 0;
+    padding-top: 8px;
+    
+    &.alert
+    {
+        padding: 8px; // Accomodate alert border
+    }
+}
+
+.form__field__label
+{
+    font-weight: $font-bold;
+}
+
+.form__field__control ul
+{
+    list-style: none;
+    padding: 0;
+}
+
+.form__field__text-input
+{
+    &.form__field__text-input--full-width
+    {
+        width: 100%;
+    }
+    
+    .alert--error &
+    {
+        border-color: $red;
+    }
+    
+    .alert--success &
+    {
+        border-color: $green-dark;
+    }
+}
+
+.form__field__help
+{
+    font-size: 12px;
+    margin-bottom: 0;
+}

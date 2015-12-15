@@ -1,0 +1,186 @@
+/**
+ * Mizzou Framework - Sass: Buttons
+ *
+ * Requires: _variables.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+ 
+ @mixin buttons() { 
+    margin-bottom: .5em; 
+    display: inline-block;
+    text-align: center;
+	padding: .5em 1em .4em;
+	line-height: 1.25;
+	text-decoration: none;
+	border: solid 1px $gold;
+	color: #222;
+	font-size: 1em;
+	font-weight: $font-default;
+    background-color: $gold-light;
+    
+    &:hover, 
+	&:focus {
+		background: $gold-lighter;
+	}
+	
+	&.outline {
+    	background-color: transparent;
+	}
+}
+.button 
+{
+    @include buttons();
+}
+
+
+/**
+ * Sets up a button with custom attributes
+ *
+ * @param color $color-background Background color
+ * @param color $color-text Text color
+ * @param color $color-border Border color
+ * @param string $size (Optional) Text size. Can be 'small' or 'large'. Defaults to 'small'
+ * @param boolean $include-print-style (Optional) Whether to make the button black and white for printing. Defaults to true
+ */
+@mixin custom-button(
+    $color-background,
+    $color-text,
+    $color-border,
+    $color-background-hover:        $color-background,
+    $color-text-hover:              $color-text,
+    $color-border-hover:            $color-border,
+    $size:                          'small'
+)
+{
+    font-weight: $font-bold;
+    display: inline-block;
+    text-decoration: none;
+    font-family: $font-default;
+    cursor: pointer;
+    text-align: center;
+    transition-property: background, border, color;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    border-style: solid;
+    border-width: 1px;
+    background: $color-background;
+    color: $color-text;
+    border: 1px solid $color-border;
+    
+    // Font size
+    @if ($size == 'large') {
+        font-size: 1.25em;
+        padding: .3333em 1em;
+        border-radius: ($base-border-radius + 2px);
+    } @else { // $size == 'small'
+        font-size: 1em;
+        padding: .3333em 1em;
+        border-radius: $base-border-radius;
+    }
+        
+    &:hover,
+    &:focus,
+    &:active
+    {
+        background: $color-background-hover;
+        color: $color-text-hover;
+        border-color: $color-border-hover;
+    }
+}
+
+/**
+ * Sets up a button with common attributes
+ *
+ * @param string $size (Optional) Text size. Can be 'small' or 'large'. Defaults to 'small'
+ * @param string $color (Optional) Button color. Can be 'brown', 'gold', or 'grey'. Defaults to 'brown'
+ * @param string $theme (Optional) Color theme. Can be 'light' or 'dark'. Dark gives the button a lighter border. Defaults to 'light'
+ * @param boolean $include-print-style (Optional) Whether to make the button black and white for printing. Defaults to true
+ */
+@mixin button(
+    $size:                      'small',
+    $color:                     'brown',
+    $theme:                     'light'
+)
+{
+    @if ($theme == 'dark') {
+        @if ($color == 'gold') {
+            @include custom-button(
+                $color-background: $gold-light,
+                $color-text: $text-color,
+                $color-border: $gold-lighter,
+                $color-background-hover: $gold-lighter,
+                $color-border-hover: $gold,
+                $size: $size
+            );
+        } @else if ($color == 'grey') {
+            @include custom-button(
+                $color-background: $grey-lighter,
+                $color-text: $text-color,
+                $color-border: $grey-lightest,
+                $color-background-hover: $grey-lightest,
+                $color-text-hover: #000,
+                $color-border-hover: #fff,
+                $size: $size
+            );
+        } @else if ($color == 'transparent') {
+            @include custom-button(
+                $color-background: transparent,
+                $color-text: $gold-lighter,
+                $color-border: $gold-light,
+                $color-background-hover: $grey-dark,
+                $color-border-hover: $gold-light,
+                $size: $size
+            );
+        } @else { // $color == 'brown'
+            @include custom-button(
+                $color-background: $orange,
+                $color-text: #fff,
+                $color-border: $orange-dark,
+                $color-background-hover: $orange-dark,
+                $color-border-hover: $orange-dark,
+                $size: $size
+            );
+        }
+    } @else { // $theme == 'light'
+        @if ($color == 'gold') {
+            @include custom-button(
+                $color-background: $gold-light,
+                $color-text: $text-color,
+                $color-border: $gold-dark,
+                $color-background-hover: $gold-lighter,
+                $color-border-hover: $gold-dark,
+                $size: $size
+            );
+        } @else if ($color == 'transparent') {
+            @include custom-button(
+                $color-background: transparent,
+                $color-text: $text-color,
+                $color-border: $gold-dark,
+                $color-background-hover: $gold-lighter,
+                $size: $size
+            );
+        } @else if ($color == 'grey') {
+            @include custom-button(
+                $color-background: $grey-darker,
+                $color-text: #fff,
+                $color-border: #000,
+                $color-background-hover: black,
+                $color-text-hover: $gold,
+                $color-border-hover: black,
+                $size: $size
+            );
+        } @else { // $color == 'brown'
+            @include custom-button(
+                $color-background: $orange,
+                $color-text: #fff,
+                $color-border: $orange-dark,
+                $color-background-hover: $orange-dark,
+                $color-border-hover: $orange-dark,
+                $size: $size
+            );
+        }
+    }
+}

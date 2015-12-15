@@ -18,8 +18,7 @@
     @include mu-unit-sig(
         $name-width: 194px,
         $name-height: 27px,
-        $name-margin: 3px,
-        $print: 'true'
+        $name-margin: 3px
     );
     background-color: $gold;
 }
@@ -31,7 +30,6 @@
         $name-height: 27px,
         $name-margin: 3px,
         $size: 'small',
-        $print: 'true',
         $center: 'true',
         $color: 'white'
     );
@@ -54,7 +52,6 @@
         $name-width: 284px,
         $name-height: 40px,
         $size: 'medium',
-        $print: 'true',
         $center: 'true'
     );
 }
@@ -88,8 +85,7 @@
 .uni-sig-extra-small 
 {
     @include mu-sig(
-        $size: 'extra-small',
-        $print: 'true'
+        $size: 'extra-small'    
     );
 }
 
@@ -103,9 +99,7 @@
 
 .uni-sig-small 
 {
-    @include mu-sig(
-        $print: 'true'
-    );
+    @include mu-sig();
     background-color: $gold;
 }
 
@@ -113,7 +107,6 @@
 {
     @include mu-sig(
         $size: 'small',
-        $print: 'true',
         $center: 'true',
         $color: 'white'
     );
@@ -123,8 +116,7 @@
 .uni-sig-medium 
 {
     @include mu-sig(
-        $size: 'medium',
-        $print: 'true'
+        $size: 'medium'
     );
 }
 
@@ -132,7 +124,6 @@
 {
     @include mu-sig(
         $size: 'medium',
-        $print: 'true',
         $center: 'true'
     );
 }
@@ -150,7 +141,6 @@
 {
     @include mu-sig(
         $size: 'large',
-        $print: 'true',
         $center: 'true'
     );
     background-color: $gold;

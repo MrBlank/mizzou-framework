@@ -30,7 +30,7 @@
 // First child - no bottom margin
 @mixin first-child() 
 {
-    *:first-child 
+    > :first-child 
     { 
         margin-top: 0 !important; 
     }
@@ -38,7 +38,7 @@
 // Last child - no bottom margin
 @mixin last-child() 
 {
-    *:last-child 
+    > :last-child 
     { 
         margin-bottom: 0 !important; 
     }
@@ -179,18 +179,16 @@ Here are the variables that can be used:
 
 @mixin print-image($image) 
 {
-    @media print {
-        position: relative;
-        background: none;
-        
-        &:after {
-            content: url('#{$image}');
-            text-indent: 0;
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
+    position: relative;
+    background: none;
+    
+    &:after {
+        content: url('#{$image}');
+        text-indent: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 }
  

@@ -295,11 +295,6 @@ hr
     clear: both;
     border: 0;
     border-bottom: 1px solid $gold-light;
-    
-    &.rule--dashed
-    {
-        border-style: dashed;
-    }
 }
 
 /* @end */
@@ -310,6 +305,7 @@ ul,
 ol
 {
     margin: ($base-margin + 0em) 0;
+    padding-left: $base-margin * 1.5em;
     
     ul,
     ol
@@ -327,15 +323,18 @@ li
     }
 }
 
-dl,
-dd
+dl
 {
     margin: ($base-margin + 0em) 0;
+    padding-left: $base-margin * 1.5em;
 }
-
 dt
 {
     font-weight: $font-bold-default;
+}
+dd 
+{
+    margin: ($base-margin * .5em) 0;
 }
 
 /* @end */
