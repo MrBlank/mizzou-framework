@@ -27,25 +27,36 @@
     .gold-lighter       { background-color: $gold-lighter; }
     .gold-lightest      { background-color: $gold-lightest; }
     
-    .tan-light          { background-color: $tan-light; }
-    .tan                { background-color: $tan; }
-    .tan-dark           { background-color: $tan-dark; }
+    .warm-grey-lighter  { background-color: $warm-grey-lighter; }
+    .warm-grey-light    { background-color: $warm-grey-light; }
+    .warm-grey          { background-color: $warm-grey; }
+    .warm-grey-dark     { background-color: $warm-grey-dark; }
+    .warm-grey-darker   { background-color: $warm-grey-darker; }
+    .warm-grey-darkest  { background-color: $warm-grey-darkest; }
     
+    .red-lighter        { background-color: $red-lighter; }
     .red-light          { background-color: $red-light; }
     .red                { background-color: $red; }
     .red-dark           { background-color: $red-dark; }
+    .red-darker         { background-color: $red-darker; }
     
+    .orange-lighter     { background-color: $orange-lighter; }
     .orange-light       { background-color: $orange-light; }
     .orange             { background-color: $orange; }
     .orange-dark        { background-color: $orange-dark; }
+    .orange-darker      { background-color: $orange-darker; }
     
+    .green-lighter      { background-color: $green-lighter; }
     .green-light        { background-color: $green-light; }
     .green              { background-color: $green; }
     .green-dark         { background-color: $green-dark; }
+    .green-darker       { background-color: $green-darker; }
     
+    .blue-lighter       { background-color: $blue-lighter; }
     .blue-light         { background-color: $blue-light; }
     .blue               { background-color: $blue; }
     .blue-dark          { background-color: $blue-dark; }
+    .blue-darker        { background-color: $blue-darker; }
 }
 
 .color-primary
@@ -62,7 +73,7 @@
 }
 .color-short 
 {
-    height: 4em;
+    height: 5em;
     margin-bottom: .5em;
 }
 .color-tall 

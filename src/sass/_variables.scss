@@ -8,39 +8,51 @@
 
 /* @group Colors */
     
+$gold-darker:                   #AF7C00 !default;
+$gold-dark:                     #D79900 !default;
 $gold:                          #f1b82d !default; // Mizzou Gold
-$gold-darker:                   darken($gold, 20%) !default;
-$gold-dark:                     darken($gold, 12%) !default;
-$gold-light:                    lighten($gold, 18%) !default;
-$gold-lighter:                  lighten($gold, 28%) !default;
-$gold-lightest:                 lighten($gold, 35%) !default;
+$gold-light:                    #FBD986 !default;
+$gold-lighter:                  #FEE8B6 !default;
+$gold-lightest:                 #FFF4D6 !default;
 
-$grey-darker:                   #222 !default;
-$grey-dark:                     #444 !default;
-$grey:                          #666 !default;
-$grey-light:                    #999 !default;
-$grey-lighter:                  #ccc !default;
-$grey-lightest:                 #ededed !default;
+$grey-darker:                   #222    !default;
+$grey-dark:                     #444    !default;
+$grey:                          #666    !default;
+$grey-light:                    #999    !default;
+$grey-lighter:                  #ccc    !default;
+$grey-lightest:                 #f1f1f1 !default;
 
-$tan-dark:                      #cac8b5 !default;
-$tan:                           #edebd5 !default;
-$tan-light:                     #f5f2f0 !default;
+$warm-grey-lighter:             #f6f5ea !default;
+$warm-grey-light:               #edebd5 !default;
+$warm-grey:                     #d5d3c0 !default;
+$warm-grey-dark:                #a6a495 !default;
+$warm-grey-darker:              #77756b !default;
+$warm-grey-darkest:             #474740 !default;
 
+
+$red-lighter:                   #FFECEC !default;
+$red-light:                     #FFC2C4 !default;
 $red:                           #900000 !default;
-$red-light:                     lighten($red, 68%) !default;
-$red-dark:                      darken($red, 10%) !default;
+$red-dark:                      #6A0206 !default;
+$red-darker:                    #470102 !default;
 
-$orange:                        #bd5c2c !default;
-$orange-light:                  lighten($orange, 45%) !default;
-$orange-dark:                   darken($orange, 14%) !default;
+$orange-lighter:                #FFE4DB !default;
+$orange-light:                  #FFBEA9 !default;
+$orange:                        #BD4D1F !default;
+$orange-dark:                   #8C3A1D !default;
+$orange-darker:                 #5E2713 !default;
 
-$green:                         #69901D !default;
-$green-light:                   lighten($green, 55%) !default;
-$green-dark:                    darken($green, 11%) !default;
+$green-lighter:                 #EBF4E9 !default;
+$green-light:                   #B2CFA9 !default;
+$green:                         #3F8F26 !default;
+$green-dark:                    #2D671B !default;
+$green-darker:                  #214716 !default;
 
-$blue:                          #318fd7 !default;
-$blue-light:                    lighten($blue, 42%) !default;
-$blue-dark:                     darken($blue, 20%) !default;
+$blue-lighter:                  #E4F1FA !default;
+$blue-light:                    #AECDEC !default;
+$blue:                          #318FD7 !default;
+$blue-dark:                     #1A5888 !default;
+$blue-darker:                   #143650 !default;
 
 // Colors by use
 $background-color:              #fff !default;
@@ -49,15 +61,15 @@ $link-color:                    $red !default;
 $link-hover-color:              $grey-darker !default;
 $border-color:                  $grey-darker !default;
 $hr-color:                      $grey-lighter !default;
-$box-bg-color:                  $tan-light !default;
-$box-border-color:              $tan !default;
-$code-bg-color:                 $tan-light !default;
-$code-border-color:             $tan !default;
+$box-bg-color:                  $warm-grey-lighter !default;
+$box-border-color:              $warm-grey-light !default;
+$code-bg-color:                 $warm-grey-lighter !default;
+$code-border-color:             $warm-grey-light !default;
 $abbr-color:                    $grey-lighter !default;
 $mark-color:                    $gold-lighter !default;
 $help-color:                    $grey-light !default;
 $form-error-message-color:      $red !default;
-$form-error-bg-color:           $red-light !default;
+$form-error-bg-color:           $red-lighter !default;
 $form-error-border-color:       $red !default;
 $form-field-border-color:       $grey-lighter !default;
 $table-cell-border-color:       $grey-lighter !default;

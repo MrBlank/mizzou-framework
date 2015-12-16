@@ -119,49 +119,71 @@ Here are the variables that can be used with their defaults:
   .color-row .grey-lighter {
     background-color: #ccc; }
   .color-row .grey-lightest {
-    background-color: #ededed; }
+    background-color: #f1f1f1; }
   .color-row .gold-darker {
-    background-color: #ad7e0c; }
+    background-color: #AF7C00; }
   .color-row .gold-dark {
-    background-color: #d39a0e; }
+    background-color: #D79900; }
   .color-row .gold {
     background-color: #f1b82d; }
   .color-row .gold-light {
-    background-color: #f7d583; }
+    background-color: #FBD986; }
   .color-row .gold-lighter {
-    background-color: #fae5b3; }
+    background-color: #FEE8B6; }
   .color-row .gold-lightest {
-    background-color: #fcf1d4; }
-  .color-row .tan-light {
-    background-color: #f5f2f0; }
-  .color-row .tan {
+    background-color: #FFF4D6; }
+  .color-row .warm-grey-lighter {
+    background-color: #f6f5ea; }
+  .color-row .warm-grey-light {
     background-color: #edebd5; }
-  .color-row .tan-dark {
-    background-color: #cac8b5; }
+  .color-row .warm-grey {
+    background-color: #d5d3c0; }
+  .color-row .warm-grey-dark {
+    background-color: #a6a495; }
+  .color-row .warm-grey-darker {
+    background-color: #77756b; }
+  .color-row .warm-grey-darkest {
+    background-color: #474740; }
+  .color-row .red-lighter {
+    background-color: #FFECEC; }
   .color-row .red-light {
-    background-color: #ffecec; }
+    background-color: #FFC2C4; }
   .color-row .red {
     background-color: #900000; }
   .color-row .red-dark {
-    background-color: #5d0000; }
+    background-color: #6A0206; }
+  .color-row .red-darker {
+    background-color: #470102; }
+  .color-row .orange-lighter {
+    background-color: #FFE4DB; }
   .color-row .orange-light {
-    background-color: #f6e2d8; }
+    background-color: #FFBEA9; }
   .color-row .orange {
-    background-color: #bd5c2c; }
+    background-color: #BD4D1F; }
   .color-row .orange-dark {
-    background-color: #83401f; }
+    background-color: #8C3A1D; }
+  .color-row .orange-darker {
+    background-color: #5E2713; }
+  .color-row .green-lighter {
+    background-color: #EBF4E9; }
   .color-row .green-light {
-    background-color: #e9f6d0; }
+    background-color: #B2CFA9; }
   .color-row .green {
-    background-color: #69901D; }
+    background-color: #3F8F26; }
   .color-row .green-dark {
-    background-color: #476114; }
+    background-color: #2D671B; }
+  .color-row .green-darker {
+    background-color: #214716; }
+  .color-row .blue-lighter {
+    background-color: #E4F1FA; }
   .color-row .blue-light {
-    background-color: #e4f1fa; }
+    background-color: #AECDEC; }
   .color-row .blue {
-    background-color: #318fd7; }
+    background-color: #318FD7; }
   .color-row .blue-dark {
-    background-color: #1a5888; }
+    background-color: #1A5888; }
+  .color-row .blue-darker {
+    background-color: #143650; }
 
 .color-primary {
   float: left;
@@ -174,7 +196,7 @@ Here are the variables that can be used with their defaults:
   margin-right: 0; }
 
 .color-short {
-  height: 4em;
+  height: 5em;
   margin-bottom: .5em; }
 
 .color-tall {

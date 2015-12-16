@@ -435,7 +435,7 @@ hr {
   margin: 1em 0;
   clear: both;
   border: 0;
-  border-bottom: 1px solid #f7d583; }
+  border-bottom: 1px solid #FBD986; }
 
 /* @end */
 /* @group Lists */
@@ -555,7 +555,7 @@ pre {
 
 code,
 var {
-  background-color: #fae5b3;
+  background-color: #FEE8B6;
   padding: 0 .1875em; }
 
 /* var
@@ -592,7 +592,7 @@ sub {
   bottom: -0.25em; }
 
 mark {
-  background: #fae5b3; }
+  background: #FEE8B6; }
 
 small {
   font-size: 12.8px; }
@@ -780,7 +780,7 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
   border-color: #900000; }
 
 .alert--success .form__field__text-input {
-  border-color: #476114; }
+  border-color: #2D671B; }
 
 .form__field__help {
   font-size: 12px;
@@ -806,9 +806,9 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
   color: #222;
   font-size: 1em;
   font-weight: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
-  background-color: #f7d583; }
+  background-color: #FBD986; }
   .button:hover, .button:focus {
-    background: #fae5b3; }
+    background: #FEE8B6; }
   .button.outline {
     background-color: transparent; }
 
@@ -1070,7 +1070,7 @@ aside {
     padding: 1rem;
     margin-bottom: 1.5rem;
     border: solid 0px #edebd5;
-    background-color: #f5f2f0; }
+    background-color: #f6f5ea; }
     aside .box > :first-child {
       margin-top: 0 !important; }
     aside .box > :last-child {
@@ -1088,7 +1088,7 @@ aside {
     padding: 1rem;
     margin-bottom: 1.5rem;
     border: solid 1px #f1b82d;
-    background-color: #fcf1d4; }
+    background-color: #FFF4D6; }
     .grid-3 .box > :first-child {
       margin-top: 0 !important; }
     .grid-3 .box > :last-child {
@@ -1203,7 +1203,7 @@ footer p {
   padding: 1.5em;
   margin-bottom: 1.5rem;
   border: solid 0px #edebd5;
-  background-color: #ededed; }
+  background-color: #f1f1f1; }
   .light-box > :first-child {
     margin-top: 0 !important; }
   .light-box > :last-child {
@@ -1231,16 +1231,16 @@ footer p {
   transition-timing-function: linear;
   border-style: solid;
   border-width: 1px;
-  background: #bd5c2c;
+  background: #BD4D1F;
   color: #fff;
-  border: 1px solid #83401f;
+  border: 1px solid #8C3A1D;
   font-size: 1em;
   padding: .3333em 1em;
   border-radius: 4px; }
   .buttons .brown:hover, .buttons .brown:focus, .buttons .brown:active {
-    background: #83401f;
+    background: #8C3A1D;
     color: #fff;
-    border-color: #83401f; }
+    border-color: #8C3A1D; }
 
 .buttons .gold {
   font-weight: 700;
@@ -1254,16 +1254,16 @@ footer p {
   transition-timing-function: linear;
   border-style: solid;
   border-width: 1px;
-  background: #f7d583;
+  background: #FBD986;
   color: #222;
-  border: 1px solid #d39a0e;
+  border: 1px solid #D79900;
   font-size: 1em;
   padding: .3333em 1em;
   border-radius: 4px; }
   .buttons .gold:hover, .buttons .gold:focus, .buttons .gold:active {
-    background: #fae5b3;
+    background: #FEE8B6;
     color: #222;
-    border-color: #d39a0e; }
+    border-color: #D79900; }
 
 .buttons .grey {
   font-weight: 700;
@@ -1302,14 +1302,14 @@ footer p {
   border-width: 1px;
   background: transparent;
   color: #222;
-  border: 1px solid #d39a0e;
+  border: 1px solid #D79900;
   font-size: 1em;
   padding: .3333em 1em;
   border-radius: 4px; }
   .buttons .transparent:hover, .buttons .transparent:focus, .buttons .transparent:active {
-    background: #fae5b3;
+    background: #FEE8B6;
     color: #222;
-    border-color: #d39a0e; }
+    border-color: #D79900; }
 
 .buttons .brown-large {
   font-weight: 700;
@@ -1323,16 +1323,16 @@ footer p {
   transition-timing-function: linear;
   border-style: solid;
   border-width: 1px;
-  background: #bd5c2c;
+  background: #BD4D1F;
   color: #fff;
-  border: 1px solid #83401f;
+  border: 1px solid #8C3A1D;
   font-size: 1.25em;
   padding: .3333em 1em;
   border-radius: 6px; }
   .buttons .brown-large:hover, .buttons .brown-large:focus, .buttons .brown-large:active {
-    background: #83401f;
+    background: #8C3A1D;
     color: #fff;
-    border-color: #83401f; }
+    border-color: #8C3A1D; }
 
 .buttons .gold-large {
   font-weight: 700;
@@ -1346,16 +1346,16 @@ footer p {
   transition-timing-function: linear;
   border-style: solid;
   border-width: 1px;
-  background: #f7d583;
+  background: #FBD986;
   color: #222;
-  border: 1px solid #d39a0e;
+  border: 1px solid #D79900;
   font-size: 1.25em;
   padding: .3333em 1em;
   border-radius: 6px; }
   .buttons .gold-large:hover, .buttons .gold-large:focus, .buttons .gold-large:active {
-    background: #fae5b3;
+    background: #FEE8B6;
     color: #222;
-    border-color: #d39a0e; }
+    border-color: #D79900; }
 
 .buttons .grey-large {
   font-weight: 700;
@@ -1394,14 +1394,14 @@ footer p {
   border-width: 1px;
   background: transparent;
   color: #222;
-  border: 1px solid #d39a0e;
+  border: 1px solid #D79900;
   font-size: 1.25em;
   padding: .3333em 1em;
   border-radius: 6px; }
   .buttons .transparent-large:hover, .buttons .transparent-large:focus, .buttons .transparent-large:active {
-    background: #fae5b3;
+    background: #FEE8B6;
     color: #222;
-    border-color: #d39a0e; }
+    border-color: #D79900; }
 
 .buttons .dark-brown {
   font-weight: 700;
@@ -1415,16 +1415,16 @@ footer p {
   transition-timing-function: linear;
   border-style: solid;
   border-width: 1px;
-  background: #bd5c2c;
+  background: #BD4D1F;
   color: #fff;
-  border: 1px solid #83401f;
+  border: 1px solid #8C3A1D;
   font-size: 1em;
   padding: .3333em 1em;
   border-radius: 4px; }
   .buttons .dark-brown:hover, .buttons .dark-brown:focus, .buttons .dark-brown:active {
-    background: #83401f;
+    background: #8C3A1D;
     color: #fff;
-    border-color: #83401f; }
+    border-color: #8C3A1D; }
 
 .buttons .dark-gold {
   font-weight: 700;
@@ -1438,14 +1438,14 @@ footer p {
   transition-timing-function: linear;
   border-style: solid;
   border-width: 1px;
-  background: #f7d583;
+  background: #FBD986;
   color: #222;
-  border: 1px solid #fae5b3;
+  border: 1px solid #FEE8B6;
   font-size: 1em;
   padding: .3333em 1em;
   border-radius: 4px; }
   .buttons .dark-gold:hover, .buttons .dark-gold:focus, .buttons .dark-gold:active {
-    background: #fae5b3;
+    background: #FEE8B6;
     color: #222;
     border-color: #f1b82d; }
 
@@ -1463,12 +1463,12 @@ footer p {
   border-width: 1px;
   background: #ccc;
   color: #222;
-  border: 1px solid #ededed;
+  border: 1px solid #f1f1f1;
   font-size: 1em;
   padding: .3333em 1em;
   border-radius: 4px; }
   .buttons .dark-grey:hover, .buttons .dark-grey:focus, .buttons .dark-grey:active {
-    background: #ededed;
+    background: #f1f1f1;
     color: #000;
     border-color: #fff; }
 
@@ -1485,15 +1485,15 @@ footer p {
   border-style: solid;
   border-width: 1px;
   background: transparent;
-  color: #fae5b3;
-  border: 1px solid #f7d583;
+  color: #FEE8B6;
+  border: 1px solid #FBD986;
   font-size: 1em;
   padding: .3333em 1em;
   border-radius: 4px; }
   .buttons .dark-transparent:hover, .buttons .dark-transparent:focus, .buttons .dark-transparent:active {
     background: #444;
-    color: #fae5b3;
-    border-color: #f7d583; }
+    color: #FEE8B6;
+    border-color: #FBD986; }
 
 @media screen and (min-width: 700px) {
   html {
