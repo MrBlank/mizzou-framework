@@ -6,6 +6,53 @@
  * @version 1.00
  */
 /* @group Colors */
+/*
+$gold-lightest:                 #FFF4D6 !default;
+$gold-lighter:                  #FEE8B6 !default;
+$gold-light:                    #FBD986 !default;
+$gold-400:                      $gold   !default;
+$gold-dark:                     #D79900 !default;
+$gold-darker:                   #AF7C00 !default;
+
+$warm-grey-lighter:             #f6f5ea !default;
+$warm-grey-light:               #edebd5 !default;
+$warm-grey:                     #d5d3c0 !default;
+$warm-grey-dark:                #a6a495 !default;
+$warm-grey-darker:              #77756b !default;
+$warm-grey-darkest:             #474740 !default;
+
+$grey-lightest:                 #f2f2f2 !default;
+$grey-lighter:                  #ccc    !default;
+$grey-light:                    #999    !default;
+$grey:                          #666    !default;
+$grey-dark:                     #444    !default;
+$grey-darker:                   #222    !default;
+
+
+$red-lighter:                   #FFECEC !default;
+$red-light:                     #FFC2C4 !default;
+$red:                           #900000 !default;
+$red-dark:                      #6A0206 !default;
+$red-darker:                    #470102 !default;
+
+$orange-lighter:                #FFE4DB !default;
+$orange-light:                  #FFBEA9 !default;
+$orange:                        #BD4D1F !default;
+$orange-dark:                   #8C3A1D !default;
+$orange-darker:                 #5E2713 !default;
+
+$green-lighter:                 #EBF4E9 !default;
+$green-light:                   #B2CFA9 !default;
+$green:                         #3F8F26 !default;
+$green-dark:                    #2D671B !default;
+$green-darker:                  #214716 !default;
+
+$blue-lighter:                  #E4F1FA !default;
+$blue-light:                    #AECDEC !default;
+$blue:                          #318FD7 !default;
+$blue-dark:                     #1A5888 !default;
+$blue-darker:                   #143650 !default;
+*/
 /* @end */
 /* @group Fonts */
 /* @end */
@@ -108,82 +155,102 @@ Here are the variables that can be used with their defaults:
     font-size: .8em; }
   .color-row .black {
     background-color: black; }
-  .color-row .grey-darker {
-    background-color: #222; }
-  .color-row .grey-dark {
-    background-color: #444; }
-  .color-row .grey {
-    background-color: #666; }
-  .color-row .grey-light {
-    background-color: #999; }
-  .color-row .grey-lighter {
-    background-color: #ccc; }
-  .color-row .grey-lightest {
-    background-color: #f1f1f1; }
-  .color-row .gold-darker {
-    background-color: #AF7C00; }
-  .color-row .gold-dark {
-    background-color: #D79900; }
-  .color-row .gold {
-    background-color: #f1b82d; }
-  .color-row .gold-light {
-    background-color: #FBD986; }
-  .color-row .gold-lighter {
-    background-color: #FEE8B6; }
-  .color-row .gold-lightest {
+  .color-row .gold-100 {
     background-color: #FFF4D6; }
-  .color-row .warm-grey-lighter {
-    background-color: #f6f5ea; }
-  .color-row .warm-grey-light {
-    background-color: #edebd5; }
-  .color-row .warm-grey {
-    background-color: #d5d3c0; }
-  .color-row .warm-grey-dark {
-    background-color: #a6a495; }
-  .color-row .warm-grey-darker {
-    background-color: #77756b; }
-  .color-row .warm-grey-darkest {
+  .color-row .gold-200 {
+    background-color: #FEE8B6; }
+  .color-row .gold-300 {
+    background-color: #FBD986; }
+  .color-row .gold-400 {
+    background-color: #F1B82D; }
+  .color-row .gold-500 {
+    background-color: #D79900; }
+  .color-row .gold-600 {
+    background-color: #AF7C00; }
+  .color-row .tan-100 {
+    background-color: #F6F5EA; }
+  .color-row .tan-200 {
+    background-color: #EDEBD5; }
+  .color-row .tan-300 {
+    background-color: #D5D3C0; }
+  .color-row .tan-400 {
+    background-color: #A6A495; }
+  .color-row .tan-500 {
+    background-color: #77756B; }
+  .color-row .tan-600 {
     background-color: #474740; }
-  .color-row .red-lighter {
+  .color-row .warm-grey-100 {
+    background-color: #EDEAE6; }
+  .color-row .warm-grey-200 {
+    background-color: #DBD5CD; }
+  .color-row .warm-grey-300 {
+    background-color: #8F8884; }
+  .color-row .warm-grey-400 {
+    background-color: #595552; }
+  .color-row .warm-grey-500 {
+    background-color: #33312F; }
+  .color-row .warm-grey-600 {
+    background-color: #242221; }
+  .color-row .grey-100 {
+    background-color: #F0F0F0; }
+  .color-row .grey-200 {
+    background-color: #CCCCCC; }
+  .color-row .grey-300 {
+    background-color: #999999; }
+  .color-row .grey-400 {
+    background-color: #666666; }
+  .color-row .grey-500 {
+    background-color: #444444; }
+  .color-row .grey-600 {
+    background-color: #222222; }
+  .color-row .red-100 {
     background-color: #FFECEC; }
-  .color-row .red-light {
+  .color-row .red-200 {
     background-color: #FFC2C4; }
-  .color-row .red {
+  .color-row .red-300 {
+    background-color: #CA4B4B; }
+  .color-row .red-400 {
     background-color: #900000; }
-  .color-row .red-dark {
+  .color-row .red-500 {
     background-color: #6A0206; }
-  .color-row .red-darker {
+  .color-row .red-600 {
     background-color: #470102; }
-  .color-row .orange-lighter {
+  .color-row .orange-100 {
     background-color: #FFE4DB; }
-  .color-row .orange-light {
+  .color-row .orange-200 {
     background-color: #FFBEA9; }
-  .color-row .orange {
+  .color-row .orange-300 {
+    background-color: #DE6835; }
+  .color-row .orange-400 {
     background-color: #BD4D1F; }
-  .color-row .orange-dark {
-    background-color: #8C3A1D; }
-  .color-row .orange-darker {
-    background-color: #5E2713; }
-  .color-row .green-lighter {
-    background-color: #EBF4E9; }
-  .color-row .green-light {
-    background-color: #B2CFA9; }
-  .color-row .green {
-    background-color: #3F8F26; }
-  .color-row .green-dark {
-    background-color: #2D671B; }
-  .color-row .green-darker {
-    background-color: #214716; }
-  .color-row .blue-lighter {
+  .color-row .orange-500 {
+    background-color: #992D00; }
+  .color-row .orange-600 {
+    background-color: #611C00; }
+  .color-row .blue-100 {
     background-color: #E4F1FA; }
-  .color-row .blue-light {
-    background-color: #AECDEC; }
-  .color-row .blue {
+  .color-row .blue-200 {
+    background-color: #B2D5F0; }
+  .color-row .blue-300 {
+    background-color: #65ABE1; }
+  .color-row .blue-400 {
     background-color: #318FD7; }
-  .color-row .blue-dark {
+  .color-row .blue-500 {
     background-color: #1A5888; }
-  .color-row .blue-darker {
+  .color-row .blue-600 {
     background-color: #143650; }
+  .color-row .green-100 {
+    background-color: #EBF4E9; }
+  .color-row .green-200 {
+    background-color: #B2CFA9; }
+  .color-row .green-300 {
+    background-color: #6FAB5D; }
+  .color-row .green-400 {
+    background-color: #3F8F26; }
+  .color-row .green-500 {
+    background-color: #2D671B; }
+  .color-row .green-600 {
+    background-color: #214716; }
 
 .color-primary {
   float: left;

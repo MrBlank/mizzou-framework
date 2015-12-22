@@ -8,6 +8,7 @@
 @import "../sass/_mizzou-signature"; 
 @import "../sass/_grid";
 @import "../sass/_skip-to-links";
+@import "../sass/_search-forms";
 
 @media print 
 {
@@ -28,7 +29,7 @@
 .header-layer,
 .footer-layer 
 {
-    background-color: $grey-darker;
+    background-color: $grey-500;
 }
 .wrapper-layer 
 {
@@ -84,9 +85,9 @@ aside
     .box 
     {
         @include box(
-            $background:    $gold-lightest,
+            $background:    $gold-100,
             $border-size:   1px,
-            $border-color:  $gold
+            $border-color:  $gold-400
         );
     }
     h2
@@ -102,18 +103,18 @@ footer
 {   
     p 
     {
-        color: $grey-lighter;
+        color: $grey-200;
         line-height: ($font-line-height * .75);
         
         a 
         {
-            color: $grey-lighter;
+            color: $grey-200;
             
             &:hover,
             &:focus,
             &:active
             {
-                color: $gold;
+                color: $gold-400;
             }
         }
     }
@@ -140,29 +141,85 @@ footer
     }
 }
 
+
+// Search forms
+
+.search-forms
+{
+    form 
+    {
+        padding: ($base-margin * 1.5em);
+    }
+    
+    .light-gold 
+    {
+        @include search-form(
+            $theme: 'light',
+            $button-color: 'gold',
+            $button-style: 'icon'
+        );
+        background: $tan-100;
+    }
+    .light-orange 
+    {
+        @include search-form(
+            $theme: 'light',
+            $button-color: 'orange'
+        );
+        background: $gold-100;
+    }
+    .light-grey 
+    {
+        @include search-form(
+            $theme: 'light',
+            $button-color: 'grey',
+            $button-style: 'icon'
+        );
+        background: $grey-100;
+    }
+    .dark-gold 
+    {
+        @include search-form(
+            $theme: 'dark',
+            $button-color: 'gold'
+        );
+        background: black;
+    }
+    .dark-grey 
+    {
+        @include search-form(
+            $theme: 'dark',
+            $button-color: 'grey',
+            $button-style: 'icon'
+        );
+        background: $red-600;
+    }
+}
+
+
 // buttons 
 
 .light-box 
 {
     @include box(
         $padding: ($base-margin * 1.5em),
-        $background: $grey-lightest
+        $background: $grey-100
     );
 }
 .dark-box 
 {
     @include box(
         $padding: ($base-margin * 1.5em),
-        $background: $grey-darker
+        $background: $grey-500
     );
 }
 
 .buttons {
-    .brown
+    .orange
     {
         @include button(
             $size: 'small',
-            $color: 'brown'
+            $color: 'orange'
         );
     }
     
@@ -188,11 +245,11 @@ footer
             $color: 'transparent'
         );
     }
-    .brown-large
+    .orange-large
     {
         @include button(
             $size: 'large',
-            $color: 'brown'
+            $color: 'orange'
         );
     }
     
@@ -219,11 +276,11 @@ footer
         )    
     }
     
-    .dark-brown
+    .dark-orange
     {
         @include button(
             $size: 'small',
-            $color: 'brown',
+            $color: 'orange',
             $theme: 'dark'
         );
     }

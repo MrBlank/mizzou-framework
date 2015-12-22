@@ -8,34 +8,6 @@
  * @version 1.00
  */
  
- @mixin buttons() { 
-    margin-bottom: .5em; 
-    display: inline-block;
-    text-align: center;
-	padding: .5em 1em .4em;
-	line-height: 1.25;
-	text-decoration: none;
-	border: solid 1px $gold;
-	color: #222;
-	font-size: 1em;
-	font-weight: $font-default;
-    background-color: $gold-light;
-    
-    &:hover, 
-	&:focus {
-		background: $gold-lighter;
-	}
-	
-	&.outline {
-    	background-color: transparent;
-	}
-}
-.button 
-{
-    @include buttons();
-}
-
-
 /**
  * Sets up a button with custom attributes
  *
@@ -70,6 +42,13 @@
     color: $color-text;
     border: 1px solid $color-border;
     
+    /* too heavy outline
+    @if ($color-background == transparent) {
+        border: 2px solid $color-border;
+    } @else {
+        border: 1px solid $color-border;
+    }*/
+    
     // Font size
     @if ($size == 'large') {
         font-size: 1.25em;
@@ -101,84 +80,84 @@
  */
 @mixin button(
     $size:                      'small',
-    $color:                     'brown',
+    $color:                     'orange',
     $theme:                     'light'
 )
 {
     @if ($theme == 'dark') {
         @if ($color == 'gold') {
             @include custom-button(
-                $color-background: $gold-light,
+                $color-background: $gold-300,
                 $color-text: $text-color,
-                $color-border: $gold-lighter,
-                $color-background-hover: $gold-lighter,
-                $color-border-hover: $gold,
+                $color-border: $gold-200,
+                $color-background-hover: $gold-200,
+                $color-border-hover: $gold-400,
                 $size: $size
             );
         } @else if ($color == 'grey') {
             @include custom-button(
-                $color-background: $grey-lighter,
+                $color-background: $grey-200,
                 $color-text: $text-color,
-                $color-border: $grey-lightest,
-                $color-background-hover: $grey-lightest,
-                $color-text-hover: #000,
-                $color-border-hover: #fff,
+                $color-border: $grey-100,
+                $color-background-hover: $grey-100,
+                $color-text-hover: $black,
+                $color-border-hover: $white,
                 $size: $size
             );
         } @else if ($color == 'transparent') {
             @include custom-button(
-                $color-background: transparent,
-                $color-text: $gold-lighter,
-                $color-border: $gold-light,
-                $color-background-hover: $grey-dark,
-                $color-border-hover: $gold-light,
+                $color-background: none,
+                $color-text: $gold-300,
+                $color-border: $gold-300,
+                $color-background-hover: $grey-400,
+                $color-border-hover: $gold-300,
                 $size: $size
             );
         } @else { // $color == 'brown'
             @include custom-button(
-                $color-background: $orange,
-                $color-text: #fff,
-                $color-border: $orange-dark,
-                $color-background-hover: $orange-dark,
-                $color-border-hover: $orange-dark,
+                $color-background: $orange-400,
+                $color-text: $white,
+                $color-border: $orange-600,
+                $color-background-hover: $orange-600,
+                $color-border-hover: $orange-600,
                 $size: $size
             );
         }
     } @else { // $theme == 'light'
         @if ($color == 'gold') {
             @include custom-button(
-                $color-background: $gold-light,
+                $color-background: $gold-300,
                 $color-text: $text-color,
-                $color-border: $gold-dark,
-                $color-background-hover: $gold-lighter,
-                $color-border-hover: $gold-dark,
+                $color-border: $gold-500,
+                $color-background-hover: $gold-200,
+                $color-border-hover: $gold-500,
                 $size: $size
             );
         } @else if ($color == 'transparent') {
             @include custom-button(
-                $color-background: transparent,
+                $color-background: none,
                 $color-text: $text-color,
-                $color-border: $gold-dark,
-                $color-background-hover: $gold-lighter,
+                $color-border: $gold-500,
+                $color-background-hover: $gold-200,
                 $size: $size
             );
         } @else if ($color == 'grey') {
             @include custom-button(
-                $color-background: $grey-darker,
-                $color-text: #fff,
-                $color-border: #000,
-                $color-background-hover: black,
-                $color-text-hover: $gold,
-                $color-border-hover: black,
+                $color-background: $grey-600,
+                $color-text: $white,
+                $color-border: $black,
+                $color-background-hover: $black,
+                $color-text-hover: $gold-400,
+                $color-border-hover: $black,
                 $size: $size
             );
         } @else { // $color == 'brown'
             @include custom-button(
-                $color-background: $orange,
-                $color-text: #fff,
-                $color-border: $orange-dark,
-                $color-background-hover: $orange-dark,
-                $color-border-hover: $orange-dark,
+                $color-background: $orange-400,
+                $color-text: $white,
+                $color-border: $orange-600,
+                $color-background-hover: $orange-600,
+                $color-border-hover: $orange-600,
                 $size: $size
             );
         }

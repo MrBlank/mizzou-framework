@@ -161,7 +161,7 @@ Here are the variables that can be used:
     background-repeat: no-repeat;
     
     @if ($filename != 'none') {
-        background-image: url('{$image-path}/{$filename}');
+        background-image: url('#{$image-path}/#{$filename}');
     }
     
     @if ($width != 'none') {
@@ -261,6 +261,37 @@ Here are the variables that can be used with their defaults:
 
 
 
+// Border Raduis
+
+@mixin border-radius($radius: $base-border-radius) 
+{
+    border-radius: $radius;
+}
+
+// Single side border-radius
+@mixin border-top-radius($radius: $base-border-radius) 
+{
+    border-top-right-radius: $radius;
+    border-top-left-radius: $radius;
+}
+
+@mixin border-right-radius($radius: $base-border-radius) 
+{
+    border-bottom-right-radius: $radius;
+    border-top-right-radius: $radius;
+}
+
+@mixin border-bottom-radius($radius: $base-border-radius) 
+{
+    border-bottom-right-radius: $radius;
+    border-bottom-left-radius: $radius;
+}
+
+@mixin border-left-radius($radius: $base-border-radius) 
+{
+    border-bottom-left-radius: $radius;
+    border-top-left-radius: $radius;
+}
 
 
 

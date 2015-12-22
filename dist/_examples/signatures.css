@@ -6,6 +6,53 @@
  * @version 1.00
  */
 /* @group Colors */
+/*
+$gold-lightest:                 #FFF4D6 !default;
+$gold-lighter:                  #FEE8B6 !default;
+$gold-light:                    #FBD986 !default;
+$gold-400:                      $gold   !default;
+$gold-dark:                     #D79900 !default;
+$gold-darker:                   #AF7C00 !default;
+
+$warm-grey-lighter:             #f6f5ea !default;
+$warm-grey-light:               #edebd5 !default;
+$warm-grey:                     #d5d3c0 !default;
+$warm-grey-dark:                #a6a495 !default;
+$warm-grey-darker:              #77756b !default;
+$warm-grey-darkest:             #474740 !default;
+
+$grey-lightest:                 #f2f2f2 !default;
+$grey-lighter:                  #ccc    !default;
+$grey-light:                    #999    !default;
+$grey:                          #666    !default;
+$grey-dark:                     #444    !default;
+$grey-darker:                   #222    !default;
+
+
+$red-lighter:                   #FFECEC !default;
+$red-light:                     #FFC2C4 !default;
+$red:                           #900000 !default;
+$red-dark:                      #6A0206 !default;
+$red-darker:                    #470102 !default;
+
+$orange-lighter:                #FFE4DB !default;
+$orange-light:                  #FFBEA9 !default;
+$orange:                        #BD4D1F !default;
+$orange-dark:                   #8C3A1D !default;
+$orange-darker:                 #5E2713 !default;
+
+$green-lighter:                 #EBF4E9 !default;
+$green-light:                   #B2CFA9 !default;
+$green:                         #3F8F26 !default;
+$green-dark:                    #2D671B !default;
+$green-darker:                  #214716 !default;
+
+$blue-lighter:                  #E4F1FA !default;
+$blue-light:                    #AECDEC !default;
+$blue:                          #318FD7 !default;
+$blue-dark:                     #1A5888 !default;
+$blue-darker:                   #143650 !default;
+*/
 /* @end */
 /* @group Fonts */
 /* @end */
@@ -140,7 +187,7 @@ Here are the variables that can be used with their defaults:
 .unit-sig-small {
   margin-left: -1px;
   margin-left: -1px;
-  background-color: #f1b82d; }
+  background-color: #F1B82D; }
   .unit-sig-small:before, .unit-sig-small:after {
     content: ' ';
     display: table; }
@@ -374,7 +421,7 @@ Here are the variables that can be used with their defaults:
 
 .unit-sig-large-center {
   margin-left: -1px;
-  background-color: #f1b82d; }
+  background-color: #F1B82D; }
   .unit-sig-large-center .unit-sig__logo,
   .unit-sig-large-center .unit-sig__wordmark,
   .unit-sig-large-center .unit-sig__unit {
@@ -500,7 +547,7 @@ Here are the variables that can be used with their defaults:
 
 .uni-sig-small {
   margin-left: -1px;
-  background-color: #f1b82d; }
+  background-color: #F1B82D; }
   .uni-sig-small:before, .uni-sig-small:after {
     content: ' ';
     display: table; }
@@ -671,7 +718,7 @@ Here are the variables that can be used with their defaults:
       background-position: left -56px; }
 
 .uni-sig-large-center {
-  background-color: #f1b82d; }
+  background-color: #F1B82D; }
   .uni-sig-large-center .mu-sig__logo,
   .uni-sig-large-center .mu-sig__wordmark {
     margin: 0; }

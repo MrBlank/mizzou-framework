@@ -66,7 +66,7 @@ html
 {
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    background: $grey-darker;
+    background: $grey-500;
     font-family: $font-sans;
     font-size: $font-size + 0px;
     line-height: $font-line-height;
@@ -168,7 +168,7 @@ h6,
 .like-h5,
 .like-h6
 {
-    color: $grey;
+    color: $grey-400;
     font-size: 1em;
     margin: .5em 0;
 }
@@ -176,7 +176,7 @@ h6,
 h6,
 .like-h6
 {
-    color: $grey-light;
+    color: $grey-300;
     font-style: italic;
 }
 
@@ -217,6 +217,10 @@ figcaption
     font-weight: $font-bold-default;
     font-size: .875em;
     
+    & >:first-child 
+    {
+        margin-top: 0;
+    }
     p
     {
         font-size: inherit;
@@ -266,7 +270,7 @@ blockquote,
     font-size: 1.5rem;
     font-weight: $font-light;
     padding: .5rem 2rem;
-    border-left: solid 1px $gold;    
+    border-left: solid 1px $gold-400;    
     @include first-child();
     @include last-child();
     
@@ -294,7 +298,7 @@ hr
     margin: ($base-margin + 0em) 0;
     clear: both;
     border: 0;
-    border-bottom: 1px solid $gold-light;
+    border-bottom: 1px solid $hr-color;
 }
 
 /* @end */
@@ -305,12 +309,12 @@ ul,
 ol
 {
     margin: ($base-margin + 0em) 0;
-    padding-left: $base-margin * 1.5em;
+    padding-left: ($base-margin * 1.5em);
     
     ul,
     ol
     {
-        margin-bottom: 0;
+        margin: 0;
     }
 }
 
@@ -369,12 +373,12 @@ textarea
 {
     margin: 0;
     padding: 4px;
-    border: 1px solid $grey-light;
+    border: 1px solid $grey-300;
     font-size: 100%;
     font-family: inherit;
-    color: $grey-dark;
+    color: $grey-500;
     border-radius: 0;
-    box-shadow: inset 0 0 4px fade($grey-light, 75%);
+    box-shadow: inset 0 0 4px fade($grey-300, 75%);
     display: block;
     -webkit-appearance: none;
 }
@@ -408,7 +412,7 @@ table
 th,
 td
 {
-    border: 1px solid $grey-light;
+    border: 1px solid $grey-300;
     text-align: left;
 }
 
@@ -470,7 +474,7 @@ pre
 code,
 var 
 {
-    background-color: $gold-lighter;
+    background-color: $gold-200;
     padding: 0 .1875em;
 }
 
@@ -504,7 +508,7 @@ a
 abbr,
 acronym
 {
-    border-bottom: 1px dotted $grey-light;
+    border-bottom: 1px dotted $grey-300;
     cursor: help;
 }
 
@@ -529,7 +533,7 @@ sub
 
 mark
 {
-    background: $gold-lighter;
+    background: $gold-200;
 }
 small 
 {
@@ -543,10 +547,10 @@ small
 ::-moz-selection { 
     color: #000; 
     color: rgba(0,0,0,.85); 
-    background-color: lighten($gold, 25%); 
+    background-color: lighten($gold-400, 25%); 
 }
 ::selection { 
     color: #000; 
     color: rgba(0,0,0,.85); 
-    background-color: lighten($gold, 25%); 
+    background-color: lighten($gold-400, 25%); 
 }

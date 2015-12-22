@@ -77,12 +77,12 @@
     
     .alert--error &
     {
-        border-color: $red;
+        border-color: $red-400;
     }
     
     .alert--success &
     {
-        border-color: $green-dark;
+        border-color: $green-500;
     }
 }
 
