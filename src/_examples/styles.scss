@@ -1,18 +1,18 @@
-@import "../sass/_variables";
-@import "../sass/_fonts";
-@import "../sass/_base-mixins"; 
-@import "../sass/_base";
-@import "../sass/_base-helpers";  
-@import "../sass/_forms"; 
-@import "../sass/_buttons"; 
-@import "../sass/_mizzou-signature"; 
-@import "../sass/_grid";
-@import "../sass/_skip-to-links";
-@import "../sass/_search-forms";
+@import "../scss/_variables";
+@import "../scss/_fonts";
+@import "../scss/_base-mixins"; 
+@import "../scss/_base";
+@import "../scss/_base-helpers";  
+@import "../scss/_forms"; 
+@import "../scss/_buttons"; 
+@import "../scss/_mizzou-signature"; 
+@import "../scss/_grid";
+@import "../scss/_skip-to-links";
+@import "../scss/_search-forms";
 
 @media print 
 {
-    @import "../sass/_print";
+    @import "../scss/_print";
 }
 
 @include font-proxima-nova(

@@ -460,29 +460,11 @@ var
     color: black;
     white-space: pre-wrap;
 }
-pre
-{
-    padding: 1em;
-    //border: solid 1px $gold-light;
-    background-color: lighten(black, 95%);
-    
-    code 
-    {
-        background-color: transparent;
-    }
-}
 code,
 var 
 {
-    background-color: $gold-200;
     padding: 0 .1875em;
 }
-
-/* var
-{
-    font-weight: bold;
-    font-style: normal;
-}*/
 
 /* @end */
 
