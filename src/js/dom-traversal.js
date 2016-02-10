@@ -15,7 +15,7 @@
  *
  * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
  * @copyright 2015 Curators of the University of Missouri
- * @version 1.0.3
+ * @version 3.0.0
  *
  * @param string strDirection Type of traversal (Can be 'children', 'parent', 'previous', or 'next')
  * @param object objNode Reference node

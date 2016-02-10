@@ -1,0 +1,545 @@
+/**
+ * Mizzou Framework: Navigation
+ *
+ * Requires: _variables.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
+ * @copyright 2016 Curators of the University of Missouri
+ * @version 3.0.0
+ */
+
+/**
+ * Sets up a vertical navigation with custom attributes.
+ *
+ * @param color $color-background Background color.
+ * @param color $color-border Border color.
+ * @param color $color-link Link color.
+ * @param color $color-link-hover Link color on hover and focus.
+ * @param color $color-link-background-hover Link background color on hover and focus.
+ * @param color $color-background (Optional) Background color highlight (primarily used for mobile menu).
+ * @param color $color-current-page (Optional) Current page color. Defaults to $color-link-hover.
+ * @param color $color-current-page-background (Optional) Current page background color. Defaults to $color-link-background-hover.
+ * @param color $color-sub-menu-background (Optional) Sub-menu background color. Defaults to $color-background.
+ * @param color $color-sub-menu-border (Optional) Sub-menu border color. Defaults to $color-border.
+ * @param color $color-sub-menu-link (Optional) Sub-menu link color. Defaults to $color-link.
+ * @param color $color-sub-menu-link-hover (Optional) Sub-menu link color on hover and focus. Defaults to $color-link-hover.
+ * @param color $color-sub-menu-link-background-hover (Optional) Sub-menu link background color on hover and focus. Defaults to $color-link-background-hover.
+ * @param color $color-sub-menu-current-page (Optional) Sub-menu current page color. Defaults to $color-sub-menu-link-hover.
+ * @param color $color-sub-menu-current-page-background (Optional) Sub-menu current page background color. Defaults to $color-sub-menu-link-background-hover.
+ * @param boolean $include-mobile-menu (Optional) Whether to include mobile menu styles. Defaults to false.
+ * @param media query $query-disable-mobile-menu (Optional) Media query at which to disable the mobile menu. Defaults to false.
+ */
+@mixin custom-vertical-navigation(
+    $color-border,
+    $color-link,
+    $color-link-hover,
+    $color-link-background,
+    $color-link-background-hover,
+    $color-link-background-highlight:               $color-link-background,
+    $color-link-background-highlight-hover:         $color-link-background-hover,
+    $color-current-page:                            $color-link-hover,
+    $color-current-page-background:                 $color-link-background-hover,
+    $color-sub-menu-border:                         $color-border,
+    $color-sub-menu-link:                           $color-link,
+    $color-sub-menu-link-hover:                     $color-link-hover,
+    $color-sub-menu-link-background:                $color-link-background,
+    $color-sub-menu-link-background-hover:          $color-link-background-hover,
+    $color-sub-menu-current-page:                   $color-sub-menu-link-hover,
+    $color-sub-menu-current-page-background:        $color-sub-menu-link-background-hover,
+    $include-mobile-menu:                           false,
+    $query-disable-mobile-menu:                     false
+)
+{
+    background: $color-link-background;
+    color: $color-link;
+
+    .nav__list
+    {
+        padding: 0;
+        list-style: none;
+    }
+    
+    .nav__list__item__link
+    {
+        display: block;
+        margin: 0 16px;
+        padding: 8px 0;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: $font-bold;
+        color: $color-link;
+        border-bottom: 1px solid $color-border;
+        
+        &:hover,
+        &:focus,
+        &:active
+        {
+            background: $color-link-background-hover;
+            color: $color-link-hover;
+            border-top: 1px solid $color-border;
+            margin: -1px 0 0 0;
+            padding: 8px 16px;
+            position: relative;
+        }
+    }
+    
+    .nav__list__item__current-page
+    {
+        display: block;
+        margin: -1px 0 0 0;
+        padding: 8px 16px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: $font-bold;
+        color: $color-current-page;
+        border-top: 1px solid $color-border;
+        border-bottom: 1px solid $color-border;
+        background: $color-current-page-background;
+    }
+    
+    .nav__list__item
+    {
+        &:first-child
+        {
+            .nav__list__item__current-page,
+            .nav__list__item__link:hover,
+            .nav__list__item__link:focus,
+            .nav__list__item__link:active
+            {
+                border-top-width: 0;
+                margin-top: 0;
+            }
+            
+            .nav__list
+            {
+                .nav__list__item__current-page
+                {
+                    border-top-width: 1px;
+                    margin-top: -1px;
+                }
+            }
+        }
+        
+        &:last-child
+        {
+            .nav__list__item__current-page,
+            .nav__list__item__link
+            {
+                border-bottom-width: 0;
+            }
+        }
+        
+        // Sub menus
+        .nav__list
+        {
+            background: $color-sub-menu-link-background;
+            border-bottom: 1px solid $color-border;
+
+            .nav__list__item__link
+            {
+                color: $color-sub-menu-link;
+                border-color: $color-sub-menu-border;
+                
+                &:hover,
+                &:focus,
+                &:active
+                {
+                    background: $color-sub-menu-link-background-hover;
+                    color: $color-sub-menu-link-hover;
+                }
+            }
+            
+            .nav__list__item__current-page
+            {
+                background: $color-sub-menu-current-page-background;
+                color: $color-sub-menu-current-page;
+                border-color: $color-sub-menu-border;
+            }
+            
+            // Disable further levels
+            .nav__list
+            {
+                display: none;
+            }
+        }
+    }
+    
+    // Mobile menu
+    @if ($include-mobile-menu) {
+        
+        &.nav--hide 
+        {
+            .nav__mobile-menu-button__header:before,
+            .nav__mobile-menu-button__header:after,
+            .nav__mobile-menu-button:after
+            {
+                transform: none;
+            }
+            
+            .nav__list
+            {
+                display: none;
+                
+                @if ($query-disable-mobile-menu != false) {
+                    @media #{$query-disable-mobile-menu}
+                    {
+                        display: block;
+                    }
+                }
+            }
+        }
+        
+        .nav__list
+        {
+            height: auto;
+        }
+        
+        .nav__mobile-menu-button
+        {
+            position: relative;
+            cursor: pointer;
+            min-width: 56px;
+            text-transform: uppercase;
+            padding: 16px 16px 16px 56px;
+            min-height: 54px;
+            text-decoration: none;
+            display: block;
+            font-weight: $font-bold;
+            border-bottom: 1px solid $color-border;
+            
+            @if (lightness($color-border) <= lightness($color-link-background-highlight)) {
+                border-top: 1px solid $color-border;
+            }
+            
+            @if ($color-link-background != $color-link-background-highlight) {
+                background-image: linear-gradient(to bottom, $color-link-background-highlight 0%, $color-link-background 100%);
+            }
+            
+            @if ($query-disable-mobile-menu != false) {
+                @media #{$query-disable-mobile-menu}
+                {
+                    display: none;
+                }
+            }
+            
+            &:hover,
+            &:focus
+            {
+                background-color: $color-link-background-hover;
+                
+                @if ($color-link-background-hover != $color-link-background-highlight-hover) {
+                    background-image: linear-gradient(to bottom, $color-link-background-highlight-hover 0%, $color-link-background-hover 100%);
+                }
+                            
+                .nav__mobile-menu-button__header
+                {
+                    color: $color-link-hover;
+                }
+                
+                .nav__mobile-menu-button__header:before,
+                .nav__mobile-menu-button__header:after,
+                &:after
+                {
+                    background: $color-link-hover;
+                }
+            }
+        }
+        
+        .nav__mobile-menu-button__header
+        {
+            font-size: 18px;
+            line-height: 1.2;
+            color: $color-link;
+            margin: 0;
+            display: block;
+        }
+        
+        // Hamburger button bars
+        .nav__mobile-menu-button__header:before,
+        .nav__mobile-menu-button__header:after,
+        .nav__mobile-menu-button:after
+        {
+            content: ' ';
+            display: block;
+            width: 24px;
+            height: 4px;
+            border-radius: 2px;
+            background: $color-link;
+            position: absolute;
+            left: 16px;
+        }
+        
+        // Top and bottom bar
+        .nav__mobile-menu-button__header:before,
+        .nav__mobile-menu-button:after
+        {
+            transition: 0.1s transform linear;
+        }
+        
+        // Top bar
+        .nav__mobile-menu-button__header:before
+        {
+            top: 16px;
+            transform: translateY(8px) rotate(45deg);
+        }
+        
+        // Middle bar
+        .nav__mobile-menu-button__header:after
+        {
+            top: 24px;
+            transform: scale(0);
+        }
+        
+        // Bottom bar
+        .nav__mobile-menu-button:after
+        {
+            top: 32px;      
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    }
+}
+
+/**
+ * Sets up vertical navigation.
+ *
+ * @param string $color (Optional) Navigation color. Can be 'gold', 'tan', or 'grey'. Defaults to 'gold'.
+ * @param boolean $include-mobile-menu (Optional) Whether to include mobile menu styles. Defaults to false.
+ * @param media query $query-disable-mobile-menu (Optional) Media query at which to disable the mobile menu. Defaults to false.
+ */
+@mixin vertical-navigation(
+    $color:                         'gold',
+    $include-mobile-menu:           false,
+    $query-disable-mobile-menu:     false
+)
+{
+    @if ($color == 'tan') {
+        @include custom-vertical-navigation(
+            $color-border: $gold-500,
+            $color-link: $color-orange-500,
+            $color-link-background-highlight: $gold-100,
+            $color-link-background: $gold-200,
+            $color-link-hover: $color-orange-600,
+            $color-link-background-highlight-hover: #fff,
+            $color-link-background-hover: $gold-100,
+            $color-sub-menu-border: $gold-200,
+            $color-sub-menu-link: $color-orange-500,
+            $color-sub-menu-link-background: #fff,
+            $color-sub-menu-link-hover: $color-orange-600,
+            $color-sub-menu-link-background-hover: $gold-100,
+            $include-mobile-menu: $include-mobile-menu,
+            $query-disable-mobile-menu: $query-disable-mobile-menu
+        );
+    } @else if ($color == 'grey') {
+        @include custom-vertical-navigation(
+            $color-border: #000,
+            $color-link: #fff,
+            $color-link-background-highlight: $grey-400,
+            $color-link-background: $grey-500,
+            $color-link-hover: $gold-400,
+            $color-link-background-highlight-hover: $grey-600,
+            $color-link-background-hover: #000,
+            $color-sub-menu-border: #000,
+            $color-sub-menu-link: #fff,
+            $color-sub-menu-link-background: $grey-600,
+            $color-sub-menu-link-hover: $gold-300,
+            $color-sub-menu-link-background-hover: #000,
+            $include-mobile-menu: $include-mobile-menu,
+            $query-disable-mobile-menu: $query-disable-mobile-menu
+        );
+    } @else if ($color == 'black') {
+        @include custom-vertical-navigation(
+            $color-border: #000,
+            $color-link: #fff,
+            $color-link-background-highlight: $grey-600,
+            $color-link-background: #000,
+            $color-link-hover: $gold-400,
+            $color-link-background-highlight-hover: $grey-500,
+            $color-link-background-hover: $grey-600,
+            $color-sub-menu-border: #000,
+            $color-sub-menu-link: #fff,
+            $color-sub-menu-link-background: $grey-500,
+            $color-sub-menu-link-hover: $gold-300,
+            $color-sub-menu-link-background-hover: $grey-600,
+            $include-mobile-menu: $include-mobile-menu,
+            $query-disable-mobile-menu: $query-disable-mobile-menu
+        );
+    } @else { // gold
+        @include custom-vertical-navigation(
+            $color-border: $gold-500,
+            $color-link: #000,
+            $color-link-background-highlight: $gold-200,
+            $color-link-background: lighten($gold-400, 9%),
+            $color-link-hover: $color-orange-500,
+            $color-link-background-highlight-hover: #fff,
+            $color-link-background-hover: $gold-100,
+            $color-sub-menu-border: $gold-400,
+            $color-sub-menu-link: #000,
+            $color-sub-menu-link-background: $gold-200,
+            $color-sub-menu-link-hover: $color-orange-500,
+            $color-sub-menu-link-background-hover: $gold-100,
+            $include-mobile-menu: $include-mobile-menu,
+            $query-disable-mobile-menu: $query-disable-mobile-menu
+        );
+    }
+}
+
+/**
+ * Sets up a horizontal navigation with custom attributes.
+ *
+ * @param color $color-border Border color.
+ * @param color $color-link Link color.
+ * @param color $color-link-hover Link color on hover and focus.
+ * @param color $color-background-highlight Background gradient top color.
+ * @param color $color-background Background gradient bottom color.
+ * @param color $color-link-background-hover-highlight Link background gradient on hover and focus top color.
+ * @param color $color-link-background-hover Link background gradient on hover and focus bottom color.
+ * @param color $color-current-page (Optional) Current page color. Defaults to $color-link-hover.
+ * @param color $color-current-page-background-highlight (Optional) Current page background gradient top color. Defaults to $color-link-background-hover-highlight.
+ * @param color $color-current-page-background (Optional) Current page background gradient bottom color. Defaults to $color-link-background-hover.
+ */
+@mixin custom-horizontal-navigation(
+    $color-border,
+    $color-link,
+    $color-link-hover,
+    $color-link-background-highlight,
+    $color-link-background,
+    $color-link-background-hover-highlight,
+    $color-link-background-hover,
+    $color-current-page:                            $color-link-hover,
+    $color-current-page-background-highlight:       $color-link-background-hover-highlight,
+    $color-current-page-background:                 $color-link-background-hover
+)
+{
+    @include clear-fix;
+    position: relative;
+    border: 1px solid $color-border;
+    background-color: $color-link-background;
+    
+    @if ($color-link-background != $color-link-background-highlight) {
+        background-image: linear-gradient(to bottom, $color-link-background-highlight 0%, $color-link-background 100%);
+    }
+    
+    .nav__list
+    {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .nav__list__item__link,
+    .nav__list__item__current-page
+    {
+        font-weight: $font-bold;
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+        padding: 8px 16px;
+        margin-left: -1px;
+        float: left;
+        border: 0;
+        border-left: 1px solid $color-border;
+        border-right: 1px solid $color-border;
+    }
+    
+    .nav__list__item__link
+    {
+        color: $color-link;
+        border-image: linear-gradient(to bottom, transparentize($color-border, 1), $color-border, transparentize($color-border, 1)) 0 1 repeat;
+
+        &:hover,
+        &:focus,
+        &:active
+        {
+            color: $color-link-hover;
+            border-image: none;
+            background-color: $color-link-background-hover;
+            
+            @if ($color-link-background-hover != $color-link-background-hover-highlight) {
+                background-image: linear-gradient(to bottom, $color-link-background-hover-highlight 0%, $color-link-background-hover 100%);
+            }
+        }
+    }
+    
+    .nav__list__item__current-page
+    {
+        color: $color-current-page;
+        background-color: $color-current-page-background;
+        
+        @if ($color-current-page-background != $color-current-page-background-highlight) {
+            background-image: linear-gradient(to bottom, $color-current-page-background-highlight 0%, $color-current-page-background 100%);
+        }
+    }
+    
+    .nav__list__item
+    {
+        &:first-child
+        {
+            .nav__list__item__link
+            {
+                border-left: 1px solid $color-border;
+            }
+            
+            .nav__list__item__current-page
+            {
+                margin-left: 0;
+            }
+        }
+        
+        // Disable further levels
+        .nav__list
+        {
+            display: none;
+        }
+    }
+}
+
+/**
+ * Sets up horizontal navigation.
+ *
+ * @param string $color (Optional) Navigation color. Can be 'gold', 'tan', or 'grey'. Defaults to 'gold'.
+ */
+@mixin horizontal-navigation(
+    $color: 'gold'
+)
+{
+    @if ($color == 'tan') {
+        @include custom-horizontal-navigation(
+            $color-border: $gold-500,
+            $color-link: $color-orange-500,
+            $color-link-background-highlight: $gold-100,
+            $color-link-background: $gold-200,
+            $color-link-hover: $color-orange-600,
+            $color-link-background-hover-highlight: #fff,
+            $color-link-background-hover: $gold-100
+        );
+    } @else if ($color == 'grey') {
+        @include custom-horizontal-navigation(
+            $color-border: #000,
+            $color-link: #fff,
+            $color-link-background-highlight: $grey-400,
+            $color-link-background: $grey-500,
+            $color-link-hover: $gold-400,
+            $color-link-background-hover-highlight: $grey-600,
+            $color-link-background-hover: #000
+        );
+    } @else if ($color == 'black') {
+        @include custom-horizontal-navigation(
+            $color-border: #000,
+            $color-link: #fff,
+            $color-link-background-highlight: $grey-600,
+            $color-link-background: #000,
+            $color-link-hover: $gold-400,
+            $color-link-background-hover-highlight: $grey-500,
+            $color-link-background-hover: $grey-600
+        );
+    } @else { // gold
+        @include custom-horizontal-navigation(
+            $color-border: $gold-500,
+            $color-link: #000,
+            $color-link-background-highlight: $gold-200,
+            $color-link-background: lighten($gold-400, 9%),
+            $color-link-hover: $color-orange-500,
+            $color-link-background-hover-highlight: #fff,
+            $color-link-background-hover: $gold-100
+        );
+    }
+}

@@ -13,7 +13,7 @@
  *
  * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
  * @copyright 2015 Curators of the University of Missouri
- * @version 1.0.4
+ * @version 3.0.0
  */
 
 function ClassManipulation() {}

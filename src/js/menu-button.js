@@ -8,7 +8,7 @@
  *
  * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
  * @copyright 2015 Curators of the University of Missouri
- * @version 1.2
+ * @version 3.0.0
  */
 
 // Class manipulation object
@@ -16,10 +16,13 @@ var objClassManipulation = new ClassManipulation();
 
 /**
  * Toggle visibility of menu
+ *
+ * @param object objEvent Event
  */
-function toggleNavVisibility()
+function toggleNavVisibility(objEvent)
 {
-    objClassManipulation.toggleClass(domTraversal('parent', this), 'hide-nav');
+    objEvent.preventDefault();
+    objClassManipulation.toggleClass(domTraversal('parent', this), 'nav--hide');
     return false;
 }
 
@@ -29,9 +32,8 @@ function toggleNavVisibility()
  * @param string strSelector Selector to apply to (i.e. 'nav' or '.menu')
  * @param string strCloneToSelector (Optional) Selector to clone the nav to
  * @param string strMenuTitle (Optional) Text node for the menu button. Defaults to 'Menu'
- * @param string strMenuTag (Optional) Type of tag to wrap around the text node. Defaults to 'h2'
  */
-function setupNavMenuButton(strSelector, strCloneToSelector, strMenuTitle, strMenuTag)
+function setupNavMenuButton(strSelector, strCloneToSelector, strMenuTitle)
 {
     // Setup variables
     var objClonedElement, objElements, objElementsToCloneTo, objHTMLTag, objLinks, objMenuBlock, objMenuBlockHeader;
@@ -39,11 +41,6 @@ function setupNavMenuButton(strSelector, strCloneToSelector, strMenuTitle, strMe
     // Set default for menu title
     if (typeof strMenuTitle === 'undefined') {
         strMenuTitle = 'Menu';
-    }
-    
-    // Set default for menu tag
-    if (typeof strMenuTag === 'undefined') {
-        strMenuTag = 'h2';
     }
     
     // Grab matching elements
@@ -65,10 +62,12 @@ function setupNavMenuButton(strSelector, strCloneToSelector, strMenuTitle, strMe
                 }
             }
             
-            // Create <div class="menu-button" tabindex="0">Menu</div>
-            objMenuBlock = document.createElement('div');
-            objClassManipulation.addClass(objMenuBlock, 'menu-button');
-            objMenuBlockHeader = document.createElement(strMenuTag);
+            // Create <a href="#" class="nav__mobile-menu-button"><span class="nav__mobile-menu-button__header">Menu</span></a>
+            objMenuBlock = document.createElement('a');
+            objMenuBlock.href = '#';
+            objClassManipulation.addClass(objMenuBlock, 'nav__mobile-menu-button');
+            objMenuBlockHeader = document.createElement('span');
+            objClassManipulation.addClass(objMenuBlockHeader, 'nav__mobile-menu-button__header');
             objMenuBlockHeader.appendChild(document.createTextNode(strMenuTitle));
             objMenuBlock.appendChild(objMenuBlockHeader);
             objMenuBlock.tabIndex = 0;
@@ -95,9 +94,9 @@ function setupNavMenuButton(strSelector, strCloneToSelector, strMenuTitle, strMe
             // Insert the element
             objElements[i].insertBefore(objMenuBlock, objElements[i].firstChild);
             
-            // Add a class to the element hiding the menu (if the element doesn't have an "open-by-default" class
-            if (!objClassManipulation.hasClass(objElements[i], 'open-by-default')) {
-                objClassManipulation.addClass(objElements[i], 'hide-nav');
+            // Add a class to the element hiding the menu (if the element doesn't have an "nav--open-by-default" class
+            if (!objClassManipulation.hasClass(objElements[i], 'nav--open-by-default')) {
+                objClassManipulation.addClass(objElements[i], 'nav--hide');
             }
         }
         
