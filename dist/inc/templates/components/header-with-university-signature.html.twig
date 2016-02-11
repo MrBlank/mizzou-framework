@@ -1,0 +1,33 @@
+{#
+/**
+ * Header (With University Signature)
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 3.0.0
+ *
+ * Variables:
+ * - header_is_homepage: (boolean) Whether or not the page is the homepage (optional, see default).
+ * - header_modifier_class: (string) A modifier class to apply to the block (optional).
+ * - header_site_base_url: (string) Base URL of the site (optional, see default).
+ * - header_site_name: (string) Name of the site (optional, see default).
+ */
+#}
+{# Defaults #}
+{% set header_is_homepage = header_is_homepage|default(page.is_homepage) %}
+{% set header_site_base_url = header_site_base_url|default(site.base_url) %}
+{% set header_site_name = header_site_name|default(site.name) %}
+
+<header role="banner"{% if (header_modifier_class) %} class="{{ header_modifier_class }}"{% endif %}>
+    <div class="header__container container">
+        <h1 class="header__title">
+            {% if (header_is_homepage) %}
+                <span>{{ header_site_name|raw }}</span>
+            {% else %}
+                <a href="{{ header_site_base_url }}">{{ header_site_name|raw }}</a>
+            {% endif %}
+        </h1>
+        {% include 'components/university-signature.html.twig' ignore missing %}
+        {% include 'components/search-form.html.twig' ignore missing %}
+    </div>
+</header>

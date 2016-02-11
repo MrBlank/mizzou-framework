@@ -1,0 +1,88 @@
+{#
+/**
+ * News Stories
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 3.0.0
+ *
+ * Variables:
+ * - story_attribution: (string) Attribution for the story; i.e. "From Undergraduate Studies", or "By Josh Murray" (optional).
+ * - story_attribution_link: (string) Link for the attribution (optional).
+ * - story_category: (string) Category for the story (optional).
+ * - story_category_link: (string) Link for the category (optional).
+ * - story_date: (string) Publication date (optional).
+ * - story_excerpt: (string) Story excerpt.
+ * - story_featured: (boolean) Whether or not this is a featured story (optional, see default).
+ * - story_heading_level: (int) Heading level for the title. Can be 1-6 (optional, see default).
+ * - story_image_alt: (string) Alt attribute for the story image (only required if story_image_src is set).
+ * - story_image_src: (string) Src attribute for the story image (optional).
+ * - story_link: (string) Link for the story.
+ * - story_title: (string) Title for the story.
+ */
+#}
+{# Defaults #}
+{% set story_featured = story_featured|default(false) %}
+{% set story_heading_level = story_heading_level|default(3) %}
+
+{# Fix heading level if it's not between 1 and 6 #}
+{% if (story_heading_level > 6) or (story_heading_level <= 0) %}
+{% set story_heading_level = 3 %}
+{% endif %}
+
+<div class="story{% if (story_featured) %} story--featured{% endif %}">
+    {# Store category #}
+    {% set story_category_html %}
+    {% if (story_category) %}
+    <p class="story__category">
+        {% if (story_category_link) %}<a href="{{ story_category_link }}" aria-label="Category: {{ story_category }}">{% endif %}
+            {{ story_category|striptags|raw }}
+        {% if (story_category_link) %}</a>{% endif %}
+    </p>
+    {% endif %}
+    {% endset %}
+    
+    {% if not (story_featured) %}
+    {{ story_category__html }}
+    {% endif %}
+    
+    {% if (story_image_src) %}
+    <figure class="story__image">
+        <a href="{{ story_link }}">
+            <img src="{{ story_image_src }}" alt="{{ story_image_alt|striptags }}" />
+        </a>
+    </figure>
+    {% endif %}
+    
+    {% if (story_featured) %}<div class="story__text">{% endif %}
+    
+    {% if (story_featured) %}
+    {{ story_category__html }}
+    {% endif %}
+    
+    <h{{ story_heading_level }} class="story__title">
+        <a href="{{ story_link }}">
+            {{ story_title|striptags('<em>')|raw }}
+        </a>
+    </h{{ story_heading_level }}>
+    
+    {% if (story_date) %}
+    <p class="story__date">
+        {{ story_date|striptags }}
+    </p>
+    {% endif %}
+    
+    <div class="story__excerpt">
+        <p>{{ story_excerpt|striptags('<em>')|raw }}</p>
+    </div>
+    
+    {% if (story_attribution) %}
+    <p class="story__attribution">
+        {% if (story_attribution_link) %}<a href="{{ story_attribution_link }}">{% endif %}
+            {{ story_attribution|striptags }}
+        {% if (story_attribution_link) %}</a>{% endif %}
+    </p>
+    {% endif %}
+    
+    {% if (story_featured) %}</div>{% endif %}
+</div>

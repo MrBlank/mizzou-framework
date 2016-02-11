@@ -1,0 +1,22 @@
+{#
+/**
+ * Google Analytics
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 3.0.0
+ *
+ * Variables:
+ * - google_analytics_asset_url: (string) URL of asset directory (CSS, JavaScript, and template images) (optional, see default). 
+ * - google_analytics_detected_hostname: (string) Hostname as reported by the server (may be the live or development environment) (see default).
+ * - google_analytics_hostname: (string) Hostname of the live site (see default).
+ */
+#}
+{# Defaults #}
+{% set google_analytics_asset_url = google_analytics_asset_url|default(site.asset_url) %}
+{% set google_analytics_detected_hostname = google_analytics_detected_hostname|default(site.detected_hostname) %}
+{% set google_analytics_hostname = google_analytics_hostname|default(site.hostname) %}
+
+{% if (google_analytics_detected_hostname == google_analytics_hostname) %}
+    <script src="{{ google_analytics_asset_url }}js/google-analytics.js"></script>
+{% endif %}

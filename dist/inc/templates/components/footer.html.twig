@@ -1,0 +1,19 @@
+{#
+/**
+ * Footer (Standard Configuration)
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 3.0.0
+ *
+ * Variables:
+ * - footer_modifier_class: (string) A modifier class to apply to the block (optional).
+ */
+#}
+
+<footer role="contentinfo"{% if (footer_modifier_class) %} class="{{ footer_modifier_class }}"{% endif %}>
+    <div class="footer__container container">
+        {% include 'components/legal-text.html.twig' ignore missing %}
+        {% include 'components/social-media.html.twig' ignore missing %}
+    </div>
+</footer>

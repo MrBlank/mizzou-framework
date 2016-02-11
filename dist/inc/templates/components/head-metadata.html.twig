@@ -1,0 +1,88 @@
+{#
+/**
+ * Head: Title and Description
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 3.0.0
+ *
+ * Variables:
+ * - metadata_asset_url: (string) URL of asset directory (CSS, JavaScript, and template images) (optional, see default).
+ * - metadata_base_url: (string) Base URL of the site (optional, see default).
+ * - metadata_description: (string) Description of the page (optional, see default).
+ * - metadata_current_page: (string) URL of current page (see default).
+ * - metadata_is_homepage: (string) Whether or not the page is the homepage (optional, see default).
+ * - metadata_name: (string) Name of the site (see default).
+ * - metadata_search_enabled: (boolean) Whether or not search is enabled on the website (see default).
+ * - metadata_search_path: (string) Path for search form action attribute (optional, see default).
+ * - metadata_search_field_name: (string) Name of the search field (see default).
+ * - metadata_site_icon_color: (string) Color of icons used for Apple and social media uses (see default).
+ * - metadata_social_media_facebook_url: (string) Facebook URL (optional, see default).
+ * - metadata_social_media_flickr_url: (string) Flickr URL (optional, see default).
+ * - metadata_social_media_twitter_username: (string) Twitter username (optional, see default).
+ * - metadata_text_encoding: (string) Type of text encoding (optional, see default).
+ * - metadata_title: (string) Title of the page (optional, see default).
+ * - metadata_viewport: (string) Viewport setting (see default).
+ */
+#}
+{# Defaults #}
+{% set metadata_asset_url = icons_asset_url|default(site.asset_url) %}
+{% set metadata_base_url = metadata_base_url|default(site.base_url) %}
+{% set metadata_current_page = metadata_current_page|default(page.current_page) %}
+{% set metadata_description = metadata_description|default(page.description) %}
+{% set metadata_image = metadata_image|default(page.image) %}
+{% set metadata_is_homepage = metadata_is_homepage|default(page.is_homepage) %}
+{% set metadata_name = metadata_name|default(site.name) %}
+{% set metadata_search_enabled = metadata_search_enabled|default(site.search_enabled) %}
+{% set metadata_search_field_name = metadata_search_field_name|default(site.search_field_name) %}
+{% set metadata_search_path = metadata_search_path|default(site.search_path) %}
+{% set metadata_site_icon_color = icons_site_icon_color|default(site.site_icon_color) %}
+{% set metadata_social_media_facebook_url = metadata_social_media_facebook_url|default(site.facebook_url) %}
+{% set metadata_social_media_flickr_url = metadata_social_media_flickr_url|default(site.flickr_url) %}
+{% set metadata_social_media_twitter_username = metadata_social_media_twitter_username|default(site.twitter_username) %}
+{% set metadata_text_encoding = metadata_text_encoding|default('utf-8') %}
+{% set metadata_title = metadata_title|default(page.title) %}
+{% set metadata_viewport = metadata_viewport|default(site.viewport) %}
+
+{% block title_and_description %}
+<meta charset="{{ metadata_text_encoding }}" />
+<title>{% if (metadata_title) %}{{ metadata_title|striptags|raw }} // {% endif %}{{ metadata_name|striptags|raw }} // University of Missouri</title>
+{% if (metadata_description) %}<meta name="description" content="{{ metadata_description|striptags }}" />{% endif %}
+<meta name="viewport" content="{{ metadata_viewport }}" />
+{% endblock %}
+
+{% block structured_data %}
+{% if (metadata_is_homepage) %}
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "{{ metadata_name|striptags }}",
+    "url": "{{ metadata_base_url }}"{% if (metadata_search_enabled) %},
+    "potentialAction": {
+         "@type": "SearchAction",
+         "target": "{{ metadata_base_url }}{{ metadata_search_path }}?{{ metadata_search_field_name }}={search_term_string}",
+         "query-input": "required name=search_term_string"
+    }{% endif %}{% if (metadata_social_media_twitter_username) or (metadata_social_media_facebook_url) or (metadata_social_media_flickr_url) %},
+    "sameAs" : [
+        {% if (metadata_social_media_twitter_username) %}"https://twitter.com/{{ metadata_social_media_twitter_username }}"{% if (metadata_social_media_facebook_url) or (metadata_social_media_flickr_url) %},{% endif %}{% endif %}
+        {% if (metadata_social_media_facebook_url) %}"{{ metadata_social_media_facebook_url }}"{% if (metadata_social_media_flickr_url) %},{% endif %}{% endif %}
+        {% if (metadata_social_media_flickr_url) %}"{{ metadata_social_media_flickr_url }}"{% endif %}
+    ]{% endif %}
+}
+</script>
+{% endif %}
+{% endblock %}
+
+{% block open_graph_and_twitter %}
+<meta name="twitter:card" content="summary" />
+{% if (metadata_social_media_twitter_username) %}<meta name="twitter:site" content="@{{ metadata_social_media_twitter_username }}" />{% endif %}
+<meta property="og:url" content="{{ metadata_current_page }}" />
+<meta property="og:title" content="{% if (metadata_title) %}{{ metadata_title|striptags }} // {% endif %}{{ metadata_name|striptags }} // University of Missouri" />
+{% if (metadata_description) %}<meta property="og:description" content="{{ metadata_description|striptags }}" />{% endif %}
+{% if (metadata_image) %}
+<meta property="og:image" content="{{ metadata_image }}" />
+{% else %}
+<meta property="og:image" content="{{ metadata_asset_url }}images/site-icon-{{ metadata_site_icon_color }}-600x600.png" />
+{% endif %}
+{% endblock %}

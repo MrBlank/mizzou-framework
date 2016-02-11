@@ -1,0 +1,133 @@
+{#
+/**
+ * Search Results
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 3.0.0
+ *
+ * Variables:
+ * - search_results: (array) Results for this page.
+ *       - title: (string) Title of the result.
+ *       - summary: (string) Short summary of the result.
+ *       - url: (string) URL of the result.
+ *       - size: (string) File size.
+ *       - indent: (boolean) Whether to indent the result.
+ * - search_results_form_action_base_url: (string) Base URL for search form action attribute (optional, see default).
+ * - search_results_form_action_path: (string) Path for search form action attribute (optional, see default).
+ * - search_results_form_field_name: (string) Name of search form input (see default).
+ * - search_results_keymatches: (array) Keymatches found for this search (optional).
+ * - search_results_number_of_pages: (int) Number of pages
+ * - search_results_number_of_results: (int) Number of results (not pages)
+ * - search_results_page: (int) Current page number 
+ * - search_results_query_string: (string) Query string for search (optional).
+ * - search_results_query_url: (string) URL for links to search results pages (i.e. http://domain/?q=).
+ * - search_results_range_end: (int) Search result range end.
+ * - search_results_range_start: (int) Search result range start.
+ * - search_results_spelling_suggestions: (array) Spelling suggestions found for this search (optional)
+ */
+#}
+{# Defaults #}
+{% set search_results_form_action_base_url = search_results_form_action_base_url|default(site.base_url) %}
+{% set search_results_form_action_path = search_results_form_action_path|default(site.search_action_path) %}
+{% set search_results_form_field_name = search_results_form_field_name|default(site.search_field_name) %}
+
+{# Construct query url #}
+{% set search_results_query_url %}{{ search_results_form_action_base_url }}{{ search_results_form_action_path }}{% endset %}
+{% set search_results_query_url %}{% if (search_results_query_url|last != '/') and (search_results_query_url != '') %}/{% endif %}?{{ search_results_form_field_name }}={% endset %}
+
+{% if (search_results_spelling_suggestions) %}
+    <p class="search-results__alternative-suggestion search-results__alternative-suggestion--spelling">Did you mean 
+    {% for suggestion in search_results_spelling_suggestions -%}
+        {% if (loop.index != 1) -%}
+            , or 
+        {% endif %}
+        <a href="{{ search_results_query_url }}{{ suggestion }}">{{ suggestion }}</a>
+    {%- endfor -%}
+    ?
+    </p>
+{% endif %}
+
+{% if (search_results_keymatches) %}
+    <p class="search-results__alternative-suggestion search-results__alternative-suggestion--keymatch">You could also try 
+    {% for suggestion in search_results_keymatches -%}
+        {% if (loop.index != 1) -%}
+            , or 
+        {% endif %}
+        <a href="{{ search_results_query_url }}{{ suggestion }}">{{ suggestion }}</a>
+    {%- endfor -%}
+    .
+    </p>
+{% endif %}
+
+{% if (search_results_number_of_results == 0) %}
+    {% if (search_results_query_string) %}
+        <div class="search-results__no-results-found">
+            {% block search_results_no_results_found_message %}
+                <h2>No Results Found</h2>
+                
+                <p>Your search for <strong>{{ query_string }}</strong> did not match any documents.</p>
+                
+                <p>No pages were found containing <strong>{{ query_string }}</strong>.</p>
+                
+                <h2>Suggestions</h2>
+                
+                <ul>
+                    <li>Make sure all words are spelled correctly.</li>
+                    <li>Try different keywords.</li>
+                    <li>Try more general keywords.</li>
+                </ul>
+            {% endblock %}
+        </div>
+    {% else %}
+        <div class="search-results__no-query-string">
+            {% block search_results_no_query_string_message %}
+                <p>Please enter a search query.</p>
+            {% endblock %}
+        </div>
+    {% endif %}
+{% else %}
+    <p class="search-results__metadata">Results <strong>{{ search_results_range_start }}-{{ search_results_range_end }}</strong> of about <strong>{{ search_results_number_of_results }}</strong> for <strong>{{ search_results_query_string }}</strong></p>
+    
+    {% if (search_results) %}
+    <ul class="search-results__entries">
+        {% for entry in search_results %}
+            <li{% if (entry.indent) %} class="indent"{% endif %}>
+                <h2 class="search-results__entries__title"><a href="{{ entry.url }}">{{ entry.title|striptags('<mark><em>')|raw }}</a></h2>
+                {% if (entry.summary) %}<p class="search-results__entries__summary">{{ entry.summary|striptags('<mark><em>')|raw }}</p>{% endif %}
+                <p class="search-results__entries__url">{{ entry.url }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    
+    {% if (search_results_number_of_pages > 1) %}
+    <ul class="search-results__pagination">
+        {% if (search_results_page > 1) %}
+            <li class="search-results__pagination__item search-results__pagination__item--previous">
+                <a href="{{ search_results_query_url }}{{ search_results_query_string }}&#38;page={{ search_results_page - 1 }}" class="search-results__pagination__item__link"><span>&#171; Previous</span></a>
+            </li>
+        {% endif %}
+
+        {% for i in (search_results_page - 5)..(search_results_page + 5) %}
+            {% if (i > 0) and (i <= search_results_number_of_pages) %}
+                {% if (i == search_results_page) %}
+                    <li class="search-results__pagination__item">
+                        <strong class="search-results__pagination__item__current-page">{{ i }}</strong>
+                    </li>
+                {% else %}
+                    <li class="search-results__pagination__item">
+                        <a href="{{ search_results_query_url }}{{ search_results_query_string }}&#38;page={{ i }}" class="search-results__pagination__item__link">{{ i }}</a>
+                    </li>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+        
+        {% if (search_results_page < search_results_number_of_pages) %}
+            <li class="search-results__pagination__item search-results__pagination__item--next">
+                <a href="{{ search_results_query_url }}{{ search_results_query_string }}&#38;page={{ search_results_page + 1 }}" class="search-results__pagination__item__link"><span>Next &#187;</span></a>
+            </li>
+        {% endif %}
+    </ul>
+    {% endif %}
+{% endif %}

@@ -1,0 +1,21 @@
+{#
+/**
+ * Typekit
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 3.0.0
+ *
+ * Variables:
+ * - typekit_id: (string) Id of the "Kit" used for Typekit integration.
+ */
+#}
+{# Defaults #}
+{% set typekit_id = typekit_id|default(site.typekit_id) %}
+
+{% if (site.typekit_id) %}
+    <!--[if !lt IE 9]><!-->
+    <script src="//use.typekit.net/{{ site.typekit_id }}.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    <!--<![endif]-->
+{% endif %}

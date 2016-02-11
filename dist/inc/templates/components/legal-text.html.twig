@@ -1,0 +1,32 @@
+{#
+/**
+ * Legal Text
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 3.0.0
+ *
+ * Variables:
+ * - legal_text_modifier_class: (string) A modifier class to apply to the block (optional).
+ * - legal_text_published_by: (string) Unit responsible for publishing this website (optional, see default).
+ * - legal_text_published_by_link: (string) Link to website of unit responsible for publishing this website (optional, see default).
+ * - legal_text_year: (string) Current year (optional, see default).
+ */
+#}
+{# Defaults #}
+{% set legal_text_published_by = legal_text_published_by|default(site.published_by) %}
+{% set legal_text_published_by_link = legal_text_published_by_link|default(site.published_by_link) %}
+{% set legal_text_year = legal_text_year|default(site.year) %}
+
+<div class="legal-text{% if (legal_text_modifier_class) %} {{ legal_text_modifier_class }}{% endif %}">
+    {% if (legal_text_published_by) %}
+        <p class="legal-text__published-by">Published by the 
+            {% if (legal_text_published_by_link) %}
+                <a href="{{ legal_text_published_by_link }}">{{ legal_text_published_by }}</a>
+            {%- else -%}
+                {{ legal_text_published_by }}
+            {%- endif -%}
+        .</p>
+    {% endif %}
+    <p class="legal-text__copyright">&#169; {{ legal_text_year }} &#8212; Curators of the <a href="http://missouri.edu">University of Missouri</a>. All rights reserved. <a href="http://missouri.edu/dmca/">DMCA</a> and <a href="http://missouri.edu/copyright/">other copyright information</a>. An <a href="http://missouri.edu/eeo-aa/">equal opportunity/access/affirmative action/pro-disabled and veteran&#160;employer</a>.</p>
+</div>

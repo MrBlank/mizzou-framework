@@ -1,0 +1,35 @@
+{#
+/**
+ * Search Form
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 3.0.0
+ *
+ * Variables:
+ * - search_form_action_base_url: (string) Base URL for search form action attribute (optional, see default).
+ * - search_form_action_path: (string) Path for search form action attribute (optional, see default).
+ * - search_form_button_text: (string) Button text (optional, see default).
+ * - search_form_id: (string) Id of search form input (optional, see default).
+ * - search_form_label: (string) Label text (optional, see default).
+ * - search_form_modifier_class: (string) A modifier class to apply to the block (optional).
+ * - search_form_name: (string) Name of search form input (optional, see default).
+ * - search_form_placeholder: (string) Placeholder text of search form input (optional, see default).
+ */
+#}
+{# Defaults #}
+{% set search_form_action_base_url = search_form_action_base_url|default(site.base_url) %}
+{% set search_form_action_path = search_form_action_path|default(site.search_action_path) %}
+{% set search_form_button_text = search_form_button_text|default('Search') %}
+{% set search_form_id = search_form_id|default('search') %}
+{% set search_form_label = search_form_label|default('Search Site:') %}
+{% set search_form_field_name = search_form_name|default(site.search_field_name) %}
+{% set search_form_placeholder = search_form_placeholder|default('Search') %}
+
+<form class="search-form{% if (search_form_modifier_class) %} {{ search_form_modifier_class }}{% endif %}" method="get" action="{{ search_form_action_base_url }}{{ search_form_action_path }}">
+    <div class="search-form__container" role="search">
+        <label class="search-form__label" for="{{ search_form_id }}">{{ search_form_label }}</label>
+        <input class="search-form__input" name="{{ search_form_field_name }}" id="{{ search_form_id }}" placeholder="{{ search_form_placeholder }}" />
+        <button class="search-form__button" type="submit"><span>{{ search_form_button_text }}</span></button>
+    </div>
+</form>

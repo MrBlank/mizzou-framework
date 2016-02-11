@@ -1,0 +1,17 @@
+{#
+/**
+ * Skip to Content Link
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 3.0.0
+ *
+ * Variables:
+ * - skip_to_content_modifier_class: (string) A modifier class to apply to the block (optional).
+ * - skip_to_content_target: (string) Id of element to jump to (optional, see default).
+ */
+#}
+{# Defaults #}
+{% set skip_to_content_target = skip_to_content_target|default('#content') %}
+
+<a href="{{ skip_to_content_target }}" class="skip-to-content{% if (skip_to_content_modifier_class) %} {{ skip_to_content_modifier_class }}{% endif %}">Skip to Content</a>

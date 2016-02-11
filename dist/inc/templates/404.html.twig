@@ -1,0 +1,21 @@
+{#
+/**
+ * 404 Template
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 3.0.0
+ *
+ * Variables:
+ * - site.base_url: (string) Base URL of the site (optional).
+ */
+#}
+
+{% extends 'page.html.twig' %}
+
+{% set page.title = 'Error!' %}
+{% set page.content %}
+<p>Sorry! It doesn&#8217;t look like we were able to find that page.</p>
+
+<p><a href="{{ site.base_url }}">Return to Main Page</a></p>
+{% endset %}

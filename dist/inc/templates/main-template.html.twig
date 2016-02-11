@@ -1,0 +1,61 @@
+{#
+/**
+ * HTML Boilerplate
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 3.0.0
+ *
+ * Variables:
+ * - page.body_class: (string) Class to include on the <body> tag (optional).
+ * - page.body_id: (string) Id to include on the <body> tag (optional).
+ * - page.html_class: (string) Class to include on the <html> tag (optional).
+ * - page.html_id: (string) Id to include on the <html> tag (optional).
+ * - site.language: (string) Language code of the site (optional - see default).
+ * - wp_head: (string) <head> tag content for WordPress sites (optional).
+ * - wp_footer: (string) end of <body> tag content for WordPress sites (optional).
+ */
+#}
+<!DOCTYPE html>
+<html lang="{{ site.language|default('en') }}"{% if (page.html_id) %} class="{{ page.html_id }}"{% endif %}{% if (page.html_class) %} class="{{ page.html_class }}"{% endif %}>
+<head>
+{% block head %}
+{% include 'components/head-metadata.html.twig' ignore missing %}
+{% include 'components/head-icons.html.twig' ignore missing %}
+{% include 'components/head-css.html.twig' ignore missing %}
+{% include 'components/head-js.html.twig' ignore missing %}
+{{ wp_head }}
+{% endblock %}
+</head>
+<body{% if (page.body_id) %} class="{{ page.body_id }}"{% endif %}{% if (page.body_class) %} class="{{ page.body_class }}"{% endif %}>
+{% block outdated_browser %}
+{% include 'components/outdated-browser.html.twig' ignore missing %}
+{% endblock %}
+
+{% block skip_to_content %}
+{% include 'components/skip-to-content.html.twig' ignore missing %}
+{% endblock %}
+
+{% block header %}
+{% include 'components/header.html.twig' ignore missing %}
+{% endblock %}
+
+{% block navigation %}
+{% include 'components/navigation.html.twig' ignore missing %}
+{% endblock %}
+
+{% block main %}
+{% include 'components/main.html.twig' ignore missing %}
+{% endblock %}
+
+{% block footer %}
+{% include 'components/footer.html.twig' ignore missing %}
+{% endblock %}
+
+{% block foot %}
+{% include 'components/typekit.html.twig' ignore missing %}
+{% include 'components/google-analytics.html.twig' ignore missing %}
+{{ wp_footer }}
+{% endblock %}
+</body>
+</html>
