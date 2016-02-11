@@ -62,12 +62,12 @@ function setupNavMenuButton(strSelector, strCloneToSelector, strMenuTitle)
                 }
             }
             
-            // Create <a href="#" class="nav__mobile-menu-button"><span class="nav__mobile-menu-button__header">Menu</span></a>
+            // Create <a href="#" class="nav__menu-button"><span class="nav__menu-button__header">Menu</span></a>
             objMenuBlock = document.createElement('a');
             objMenuBlock.href = '#';
-            objClassManipulation.addClass(objMenuBlock, 'nav__mobile-menu-button');
+            objClassManipulation.addClass(objMenuBlock, 'nav__menu-button');
             objMenuBlockHeader = document.createElement('span');
-            objClassManipulation.addClass(objMenuBlockHeader, 'nav__mobile-menu-button__header');
+            objClassManipulation.addClass(objMenuBlockHeader, 'nav__menu-button__header');
             objMenuBlockHeader.appendChild(document.createTextNode(strMenuTitle));
             objMenuBlock.appendChild(objMenuBlockHeader);
             objMenuBlock.tabIndex = 0;

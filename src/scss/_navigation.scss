@@ -3,7 +3,7 @@
  *
  * Requires: _variables.scss
  *
- * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
  * @copyright 2016 Curators of the University of Missouri
  * @version 3.0.0
  */
@@ -59,7 +59,7 @@
         list-style: none;
     }
     
-    .nav__list__item__link
+    .nav__link
     {
         display: block;
         margin: 0 16px;
@@ -83,7 +83,7 @@
         }
     }
     
-    .nav__list__item__current-page
+    .nav__current-page
     {
         display: block;
         margin: -1px 0 0 0;
@@ -97,14 +97,14 @@
         background: $color-current-page-background;
     }
     
-    .nav__list__item
+    .nav__item
     {
         &:first-child
         {
-            .nav__list__item__current-page,
-            .nav__list__item__link:hover,
-            .nav__list__item__link:focus,
-            .nav__list__item__link:active
+            .nav__current-page,
+            .nav__link:hover,
+            .nav__link:focus,
+            .nav__link:active
             {
                 border-top-width: 0;
                 margin-top: 0;
@@ -112,7 +112,7 @@
             
             .nav__list
             {
-                .nav__list__item__current-page
+                .nav__current-page
                 {
                     border-top-width: 1px;
                     margin-top: -1px;
@@ -122,8 +122,8 @@
         
         &:last-child
         {
-            .nav__list__item__current-page,
-            .nav__list__item__link
+            .nav__current-page,
+            .nav__link
             {
                 border-bottom-width: 0;
             }
@@ -135,7 +135,7 @@
             background: $color-sub-menu-link-background;
             border-bottom: 1px solid $color-border;
 
-            .nav__list__item__link
+            .nav__link
             {
                 color: $color-sub-menu-link;
                 border-color: $color-sub-menu-border;
@@ -149,7 +149,7 @@
                 }
             }
             
-            .nav__list__item__current-page
+            .nav__current-page
             {
                 background: $color-sub-menu-current-page-background;
                 color: $color-sub-menu-current-page;
@@ -169,9 +169,9 @@
         
         &.nav--hide 
         {
-            .nav__mobile-menu-button__header:before,
-            .nav__mobile-menu-button__header:after,
-            .nav__mobile-menu-button:after
+            .nav__menu-button__header:before,
+            .nav__menu-button__header:after,
+            .nav__menu-button:after
             {
                 transform: none;
             }
@@ -194,7 +194,7 @@
             height: auto;
         }
         
-        .nav__mobile-menu-button
+        .nav__menu-button
         {
             position: relative;
             cursor: pointer;
@@ -231,13 +231,13 @@
                     background-image: linear-gradient(to bottom, $color-link-background-highlight-hover 0%, $color-link-background-hover 100%);
                 }
                             
-                .nav__mobile-menu-button__header
+                .nav__menu-button__header
                 {
                     color: $color-link-hover;
                 }
                 
-                .nav__mobile-menu-button__header:before,
-                .nav__mobile-menu-button__header:after,
+                .nav__menu-button__header:before,
+                .nav__menu-button__header:after,
                 &:after
                 {
                     background: $color-link-hover;
@@ -245,7 +245,7 @@
             }
         }
         
-        .nav__mobile-menu-button__header
+        .nav__menu-button__header
         {
             font-size: 18px;
             line-height: 1.2;
@@ -255,9 +255,9 @@
         }
         
         // Hamburger button bars
-        .nav__mobile-menu-button__header:before,
-        .nav__mobile-menu-button__header:after,
-        .nav__mobile-menu-button:after
+        .nav__menu-button__header:before,
+        .nav__menu-button__header:after,
+        .nav__menu-button:after
         {
             content: ' ';
             display: block;
@@ -270,28 +270,28 @@
         }
         
         // Top and bottom bar
-        .nav__mobile-menu-button__header:before,
-        .nav__mobile-menu-button:after
+        .nav__menu-button__header:before,
+        .nav__menu-button:after
         {
             transition: 0.1s transform linear;
         }
         
         // Top bar
-        .nav__mobile-menu-button__header:before
+        .nav__menu-button__header:before
         {
             top: 16px;
             transform: translateY(8px) rotate(45deg);
         }
         
         // Middle bar
-        .nav__mobile-menu-button__header:after
+        .nav__menu-button__header:after
         {
             top: 24px;
             transform: scale(0);
         }
         
         // Bottom bar
-        .nav__mobile-menu-button:after
+        .nav__menu-button:after
         {
             top: 32px;      
             transform: translateY(-8px) rotate(-45deg);
@@ -315,16 +315,16 @@
     @if ($color == 'tan') {
         @include custom-vertical-navigation(
             $color-border: $gold-500,
-            $color-link: $color-orange-500,
+            $color-link: $orange-500,
             $color-link-background-highlight: $gold-100,
             $color-link-background: $gold-200,
-            $color-link-hover: $color-orange-600,
+            $color-link-hover: $orange-600,
             $color-link-background-highlight-hover: #fff,
             $color-link-background-hover: $gold-100,
             $color-sub-menu-border: $gold-200,
-            $color-sub-menu-link: $color-orange-500,
+            $color-sub-menu-link: $orange-500,
             $color-sub-menu-link-background: #fff,
-            $color-sub-menu-link-hover: $color-orange-600,
+            $color-sub-menu-link-hover: $orange-600,
             $color-sub-menu-link-background-hover: $gold-100,
             $include-mobile-menu: $include-mobile-menu,
             $query-disable-mobile-menu: $query-disable-mobile-menu
@@ -369,13 +369,13 @@
             $color-link: #000,
             $color-link-background-highlight: $gold-200,
             $color-link-background: lighten($gold-400, 9%),
-            $color-link-hover: $color-orange-500,
+            $color-link-hover: $red-400,
             $color-link-background-highlight-hover: #fff,
             $color-link-background-hover: $gold-100,
             $color-sub-menu-border: $gold-400,
             $color-sub-menu-link: #000,
             $color-sub-menu-link-background: $gold-200,
-            $color-sub-menu-link-hover: $color-orange-500,
+            $color-sub-menu-link-hover: $red-400,
             $color-sub-menu-link-background-hover: $gold-100,
             $include-mobile-menu: $include-mobile-menu,
             $query-disable-mobile-menu: $query-disable-mobile-menu
@@ -425,8 +425,8 @@
         padding: 0;
     }
     
-    .nav__list__item__link,
-    .nav__list__item__current-page
+    .nav__link,
+    .nav__current-page
     {
         font-weight: $font-bold;
         text-decoration: none;
@@ -440,7 +440,7 @@
         border-right: 1px solid $color-border;
     }
     
-    .nav__list__item__link
+    .nav__link
     {
         color: $color-link;
         border-image: linear-gradient(to bottom, transparentize($color-border, 1), $color-border, transparentize($color-border, 1)) 0 1 repeat;
@@ -459,7 +459,7 @@
         }
     }
     
-    .nav__list__item__current-page
+    .nav__current-page
     {
         color: $color-current-page;
         background-color: $color-current-page-background;
@@ -469,16 +469,16 @@
         }
     }
     
-    .nav__list__item
+    .nav__item
     {
         &:first-child
         {
-            .nav__list__item__link
+            .nav__link
             {
                 border-left: 1px solid $color-border;
             }
             
-            .nav__list__item__current-page
+            .nav__current-page
             {
                 margin-left: 0;
             }
@@ -504,10 +504,10 @@
     @if ($color == 'tan') {
         @include custom-horizontal-navigation(
             $color-border: $gold-500,
-            $color-link: $color-orange-500,
+            $color-link: $orange-500,
             $color-link-background-highlight: $gold-100,
             $color-link-background: $gold-200,
-            $color-link-hover: $color-orange-600,
+            $color-link-hover: $orange-600,
             $color-link-background-hover-highlight: #fff,
             $color-link-background-hover: $gold-100
         );
@@ -537,7 +537,7 @@
             $color-link: #000,
             $color-link-background-highlight: $gold-200,
             $color-link-background: lighten($gold-400, 9%),
-            $color-link-hover: $color-orange-500,
+            $color-link-hover: $orange-500,
             $color-link-background-hover-highlight: #fff,
             $color-link-background-hover: $gold-100
         );
