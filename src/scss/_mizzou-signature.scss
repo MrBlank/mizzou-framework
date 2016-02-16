@@ -29,6 +29,7 @@
     // Set names
     $logo-filename:             'mu-logo-#{$size}.svg';
     $wordmark-filename:         'mu-wordmark-#{$color}-#{$size}.svg'; 
+    $wordmark-filename-print:   'mu-wordmark-black-#{$size}.svg'; 
     
     // Set dimensions
     @if ($size == 'large') {
@@ -107,7 +108,7 @@
             }
         }
         @if ($print == 'true') {
-            @include print-image('#{$image-path}/#{$wordmark-filename}'); 
+            @include print-image('#{$image-path}/#{$wordmark-filename-print}'); 
         }
     }
 }
@@ -146,6 +147,7 @@
     // Set filenames
     $logo-filename:             'mu-logo-#{$size}.svg';
     $unit-name-filename:        '#{$name-prefix}-#{$color}-#{$size}.svg';
+    $unit-name-filename-print:  '#{$name-prefix}-black-#{$size}.svg';
     $wordmark-filename:         'unit-wordmark-#{$color}-#{$size}.svg';
     $wordmark-filename-print:   'unit-wordmark-black-#{$size}.svg';
     
@@ -216,7 +218,7 @@
             }
         }
         @if ($print == 'true') {
-            @include print-image('#{$image-path}/#{$wordmark-filename}');
+            @include print-image('#{$image-path}/#{$wordmark-filename-print}');
         }
         @if ($center == 'false') {
             margin-left: $wordmark-indent;
@@ -237,7 +239,7 @@
             }
         }
         @if ($print == 'true') {
-            @include print-image('#{$image-path}/#{$unit-name-filename}');
+            @include print-image('#{$image-path}/#{$unit-name-filename-print}');
         }
     }
 }
