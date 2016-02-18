@@ -129,6 +129,7 @@
  * @param unit $wordmark-indent - (Optional) Helps left alignment with unit name when aligned left. Defaults to 0
  * @param boolean $print - (Optional) Whether to set the images up for printing. Defaults to false
  * @param boolean $center - (Optional) Whether to center the signature. Defaults to false
+ * @param boolean $health-wordmark: - (Optional) Whether to use the University of Missouri Health wordmark. Defaults to false
  */
 
 @mixin mu-unit-sig(
@@ -140,13 +141,15 @@
     $color:             'black', // black or white
     $wordmark-indent:   0, // Helps left alignment with unit name when aligned left
     $print:             'false', // false or true
-    $center:            'false' // false or true
+    $center:            'false', // false or true
+    $health-wordmark:   'false' // false or true
 ) 
 {
     // Set filenames
     $logo-filename:             'mu-logo-#{$size}.svg';
     $unit-name-filename:        '#{$name-prefix}-#{$color}-#{$size}.svg';
     $wordmark-filename:         'unit-wordmark-#{$color}-#{$size}.svg';
+    $health-wordmark-filename:  'health-wordmark-#{$color}-#{$size}.svg';
     
     // Set dimensions
     @if ($size == 'large') {
@@ -155,6 +158,7 @@
         $logo-space: 20px;
         $wordmark-width: 243px;
         $wordmark-height: 26px;
+        $health-wordmark-width: 295px;
     } 
     @if ($size == 'medium') {
         $logo-width: 50px;
@@ -162,6 +166,7 @@
         $logo-space: 15px;
         $wordmark-width: 183px;
         $wordmark-height: 20px;
+        $health-wordmark-width: 223px;
     }
     @if ($size == 'small') {
         $logo-width: 34px;
@@ -169,6 +174,7 @@
         $logo-space: 10px;
         $wordmark-width: 149px;
         $wordmark-height: 17px;
+        $health-wordmark-width: 180px;
     }
     @if ($center == 'false') {
         @include clear-fix(); // Keeps parent container at least as tall as the logo if it is not centered.
@@ -201,13 +207,23 @@
         }
     } 
     .unit-sig__wordmark a 
-    {
-        width: $wordmark-width;
+    {   
         height: $wordmark-height;
         
+        @if ($health-wordmark == 'false') {
+             width: $wordmark-width;
+        }
+        @if ($health-wordmark == 'true') {
+             width: $health-wordmark-width;
+        }
         @if ($print == 'false') {
-            background-image: url('#{$image-path}/#{$wordmark-filename}');
             
+            @if ($health-wordmark == 'false') {
+                 background-image: url('#{$image-path}/#{$wordmark-filename}');
+            }
+            @if ($health-wordmark == 'true') {
+                 background-image: url('#{$image-path}/#{$health-wordmark-filename}');
+            }
             &:hover,
             &:focus,
             &:active {
@@ -215,7 +231,13 @@
             }
         }
         @if ($print == 'true') {
-            @include print-image('#{$image-path}/#{$wordmark-filename}');
+            
+            @if ($health-wordmark == 'false') {
+                @include print-image('#{$image-path}/#{$wordmark-filename}');
+            }
+            @if ($health-wordmark == 'true') {
+                @include print-image('#{$image-path}/#{$health-wordmark-filename}');
+            }
         }
         @if ($center == 'false') {
             margin-left: $wordmark-indent;
@@ -280,6 +302,7 @@
     }
     @if ($center == 'false') {
         float: left;
+        margin-left: -1px; // Hangs the 1px rule
     }
 }
 
