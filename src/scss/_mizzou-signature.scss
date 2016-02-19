@@ -5,7 +5,7 @@
  *
  * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
  * @copyright 2015 Curators of the University of Missouri
- * @version 1.00
+ * @version 1.2
  */
 
 /* @group MU Signatures */
@@ -66,7 +66,6 @@
      
     @if ($center == 'false') {
         @include clear-fix(); // Keeps parent container at least as tall as the logo if it is not centered.
-        margin-left: -1px; // For alignment with 1px rule on image
     }
            
     .mu-sig__logo,
@@ -107,7 +106,7 @@
             }
         }
         @if ($print == 'true') {
-            @include print-image('#{$image-path}/#{$wordmark-filename}'); 
+            @include print-image('#{$wordmark-filename}'); 
         }
     }
 }
@@ -178,10 +177,7 @@
     }
     @if ($center == 'false') {
         @include clear-fix(); // Keeps parent container at least as tall as the logo if it is not centered.
-        margin-left: -1px; // For alignment with 1px rule on image
     }
-    
-    margin-left: -1px; // For alignment with 1px rule on image
     
     .unit-sig__logo,
     .unit-sig__wordmark,
@@ -233,10 +229,10 @@
         @if ($print == 'true') {
             
             @if ($health-wordmark == 'false') {
-                @include print-image('#{$image-path}/#{$wordmark-filename}');
+                @include print-image('#{$wordmark-filename}');
             }
             @if ($health-wordmark == 'true') {
-                @include print-image('#{$image-path}/#{$health-wordmark-filename}');
+                @include print-image('#{$health-wordmark-filename}');
             }
         }
         @if ($center == 'false') {
@@ -258,7 +254,7 @@
             }
         }
         @if ($print == 'true') {
-            @include print-image('#{$image-path}/#{$unit-name-filename}');
+            @include print-image('#{$unit-name-filename}');
         }
     }
 }
@@ -295,7 +291,7 @@
         background-image: url('#{$image-path}/#{$logo-filename}');
     }
     @if ($print == 'true') {
-        @include print-image('#{$image-path}/#{$logo-filename}');
+        @include print-image('#{$logo-filename}');
     }
     @if ($center == 'true') {
         margin-bottom: $logo-space; // Clear space - 1px rule

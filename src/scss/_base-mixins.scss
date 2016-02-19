@@ -5,7 +5,7 @@
  *
  * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
  * @copyright 2015 Curators of the University of Missouri
- * @version 1.00
+ * @version 1.10
  */
  
 /* @group Placeholder Selectors */
@@ -66,8 +66,8 @@ Here are the variables that can be used:
 */
 
 @mixin center-block (
-    $max-width: none, 
-    $min-width: none
+    $max-width: $base-max-width, 
+    $min-width: $base-min-width
 ) 
 {
     position: relative;
@@ -163,11 +163,9 @@ Here are the variables that can be used:
     @if ($filename != 'none') {
         background-image: url('#{$image-path}/#{$filename}');
     }
-    
     @if ($width != 'none') {
         width: $width;
     }
-    
     @if ($height != 'none') {
         height: $height;
     }
@@ -177,18 +175,30 @@ Here are the variables that can be used:
 
 // Replaces background image with content selector and after pseudo element for printing
 
-@mixin print-image($image) 
+@mixin print-image(
+    $filename:      'none',
+    $width:         'none',
+    $height:        'none'
+) 
 {
     position: relative;
     background: none;
     
     &:after {
-        content: url('#{$image}');
         text-indent: 0;
         display: block;
         position: absolute;
         top: 0;
         left: 0;
+        @if ($filename != 'none') {
+            content: url('#{$image-path}/#{$filename}');
+        }
+        @if ($width != 'none') {
+            width: $width;
+        }
+        @if ($height != 'none') {
+            height: $height;
+        }
     }
 }
  
@@ -205,7 +215,7 @@ Here are the variables that can be used with their defaults:
 
 ```
 @background: @color-box-bg          // Use 'none' to remove
-@padding: 1                         // This is a REM unit 
+@padding: 1rem 
 @border-size: 0                     // Change this to add a border
 @border-color: @color-box-border 
 @border-style: solid
@@ -217,14 +227,14 @@ Here are the variables that can be used with their defaults:
 
 @mixin box (
     $background: $box-bg-color, 
-    $padding: 1rem, 
+    $padding: 1em, 
     $border-size: 0px, 
     $border-color: $box-border-color, 
     $border-style: solid
     ) 
 {
     padding: $padding; 
-    margin-bottom: 1.5rem; 
+    margin-bottom: $base-margin + 0em; 
     @include first-child();
     @include last-child();
     
