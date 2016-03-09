@@ -131,7 +131,7 @@
  *
  * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
  * @copyright 2015 Curators of the University of Missouri
- * @version 1.00
+ * @version 1.10
  */
 /* @group Placeholder Selectors */
 /*
@@ -196,7 +196,7 @@ Here are the variables that can be used with their defaults:
 
 ```
 @background: @color-box-bg          // Use 'none' to remove
-@padding: 1                         // This is a REM unit 
+@padding: 1rem 
 @border-size: 0                     // Change this to add a border
 @border-color: @color-box-border 
 @border-style: solid
@@ -301,7 +301,7 @@ h6,
 caption,
 .like-h5,
 .like-h6 {
-  margin: 1em 0;
+  margin: 0 0 1em 0;
   font-weight: 600;
   color: #000; }
   h1 a,
@@ -320,13 +320,13 @@ caption,
 
 h1,
 .like-h1 {
-  margin: 0.75em 0;
+  margin: 0 0 0.75em 0;
   font-size: 2.5em;
   line-height: 1.2; }
 
 h2,
 .like-h2 {
-  margin: 0.75em 0;
+  margin: 0 0 0.75em 0;
   font-size: 2em;
   line-height: 1.2; }
 
@@ -354,7 +354,7 @@ h6,
   font-style: italic; }
 
 p {
-  margin: 1em 0; }
+  margin: 0 0 1em 0; }
 
 /* @end */
 /* @group Images, Figures, and Video */
@@ -369,7 +369,7 @@ figure,
 .alignleft,
 .aligncenter,
 .alignright {
-  margin: 1em 0;
+  margin: 0 0 1em 0;
   max-width: 100%; }
 
 figure.center,
@@ -390,7 +390,7 @@ iframe {
   clear: both; }
 
 .video {
-  margin: 1em 0;
+  margin: 0 0 1em 0;
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
@@ -434,7 +434,7 @@ address {
 /* @end */
 /* @group Horizontal Rules */
 hr {
-  margin: 1em 0;
+  margin: 0 0 1em 0;
   clear: both;
   border: 0;
   border-bottom: 1px solid #CCCCCC; }
@@ -443,7 +443,7 @@ hr {
 /* @group Lists */
 ul,
 ol {
-  margin: 1em 0;
+  margin: 0 0 1em 0;
   padding-left: 1.5em; }
   ul ul,
   ul ol,
@@ -456,20 +456,20 @@ li p {
   font-size: inherit; }
 
 dl {
-  margin: 1em 0;
+  margin: 0 0 1em 0;
   padding-left: 1.5em; }
 
 dt {
   font-weight: 600; }
 
 dd {
-  margin: 0.5em 0; }
+  margin: 0 0 0.5em 0; }
 
 /* @end */
 /* @group Forms */
 form,
 fieldset {
-  margin: 1em 0; }
+  margin: 0 0 1em 0; }
 
 fieldset,
 legend {
@@ -510,7 +510,7 @@ button {
 /* @end */
 /* @group Tables */
 table {
-  margin: 1em 0;
+  margin: 0 0 1em 0;
   border-collapse: collapse;
   border-spacing: 0; }
 
@@ -548,10 +548,6 @@ var {
   font-family: "source code pro", "Menlo", "Courier New", monospace;
   color: black;
   white-space: pre-wrap; }
-
-code,
-var {
-  padding: 0 .1875em; }
 
 /* @end */
 /* @group Links */
@@ -809,7 +805,7 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
  *
  * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
  * @copyright 2015 Curators of the University of Missouri
- * @version 1.00
+ * @version 1.2
  */
 /* @group MU Signatures */
 /**
@@ -834,6 +830,7 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
  * @param unit $wordmark-indent - (Optional) Helps left alignment with unit name when aligned left. Defaults to 0
  * @param boolean $print - (Optional) Whether to set the images up for printing. Defaults to false
  * @param boolean $center - (Optional) Whether to center the signature. Defaults to false
+ * @param boolean $health-wordmark: - (Optional) Whether to use the University of Missouri Health wordmark. Defaults to false
  */
 /* @end */
 /* @group Signature Mixins */
@@ -1036,7 +1033,8 @@ footer {
     float: left;
     width: 100%;
     padding-left: 0.5rem;
-    padding-right: 0.5rem; }
+    padding-right: 0.5rem;
+    margin-top: 2em; }
 
 article,
 aside {
@@ -1056,8 +1054,8 @@ aside {
   padding-left: 0.5rem;
   padding-right: 0.5rem; }
   aside .box {
-    padding: 1rem;
-    margin-bottom: 1.5rem;
+    padding: 1em;
+    margin-bottom: 1em;
     border: solid 0px #DBD5CD;
     background-color: #EDEAE6; }
     aside .box > :first-child {
@@ -1074,8 +1072,8 @@ aside {
   .grid-3:after {
     clear: both; }
   .grid-3 .box {
-    padding: 1rem;
-    margin-bottom: 1.5rem;
+    padding: 1em;
+    margin-bottom: 1em;
     border: solid 1px #F1B82D;
     background-color: #FFF4D6; }
     .grid-3 .box > :first-child {
@@ -1101,8 +1099,48 @@ footer p {
     footer p a:hover, footer p a:focus, footer p a:active {
       color: #F1B82D; }
 
-.mu-sig {
+.mu-sig:before, .mu-sig:after {
+  content: ' ';
+  display: table; }
+
+.mu-sig:after {
+  clear: both; }
+
+.mu-sig .mu-sig__logo,
+.mu-sig .mu-sig__wordmark {
+  margin: 0; }
+
+.mu-sig .mu-sig__logo a,
+.mu-sig .mu-sig__wordmark a {
+  display: block;
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: left 0;
+  margin: 0; }
+
+.mu-sig .mu-sig__logo a {
+  width: 34px;
+  height: 38px;
+  background-image: url("../images/mu-logo-small.svg");
+  float: left;
   margin-left: -1px; }
+
+.mu-sig .mu-sig__wordmark {
+  color: red;
+  margin-left: 44px;
+  padding-top: 9px; }
+
+.mu-sig .mu-sig__wordmark a {
+  width: 229px;
+  height: 27px;
+  background-image: url("../images/mu-wordmark-white-small.svg"); }
+  .mu-sig .mu-sig__wordmark a:hover, .mu-sig .mu-sig__wordmark a:focus, .mu-sig .mu-sig__wordmark a:active {
+    background-position: left -27px; }
+
+@media print {
   .mu-sig:before, .mu-sig:after {
     content: ' ';
     display: table; }
@@ -1122,71 +1160,35 @@ footer p {
     background-position: left 0;
     margin: 0; }
   .mu-sig .mu-sig__logo a {
-    width: 34px;
-    height: 38px;
-    background-image: url("../images/mu-logo-small.svg");
-    float: left; }
+    width: 66px;
+    height: 74px;
+    position: relative;
+    background: none;
+    float: left;
+    margin-left: -1px; }
+    .mu-sig .mu-sig__logo a:after {
+      text-indent: 0;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: url("../images/mu-logo-large.svg"); }
   .mu-sig .mu-sig__wordmark {
     color: red;
-    margin-left: 44px;
-    padding-top: 9px; }
+    margin-left: 86px;
+    padding-top: 14px; }
   .mu-sig .mu-sig__wordmark a {
-    width: 229px;
-    height: 27px;
-    background-image: url("../images/mu-wordmark-white-small.svg"); }
-    .mu-sig .mu-sig__wordmark a:hover, .mu-sig .mu-sig__wordmark a:focus, .mu-sig .mu-sig__wordmark a:active {
-      background-position: left -27px; }
-
-@media print {
-  .mu-sig {
-    margin-left: -1px; }
-    .mu-sig:before, .mu-sig:after {
-      content: ' ';
-      display: table; }
-    .mu-sig:after {
-      clear: both; }
-    .mu-sig .mu-sig__logo,
-    .mu-sig .mu-sig__wordmark {
-      margin: 0; }
-    .mu-sig .mu-sig__logo a,
-    .mu-sig .mu-sig__wordmark a {
+    width: 478px;
+    height: 56px;
+    position: relative;
+    background: none; }
+    .mu-sig .mu-sig__wordmark a:after {
+      text-indent: 0;
       display: block;
-      text-indent: 200%;
-      white-space: nowrap;
-      overflow: hidden;
-      padding: 0;
-      background-repeat: no-repeat;
-      background-position: left 0;
-      margin: 0; }
-    .mu-sig .mu-sig__logo a {
-      width: 66px;
-      height: 74px;
-      position: relative;
-      background: none;
-      float: left; }
-      .mu-sig .mu-sig__logo a:after {
-        content: url("../images/mu-logo-large.svg");
-        text-indent: 0;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0; }
-    .mu-sig .mu-sig__wordmark {
-      color: red;
-      margin-left: 86px;
-      padding-top: 14px; }
-    .mu-sig .mu-sig__wordmark a {
-      width: 478px;
-      height: 56px;
-      position: relative;
-      background: none; }
-      .mu-sig .mu-sig__wordmark a:after {
-        content: url("../images/mu-wordmark-black-large.svg");
-        text-indent: 0;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0; } }
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: url("../images/mu-wordmark-black-large.svg"); } }
 
 .search-forms form {
   padding: 1.5em; }
@@ -1592,7 +1594,7 @@ footer p {
 
 .light-box {
   padding: 1.5em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1em;
   border: solid 0px #DBD5CD;
   background-color: #F0F0F0; }
   .light-box > :first-child {
@@ -1602,7 +1604,7 @@ footer p {
 
 .dark-box {
   padding: 1.5em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1em;
   border: solid 0px #DBD5CD;
   background-color: #444444; }
   .dark-box > :first-child {
@@ -2000,38 +2002,37 @@ footer p {
     width: 33.33333%;
     padding-left: 0.5rem;
     padding-right: 0.5rem; }
-  .mu-sig {
+  .mu-sig:before, .mu-sig:after {
+    content: ' ';
+    display: table; }
+  .mu-sig:after {
+    clear: both; }
+  .mu-sig .mu-sig__logo,
+  .mu-sig .mu-sig__wordmark {
+    margin: 0; }
+  .mu-sig .mu-sig__logo a,
+  .mu-sig .mu-sig__wordmark a {
+    display: block;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: left 0;
+    margin: 0; }
+  .mu-sig .mu-sig__logo a {
+    width: 50px;
+    height: 56px;
+    background-image: url("../images/mu-logo-medium.svg");
+    float: left;
     margin-left: -1px; }
-    .mu-sig:before, .mu-sig:after {
-      content: ' ';
-      display: table; }
-    .mu-sig:after {
-      clear: both; }
-    .mu-sig .mu-sig__logo,
-    .mu-sig .mu-sig__wordmark {
-      margin: 0; }
-    .mu-sig .mu-sig__logo a,
-    .mu-sig .mu-sig__wordmark a {
-      display: block;
-      text-indent: 200%;
-      white-space: nowrap;
-      overflow: hidden;
-      padding: 0;
-      background-repeat: no-repeat;
-      background-position: left 0;
-      margin: 0; }
-    .mu-sig .mu-sig__logo a {
-      width: 50px;
-      height: 56px;
-      background-image: url("../images/mu-logo-medium.svg");
-      float: left; }
-    .mu-sig .mu-sig__wordmark {
-      color: red;
-      margin-left: 65px;
-      padding-top: 11px; }
-    .mu-sig .mu-sig__wordmark a {
-      width: 334px;
-      height: 39px;
-      background-image: url("../images/mu-wordmark-white-medium.svg"); }
-      .mu-sig .mu-sig__wordmark a:hover, .mu-sig .mu-sig__wordmark a:focus, .mu-sig .mu-sig__wordmark a:active {
-        background-position: left -39px; } }
+  .mu-sig .mu-sig__wordmark {
+    color: red;
+    margin-left: 65px;
+    padding-top: 11px; }
+  .mu-sig .mu-sig__wordmark a {
+    width: 334px;
+    height: 39px;
+    background-image: url("../images/mu-wordmark-white-medium.svg"); }
+    .mu-sig .mu-sig__wordmark a:hover, .mu-sig .mu-sig__wordmark a:focus, .mu-sig .mu-sig__wordmark a:active {
+      background-position: left -39px; } }

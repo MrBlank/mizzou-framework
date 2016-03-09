@@ -22,7 +22,7 @@
  *
  * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
  * @copyright 2015 Curators of the University of Missouri
- * @version 1.00
+ * @version 1.10
  */
 /* @group Placeholder Selectors */
 /*
@@ -87,7 +87,7 @@ Here are the variables that can be used with their defaults:
 
 ```
 @background: @color-box-bg          // Use 'none' to remove
-@padding: 1                         // This is a REM unit 
+@padding: 1rem 
 @border-size: 0                     // Change this to add a border
 @border-color: @color-box-border 
 @border-style: solid
@@ -103,7 +103,7 @@ Here are the variables that can be used with their defaults:
  *
  * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
  * @copyright 2015 Curators of the University of Missouri
- * @version 1.00
+ * @version 1.2
  */
 /* @group MU Signatures */
 /**
@@ -128,6 +128,7 @@ Here are the variables that can be used with their defaults:
  * @param unit $wordmark-indent - (Optional) Helps left alignment with unit name when aligned left. Defaults to 0
  * @param boolean $print - (Optional) Whether to set the images up for printing. Defaults to false
  * @param boolean $center - (Optional) Whether to center the signature. Defaults to false
+ * @param boolean $health-wordmark: - (Optional) Whether to use the University of Missouri Health wordmark. Defaults to false
  */
 /* @end */
 /* @group Signature Mixins */
@@ -138,8 +139,6 @@ Here are the variables that can be used with their defaults:
   border: solid 1px #222; }
 
 .unit-sig-small {
-  margin-left: -1px;
-  margin-left: -1px;
   background-color: #F1B82D; }
   .unit-sig-small:before, .unit-sig-small:after {
     content: ' ';
@@ -165,13 +164,14 @@ Here are the variables that can be used with their defaults:
     width: 34px;
     height: 38px;
     background-image: url("../images/mu-logo-small.svg");
-    float: left; }
+    float: left;
+    margin-left: -1px; }
   .unit-sig-small .unit-sig__wordmark,
   .unit-sig-small .unit-sig__unit {
     margin-left: 44px; }
   .unit-sig-small .unit-sig__wordmark a {
-    width: 149px;
     height: 17px;
+    width: 149px;
     background-image: url("../images/unit-wordmark-black-small.svg");
     margin-left: 0; }
     .unit-sig-small .unit-sig__wordmark a:hover, .unit-sig-small .unit-sig__wordmark a:focus, .unit-sig-small .unit-sig__wordmark a:active {
@@ -185,7 +185,6 @@ Here are the variables that can be used with their defaults:
       background-position: left -27px; }
 
 .unit-sig-small-center {
-  margin-left: -1px;
   background-color: #222; }
   .unit-sig-small-center .unit-sig__logo,
   .unit-sig-small-center .unit-sig__wordmark,
@@ -209,8 +208,8 @@ Here are the variables that can be used with their defaults:
     background-image: url("../images/mu-logo-small.svg");
     margin-bottom: 10px; }
   .unit-sig-small-center .unit-sig__wordmark a {
-    width: 149px;
     height: 17px;
+    width: 149px;
     background-image: url("../images/unit-wordmark-white-small.svg"); }
     .unit-sig-small-center .unit-sig__wordmark a:hover, .unit-sig-small-center .unit-sig__wordmark a:focus, .unit-sig-small-center .unit-sig__wordmark a:active {
       background-position: left -17px; }
@@ -222,112 +221,117 @@ Here are the variables that can be used with their defaults:
     .unit-sig-small-center .unit-sig__unit a:hover, .unit-sig-small-center .unit-sig__unit a:focus, .unit-sig-small-center .unit-sig__unit a:active {
       background-position: left -27px; }
 
-.unit-sig-medium {
-  margin-left: -1px;
-  margin-left: -1px; }
-  .unit-sig-medium:before, .unit-sig-medium:after {
-    content: ' ';
-    display: table; }
-  .unit-sig-medium:after {
-    clear: both; }
-  .unit-sig-medium .unit-sig__logo,
-  .unit-sig-medium .unit-sig__wordmark,
-  .unit-sig-medium .unit-sig__unit {
-    margin: 0; }
-  .unit-sig-medium .unit-sig__logo a,
-  .unit-sig-medium .unit-sig__wordmark a,
-  .unit-sig-medium .unit-sig__unit a {
-    display: block;
-    text-indent: 200%;
-    white-space: nowrap;
-    overflow: hidden;
-    padding: 0;
-    background-repeat: no-repeat;
-    background-position: left 0;
-    margin: 0; }
-  .unit-sig-medium .unit-sig__logo a {
-    width: 50px;
-    height: 56px;
-    position: relative;
-    background: none;
-    float: left; }
-    .unit-sig-medium .unit-sig__logo a:after {
-      content: url("../images/mu-logo-medium.svg");
-      text-indent: 0;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0; }
-  .unit-sig-medium .unit-sig__wordmark,
-  .unit-sig-medium .unit-sig__unit {
-    margin-left: 65px; }
-  .unit-sig-medium .unit-sig__wordmark a {
-    width: 183px;
-    height: 20px;
-    position: relative;
-    background: none;
-    margin-left: 0; }
-    .unit-sig-medium .unit-sig__wordmark a:after {
-      content: url("../images/unit-wordmark-black-medium.svg");
-      text-indent: 0;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0; }
-  .unit-sig-medium .unit-sig__unit a {
-    width: 284px;
-    height: 40px;
-    margin-bottom: 0;
-    position: relative;
-    background: none; }
-    .unit-sig-medium .unit-sig__unit a:after {
-      content: url("../images/unit-name-black-medium.svg");
-      text-indent: 0;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0; }
+.unit-sig-medium:before, .unit-sig-medium:after {
+  content: ' ';
+  display: table; }
 
-.unit-sig-medium-center {
+.unit-sig-medium:after {
+  clear: both; }
+
+.unit-sig-medium .unit-sig__logo,
+.unit-sig-medium .unit-sig__wordmark,
+.unit-sig-medium .unit-sig__unit {
+  margin: 0; }
+
+.unit-sig-medium .unit-sig__logo a,
+.unit-sig-medium .unit-sig__wordmark a,
+.unit-sig-medium .unit-sig__unit a {
+  display: block;
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: left 0;
+  margin: 0; }
+
+.unit-sig-medium .unit-sig__logo a {
+  width: 50px;
+  height: 56px;
+  position: relative;
+  background: none;
+  float: left;
   margin-left: -1px; }
-  .unit-sig-medium-center .unit-sig__logo,
-  .unit-sig-medium-center .unit-sig__wordmark,
-  .unit-sig-medium-center .unit-sig__unit {
-    margin: 0; }
-  .unit-sig-medium-center .unit-sig__logo a,
-  .unit-sig-medium-center .unit-sig__wordmark a,
-  .unit-sig-medium-center .unit-sig__unit a {
+  .unit-sig-medium .unit-sig__logo a:after {
+    text-indent: 0;
     display: block;
-    text-indent: 200%;
-    white-space: nowrap;
-    overflow: hidden;
-    padding: 0;
-    background-repeat: no-repeat;
-    background-position: left 0;
-    margin-left: auto;
-    margin-right: auto; }
-  .unit-sig-medium-center .unit-sig__logo a {
-    width: 50px;
-    height: 56px;
-    background-image: url("../images/mu-logo-medium.svg");
-    margin-bottom: 15px; }
-  .unit-sig-medium-center .unit-sig__wordmark a {
-    width: 183px;
-    height: 20px;
-    background-image: url("../images/unit-wordmark-black-medium.svg"); }
-    .unit-sig-medium-center .unit-sig__wordmark a:hover, .unit-sig-medium-center .unit-sig__wordmark a:focus, .unit-sig-medium-center .unit-sig__wordmark a:active {
-      background-position: left -20px; }
-  .unit-sig-medium-center .unit-sig__unit a {
-    width: 284px;
-    height: 40px;
-    margin-bottom: 0;
-    background-image: url("../images/unit-name-black-medium.svg"); }
-    .unit-sig-medium-center .unit-sig__unit a:hover, .unit-sig-medium-center .unit-sig__unit a:focus, .unit-sig-medium-center .unit-sig__unit a:active {
-      background-position: left -40px; }
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: url("../images/mu-logo-medium.svg"); }
+
+.unit-sig-medium .unit-sig__wordmark,
+.unit-sig-medium .unit-sig__unit {
+  margin-left: 65px; }
+
+.unit-sig-medium .unit-sig__wordmark a {
+  height: 20px;
+  width: 183px;
+  position: relative;
+  background: none;
+  margin-left: 0; }
+  .unit-sig-medium .unit-sig__wordmark a:after {
+    text-indent: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: url("../images/unit-wordmark-black-medium.svg"); }
+
+.unit-sig-medium .unit-sig__unit a {
+  width: 284px;
+  height: 40px;
+  margin-bottom: 0;
+  position: relative;
+  background: none; }
+  .unit-sig-medium .unit-sig__unit a:after {
+    text-indent: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: url("../images/unit-name-black-medium.svg"); }
+
+.unit-sig-medium-center .unit-sig__logo,
+.unit-sig-medium-center .unit-sig__wordmark,
+.unit-sig-medium-center .unit-sig__unit {
+  margin: 0; }
+
+.unit-sig-medium-center .unit-sig__logo a,
+.unit-sig-medium-center .unit-sig__wordmark a,
+.unit-sig-medium-center .unit-sig__unit a {
+  display: block;
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: left 0;
+  margin-left: auto;
+  margin-right: auto; }
+
+.unit-sig-medium-center .unit-sig__logo a {
+  width: 50px;
+  height: 56px;
+  background-image: url("../images/mu-logo-medium.svg");
+  margin-bottom: 15px; }
+
+.unit-sig-medium-center .unit-sig__wordmark a {
+  height: 20px;
+  width: 183px;
+  background-image: url("../images/unit-wordmark-black-medium.svg"); }
+  .unit-sig-medium-center .unit-sig__wordmark a:hover, .unit-sig-medium-center .unit-sig__wordmark a:focus, .unit-sig-medium-center .unit-sig__wordmark a:active {
+    background-position: left -20px; }
+
+.unit-sig-medium-center .unit-sig__unit a {
+  width: 284px;
+  height: 40px;
+  margin-bottom: 0;
+  background-image: url("../images/unit-name-black-medium.svg"); }
+  .unit-sig-medium-center .unit-sig__unit a:hover, .unit-sig-medium-center .unit-sig__unit a:focus, .unit-sig-medium-center .unit-sig__unit a:active {
+    background-position: left -40px; }
 
 .unit-sig-large {
-  margin-left: -1px;
-  margin-left: -1px;
   background-color: #222; }
   .unit-sig-large:before, .unit-sig-large:after {
     content: ' ';
@@ -353,13 +357,14 @@ Here are the variables that can be used with their defaults:
     width: 66px;
     height: 74px;
     background-image: url("../images/mu-logo-large.svg");
-    float: left; }
+    float: left;
+    margin-left: -1px; }
   .unit-sig-large .unit-sig__wordmark,
   .unit-sig-large .unit-sig__unit {
     margin-left: 86px; }
   .unit-sig-large .unit-sig__wordmark a {
-    width: 243px;
     height: 26px;
+    width: 243px;
     background-image: url("../images/unit-wordmark-white-large.svg");
     margin-left: 0; }
     .unit-sig-large .unit-sig__wordmark a:hover, .unit-sig-large .unit-sig__wordmark a:focus, .unit-sig-large .unit-sig__wordmark a:active {
@@ -373,7 +378,6 @@ Here are the variables that can be used with their defaults:
       background-position: left -57px; }
 
 .unit-sig-large-center {
-  margin-left: -1px;
   background-color: #F1B82D; }
   .unit-sig-large-center .unit-sig__logo,
   .unit-sig-large-center .unit-sig__wordmark,
@@ -398,24 +402,24 @@ Here are the variables that can be used with their defaults:
     background: none;
     margin-bottom: 20px; }
     .unit-sig-large-center .unit-sig__logo a:after {
-      content: url("../images/mu-logo-large.svg");
       text-indent: 0;
       display: block;
       position: absolute;
       top: 0;
-      left: 0; }
+      left: 0;
+      content: url("../images/mu-logo-large.svg"); }
   .unit-sig-large-center .unit-sig__wordmark a {
-    width: 243px;
     height: 26px;
+    width: 243px;
     position: relative;
     background: none; }
     .unit-sig-large-center .unit-sig__wordmark a:after {
-      content: url("../images/unit-wordmark-black-large.svg");
       text-indent: 0;
       display: block;
       position: absolute;
       top: 0;
-      left: 0; }
+      left: 0;
+      content: url("../images/unit-wordmark-black-large.svg"); }
   .unit-sig-large-center .unit-sig__unit a {
     width: 404px;
     height: 57px;
@@ -423,48 +427,53 @@ Here are the variables that can be used with their defaults:
     position: relative;
     background: none; }
     .unit-sig-large-center .unit-sig__unit a:after {
-      content: url("../images/unit-name-black-large.svg");
       text-indent: 0;
       display: block;
       position: absolute;
       top: 0;
-      left: 0; }
+      left: 0;
+      content: url("../images/unit-name-black-large.svg"); }
 
-.uni-sig-extra-small {
+.uni-sig-extra-small:before, .uni-sig-extra-small:after {
+  content: ' ';
+  display: table; }
+
+.uni-sig-extra-small:after {
+  clear: both; }
+
+.uni-sig-extra-small .mu-sig__logo,
+.uni-sig-extra-small .mu-sig__wordmark {
+  margin: 0; }
+
+.uni-sig-extra-small .mu-sig__logo a,
+.uni-sig-extra-small .mu-sig__wordmark a {
+  display: block;
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: left 0;
+  margin: 0; }
+
+.uni-sig-extra-small .mu-sig__logo a {
+  width: 26px;
+  height: 29px;
+  background-image: url("../images/mu-logo-extra-small.svg");
+  float: left;
   margin-left: -1px; }
-  .uni-sig-extra-small:before, .uni-sig-extra-small:after {
-    content: ' ';
-    display: table; }
-  .uni-sig-extra-small:after {
-    clear: both; }
-  .uni-sig-extra-small .mu-sig__logo,
-  .uni-sig-extra-small .mu-sig__wordmark {
-    margin: 0; }
-  .uni-sig-extra-small .mu-sig__logo a,
-  .uni-sig-extra-small .mu-sig__wordmark a {
-    display: block;
-    text-indent: 200%;
-    white-space: nowrap;
-    overflow: hidden;
-    padding: 0;
-    background-repeat: no-repeat;
-    background-position: left 0;
-    margin: 0; }
-  .uni-sig-extra-small .mu-sig__logo a {
-    width: 26px;
-    height: 29px;
-    background-image: url("../images/mu-logo-extra-small.svg");
-    float: left; }
-  .uni-sig-extra-small .mu-sig__wordmark {
-    color: red;
-    margin-left: 33px;
-    padding-top: 6px; }
-  .uni-sig-extra-small .mu-sig__wordmark a {
-    width: 177px;
-    height: 21px;
-    background-image: url("../images/mu-wordmark-black-extra-small.svg"); }
-    .uni-sig-extra-small .mu-sig__wordmark a:hover, .uni-sig-extra-small .mu-sig__wordmark a:focus, .uni-sig-extra-small .mu-sig__wordmark a:active {
-      background-position: left -21px; }
+
+.uni-sig-extra-small .mu-sig__wordmark {
+  color: red;
+  margin-left: 33px;
+  padding-top: 6px; }
+
+.uni-sig-extra-small .mu-sig__wordmark a {
+  width: 177px;
+  height: 21px;
+  background-image: url("../images/mu-wordmark-black-extra-small.svg"); }
+  .uni-sig-extra-small .mu-sig__wordmark a:hover, .uni-sig-extra-small .mu-sig__wordmark a:focus, .uni-sig-extra-small .mu-sig__wordmark a:active {
+    background-position: left -21px; }
 
 .uni-sig-extra-small-center .mu-sig__logo,
 .uni-sig-extra-small-center .mu-sig__wordmark {
@@ -499,7 +508,6 @@ Here are the variables that can be used with their defaults:
     background-position: left -21px; }
 
 .uni-sig-small {
-  margin-left: -1px;
   background-color: #F1B82D; }
   .uni-sig-small:before, .uni-sig-small:after {
     content: ' ';
@@ -523,7 +531,8 @@ Here are the variables that can be used with their defaults:
     width: 34px;
     height: 38px;
     background-image: url("../images/mu-logo-small.svg");
-    float: left; }
+    float: left;
+    margin-left: -1px; }
   .uni-sig-small .mu-sig__wordmark {
     color: red;
     margin-left: 44px;
@@ -565,41 +574,46 @@ Here are the variables that can be used with their defaults:
     .uni-sig-small-center .mu-sig__wordmark a:hover, .uni-sig-small-center .mu-sig__wordmark a:focus, .uni-sig-small-center .mu-sig__wordmark a:active {
       background-position: left -27px; }
 
-.uni-sig-medium {
+.uni-sig-medium:before, .uni-sig-medium:after {
+  content: ' ';
+  display: table; }
+
+.uni-sig-medium:after {
+  clear: both; }
+
+.uni-sig-medium .mu-sig__logo,
+.uni-sig-medium .mu-sig__wordmark {
+  margin: 0; }
+
+.uni-sig-medium .mu-sig__logo a,
+.uni-sig-medium .mu-sig__wordmark a {
+  display: block;
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: left 0;
+  margin: 0; }
+
+.uni-sig-medium .mu-sig__logo a {
+  width: 50px;
+  height: 56px;
+  background-image: url("../images/mu-logo-medium.svg");
+  float: left;
   margin-left: -1px; }
-  .uni-sig-medium:before, .uni-sig-medium:after {
-    content: ' ';
-    display: table; }
-  .uni-sig-medium:after {
-    clear: both; }
-  .uni-sig-medium .mu-sig__logo,
-  .uni-sig-medium .mu-sig__wordmark {
-    margin: 0; }
-  .uni-sig-medium .mu-sig__logo a,
-  .uni-sig-medium .mu-sig__wordmark a {
-    display: block;
-    text-indent: 200%;
-    white-space: nowrap;
-    overflow: hidden;
-    padding: 0;
-    background-repeat: no-repeat;
-    background-position: left 0;
-    margin: 0; }
-  .uni-sig-medium .mu-sig__logo a {
-    width: 50px;
-    height: 56px;
-    background-image: url("../images/mu-logo-medium.svg");
-    float: left; }
-  .uni-sig-medium .mu-sig__wordmark {
-    color: red;
-    margin-left: 65px;
-    padding-top: 11px; }
-  .uni-sig-medium .mu-sig__wordmark a {
-    width: 334px;
-    height: 39px;
-    background-image: url("../images/mu-wordmark-black-medium.svg"); }
-    .uni-sig-medium .mu-sig__wordmark a:hover, .uni-sig-medium .mu-sig__wordmark a:focus, .uni-sig-medium .mu-sig__wordmark a:active {
-      background-position: left -39px; }
+
+.uni-sig-medium .mu-sig__wordmark {
+  color: red;
+  margin-left: 65px;
+  padding-top: 11px; }
+
+.uni-sig-medium .mu-sig__wordmark a {
+  width: 334px;
+  height: 39px;
+  background-image: url("../images/mu-wordmark-black-medium.svg"); }
+  .uni-sig-medium .mu-sig__wordmark a:hover, .uni-sig-medium .mu-sig__wordmark a:focus, .uni-sig-medium .mu-sig__wordmark a:active {
+    background-position: left -39px; }
 
 .uni-sig-medium-center .mu-sig__logo,
 .uni-sig-medium-center .mu-sig__wordmark {
@@ -634,7 +648,6 @@ Here are the variables that can be used with their defaults:
     background-position: left -39px; }
 
 .uni-sig-large {
-  margin-left: -1px;
   background-color: #222; }
   .uni-sig-large:before, .uni-sig-large:after {
     content: ' ';
@@ -658,7 +671,8 @@ Here are the variables that can be used with their defaults:
     width: 66px;
     height: 74px;
     background-image: url("../images/mu-logo-large.svg");
-    float: left; }
+    float: left;
+    margin-left: -1px; }
   .uni-sig-large .mu-sig__wordmark {
     color: red;
     margin-left: 86px;

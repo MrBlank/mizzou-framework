@@ -53,6 +53,7 @@ footer
     .heading 
     {
         @include grid-column(1, 1);
+        margin-top: ($base-margin + 1em);
     }
 }
 article,

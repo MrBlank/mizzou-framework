@@ -22,7 +22,7 @@
  *
  * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
  * @copyright 2015 Curators of the University of Missouri
- * @version 1.00
+ * @version 1.10
  */
 /* @group Placeholder Selectors */
 /*
@@ -87,7 +87,7 @@ Here are the variables that can be used with their defaults:
 
 ```
 @background: @color-box-bg          // Use 'none' to remove
-@padding: 1                         // This is a REM unit 
+@padding: 1rem 
 @border-size: 0                     // Change this to add a border
 @border-color: @color-box-border 
 @border-style: solid
