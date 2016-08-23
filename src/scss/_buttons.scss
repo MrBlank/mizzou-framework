@@ -3,32 +3,32 @@
  *
  * Requires: _variables.scss
  *
- * @author Josh Nichols (nicholsjc@missouri.edu), University of Missouri
- * @copyright 2016 Curators of the University of Missouri
- * @version 1.50
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
  */
  
 /**
- * Sets up a button with custom (optional) attributes
+ * Sets up a button with custom attributes
  *
- * @param color $color-background 
- * @param color $color-text 
- * @param color $color-border 
- * @param color $color-background-hover
- * @param color $color-text-hover
- * @param color $color-border-hover 
+ * @param color $color-background Background color
+ * @param color $color-text Text color
+ * @param color $color-border Border color
+ * @param string $size (Optional) Text size. Can be 'small' or 'large'. Defaults to 'small'
+ * @param boolean $include-print-style (Optional) Whether to make the button black and white for printing. Defaults to true
  */
- 
 @mixin custom-button(
-    $color-background:              $gold-400,
-    $color-text:                    $black,
-    $color-border:                  $gold-400,
-    $color-background-hover:        $gold-200,
-    $color-text-hover:              $black,
-    $color-border-hover:            $gold-400
-){
+    $color-background,
+    $color-text,
+    $color-border,
+    $color-background-hover:        $color-background,
+    $color-text-hover:              $color-text,
+    $color-border-hover:            $color-border,
+    $size:                          'small'
+)
+{
     font-weight: $font-bold;
-    display: block;
+    display: inline-block;
     text-decoration: none;
     font-family: $font-default;
     cursor: pointer;
@@ -41,14 +41,29 @@
     background: $color-background;
     color: $color-text;
     border: 1px solid $color-border;
-    font-size: 1em;
-    border-radius: $base-border-radius;
-    padding: .5em .75em .4em;
-    margin: ($base-margin * .5em) 0 ($base-margin * 1em) 0;
+    
+    /* too heavy outline
+    @if ($color-background == transparent) {
+        border: 2px solid $color-border;
+    } @else {
+        border: 1px solid $color-border;
+    }*/
+    
+    // Font size
+    @if ($size == 'large') {
+        font-size: 1.25em;
+        padding: .3333em 1em;
+        border-radius: ($base-border-radius + 2px);
+    } @else { // $size == 'small'
+        font-size: 1em;
+        padding: .3333em 1em;
+        border-radius: $base-border-radius;
+    }
         
     &:hover,
     &:focus,
-    &:active {
+    &:active
+    {
         background: $color-background-hover;
         color: $color-text-hover;
         border-color: $color-border-hover;
@@ -56,194 +71,16 @@
 }
 
 /**
- * Sets the button's display to inline-block 
- */
-
-@mixin button--inline-block() {
-        
-    display: inline-block;
-    margin-right: .5em;
-    margin-bottom: ($base-margin * .5em);
-}
-
-/**
- * Sets the button's display to block (this is the default style for custom-button)
- */
-
-@mixin button--block() {
-        
-    display: block;
-    margin-right: 0;
-    margin-bottom: ($base-margin * 1em);
-}
- 
-
-/**
- * Standard button styles.
- */
-
-.button:last-child {
-    margin-bottom: ($base-margin * .5em);
-}
-
-.button { 
-    @include custom-button(
-        $color-background:          $gold,
-        $color-text:                $black,
-        $color-border:              $gold,
-        $color-background-hover:    $gold-200,
-        $color-text-hover:          $black,
-        $color-border-hover:        $gold
-    );
-    
-    /*
-    &.button--reversed {
-        background-color: $gold-200;
-        border-color: $gold-200;
-        
-        &:hover,
-        &:focus,
-        &:active {
-            background-color: $gold-400;
-            border-color: $gold-400;
-        }
-    }
-    
-    
-    &.button--alternate { // For gold backgrounds
-        background-color: $grey-600;
-        color: $grey-100;
-        border-color: $grey-600;
-    
-        &:hover,
-        &:focus,
-        &:active {
-            background-color: fade-out($grey-600, .3);
-            color: $grey-100;
-            border-color: $grey-600;
-        }
-    }*/
-    
-    
-    &.button--secondary {
-        background-color: fade-out($gold, .9);
-    
-        &:hover,
-        &:focus,
-        &:active {
-            background: fade-out($gold, .6);
-        }
-    }
-    
-    /*
-    &.button--secondary-reversed {
-        background-color: transparent;
-        color: $grey-100;
-        border-color: $gold;
-        
-        &:hover,
-        &:focus,
-        &:active {
-            background-color: fade-out($gold-200, .8);
-            color: $grey-100;
-            border-color: $gold;
-        }
-    }
-    &.button--secondary-alternate { // For gold backgrounds
-        background-color: transparent;
-        color: $grey-600;
-        border-color: $grey-600;
-    
-        &:hover,
-        &:focus,
-        &:active {
-            background-color: fade-out($gold-200, .6);
-            color: $grey-600;
-            border-color: $grey-600;
-        }
-    }
-    */
-    
-    &.button--apply { 
-        color: $white !important;
-        border-color: $red-400 !important;
-        background-color: $red-400 !important;
-        
-        &:hover,
-        &:focus,
-        &:active {
-            background: $red-600 !important;
-            color: $gold !important;
-            border-color: $red-400 !important;
-        }
-
-        position: relative;
-        margin-top: 55px;
-        min-width: 180px; // Hands are 140px wide
-        
-        &:after { // Truman Hands
-    		content: '';
-    		display: block;
-    		width: 100%;
-    		height: 22px;
-    		background: transparent url('#{$image-path}/truman-paws.png') no-repeat center center;
-    		background-size: 140px 22px;
-    		position: absolute;
-    		top: -10px;
-    		left: 0px;
-        }
-        &:before { // Truman Head - Uses a 'span' for transition support
-        	content: '';
-        	display: block;
-        	width: 100%;
-        	height: 50px;
-        	background: transparent url('#{$image-path}/truman-face.png') no-repeat center 20px;
-        	background-size: 80px 83px;
-        	position: absolute;
-        	top: -51px;
-        	left: 0;
-        	transition: background linear .2s;
-        }
-        &:hover,
-        &:focus {
-        	
-        	&:before {
-        		background-position: center 0px;			
-        	}
-        }
-
-    } 
-    
-    @media #{$query-2x} {
-    	
-    	&.button--apply:before {
-    		background-image: url('#{$image-path}/truman-face-2x.png');
-    	}
-    	&.button--apply:after {
-    		background-image: url('#{$image-path}/truman-paws-2x.png');
-    	}
-    
-    }
-    
-}
-
-
-
-
-
-
-// DEPRICATED FOR CLASS-BASED THEMES
-
-/**
  * Sets up a button with common attributes
  *
+ * @param string $size (Optional) Text size. Can be 'small' or 'large'. Defaults to 'small'
  * @param string $color (Optional) Button color. Can be 'brown', 'gold', or 'grey'. Defaults to 'brown'
  * @param string $theme (Optional) Color theme. Can be 'light' or 'dark'. Dark gives the button a lighter border. Defaults to 'light'
  * @param boolean $include-print-style (Optional) Whether to make the button black and white for printing. Defaults to true
  */
-/* 
 @mixin button(
-    $color:                     'gold',
+    $size:                      'small',
+    $color:                     'orange',
     $theme:                     'light'
 )
 {
@@ -254,7 +91,8 @@
                 $color-text: $text-color,
                 $color-border: $gold-200,
                 $color-background-hover: $gold-200,
-                $color-border-hover: $gold-400
+                $color-border-hover: $gold-400,
+                $size: $size
             );
         } @else if ($color == 'grey') {
             @include custom-button(
@@ -263,7 +101,8 @@
                 $color-border: $grey-100,
                 $color-background-hover: $grey-100,
                 $color-text-hover: $black,
-                $color-border-hover: $white
+                $color-border-hover: $white,
+                $size: $size
             );
         } @else if ($color == 'transparent') {
             @include custom-button(
@@ -271,7 +110,8 @@
                 $color-text: $gold-300,
                 $color-border: $gold-300,
                 $color-background-hover: $grey-400,
-                $color-border-hover: $gold-300
+                $color-border-hover: $gold-300,
+                $size: $size
             );
         } @else { // $color == 'brown'
             @include custom-button(
@@ -279,7 +119,8 @@
                 $color-text: $white,
                 $color-border: $orange-600,
                 $color-background-hover: $orange-600,
-                $color-border-hover: $orange-600
+                $color-border-hover: $orange-600,
+                $size: $size
             );
         }
     } @else { // $theme == 'light'
@@ -289,14 +130,16 @@
                 $color-text: $text-color,
                 $color-border: $gold-500,
                 $color-background-hover: $gold-200,
-                $color-border-hover: $gold-500
+                $color-border-hover: $gold-500,
+                $size: $size
             );
         } @else if ($color == 'transparent') {
             @include custom-button(
                 $color-background: none,
                 $color-text: $text-color,
                 $color-border: $gold-500,
-                $color-background-hover: $gold-200
+                $color-background-hover: $gold-200,
+                $size: $size
             );
         } @else if ($color == 'grey') {
             @include custom-button(
@@ -305,7 +148,8 @@
                 $color-border: $black,
                 $color-background-hover: $black,
                 $color-text-hover: $gold-400,
-                $color-border-hover: $black
+                $color-border-hover: $black,
+                $size: $size
             );
         } @else { // $color == 'brown'
             @include custom-button(
@@ -313,8 +157,9 @@
                 $color-text: $white,
                 $color-border: $orange-600,
                 $color-background-hover: $orange-600,
-                $color-border-hover: $orange-600
+                $color-border-hover: $orange-600,
+                $size: $size
             );
         }
     }
-}*/
+}

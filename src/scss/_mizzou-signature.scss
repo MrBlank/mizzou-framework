@@ -47,14 +47,15 @@
         $wordmark-height: 39px;
         $wordmark-top: 11px;
     } 
-    @if ($size == 'small')  {
+    // $size == 'small'
+        
         $logo-width: 34px;
         $logo-height: 38px;
         $logo-space: 10px;
         $wordmark-width: 229px;
         $wordmark-height: 27px;
         $wordmark-top: 9px;
-    } 
+    
     @if ($size == 'extra-small') {
         $logo-width: 26px;
         $logo-height: 29px;
