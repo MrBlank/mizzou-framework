@@ -74,7 +74,7 @@
  * Sets up a button with common attributes
  *
  * @param string $size (Optional) Text size. Can be 'small' or 'large'. Defaults to 'small'
- * @param string $color (Optional) Button color. Can be 'brown', 'gold', or 'grey'. Defaults to 'brown'
+ * @param string $color (Optional) Button color. Can be 'brown', 'gold', or 'gray'. Defaults to 'brown'
  * @param string $theme (Optional) Color theme. Can be 'light' or 'dark'. Dark gives the button a lighter border. Defaults to 'light'
  * @param boolean $include-print-style (Optional) Whether to make the button black and white for printing. Defaults to true
  */
@@ -94,12 +94,12 @@
                 $color-border-hover: $gold-400,
                 $size: $size
             );
-        } @else if ($color == 'grey') {
+        } @else if ($color == 'gray') {
             @include custom-button(
-                $color-background: $grey-200,
+                $color-background: $gray-200,
                 $color-text: $text-color,
-                $color-border: $grey-100,
-                $color-background-hover: $grey-100,
+                $color-border: $gray-100,
+                $color-background-hover: $gray-100,
                 $color-text-hover: $black,
                 $color-border-hover: $white,
                 $size: $size
@@ -109,7 +109,7 @@
                 $color-background: none,
                 $color-text: $gold-300,
                 $color-border: $gold-300,
-                $color-background-hover: $grey-400,
+                $color-background-hover: $gray-400,
                 $color-border-hover: $gold-300,
                 $size: $size
             );
@@ -141,9 +141,9 @@
                 $color-background-hover: $gold-200,
                 $size: $size
             );
-        } @else if ($color == 'grey') {
+        } @else if ($color == 'gray') {
             @include custom-button(
-                $color-background: $grey-600,
+                $color-background: $gray-600,
                 $color-text: $white,
                 $color-border: $black,
                 $color-background-hover: $black,

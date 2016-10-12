@@ -302,7 +302,7 @@
 /**
  * Sets up vertical navigation.
  *
- * @param string $color (Optional) Navigation color. Can be 'gold', 'tan', or 'grey'. Defaults to 'gold'.
+ * @param string $color (Optional) Navigation color. Can be 'gold', 'tan', or 'gray'. Defaults to 'gold'.
  * @param boolean $include-mobile-menu (Optional) Whether to include mobile menu styles. Defaults to false.
  * @param media query $query-disable-mobile-menu (Optional) Media query at which to disable the mobile menu. Defaults to false.
  */
@@ -329,18 +329,18 @@
             $include-mobile-menu: $include-mobile-menu,
             $query-disable-mobile-menu: $query-disable-mobile-menu
         );
-    } @else if ($color == 'grey') {
+    } @else if ($color == 'gray') {
         @include custom-vertical-navigation(
             $color-border: #000,
             $color-link: #fff,
-            $color-link-background-highlight: $grey-400,
-            $color-link-background: $grey-500,
+            $color-link-background-highlight: $gray-400,
+            $color-link-background: $gray-500,
             $color-link-hover: $gold-400,
-            $color-link-background-highlight-hover: $grey-600,
+            $color-link-background-highlight-hover: $gray-600,
             $color-link-background-hover: #000,
             $color-sub-menu-border: #000,
             $color-sub-menu-link: #fff,
-            $color-sub-menu-link-background: $grey-600,
+            $color-sub-menu-link-background: $gray-600,
             $color-sub-menu-link-hover: $gold-300,
             $color-sub-menu-link-background-hover: #000,
             $include-mobile-menu: $include-mobile-menu,
@@ -350,16 +350,16 @@
         @include custom-vertical-navigation(
             $color-border: #000,
             $color-link: #fff,
-            $color-link-background-highlight: $grey-600,
+            $color-link-background-highlight: $gray-600,
             $color-link-background: #000,
             $color-link-hover: $gold-400,
-            $color-link-background-highlight-hover: $grey-500,
-            $color-link-background-hover: $grey-600,
+            $color-link-background-highlight-hover: $gray-500,
+            $color-link-background-hover: $gray-600,
             $color-sub-menu-border: #000,
             $color-sub-menu-link: #fff,
-            $color-sub-menu-link-background: $grey-500,
+            $color-sub-menu-link-background: $gray-500,
             $color-sub-menu-link-hover: $gold-300,
-            $color-sub-menu-link-background-hover: $grey-600,
+            $color-sub-menu-link-background-hover: $gray-600,
             $include-mobile-menu: $include-mobile-menu,
             $query-disable-mobile-menu: $query-disable-mobile-menu
         );
@@ -495,7 +495,7 @@
 /**
  * Sets up horizontal navigation.
  *
- * @param string $color (Optional) Navigation color. Can be 'gold', 'tan', or 'grey'. Defaults to 'gold'.
+ * @param string $color (Optional) Navigation color. Can be 'gold', 'tan', or 'gray'. Defaults to 'gold'.
  */
 @mixin horizontal-navigation(
     $color: 'gold'
@@ -511,25 +511,25 @@
             $color-link-background-hover-highlight: #fff,
             $color-link-background-hover: $gold-100
         );
-    } @else if ($color == 'grey') {
+    } @else if ($color == 'gray') {
         @include custom-horizontal-navigation(
             $color-border: #000,
             $color-link: #fff,
-            $color-link-background-highlight: $grey-400,
-            $color-link-background: $grey-500,
+            $color-link-background-highlight: $gray-400,
+            $color-link-background: $gray-500,
             $color-link-hover: $gold-400,
-            $color-link-background-hover-highlight: $grey-600,
+            $color-link-background-hover-highlight: $gray-600,
             $color-link-background-hover: #000
         );
     } @else if ($color == 'black') {
         @include custom-horizontal-navigation(
             $color-border: #000,
             $color-link: #fff,
-            $color-link-background-highlight: $grey-600,
+            $color-link-background-highlight: $gray-600,
             $color-link-background: #000,
             $color-link-hover: $gold-400,
-            $color-link-background-hover-highlight: $grey-500,
-            $color-link-background-hover: $grey-600
+            $color-link-background-hover-highlight: $gray-500,
+            $color-link-background-hover: $gray-600
         );
     } @else { // gold
         @include custom-horizontal-navigation(

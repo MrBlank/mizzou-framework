@@ -1,9 +1,9 @@
 /**
  * Mizzou Framework - Sass: Variables
  *
- * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
- * @copyright 2015 Curators of the University of Missouri
- * @version 1.00
+ * @author Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2016 Curators of the University of Missouri
+ * @version 1.10
  */
 
 /* @group Colors */
@@ -14,8 +14,8 @@ $black:                         #000000 !default;
 $white:                         #FFFFFF !default;
 $gold:                          #F1B82D !default; // Mizzou Gold
 $tan:                           #A6A495 !default;
-$warm-grey:                     #595552 !default;
-$grey:                          #666666 !default;
+$warm-gray:                     #595552 !default;
+$gray:                          #666666 !default;
 $red:                           #900000 !default;
 $orange:                        #BD4D1F !default;
 $blue:                          #318FD7 !default;
@@ -37,19 +37,19 @@ $tan-400:                       $tan;
 $tan-500:                       #77756B !default;
 $tan-600:                       #474740 !default;
 
-$warm-grey-100:                 #EDEAE6 !default;
-$warm-grey-200:                 #DBD5CD !default;
-$warm-grey-300:                 #8F8884 !default;
-$warm-grey-400:                 $warm-grey;
-$warm-grey-500:                 #33312F !default;
-$warm-grey-600:                 #242221 !default;
+$warm-gray-100:                 #EDEAE6 !default;
+$warm-gray-200:                 #DBD5CD !default;
+$warm-gray-300:                 #8F8884 !default;
+$warm-gray-400:                 $warm-gray;
+$warm-gray-500:                 #33312F !default;
+$warm-gray-600:                 #242221 !default;
 
-$grey-100:                      #F0F0F0 !default;
-$grey-200:                      #CCCCCC !default;
-$grey-300:                      #999999 !default;
-$grey-400:                      $grey;
-$grey-500:                      #444444 !default;
-$grey-600:                      #222222 !default;
+$gray-100:                      #F0F0F0 !default;
+$gray-200:                      #CCCCCC !default;
+$gray-300:                      #999999 !default;
+$gray-400:                      $gray;
+$gray-500:                      #444444 !default;
+$gray-600:                      #222222 !default;
 
 $red-100:                       #FFECEC !default;
 $red-200:                       #FFC2C4 !default;
@@ -82,24 +82,24 @@ $green-600:                     #214716 !default;
 // Colors by use
 
 $background-color:              $white !default;
-$text-color:                    $grey-600 !default;
+$text-color:                    $gray-600 !default;
 $link-color:                    $red !default;
-$link-hover-color:              $grey-600 !default;
-$border-color:                  $grey-600 !default;
-$hr-color:                      $grey-200 !default;
-$box-bg-color:                  $warm-grey-100 !default;
-$box-border-color:              $warm-grey-200 !default;
-$code-bg-color:                 $warm-grey-100 !default;
-$code-border-color:             $warm-grey-200 !default;
-$abbr-color:                    $grey-100 !default;
+$link-hover-color:              $gray-600 !default;
+$border-color:                  $gray-600 !default;
+$hr-color:                      $gray-200 !default;
+$box-bg-color:                  $warm-gray-100 !default;
+$box-border-color:              $warm-gray-200 !default;
+$code-bg-color:                 $warm-gray-100 !default;
+$code-border-color:             $warm-gray-200 !default;
+$abbr-color:                    $gray-100 !default;
 $mark-color:                    $gold-100 !default;
-$help-color:                    $grey-200 !default;
+$help-color:                    $gray-200 !default;
 $form-error-message-color:      $red !default;
 $form-error-bg-color:           $red-100 !default;
 $form-error-border-color:       $red !default;
-$form-field-border-color:       $grey-200 !default;
-$table-cell-border-color:       $grey-200 !default;
-$table-cell-stripe-color:       $grey-100 !default;
+$form-field-border-color:       $gray-200 !default;
+$table-cell-border-color:       $gray-200 !default;
+$table-cell-stripe-color:       $gray-100 !default;
 $table-cell-header-color:       $gold-100 !default;
 
 /* @end */

@@ -12,7 +12,7 @@
  * Styles for a search form
  *
  * @param string $theme (Optional) Color theme. Can be 'light' or 'dark'. Defaults to 'light'
- * @param string $button-color (Optional) Button color. Can be 'orange', 'gold', or 'grey'. Defaults to 'gold' (see .ui-button)
+ * @param string $button-color (Optional) Button color. Can be 'orange', 'gold', or 'gray'. Defaults to 'gold' (see .ui-button)
  * @param boolean $include-print-style (Optional) Whether to hide the form for printing. Defaults to true
  */
  
@@ -67,7 +67,7 @@
         } @else { // $theme == 'light'
             @if ($button-color == 'orange') {
                 border-color: $orange-500;
-            } @else if ($button-color == 'grey') {
+            } @else if ($button-color == 'gray') {
                 border-color: $black;
             } @else { // $button-color == 'gold' 
                 border-color: $gold-500;
@@ -123,7 +123,7 @@
             {
                 display: inline-block;
                 
-                @if (($button-color == 'orange') or (($button-color == 'grey') and ($theme == 'light'))) {
+                @if (($button-color == 'orange') or (($button-color == 'gray') and ($theme == 'light'))) {
                     @include replace-with-image(
                         $filename: 'search-icon-white.svg',
                         $width: 16px,
