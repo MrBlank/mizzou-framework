@@ -5,7 +5,7 @@
  *
  * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
  * @copyright 2015 Curators of the University of Missouri
- * @version 1.2
+ * @version 1.3
  */
 
 /* @group MU Signatures */
@@ -31,6 +31,15 @@
     $wordmark-filename:         'mu-wordmark-#{$color}-#{$size}.svg'; 
     
     // Set dimensions
+    
+    // $size == 'small'
+    $logo-width: 34px;
+    $logo-height: 38px;
+    $logo-space: 10px;
+    $wordmark-width: 229px;
+    $wordmark-height: 27px;
+    $wordmark-top: 9px;
+    
     @if ($size == 'large') {
         $logo-width: 66px;
         $logo-height: 74px;
@@ -46,16 +55,7 @@
         $wordmark-width: 334px;
         $wordmark-height: 39px;
         $wordmark-top: 11px;
-    } 
-    // $size == 'small'
-        
-        $logo-width: 34px;
-        $logo-height: 38px;
-        $logo-space: 10px;
-        $wordmark-width: 229px;
-        $wordmark-height: 27px;
-        $wordmark-top: 9px;
-    
+    }     
     @if ($size == 'extra-small') {
         $logo-width: 26px;
         $logo-height: 29px;
@@ -152,6 +152,15 @@
     $health-wordmark-filename:  'health-wordmark-#{$color}-#{$size}.svg';
     
     // Set dimensions
+    
+    // $size == 'small'
+    $logo-width: 34px;
+    $logo-height: 38px;
+    $logo-space: 10px;
+    $wordmark-width: 149px;
+    $wordmark-height: 17px;
+    $health-wordmark-width: 180px;
+        
     @if ($size == 'large') {
         $logo-width: 66px;
         $logo-height: 74px;
@@ -167,14 +176,6 @@
         $wordmark-width: 183px;
         $wordmark-height: 20px;
         $health-wordmark-width: 223px;
-    }
-    @if ($size == 'small') {
-        $logo-width: 34px;
-        $logo-height: 38px;
-        $logo-space: 10px;
-        $wordmark-width: 149px;
-        $wordmark-height: 17px;
-        $health-wordmark-width: 180px;
     }
     @if ($center == 'false') {
         @include clear-fix(); // Keeps parent container at least as tall as the logo if it is not centered.
