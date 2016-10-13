@@ -40,7 +40,8 @@
     $wordmark-height: 27px;
     $wordmark-top: 9px;
     
-    @if ($size == 'large') {
+    @if ($size == 'large') 
+    {
         $logo-width: 66px;
         $logo-height: 74px;
         $logo-space: 20px;
@@ -48,7 +49,8 @@
         $wordmark-height: 56px;
         $wordmark-top: 14px;
     } 
-    @if ($size == 'medium') {
+    @if ($size == 'medium') 
+    {
         $logo-width: 50px;
         $logo-height: 56px;
         $logo-space: 15px;
@@ -56,7 +58,8 @@
         $wordmark-height: 39px;
         $wordmark-top: 11px;
     }     
-    @if ($size == 'extra-small') {
+    @if ($size == 'extra-small') 
+    {
         $logo-width: 26px;
         $logo-height: 29px;
         $logo-space: 7px;
@@ -65,7 +68,8 @@
         $wordmark-top: 6px;
     }
      
-    @if ($center == 'false') {
+    @if ($center == 'false') 
+    {
         @include clear-fix(); // Keeps parent container at least as tall as the logo if it is not centered.
     }
            
@@ -97,7 +101,8 @@
         width: $wordmark-width;
         height: $wordmark-height;
         
-        @if ($print == 'false') {
+        @if ($print == 'false') 
+        {
             background-image: url('#{$image-path}/#{$wordmark-filename}');
             
             &:hover,
@@ -106,8 +111,16 @@
                 background-position: left (-$wordmark-height);
             }
         }
-        @if ($print == 'true') {
+        @if ($print == 'true') 
+        {
             @include print-image('#{$wordmark-filename}'); 
+            
+            @if ($color == 'white') 
+            { 
+                &:after {
+                    top: -($wordmark-height * 2); // White text version has a black text at the bottom of the sprite for printing.
+                }
+            }
         }
     }
 }
@@ -236,17 +249,25 @@
             @if ($health-wordmark == 'true') {
                 @include print-image('#{$health-wordmark-filename}');
             }
+            @if ($color == 'white') 
+            { 
+                &:after {
+                    top: -($wordmark-height * 2); // White text version has a black text at the bottom of the sprite for printing.
+                }
+            }
         }
         @if ($center == 'false') {
             margin-left: $wordmark-indent;
         }
     }
-    .unit-sig__unit a {
+    .unit-sig__unit a 
+    {
         width: $name-width;
         height: $name-height;
         margin-bottom: $name-margin;
         
-        @if ($print == 'false') {
+        @if ($print == 'false') 
+        {
             background-image: url('#{$image-path}/#{$unit-name-filename}');
             
             &:hover,
@@ -255,8 +276,16 @@
                 background-position: left (-$name-height);
             }
         }
-        @if ($print == 'true') {
+        @if ($print == 'true') 
+        {
             @include print-image('#{$unit-name-filename}');
+            
+            @if ($color == 'white') 
+            { 
+                &:after {
+                    top: -($name-height * 2); // White text version has black text at the bottom of the sprite for printing.
+                }
+            }
         }
     }
 }
@@ -273,10 +302,12 @@
     @include replace-with-image();
     background-position: left 0;
     
-    @if ($center == 'false') {
+    @if ($center == 'false') 
+    {
         margin: 0;
     }
-    @if ($center == 'true') {
+    @if ($center == 'true') 
+    {
         margin-left: auto;
         margin-right: auto;
     }
@@ -289,19 +320,24 @@
     width: $logo-width;
     height: $logo-height;
     
-    @if ($print == 'false') {
+    @if ($print == 'false') 
+    {
         background-image: url('#{$image-path}/#{$logo-filename}');
     }
-    @if ($print == 'true') {
+    @if ($print == 'true') 
+    {
         @include print-image('#{$logo-filename}');
     }
-    @if ($center == 'true') {
+    @if ($center == 'true') 
+    {
         margin-bottom: $logo-space; // Clear space - 1px rule
     }
-    @if ($center == 'false') {
+    @if ($center == 'false') 
+    {
         float: left;
         margin-left: -1px; // Hangs the 1px rule
     }
 }
+
 
 /* @end */

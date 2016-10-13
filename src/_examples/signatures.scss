@@ -21,6 +21,15 @@
         $name-margin: 3px
     );
     background-color: $gold;
+    
+    @media print {
+        @include mu-unit-sig(
+            $name-width: 194px,
+            $name-height: 27px,
+            $name-margin: 3px, 
+            $print: 'true'
+        );
+    }
 }
 
 .unit-sig-small-center 
@@ -34,6 +43,18 @@
         $color: 'white'
     );
     background-color: #222;
+    
+    @media print {
+        @include mu-unit-sig(
+            $name-width: 194px,
+            $name-height: 27px,
+            $name-margin: 3px,
+            $size: 'small',
+            $center: 'true',
+            $color: 'white', 
+            $print: 'true'
+        );
+    }
 }
 
 .unit-sig-medium 
@@ -41,8 +62,7 @@
     @include mu-unit-sig(
         $name-width: 284px,
         $name-height: 40px,
-        $size: 'medium',
-        $print: 'true'
+        $size: 'medium'
     );
 }
 
@@ -65,6 +85,16 @@
         $color: 'white'
     );
     background-color: #222;
+    
+    @media print {
+        @include mu-unit-sig(
+            $name-width: 404px,
+            $name-height: 57px,
+            $size: 'large',
+            $color: 'white', 
+            $print: 'true'
+        );
+    }
 }
 
 .unit-sig-large-center 
@@ -73,7 +103,6 @@
         $name-width: 404px,
         $name-height: 57px,
         $size: 'large',
-        $print: 'true',
         $center: 'true'
     );
     background-color: $gold;
@@ -85,8 +114,15 @@
 .uni-sig-extra-small 
 {
     @include mu-sig(
-        $size: 'extra-small'    
+        $size: 'extra-small' 
     );
+    
+    @media print {
+        @include mu-sig(
+            $size: 'extra-small', 
+            $print: 'true'
+        );
+    } 
 }
 
 .uni-sig-extra-small-center 
@@ -95,6 +131,13 @@
         $size: 'extra-small',
         $center: 'true'
     );
+    @media print {
+        @include mu-sig(
+            $size: 'extra-small', 
+            $center: 'true',
+            $print: 'true'
+        );
+    } 
 }
 
 .uni-sig-small 
@@ -111,6 +154,15 @@
         $color: 'white'
     );
     background-color: #222;
+    
+    @media print {
+        @include mu-sig(
+            $size: 'small', 
+            $center: 'true',
+            $color: 'white',
+            $print: 'true'
+        );
+    } 
 }
 
 .uni-sig-medium 

@@ -2,9 +2,9 @@
 /**
  * Mizzou Framework - Sass: Variables
  *
- * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
- * @copyright 2015 Curators of the University of Missouri
- * @version 1.00
+ * @author Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2016 Curators of the University of Missouri
+ * @version 1.10
  */
 /* @group Colors */
 /* @end */
@@ -296,12 +296,13 @@ h5,
 h6,
 .like-h1,
 .like-h2,
+legend,
 .like-h3,
 .like-h4,
 caption,
 .like-h5,
 .like-h6 {
-  margin: 0 0 1em 0;
+  margin: 0 0 1rem 0;
   font-weight: 600;
   color: #000; }
   h1 a,
@@ -311,7 +312,7 @@ caption,
   h5 a,
   h6 a,
   .like-h1 a,
-  .like-h2 a,
+  .like-h2 a, legend a,
   .like-h3 a,
   .like-h4 a, caption a,
   .like-h5 a,
@@ -320,19 +321,20 @@ caption,
 
 h1,
 .like-h1 {
-  margin: 0 0 0.75em 0;
+  margin: 0 0 1rem 0;
   font-size: 2.5em;
   line-height: 1.2; }
 
 h2,
-.like-h2 {
-  margin: 0 0 0.75em 0;
-  font-size: 2em;
+.like-h2,
+legend {
+  margin: 0 0 1rem 0;
+  font-size: 1.8em;
   line-height: 1.2; }
 
 h3,
 .like-h3 {
-  font-size: 1.5em;
+  font-size: 1.4em;
   line-height: 1.3; }
 
 h4,
@@ -354,7 +356,7 @@ h6,
   font-style: italic; }
 
 p {
-  margin: 0 0 1em 0; }
+  margin: 0 0 1rem 0; }
 
 /* @end */
 /* @group Images, Figures, and Video */
@@ -369,7 +371,7 @@ figure,
 .alignleft,
 .aligncenter,
 .alignright {
-  margin: 0 0 1em 0;
+  margin: 0 0 1rem 0;
   max-width: 100%; }
 
 figure.center,
@@ -390,7 +392,7 @@ iframe {
   clear: both; }
 
 .video {
-  margin: 0 0 1em 0;
+  margin: 0 0 1rem 0;
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
@@ -434,7 +436,7 @@ address {
 /* @end */
 /* @group Horizontal Rules */
 hr {
-  margin: 0 0 1em 0;
+  margin: 0 0 1rem 0;
   clear: both;
   border: 0;
   border-bottom: 1px solid #CCCCCC; }
@@ -443,8 +445,8 @@ hr {
 /* @group Lists */
 ul,
 ol {
-  margin: 0 0 1em 0;
-  padding-left: 1.5em; }
+  margin: 0 0 1rem 0;
+  padding-left: 1.5rem; }
   ul ul,
   ul ol,
   ol ul,
@@ -456,20 +458,20 @@ li p {
   font-size: inherit; }
 
 dl {
-  margin: 0 0 1em 0;
-  padding-left: 1.5em; }
+  margin: 0 0 1rem 0;
+  padding-left: 1.5rem; }
 
 dt {
   font-weight: 600; }
 
 dd {
-  margin: 0 0 0.5em 0; }
+  margin: 0 0 0.5rem 0; }
 
 /* @end */
 /* @group Forms */
 form,
 fieldset {
-  margin: 0 0 1em 0; }
+  margin: 0 0 1rem 0; }
 
 fieldset,
 legend {
@@ -510,7 +512,7 @@ button {
 /* @end */
 /* @group Tables */
 table {
-  margin: 0 0 1em 0;
+  margin: 0 0 1rem 0;
   border-collapse: collapse;
   border-spacing: 0; }
 
@@ -667,7 +669,7 @@ hr.rule--space {
   text-transform: uppercase; }
 
 .dropcap {
-  font-weight: 700;
+  font-weight: 600;
   float: left;
   display: block;
   line-height: .7;
@@ -794,7 +796,7 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
  * Sets up a button with common attributes
  *
  * @param string $size (Optional) Text size. Can be 'small' or 'large'. Defaults to 'small'
- * @param string $color (Optional) Button color. Can be 'brown', 'gold', or 'grey'. Defaults to 'brown'
+ * @param string $color (Optional) Button color. Can be 'brown', 'gold', or 'gray'. Defaults to 'brown'
  * @param string $theme (Optional) Color theme. Can be 'light' or 'dark'. Dark gives the button a lighter border. Defaults to 'light'
  * @param boolean $include-print-style (Optional) Whether to make the button black and white for printing. Defaults to true
  */
@@ -805,7 +807,7 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
  *
  * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
  * @copyright 2015 Curators of the University of Missouri
- * @version 1.2
+ * @version 1.3
  */
 /* @group MU Signatures */
 /**
@@ -904,7 +906,7 @@ The `.dropcap` class works on an inline element, usually and span tag. Add the c
  * Styles for a search form
  *
  * @param string $theme (Optional) Color theme. Can be 'light' or 'dark'. Defaults to 'light'
- * @param string $button-color (Optional) Button color. Can be 'orange', 'gold', or 'grey'. Defaults to 'gold' (see .ui-button)
+ * @param string $button-color (Optional) Button color. Can be 'orange', 'gold', or 'gray'. Defaults to 'gold' (see .ui-button)
  * @param boolean $include-print-style (Optional) Whether to hide the form for printing. Defaults to true
  */
 @media print {
@@ -1351,19 +1353,19 @@ footer p {
       color: #FFFFFF;
       border-color: #611C00; }
 
-.search-forms .light-grey {
+.search-forms .light-gray {
   background: #F0F0F0; }
-  .search-forms .light-grey .search-form__container {
+  .search-forms .light-gray .search-form__container {
     position: relative;
     overflow: hidden;
     padding-right: 50px; }
-  .search-forms .light-grey .search-form__label {
+  .search-forms .light-gray .search-form__label {
     position: absolute;
     top: -500px;
     width: 1px;
     height: 1px;
     overflow: hidden; }
-  .search-forms .light-grey .search-form__input {
+  .search-forms .light-gray .search-form__input {
     width: 100%;
     background: #fff;
     display: block;
@@ -1379,13 +1381,13 @@ footer p {
     border-style: solid;
     border-width: 1px 0 1px 1px;
     border-color: #000000; }
-    .search-forms .light-grey .search-form__input::-webkit-input-placeholder {
+    .search-forms .light-gray .search-form__input::-webkit-input-placeholder {
       line-height: 1.3125; }
-    .search-forms .light-grey .search-form__input::-moz-placeholder {
+    .search-forms .light-gray .search-form__input::-moz-placeholder {
       line-height: 1.3125; }
-    .search-forms .light-grey .search-form__input:-ms-input-placeholder {
+    .search-forms .light-gray .search-form__input:-ms-input-placeholder {
       line-height: 1.3125; }
-  .search-forms .light-grey .search-form__button {
+  .search-forms .light-gray .search-form__button {
     font-weight: 700;
     display: inline-block;
     text-decoration: none;
@@ -1418,11 +1420,11 @@ footer p {
     height: 34px;
     overflow: hidden;
     width: 50px; }
-    .search-forms .light-grey .search-form__button:hover, .search-forms .light-grey .search-form__button:focus, .search-forms .light-grey .search-form__button:active {
+    .search-forms .light-gray .search-form__button:hover, .search-forms .light-gray .search-form__button:focus, .search-forms .light-gray .search-form__button:active {
       background: #000000;
       color: #F1B82D;
       border-color: #000000; }
-    .search-forms .light-grey .search-form__button span {
+    .search-forms .light-gray .search-form__button span {
       display: inline-block;
       display: block;
       text-indent: 200%;
@@ -1509,19 +1511,19 @@ footer p {
       color: #222222;
       border-color: #F1B82D; }
 
-.search-forms .dark-grey {
+.search-forms .dark-gray {
   background: #470102; }
-  .search-forms .dark-grey .search-form__container {
+  .search-forms .dark-gray .search-form__container {
     position: relative;
     overflow: hidden;
     padding-right: 50px; }
-  .search-forms .dark-grey .search-form__label {
+  .search-forms .dark-gray .search-form__label {
     position: absolute;
     top: -500px;
     width: 1px;
     height: 1px;
     overflow: hidden; }
-  .search-forms .dark-grey .search-form__input {
+  .search-forms .dark-gray .search-form__input {
     width: 100%;
     background: #fff;
     display: block;
@@ -1537,13 +1539,13 @@ footer p {
     border-style: solid;
     border-width: 1px 0 1px 1px;
     border-color: #fff; }
-    .search-forms .dark-grey .search-form__input::-webkit-input-placeholder {
+    .search-forms .dark-gray .search-form__input::-webkit-input-placeholder {
       line-height: 1.3125; }
-    .search-forms .dark-grey .search-form__input::-moz-placeholder {
+    .search-forms .dark-gray .search-form__input::-moz-placeholder {
       line-height: 1.3125; }
-    .search-forms .dark-grey .search-form__input:-ms-input-placeholder {
+    .search-forms .dark-gray .search-form__input:-ms-input-placeholder {
       line-height: 1.3125; }
-  .search-forms .dark-grey .search-form__button {
+  .search-forms .dark-gray .search-form__button {
     font-weight: 700;
     display: inline-block;
     text-decoration: none;
@@ -1576,11 +1578,11 @@ footer p {
     height: 34px;
     overflow: hidden;
     width: 50px; }
-    .search-forms .dark-grey .search-form__button:hover, .search-forms .dark-grey .search-form__button:focus, .search-forms .dark-grey .search-form__button:active {
+    .search-forms .dark-gray .search-form__button:hover, .search-forms .dark-gray .search-form__button:focus, .search-forms .dark-gray .search-form__button:active {
       background: #F0F0F0;
       color: #000000;
       border-color: #FFFFFF; }
-    .search-forms .dark-grey .search-form__button span {
+    .search-forms .dark-gray .search-form__button span {
       display: inline-block;
       display: block;
       text-indent: 200%;
@@ -1670,7 +1672,7 @@ footer p {
     color: #222222;
     border-color: #D79900; }
 
-.buttons .grey {
+.buttons .gray {
   font-weight: 700;
   display: inline-block;
   text-decoration: none;
@@ -1694,7 +1696,7 @@ footer p {
   font-size: 1em;
   padding: .3333em 1em;
   border-radius: 4px; }
-  .buttons .grey:hover, .buttons .grey:focus, .buttons .grey:active {
+  .buttons .gray:hover, .buttons .gray:focus, .buttons .gray:active {
     background: #000000;
     color: #F1B82D;
     border-color: #000000; }
@@ -1786,7 +1788,7 @@ footer p {
     color: #222222;
     border-color: #D79900; }
 
-.buttons .grey-large {
+.buttons .gray-large {
   font-weight: 700;
   display: inline-block;
   text-decoration: none;
@@ -1810,7 +1812,7 @@ footer p {
   font-size: 1.25em;
   padding: .3333em 1em;
   border-radius: 6px; }
-  .buttons .grey-large:hover, .buttons .grey-large:focus, .buttons .grey-large:active {
+  .buttons .gray-large:hover, .buttons .gray-large:focus, .buttons .gray-large:active {
     background: #000000;
     color: #F1B82D;
     border-color: #000000; }
@@ -1902,7 +1904,7 @@ footer p {
     color: #222222;
     border-color: #F1B82D; }
 
-.buttons .dark-grey {
+.buttons .dark-gray {
   font-weight: 700;
   display: inline-block;
   text-decoration: none;
@@ -1926,7 +1928,7 @@ footer p {
   font-size: 1em;
   padding: .3333em 1em;
   border-radius: 4px; }
-  .buttons .dark-grey:hover, .buttons .dark-grey:focus, .buttons .dark-grey:active {
+  .buttons .dark-gray:hover, .buttons .dark-gray:focus, .buttons .dark-gray:active {
     background: #F0F0F0;
     color: #000000;
     border-color: #FFFFFF; }

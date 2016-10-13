@@ -29,7 +29,7 @@
 .header-layer,
 .footer-layer 
 {
-    background-color: $grey-500;
+    background-color: $gray-500;
 }
 .wrapper-layer 
 {
@@ -104,12 +104,12 @@ footer
 {   
     p 
     {
-        color: $grey-200;
+        color: $gray-200;
         line-height: ($font-line-height * .75);
         
         a 
         {
-            color: $grey-200;
+            color: $gray-200;
             
             &:hover,
             &:focus,
@@ -169,14 +169,14 @@ footer
         );
         background: $gold-100;
     }
-    .light-grey 
+    .light-gray 
     {
         @include search-form(
             $theme: 'light',
-            $button-color: 'grey',
+            $button-color: 'gray',
             $button-style: 'icon'
         );
-        background: $grey-100;
+        background: $gray-100;
     }
     .dark-gold 
     {
@@ -186,11 +186,11 @@ footer
         );
         background: black;
     }
-    .dark-grey 
+    .dark-gray 
     {
         @include search-form(
             $theme: 'dark',
-            $button-color: 'grey',
+            $button-color: 'gray',
             $button-style: 'icon'
         );
         background: $red-600;
@@ -204,14 +204,14 @@ footer
 {
     @include box(
         $padding: ($base-margin * 1.5em),
-        $background: $grey-100
+        $background: $gray-100
     );
 }
 .dark-box 
 {
     @include box(
         $padding: ($base-margin * 1.5em),
-        $background: $grey-500
+        $background: $gray-500
     );
 }
 
@@ -232,11 +232,11 @@ footer
         );
     }
     
-    .grey
+    .gray
     {
         @include button(
             $size: 'small',
-            $color: 'grey'
+            $color: 'gray'
         );
     }
     .transparent
@@ -262,11 +262,11 @@ footer
         );
     }
     
-    .grey-large
+    .gray-large
     {
         @include button(
             $size: 'large',
-            $color: 'grey'
+            $color: 'gray'
         );
     }
     .transparent-large 
@@ -295,11 +295,11 @@ footer
         );
     }
     
-    .dark-grey
+    .dark-gray
     {
         @include button(
             $size: 'small',
-            $color: 'grey',
+            $color: 'gray',
             $theme: 'dark'
         );
     }

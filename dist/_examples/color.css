@@ -1,9 +1,9 @@
 /**
  * Mizzou Framework - Sass: Variables
  *
- * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
- * @copyright 2015 Curators of the University of Missouri
- * @version 1.00
+ * @author Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2016 Curators of the University of Missouri
+ * @version 1.10
  */
 /* @group Colors */
 /* @end */
@@ -132,29 +132,29 @@ Here are the variables that can be used with their defaults:
     background-color: #77756B; }
   .color-row .tan-600 {
     background-color: #474740; }
-  .color-row .warm-grey-100 {
+  .color-row .warm-gray-100 {
     background-color: #EDEAE6; }
-  .color-row .warm-grey-200 {
+  .color-row .warm-gray-200 {
     background-color: #DBD5CD; }
-  .color-row .warm-grey-300 {
+  .color-row .warm-gray-300 {
     background-color: #8F8884; }
-  .color-row .warm-grey-400 {
+  .color-row .warm-gray-400 {
     background-color: #595552; }
-  .color-row .warm-grey-500 {
+  .color-row .warm-gray-500 {
     background-color: #33312F; }
-  .color-row .warm-grey-600 {
+  .color-row .warm-gray-600 {
     background-color: #242221; }
-  .color-row .grey-100 {
+  .color-row .gray-100 {
     background-color: #F0F0F0; }
-  .color-row .grey-200 {
+  .color-row .gray-200 {
     background-color: #CCCCCC; }
-  .color-row .grey-300 {
+  .color-row .gray-300 {
     background-color: #999999; }
-  .color-row .grey-400 {
+  .color-row .gray-400 {
     background-color: #666666; }
-  .color-row .grey-500 {
+  .color-row .gray-500 {
     background-color: #444444; }
-  .color-row .grey-600 {
+  .color-row .gray-600 {
     background-color: #222222; }
   .color-row .red-100 {
     background-color: #FFECEC; }

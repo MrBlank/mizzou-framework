@@ -1,9 +1,9 @@
 /**
  * Mizzou Framework - Sass: Variables
  *
- * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
- * @copyright 2015 Curators of the University of Missouri
- * @version 1.00
+ * @author Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2016 Curators of the University of Missouri
+ * @version 1.10
  */
 /* @group Colors */
 /* @end */
@@ -103,7 +103,7 @@ Here are the variables that can be used with their defaults:
  *
  * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
  * @copyright 2015 Curators of the University of Missouri
- * @version 1.2
+ * @version 1.3
  */
 /* @group MU Signatures */
 /**
@@ -183,6 +183,70 @@ Here are the variables that can be used with their defaults:
     background-image: url("../images/unit-name-black-small.svg"); }
     .unit-sig-small .unit-sig__unit a:hover, .unit-sig-small .unit-sig__unit a:focus, .unit-sig-small .unit-sig__unit a:active {
       background-position: left -27px; }
+  @media print {
+    .unit-sig-small:before, .unit-sig-small:after {
+      content: ' ';
+      display: table; }
+    .unit-sig-small:after {
+      clear: both; }
+    .unit-sig-small .unit-sig__logo,
+    .unit-sig-small .unit-sig__wordmark,
+    .unit-sig-small .unit-sig__unit {
+      margin: 0; }
+    .unit-sig-small .unit-sig__logo a,
+    .unit-sig-small .unit-sig__wordmark a,
+    .unit-sig-small .unit-sig__unit a {
+      display: block;
+      text-indent: 200%;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 0;
+      background-repeat: no-repeat;
+      background-position: left 0;
+      margin: 0; }
+    .unit-sig-small .unit-sig__logo a {
+      width: 34px;
+      height: 38px;
+      position: relative;
+      background: none;
+      float: left;
+      margin-left: -1px; }
+      .unit-sig-small .unit-sig__logo a:after {
+        text-indent: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: url("../images/mu-logo-small.svg"); }
+    .unit-sig-small .unit-sig__wordmark,
+    .unit-sig-small .unit-sig__unit {
+      margin-left: 44px; }
+    .unit-sig-small .unit-sig__wordmark a {
+      height: 17px;
+      width: 149px;
+      position: relative;
+      background: none;
+      margin-left: 0; }
+      .unit-sig-small .unit-sig__wordmark a:after {
+        text-indent: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: url("../images/unit-wordmark-black-small.svg"); }
+    .unit-sig-small .unit-sig__unit a {
+      width: 194px;
+      height: 27px;
+      margin-bottom: 3px;
+      position: relative;
+      background: none; }
+      .unit-sig-small .unit-sig__unit a:after {
+        text-indent: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: url("../images/unit-name-black-small.svg"); } }
 
 .unit-sig-small-center {
   background-color: #222; }
@@ -220,6 +284,65 @@ Here are the variables that can be used with their defaults:
     background-image: url("../images/unit-name-white-small.svg"); }
     .unit-sig-small-center .unit-sig__unit a:hover, .unit-sig-small-center .unit-sig__unit a:focus, .unit-sig-small-center .unit-sig__unit a:active {
       background-position: left -27px; }
+  @media print {
+    .unit-sig-small-center .unit-sig__logo,
+    .unit-sig-small-center .unit-sig__wordmark,
+    .unit-sig-small-center .unit-sig__unit {
+      margin: 0; }
+    .unit-sig-small-center .unit-sig__logo a,
+    .unit-sig-small-center .unit-sig__wordmark a,
+    .unit-sig-small-center .unit-sig__unit a {
+      display: block;
+      text-indent: 200%;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 0;
+      background-repeat: no-repeat;
+      background-position: left 0;
+      margin-left: auto;
+      margin-right: auto; }
+    .unit-sig-small-center .unit-sig__logo a {
+      width: 34px;
+      height: 38px;
+      position: relative;
+      background: none;
+      margin-bottom: 10px; }
+      .unit-sig-small-center .unit-sig__logo a:after {
+        text-indent: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: url("../images/mu-logo-small.svg"); }
+    .unit-sig-small-center .unit-sig__wordmark a {
+      height: 17px;
+      width: 149px;
+      position: relative;
+      background: none; }
+      .unit-sig-small-center .unit-sig__wordmark a:after {
+        text-indent: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: url("../images/unit-wordmark-white-small.svg"); }
+      .unit-sig-small-center .unit-sig__wordmark a:after {
+        top: -34px; }
+    .unit-sig-small-center .unit-sig__unit a {
+      width: 194px;
+      height: 27px;
+      margin-bottom: 3px;
+      position: relative;
+      background: none; }
+      .unit-sig-small-center .unit-sig__unit a:after {
+        text-indent: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: url("../images/unit-name-white-small.svg"); }
+      .unit-sig-small-center .unit-sig__unit a:after {
+        top: -54px; } }
 
 .unit-sig-medium:before, .unit-sig-medium:after {
   content: ' ';
@@ -248,17 +371,9 @@ Here are the variables that can be used with their defaults:
 .unit-sig-medium .unit-sig__logo a {
   width: 50px;
   height: 56px;
-  position: relative;
-  background: none;
+  background-image: url("../images/mu-logo-medium.svg");
   float: left;
   margin-left: -1px; }
-  .unit-sig-medium .unit-sig__logo a:after {
-    text-indent: 0;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: url("../images/mu-logo-medium.svg"); }
 
 .unit-sig-medium .unit-sig__wordmark,
 .unit-sig-medium .unit-sig__unit {
@@ -267,30 +382,18 @@ Here are the variables that can be used with their defaults:
 .unit-sig-medium .unit-sig__wordmark a {
   height: 20px;
   width: 183px;
-  position: relative;
-  background: none;
+  background-image: url("../images/unit-wordmark-black-medium.svg");
   margin-left: 0; }
-  .unit-sig-medium .unit-sig__wordmark a:after {
-    text-indent: 0;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: url("../images/unit-wordmark-black-medium.svg"); }
+  .unit-sig-medium .unit-sig__wordmark a:hover, .unit-sig-medium .unit-sig__wordmark a:focus, .unit-sig-medium .unit-sig__wordmark a:active {
+    background-position: left -20px; }
 
 .unit-sig-medium .unit-sig__unit a {
   width: 284px;
   height: 40px;
   margin-bottom: 0;
-  position: relative;
-  background: none; }
-  .unit-sig-medium .unit-sig__unit a:after {
-    text-indent: 0;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: url("../images/unit-name-black-medium.svg"); }
+  background-image: url("../images/unit-name-black-medium.svg"); }
+  .unit-sig-medium .unit-sig__unit a:hover, .unit-sig-medium .unit-sig__unit a:focus, .unit-sig-medium .unit-sig__unit a:active {
+    background-position: left -40px; }
 
 .unit-sig-medium-center .unit-sig__logo,
 .unit-sig-medium-center .unit-sig__wordmark,
@@ -376,6 +479,74 @@ Here are the variables that can be used with their defaults:
     background-image: url("../images/unit-name-white-large.svg"); }
     .unit-sig-large .unit-sig__unit a:hover, .unit-sig-large .unit-sig__unit a:focus, .unit-sig-large .unit-sig__unit a:active {
       background-position: left -57px; }
+  @media print {
+    .unit-sig-large:before, .unit-sig-large:after {
+      content: ' ';
+      display: table; }
+    .unit-sig-large:after {
+      clear: both; }
+    .unit-sig-large .unit-sig__logo,
+    .unit-sig-large .unit-sig__wordmark,
+    .unit-sig-large .unit-sig__unit {
+      margin: 0; }
+    .unit-sig-large .unit-sig__logo a,
+    .unit-sig-large .unit-sig__wordmark a,
+    .unit-sig-large .unit-sig__unit a {
+      display: block;
+      text-indent: 200%;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 0;
+      background-repeat: no-repeat;
+      background-position: left 0;
+      margin: 0; }
+    .unit-sig-large .unit-sig__logo a {
+      width: 66px;
+      height: 74px;
+      position: relative;
+      background: none;
+      float: left;
+      margin-left: -1px; }
+      .unit-sig-large .unit-sig__logo a:after {
+        text-indent: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: url("../images/mu-logo-large.svg"); }
+    .unit-sig-large .unit-sig__wordmark,
+    .unit-sig-large .unit-sig__unit {
+      margin-left: 86px; }
+    .unit-sig-large .unit-sig__wordmark a {
+      height: 26px;
+      width: 243px;
+      position: relative;
+      background: none;
+      margin-left: 0; }
+      .unit-sig-large .unit-sig__wordmark a:after {
+        text-indent: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: url("../images/unit-wordmark-white-large.svg"); }
+      .unit-sig-large .unit-sig__wordmark a:after {
+        top: -52px; }
+    .unit-sig-large .unit-sig__unit a {
+      width: 404px;
+      height: 57px;
+      margin-bottom: 0;
+      position: relative;
+      background: none; }
+      .unit-sig-large .unit-sig__unit a:after {
+        text-indent: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: url("../images/unit-name-white-large.svg"); }
+      .unit-sig-large .unit-sig__unit a:after {
+        top: -114px; } }
 
 .unit-sig-large-center {
   background-color: #F1B82D; }
@@ -398,41 +569,21 @@ Here are the variables that can be used with their defaults:
   .unit-sig-large-center .unit-sig__logo a {
     width: 66px;
     height: 74px;
-    position: relative;
-    background: none;
+    background-image: url("../images/mu-logo-large.svg");
     margin-bottom: 20px; }
-    .unit-sig-large-center .unit-sig__logo a:after {
-      text-indent: 0;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      content: url("../images/mu-logo-large.svg"); }
   .unit-sig-large-center .unit-sig__wordmark a {
     height: 26px;
     width: 243px;
-    position: relative;
-    background: none; }
-    .unit-sig-large-center .unit-sig__wordmark a:after {
-      text-indent: 0;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      content: url("../images/unit-wordmark-black-large.svg"); }
+    background-image: url("../images/unit-wordmark-black-large.svg"); }
+    .unit-sig-large-center .unit-sig__wordmark a:hover, .unit-sig-large-center .unit-sig__wordmark a:focus, .unit-sig-large-center .unit-sig__wordmark a:active {
+      background-position: left -26px; }
   .unit-sig-large-center .unit-sig__unit a {
     width: 404px;
     height: 57px;
     margin-bottom: 0;
-    position: relative;
-    background: none; }
-    .unit-sig-large-center .unit-sig__unit a:after {
-      text-indent: 0;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      content: url("../images/unit-name-black-large.svg"); }
+    background-image: url("../images/unit-name-black-large.svg"); }
+    .unit-sig-large-center .unit-sig__unit a:hover, .unit-sig-large-center .unit-sig__unit a:focus, .unit-sig-large-center .unit-sig__unit a:active {
+      background-position: left -57px; }
 
 .uni-sig-extra-small:before, .uni-sig-extra-small:after {
   content: ' ';
@@ -475,6 +626,56 @@ Here are the variables that can be used with their defaults:
   .uni-sig-extra-small .mu-sig__wordmark a:hover, .uni-sig-extra-small .mu-sig__wordmark a:focus, .uni-sig-extra-small .mu-sig__wordmark a:active {
     background-position: left -21px; }
 
+@media print {
+  .uni-sig-extra-small:before, .uni-sig-extra-small:after {
+    content: ' ';
+    display: table; }
+  .uni-sig-extra-small:after {
+    clear: both; }
+  .uni-sig-extra-small .mu-sig__logo,
+  .uni-sig-extra-small .mu-sig__wordmark {
+    margin: 0; }
+  .uni-sig-extra-small .mu-sig__logo a,
+  .uni-sig-extra-small .mu-sig__wordmark a {
+    display: block;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: left 0;
+    margin: 0; }
+  .uni-sig-extra-small .mu-sig__logo a {
+    width: 26px;
+    height: 29px;
+    position: relative;
+    background: none;
+    float: left;
+    margin-left: -1px; }
+    .uni-sig-extra-small .mu-sig__logo a:after {
+      text-indent: 0;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: url("../images/mu-logo-extra-small.svg"); }
+  .uni-sig-extra-small .mu-sig__wordmark {
+    color: red;
+    margin-left: 33px;
+    padding-top: 6px; }
+  .uni-sig-extra-small .mu-sig__wordmark a {
+    width: 177px;
+    height: 21px;
+    position: relative;
+    background: none; }
+    .uni-sig-extra-small .mu-sig__wordmark a:after {
+      text-indent: 0;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: url("../images/mu-wordmark-black-extra-small.svg"); } }
+
 .uni-sig-extra-small-center .mu-sig__logo,
 .uni-sig-extra-small-center .mu-sig__wordmark {
   margin: 0; }
@@ -506,6 +707,49 @@ Here are the variables that can be used with their defaults:
   background-image: url("../images/mu-wordmark-black-extra-small.svg"); }
   .uni-sig-extra-small-center .mu-sig__wordmark a:hover, .uni-sig-extra-small-center .mu-sig__wordmark a:focus, .uni-sig-extra-small-center .mu-sig__wordmark a:active {
     background-position: left -21px; }
+
+@media print {
+  .uni-sig-extra-small-center .mu-sig__logo,
+  .uni-sig-extra-small-center .mu-sig__wordmark {
+    margin: 0; }
+  .uni-sig-extra-small-center .mu-sig__logo a,
+  .uni-sig-extra-small-center .mu-sig__wordmark a {
+    display: block;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: left 0;
+    margin-left: auto;
+    margin-right: auto; }
+  .uni-sig-extra-small-center .mu-sig__logo a {
+    width: 26px;
+    height: 29px;
+    position: relative;
+    background: none;
+    margin-bottom: 7px; }
+    .uni-sig-extra-small-center .mu-sig__logo a:after {
+      text-indent: 0;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: url("../images/mu-logo-extra-small.svg"); }
+  .uni-sig-extra-small-center .mu-sig__wordmark {
+    color: red; }
+  .uni-sig-extra-small-center .mu-sig__wordmark a {
+    width: 177px;
+    height: 21px;
+    position: relative;
+    background: none; }
+    .uni-sig-extra-small-center .mu-sig__wordmark a:after {
+      text-indent: 0;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: url("../images/mu-wordmark-black-extra-small.svg"); } }
 
 .uni-sig-small {
   background-color: #F1B82D; }
@@ -573,6 +817,50 @@ Here are the variables that can be used with their defaults:
     background-image: url("../images/mu-wordmark-white-small.svg"); }
     .uni-sig-small-center .mu-sig__wordmark a:hover, .uni-sig-small-center .mu-sig__wordmark a:focus, .uni-sig-small-center .mu-sig__wordmark a:active {
       background-position: left -27px; }
+  @media print {
+    .uni-sig-small-center .mu-sig__logo,
+    .uni-sig-small-center .mu-sig__wordmark {
+      margin: 0; }
+    .uni-sig-small-center .mu-sig__logo a,
+    .uni-sig-small-center .mu-sig__wordmark a {
+      display: block;
+      text-indent: 200%;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 0;
+      background-repeat: no-repeat;
+      background-position: left 0;
+      margin-left: auto;
+      margin-right: auto; }
+    .uni-sig-small-center .mu-sig__logo a {
+      width: 34px;
+      height: 38px;
+      position: relative;
+      background: none;
+      margin-bottom: 10px; }
+      .uni-sig-small-center .mu-sig__logo a:after {
+        text-indent: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: url("../images/mu-logo-small.svg"); }
+    .uni-sig-small-center .mu-sig__wordmark {
+      color: red; }
+    .uni-sig-small-center .mu-sig__wordmark a {
+      width: 229px;
+      height: 27px;
+      position: relative;
+      background: none; }
+      .uni-sig-small-center .mu-sig__wordmark a:after {
+        text-indent: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: url("../images/mu-wordmark-white-small.svg"); }
+      .uni-sig-small-center .mu-sig__wordmark a:after {
+        top: -54px; } }
 
 .uni-sig-medium:before, .uni-sig-medium:after {
   content: ' ';
