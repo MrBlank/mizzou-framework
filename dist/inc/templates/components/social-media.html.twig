@@ -1,0 +1,27 @@
+{#
+/**
+ * Social Media
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 3.0.0
+ *
+ * Variables:
+ * - social_media_facebook_url: (string) Facebook URL (optional, see default).
+ * - social_media_flickr_url: (string) Flickr URL (optional, see default).
+ * - social_media_modifier_class: (string) A modifier class to apply to the block (optional).
+ * - social_media_twitter_username: (string) Twitter username (optional, see default).
+ */
+#}
+{# Defaults #}
+{% set social_media_facebook_url = social_media_facebook_url|default(site.facebook_url) %}
+{% set social_media_flickr_url = social_media_flickr_url|default(site.flickr_url) %}
+{% set social_media_twitter_username = social_media_twitter_username|default(site.twitter_username) %}
+
+{% if (social_media_twitter_username) or (social_media_facebook_url) or (social_media_flickr_url) %}
+    <ul class="social-media{% if (social_media_modifier_class) %} {{ social_media_modifier_class }}{% endif %}">{% spaceless %}
+        {% if (social_media_twitter_username) %}<li class="social-media__twitter"><a href="https://twitter.com/{{ social_media_twitter_username }}">Twitter</a></li>{% endif %}
+        {% if (social_media_facebook_url) %}<li class="social-media__facebook"><a href="{{ social_media_facebook_url }}">Facebook</a></li>{% endif %}
+        {% if (social_media_flickr_url) %}<li class="social-media__flickr"><a href="{{ social_media_flickr_url }}">Flickr</a></li>{% endif %}
+    {% endspaceless %}</ul>
+{% endif %}

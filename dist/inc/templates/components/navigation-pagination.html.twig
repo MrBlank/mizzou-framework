@@ -1,0 +1,29 @@
+{#
+/**
+ * Navigation Pagination
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 3.0.0
+ *
+ * Variables:
+ * - pagination.next: (array) Navigation item of next page (optional).
+ *       - link: (string) Link for navigation item.
+ *       - title: (string) Title of navigation item.
+ * - pagination.previous: (array) Navigation item of previous page (optional).
+ *       - link: (string) Link for navigation item.
+ *       - title: (string) Title of navigation item.
+ * - pagination_modifier_class: (string) A modifier class to apply to the block (optional).
+ */
+#}
+
+{% if (pagination.previous) or (pagination.next) %}
+    <ul class="pagination{% if (pagination_modifier_class) %} {{ pagination_modifier_class }}{% endif %}">
+    {% if (pagination.previous) %}
+        <li class="pagination__previous"><a href="{{ pagination.previous.link }}">Previous</a></li>
+    {% endif %}
+    {% if (pagination.next) %}
+        <li class="pagination__next"><a href="{{ pagination.next.link }}">Next</a></li>
+    {% endif %}
+    </ul>
+{% endif %}

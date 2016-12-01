@@ -1,0 +1,21 @@
+{#
+/**
+ * Block Template
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 3.0.0
+ *
+ * Variables:
+ * - block: (object) Block content (see https://github.com/jarednova/timber/wiki/TimberPost for properties).
+ */
+#}
+<div class="block block--{{ block.post_name }}">
+    {{ block.content|raw }}
+
+    {% if block.can_edit %}
+        <div class="block__edit-link">
+            <a href="{{ block.edit_link }}">Edit Content Block</a>
+        </div>
+    {% endif %}
+</div>

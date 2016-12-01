@@ -1,0 +1,21 @@
+{#
+/**
+ * Single Post Template
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 3.0.0
+ *
+ * Variables:
+ * - page: (object) Page content (see https://github.com/jarednova/timber/wiki/TimberPost for properties).
+ */
+#}
+
+{% extends 'main-template.html' %}
+
+{% block content %}
+<article>
+    <h1>{{ page.title|striptags('<em>')|raw }}</h1>
+    {{ page.content|raw }}
+</article>
+{% endblock %}

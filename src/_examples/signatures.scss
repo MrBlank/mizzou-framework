@@ -1,0 +1,199 @@
+@import "../scss/_variables";
+@import "../scss/_base-mixins"; 
+@import "../scss/_mizzou-signature"; 
+
+
+
+.wrapper article div
+{
+    margin-bottom: 3em;
+    padding: 2em;
+    border: solid 1px #222;
+}
+
+// Unit sigs
+
+.unit-sig-small 
+{
+    @include mu-unit-sig(
+        $name-width: 194px,
+        $name-height: 27px,
+        $name-margin: 3px
+    );
+    background-color: $gold;
+    
+    @media print {
+        @include mu-unit-sig(
+            $name-width: 194px,
+            $name-height: 27px,
+            $name-margin: 3px, 
+            $print: 'true'
+        );
+    }
+}
+
+.unit-sig-small-center 
+{
+    @include mu-unit-sig(
+        $name-width: 194px,
+        $name-height: 27px,
+        $name-margin: 3px,
+        $size: 'small',
+        $center: 'true',
+        $color: 'white'
+    );
+    background-color: #222;
+    
+    @media print {
+        @include mu-unit-sig(
+            $name-width: 194px,
+            $name-height: 27px,
+            $name-margin: 3px,
+            $size: 'small',
+            $center: 'true',
+            $color: 'white', 
+            $print: 'true'
+        );
+    }
+}
+
+.unit-sig-medium 
+{
+    @include mu-unit-sig(
+        $name-width: 284px,
+        $name-height: 40px,
+        $size: 'medium'
+    );
+}
+
+.unit-sig-medium-center 
+{
+    @include mu-unit-sig(
+        $name-width: 284px,
+        $name-height: 40px,
+        $size: 'medium',
+        $center: 'true'
+    );
+}
+
+.unit-sig-large 
+{
+    @include mu-unit-sig(
+        $name-width: 404px,
+        $name-height: 57px,
+        $size: 'large',
+        $color: 'white'
+    );
+    background-color: #222;
+    
+    @media print {
+        @include mu-unit-sig(
+            $name-width: 404px,
+            $name-height: 57px,
+            $size: 'large',
+            $color: 'white', 
+            $print: 'true'
+        );
+    }
+}
+
+.unit-sig-large-center 
+{
+    @include mu-unit-sig(
+        $name-width: 404px,
+        $name-height: 57px,
+        $size: 'large',
+        $center: 'true'
+    );
+    background-color: $gold;
+}
+
+
+// University sigs
+
+.uni-sig-extra-small 
+{
+    @include mu-sig(
+        $size: 'extra-small' 
+    );
+    
+    @media print {
+        @include mu-sig(
+            $size: 'extra-small', 
+            $print: 'true'
+        );
+    } 
+}
+
+.uni-sig-extra-small-center 
+{
+    @include mu-sig(
+        $size: 'extra-small',
+        $center: 'true'
+    );
+    @media print {
+        @include mu-sig(
+            $size: 'extra-small', 
+            $center: 'true',
+            $print: 'true'
+        );
+    } 
+}
+
+.uni-sig-small 
+{
+    @include mu-sig();
+    background-color: $gold;
+}
+
+.uni-sig-small-center 
+{
+    @include mu-sig(
+        $size: 'small',
+        $center: 'true',
+        $color: 'white'
+    );
+    background-color: #222;
+    
+    @media print {
+        @include mu-sig(
+            $size: 'small', 
+            $center: 'true',
+            $color: 'white',
+            $print: 'true'
+        );
+    } 
+}
+
+.uni-sig-medium 
+{
+    @include mu-sig(
+        $size: 'medium'
+    );
+}
+
+.uni-sig-medium-center 
+{
+    @include mu-sig(
+        $size: 'medium',
+        $center: 'true'
+    );
+}
+
+.uni-sig-large 
+{
+    @include mu-sig(
+        $size: 'large',
+        $color: 'white'
+    );
+    background-color: #222;
+}
+
+.uni-sig-large-center 
+{
+    @include mu-sig(
+        $size: 'large',
+        $center: 'true'
+    );
+    background-color: $gold;
+}

@@ -1,0 +1,2 @@
+# Disable IE compatibility mode
+Header set X-UA-Compatible "IE=edge,chrome=1"

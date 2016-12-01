@@ -1,0 +1,58 @@
+/**
+ * Mizzou Framework - Sass: Skip to Links
+ *
+ * Requires: _variables.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+ 
+/**
+ * Sets up "Skip to Content" link at the top of the document that's visible on tab
+ *
+ * @param string $theme (Optional) Color theme. Can be 'light' or 'dark'. Defaults to 'light'
+ * @param boolean $include-print-style (Optional) Whether to hide the element for printing. Defaults to true
+ */
+@mixin skip-to-content(
+    $theme:                     'light',
+    $include-print-style:       true
+)
+{
+    font-weight: $font-bold;
+    position: absolute;
+    top: -5000px;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    display: block;
+    text-decoration: none; 
+    text-transform: uppercase;
+    padding: .45em .5em .25em;
+    font-size: 20px;
+    text-align: center;
+    //outline: none;
+    
+    @if ($theme == 'dark') {
+        background: rgba($gray-darker, .9);
+        border-bottom: 1px solid #000;
+        color: $gold-light;
+    } @else { // $theme == 'light'
+        background: rgba($gold, .9);
+        border-bottom: 1px solid $gold;
+        color: $text-color;
+    }
+
+    @if ($include-print-style == true) {
+        @media print
+        {
+            display: none;
+        }
+    }
+    
+    &:focus,
+    &:active
+    {
+        top: 0;
+    }
+}

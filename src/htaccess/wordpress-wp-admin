@@ -1,0 +1,7 @@
+# Block access to external addresses 
+order deny,allow
+deny from all
+allow from 128.206.
+allow from 161.130.
+allow from 10.7.
+allow from 10.8.

@@ -1,0 +1,2039 @@
+@charset "UTF-8";
+/**
+ * Mizzou Framework - Sass: Variables
+ *
+ * @author Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2016 Curators of the University of Missouri
+ * @version 1.10
+ */
+/* @group Colors */
+/* @end */
+/* @group Fonts */
+/* @end */
+/* @group Standard Measurements */
+/* @end */
+/* @group Images */
+/* @end */
+/* @group Viewport */
+/* @end */
+/**
+ * Mizzou Framework - Sass: Fonts
+ *
+ * Requires: variables.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+/* @group Proxima Nova */
+/**
+ * # Notes
+ *	
+ *  - Only embed a few weights you need. Fonts add a lot of page weight.
+ *  - Font files are not included in the Mizzou Framework
+ *  - License: http://www.fontspring.com/fonts/mark-simonson-studio/proxima-nova
+ *	- MARCOM licensed pageviews: 5,000,000 Pageviews
+ *	- Purchased from fontspring.com with Webcom account
+ *	- No tracking code
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2012 Fontspring
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      Mark Simonson Studio
+ * License URL: http://www.fontspring.com/fflicense/mark-simonson-studio
+ *
+ */
+/* @end */
+/* @group Janson */
+/**
+ *	
+ * # Notes
+ * 	
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2799089
+ * Licensed pageviews: 1,000,000
+ * Purchased from myfonts.com with Webcom account
+ * Include licence and tracking @import when embedding in a site
+ *   
+ * # Tracking 
+ *
+ * - We have limited pageviews for this font! 
+ * - Tracking ID is based on the fontkit generated at myfonts.com 
+ * - Replace the ID with the one generated from the fontkit 
+ * - To use other fontkits with fewer fonts, you must create a new one at myfonts.com and apply he new ID 
+ * 
+ */
+/**
+ * @license
+ * MyFonts Webfont Build ID 3140068, 2015-12-11T15:15:55-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: JansonURW-Reg by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-t-regular/
+ * 
+ * Webfont: JansonURW-Med by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-t-medium/
+ * 
+ * Webfont: JansonURW-BolIta by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-t-bold-italic/
+ * 
+ * Webfont: JansonURW-Lig by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-t-light/
+ * 
+ * Webfont: JansonURW-MedIta by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-t-medium-italic/
+ * 
+ * Webfont: JansonURWSC-Reg by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-sc-t-regular/
+ * 
+ * Webfont: JansonURW-Bol by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-t-bold/
+ * 
+ * Webfont: JansonURW-RegIta by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-t-italic/
+ * 
+ * Webfont: JansonURW-LigIta by URW++
+ * URL: http://www.myfonts.com/fonts/urw/janson/urw-t-light-italic/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3140068
+ * Licensed pageviews: 2,020,000
+ * Webfonts copyright: (URW)++,Copyright 2006 by (URW)++ Design &amp; Development
+ * 
+ * © 2015 MyFonts Inc
+*/
+/**
+ * Add your tracking link for license, unique to each fontkit you build.
+ * Include when calling the mixin. Replace '{fontkit-id}' with the number.
+ * (This @import is placed at the top of compiled CSS file when compiled.)
+ *
+ * @import url("//hello.myfonts.net/count/{fontkit-id}"); 
+ *
+ */
+/* @end */
+/**
+ * Mizzou Framework - Sass: Base Mixins
+ *
+ * Requires: _variables.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.10
+ */
+/* @group Placeholder Selectors */
+/*
+The `.center-block()` mixin is a quick way to center layouts.
+
+```html_example
+<div class="center-me">
+    <p>A Centered, block-level element.</p>
+</div>
+```
+Here are the variables that can be used:
+
+```
+@max-width  
+@min-width
+
+.center-me {
+    .center-block(@bmax-width: 300px, @min-width: 150px);
+    .box();
+    width: 50%;
+}
+*/
+/**
+ * Sets up containing div, centered with a max-width
+ *
+ * @param unit $max-width (Optional) Width of the block. Defaults to 100%
+ * @param boolean $include-print-style (Optional) Whether to set the block to 100% for printing. Defaults to true
+ */
+/*@mixin center-block(
+    $max-width:                 100%,
+    $include-print-style:       true
+)
+{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $max-width;
+    
+    @if (($max-width != 100%) and ($include-print-style == true)) {
+        @media print
+        {
+            max-width: 100%;
+        }
+    }
+}*/
+/* @end */
+/**
+ * Image replacement technique. Offsets the element text and sets a background image
+ *
+ * @param string $filename (Optional) Filename of the image. Defaults to 'none'
+ * @param unit $width (Optional) Width of the image. Defaults to 'none'
+ * @param unit $height (Optional) Height of the image. Defaults to 'none'
+ */
+/*
+The `.box()` mixin is good for adding empasis to an element. 
+
+```html_example
+<div class="box-example">
+    <p>A box with some added style options.</p>
+</div>
+```
+Here are the variables that can be used with their defaults:
+
+```
+@background: @color-box-bg          // Use 'none' to remove
+@padding: 1rem 
+@border-size: 0                     // Change this to add a border
+@border-color: @color-box-border 
+@border-style: solid
+
+.box-example {
+    .box(@gold-lightest, 1.5, 1px, @gold);
+}
+*/
+/**
+ * Mizzou Framework - Sass: Base
+ *
+ * Requires: _variables.scss, _base-mixins.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+/* @group Viewport */
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@viewport {
+  width: device-width; }
+
+/* @end */
+/* @group General Settings / Major Containers */
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+*[tabindex="-1"] {
+  outline: none; }
+
+article,
+aside,
+audio,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+video {
+  display: block;
+  margin: 0;
+  padding: 0; }
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  background: #444444;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  min-width: 320px; }
+
+body {
+  background: #FFFFFF;
+  color: #222222;
+  margin: 0; }
+
+/* @end */
+/* @group Text Format */
+b,
+strong,
+.bold {
+  font-weight: 600; }
+
+i,
+em,
+.italic {
+  font-style: italic; }
+  i em,
+  em em,
+  .italic em {
+    font-style: normal; }
+
+u {
+  text-decoration: none; }
+
+/* @end */
+/* @group Headings and Paragraphs */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.like-h1,
+.like-h2,
+legend,
+.like-h3,
+.like-h4,
+caption,
+.like-h5,
+.like-h6 {
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+  color: #000; }
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  h6 a,
+  .like-h1 a,
+  .like-h2 a, legend a,
+  .like-h3 a,
+  .like-h4 a, caption a,
+  .like-h5 a,
+  .like-h6 a {
+    text-decoration: none; }
+
+h1,
+.like-h1 {
+  margin: 0 0 1rem 0;
+  font-size: 2.5em;
+  line-height: 1.2; }
+
+h2,
+.like-h2,
+legend {
+  margin: 0 0 1rem 0;
+  font-size: 1.8em;
+  line-height: 1.2; }
+
+h3,
+.like-h3 {
+  font-size: 1.4em;
+  line-height: 1.3; }
+
+h4,
+.like-h4,
+caption {
+  font-size: 1em; }
+
+h5,
+h6,
+.like-h5,
+.like-h6 {
+  color: #666666;
+  font-size: 1em;
+  margin: .5em 0; }
+
+h6,
+.like-h6 {
+  color: #999999;
+  font-style: italic; }
+
+p {
+  margin: 0 0 1rem 0; }
+
+/* @end */
+/* @group Images, Figures, and Video */
+img {
+  border: 0;
+  max-width: 100%;
+  width: auto;
+  height: auto; }
+
+figure,
+.alignnone,
+.alignleft,
+.aligncenter,
+.alignright {
+  margin: 0 0 1rem 0;
+  max-width: 100%; }
+
+figure.center,
+.aligncenter {
+  margin: 0 auto 1em auto;
+  text-align: center; }
+
+figcaption {
+  font-weight: 600;
+  font-size: .875em; }
+  figcaption > :first-child {
+    margin-top: 0; }
+  figcaption p {
+    font-size: inherit; }
+
+iframe {
+  border: 0;
+  clear: both; }
+
+.video {
+  margin: 0 0 1rem 0;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden; }
+  .video.video--4x3 {
+    padding-bottom: 75%; }
+  .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+/* @end */
+/* @group Blockquotes */
+blockquote,
+.like-blockquote {
+  margin: 2rem 0;
+  margin-left: 0;
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: .5rem 2rem;
+  border-left: solid 1px #F1B82D; }
+  blockquote > :first-child,
+  .like-blockquote > :first-child {
+    margin-top: 0 !important; }
+  blockquote > :last-child,
+  .like-blockquote > :last-child {
+    margin-bottom: 0 !important; }
+  blockquote .attribution,
+  .like-blockquote .attribution {
+    font-size: 1rem;
+    font-weight: 400; }
+
+/* @end */
+/* @group Addresses */
+address {
+  font-style: normal; }
+
+/* @end */
+/* @group Horizontal Rules */
+hr {
+  margin: 0 0 1rem 0;
+  clear: both;
+  border: 0;
+  border-bottom: 1px solid #CCCCCC; }
+
+/* @end */
+/* @group Lists */
+ul,
+ol {
+  margin: 0 0 1rem 0;
+  padding-left: 1.5rem; }
+  ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
+    margin: 0; }
+
+li li,
+li p {
+  font-size: inherit; }
+
+dl {
+  margin: 0 0 1rem 0;
+  padding-left: 1.5rem; }
+
+dt {
+  font-weight: 600; }
+
+dd {
+  margin: 0 0 0.5rem 0; }
+
+/* @end */
+/* @group Forms */
+form,
+fieldset {
+  margin: 0 0 1rem 0; }
+
+fieldset,
+legend {
+  padding: 0;
+  border: 0; }
+
+input[type='text'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='url'],
+input[type='email'],
+textarea {
+  margin: 0;
+  padding: 4px;
+  border: 1px solid #999999;
+  font-size: 100%;
+  font-family: inherit;
+  color: #444444;
+  border-radius: 0;
+  box-shadow: inset 0 0 4px fade(#999999, 75%);
+  display: block;
+  -webkit-appearance: none; }
+
+input[type='submit'],
+input[type='reset'],
+input[type='button'],
+button {
+  vertical-align: top;
+  cursor: pointer; }
+  input[type='submit']::-moz-focus-inner,
+  input[type='reset']::-moz-focus-inner,
+  input[type='button']::-moz-focus-inner,
+  button::-moz-focus-inner {
+    border: 0;
+    padding: 0; }
+
+/* @end */
+/* @group Tables */
+table {
+  margin: 0 0 1rem 0;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+th,
+td {
+  border: 1px solid #999999;
+  text-align: left; }
+
+th,
+td {
+  vertical-align: top;
+  padding: 4px 8px; }
+
+th[scope='col'] {
+  border-bottom-width: 2px; }
+
+th[scope='row'] {
+  border-right-width: 2px; }
+
+tfoot th,
+tfoot td {
+  font-size: 14px;
+  border: 0; }
+
+caption {
+  margin: 0 0 8px 0;
+  text-align: left; }
+
+/* @end */
+/* @group Code and Preformatted Text */
+pre,
+code,
+var {
+  font-size: .875em;
+  font-family: "source code pro", "Menlo", "Courier New", monospace;
+  color: black;
+  white-space: pre-wrap; }
+
+/* @end */
+/* @group Links */
+a {
+  color: #900000;
+  text-decoration: underline; }
+  a:hover, a:focus, a:active {
+    color: #222222; }
+
+/* @end */
+/* @group Marks and Notations */
+abbr,
+acronym {
+  border-bottom: 1px dotted #999999;
+  cursor: help; }
+
+sub,
+sup {
+  position: relative;
+  font-size: 0.75em;
+  line-height: 0;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+mark {
+  background: #FEE8B6; }
+
+small {
+  font-size: 12.8px; }
+
+/* @end */
+::-moz-selection {
+  color: #000;
+  color: rgba(0, 0, 0, 0.85);
+  background-color: #f9e0a5; }
+
+::selection {
+  color: #000;
+  color: rgba(0, 0, 0, 0.85);
+  background-color: #f9e0a5; }
+
+/**
+ * Mizzou Framework - Sass: Helper Classes
+ *
+ * Requires: _variables.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+/* @group Lists */
+ul.list--spaced > li,
+ol.list--spaced > li {
+  margin-bottom: 1em; }
+
+ul.list--square {
+  list-style: square; }
+
+ul.list--disc {
+  list-style: disc; }
+
+ul.list--circle {
+  list-style: circle; }
+
+ol.list--decimal {
+  list-style: decimal; }
+
+ol.list--lower-alpha {
+  list-style: lower-alpha; }
+
+ol.list--upper-alpha {
+  list-style: upper-alpha; }
+
+ol.list--lower-roman {
+  list-style: lower-roman; }
+
+ol.list--upper-roman {
+  list-style: upper-roman; }
+
+ul.list--none {
+  list-style: none;
+  padding-left: 0; }
+
+li li,
+li p {
+  font-size: inherit; }
+
+/* @end */
+/* @group Horizontal Rules */
+hr.rule--dashed {
+  border-style: dashed; }
+
+hr.rule--space {
+  border-color: transparent;
+  visibility: hidden; }
+
+/* @end */
+/* @group Others  */
+.clear {
+  clear: both; }
+
+/* @end */
+/*@group Type helpers */
+.dquo {
+  margin-left: -.3em; }
+
+.quo {
+  margin-left: -.2em; }
+
+.caps {
+  font-size: 90%;
+  text-transform: uppercase; }
+
+.dropcap {
+  font-weight: 600;
+  float: left;
+  display: block;
+  line-height: .7;
+  font-size: 5.4em;
+  margin: 0 .08em 0 -.04em;
+  padding-top: .11em; }
+  .dropcap.hang {
+    margin-left: -.3em; }
+
+/*doc
+---
+title: Type Helpers
+name: zhelpers_02
+category: Mixins & Helper Classes
+---
+
+## Hanging Quotes
+
+The `.quo` and `.dquo` classes are for single quotes and double quotes, respectively. 
+They push the element to the left a little to cause the punctuation to hang into the margins.
+
+```html_example 
+<h1><span class="quo">&#8216;</span>Let these columns stand. Let them stand a thousand years.&#8217;</h1>
+<p><span class="dquo">&#8220;</span>Let these columns stand. Let them stand a thousand years. Crown them with an arch, memorial to the men who in their magnificent presence learned what life and duty are, and how to live the one and do the other. They will be to all the rallying point of future devotion and service to the university.&#8221;</p>
+```
+
+## Small Caps
+
+The `.caps` class shrinks text a little and transforms text to uppercase.
+
+```html_example 
+<p>The quarterly magazine of <span class="caps">MAA</span> is called <span class="caps">MIZZOU</span> and provides news and information about the University of Missouri</p>
+```
+
+## Dropcaps
+
+The `.dropcap` class works on an inline element, usually and span tag. Add the class `.hang` when it starts with punctuation to hang it in the margins. 
+
+```html_example 
+<p><span class="dropcap">L</span>Let these columns stand. Let them stand a thousand years. Crown them with an arch, memorial to the men who in their magnificent presence learned what life and duty are, and how to live the one and do the other. They will be to all the rallying point of future devotion and service to the university.</p>
+<p><span class="dropcap hang">&#8216;L</span>Let these columns stand. Let them stand a thousand years. Crown them with an arch, memorial to the men who in their magnificent presence learned what life and duty are, and how to live the one and do the other. They will be to all the rallying point of future devotion and service to the university.&#8217;</p>
+```
+
+*/
+/* @end */
+/**
+ * Mizzou Framework - Sass: Forms
+ *
+ * Requires: _variables.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+.form--horizontal-layout {
+  margin: 1em 0;
+  display: table;
+  width: 100%; }
+  .form--horizontal-layout .form__field {
+    display: table-row; }
+    .form--horizontal-layout .form__field.alert {
+      padding: 0; }
+    .form--horizontal-layout .form__field:after {
+      display: none; }
+    .form--horizontal-layout .form__field .form__field__label,
+    .form--horizontal-layout .form__field .form__field__control {
+      display: table-cell;
+      vertical-align: top;
+      padding: 8px; }
+    .form--horizontal-layout .form__field .form__field__label {
+      width: 184px;
+      padding-right: 16px; }
+
+.form__field {
+  margin: 1em 0;
+  padding-top: 8px; }
+  .form__field:before, .form__field:after {
+    content: ' ';
+    display: table; }
+  .form__field:after {
+    clear: both; }
+  .form__field.alert {
+    padding: 8px; }
+
+.form__field__label {
+  font-weight: 700; }
+
+.form__field__control ul {
+  list-style: none;
+  padding: 0; }
+
+.form__field__text-input.form__field__text-input--full-width {
+  width: 100%; }
+
+.alert--error .form__field__text-input {
+  border-color: #900000; }
+
+.alert--success .form__field__text-input {
+  border-color: #2D671B; }
+
+.form__field__help {
+  font-size: 12px;
+  margin-bottom: 0; }
+
+/**
+ * Mizzou Framework - Sass: Buttons
+ *
+ * Requires: _variables.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+/**
+ * Sets up a button with custom attributes
+ *
+ * @param color $color-background Background color
+ * @param color $color-text Text color
+ * @param color $color-border Border color
+ * @param string $size (Optional) Text size. Can be 'small' or 'large'. Defaults to 'small'
+ * @param boolean $include-print-style (Optional) Whether to make the button black and white for printing. Defaults to true
+ */
+/**
+ * Sets up a button with common attributes
+ *
+ * @param string $size (Optional) Text size. Can be 'small' or 'large'. Defaults to 'small'
+ * @param string $color (Optional) Button color. Can be 'brown', 'gold', or 'gray'. Defaults to 'brown'
+ * @param string $theme (Optional) Color theme. Can be 'light' or 'dark'. Dark gives the button a lighter border. Defaults to 'light'
+ * @param boolean $include-print-style (Optional) Whether to make the button black and white for printing. Defaults to true
+ */
+/**
+ * Mizzou Framework - Sass: Mizzou Signatures
+ *
+ * Requires: _base-mixins.scss
+ *
+ * @author Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2016 Curators of the University of Missouri
+ * @version 1.3
+ */
+/* @group MU Signatures */
+/**
+ * Sets up a university signature
+ *
+ * @param string $size - (Optional) Signature size. Can be 'extra-small', 'small', 'medium', or 'large'. Defaults to 'small'
+ * @param string $color - (Optional) Text color. Can be black or white. Defaults to black
+ * @param boolean $print - (Optional) Whether to set the images up for printing. Defaults to false
+ * @param boolean $center - (Optional) Whether to center the signature. Defaults to false
+ */
+/* @end */
+/* @group Unit Signatures */
+/**
+ * Sets up a unit signature
+ *
+ * @param unit $name-name-width - Width of the unit name image
+ * @param unit $name-height - Height of the unit name image. Should be half the actual height, as it's a rollover sprite
+ * @param string $name-prefix - (Optional) Prefix for unit name file. Defaults to 'unit-name'
+ * @param unit $name-margin - (Optional) Helps adjust space between unit name and wordmark with bottom margin. Defaults to 0
+ * @param string $size - (Optional) Signature size. Can be 'small', 'medium', or 'large'. Defaults to 'small'
+ * @param string $color - (Optional) Text color. Can be 'black' or 'white'. Defaults to 'black'
+ * @param unit $wordmark-indent - (Optional) Helps left alignment with unit name when aligned left. Defaults to 0
+ * @param boolean $print - (Optional) Whether to set the images up for printing. Defaults to false
+ * @param boolean $center - (Optional) Whether to center the signature. Defaults to false
+ * @param boolean $health-wordmark: - (Optional) Whether to use the University of Missouri Health wordmark. Defaults to false
+ */
+/* @end */
+/* @group Signature Mixins */
+/* @end */
+/**
+ * Mizzou Framework - Sass: Grid Mixin
+ *
+ * Requires: _mixins.scss
+ *
+ * $author Josh Hughes (hughesjd$missouri.edu), Josh Nichols (nicholsjc$missouri.edu), University of Missouri
+ * $copyright 2015 Curators of the University of Missouri
+ * $version 1.00
+ */
+/**
+ * Takes a given fraction, and generates a floated column
+ *
+ * Example:
+ *
+ *     @include grid-column(1, 2);
+ *
+ * ... which will output the following:
+ * 
+ *     float: left
+ *     width: 50%;
+ *
+ * @param int $x Numerator
+ * @param int $y Denominator
+ * @param float $padding-left (Optional) Padding left for the column (defaults to 8px)
+ * @param float $padding-right (Optional) Padding right for the column (defaults to 8px)
+ * @param string $float-direction (Optional) How to float the column (defaults to left)
+ */
+/**
+ * Creates a container for columns (setting padding and enclosing floats)
+ *
+ * @param float $padding-left (Optional) Padding left for the row (defaults to 8px)
+ * @param float $padding-right (Optional) Padding right for the row (defaults to 8px)
+ */
+/* Not really used. Delete?
+@mixin grid-push($x, $y) {
+    margin-left: ($x * 100% / $y);
+}
+@mixin grid-pull($x, $y) {
+    margin-right: ($x * 100% / $y);
+}
+*/
+/**
+ * Mizzou Framework - Sass: Skip to Links
+ *
+ * Requires: _variables.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+/**
+ * Sets up "Skip to Content" link at the top of the document that's visible on tab
+ *
+ * @param string $theme (Optional) Color theme. Can be 'light' or 'dark'. Defaults to 'light'
+ * @param boolean $include-print-style (Optional) Whether to hide the element for printing. Defaults to true
+ */
+/**
+ * Sass CSS Framework: Search Form
+ *
+ * Requires: _variables.scss, mizzou-base.scss, _buttons.scss
+ *
+ * $author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
+ * $copyright 2015 Curators of the University of Missouri
+ * $version 3.00
+ */
+/**
+ * Styles for a search form
+ *
+ * @param string $theme (Optional) Color theme. Can be 'light' or 'dark'. Defaults to 'light'
+ * @param string $button-color (Optional) Button color. Can be 'orange', 'gold', or 'gray'. Defaults to 'gold' (see .ui-button)
+ * @param boolean $include-print-style (Optional) Whether to hide the form for printing. Defaults to true
+ */
+@media print {
+  /**
+ * Mizzou Framework - Sass: Print Reset
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+  *,
+  *:before,
+  *:after {
+    background-image: none !important;
+    background-color: #fff !important;
+    color: #000 !important;
+    border-color: #000 !important; }
+  html {
+    font-size: 11pt !important; }
+  a, a:visited {
+    text-decoration: underline; }
+  pre, blockquote {
+    page-break-inside: avoid; }
+  thead {
+    display: table-header-group; }
+  tr {
+    page-break-inside: avoid; }
+  img {
+    page-break-inside: avoid;
+    max-width: 100%; }
+  p,
+  h1,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("../fonts/proximanova-light-webfont.woff2") format("woff2"), url("../fonts/proximanova-light-webfont.woff") format("woff"), url("../fonts/proximanova-light-webfont.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("../fonts/proximanova-lightit-webfont.woff2") format("woff2"), url("../fonts/proximanova-lightit-webfont.woff") format("woff"), url("../fonts/proximanova-lightit-webfont.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("../fonts/proximanova-regular-webfont.woff2") format("woff2"), url("../fonts/proximanova-regular-webfont.woff") format("woff"), url("../fonts/proximanova-regular-webfont.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("../fonts/proximanova-regularit-webfont.woff2") format("woff2"), url("../fonts/proximanova-regularit-webfont.woff") format("woff"), url("../fonts/proximanova-regularit-webfont.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("../fonts/proximanova-semibold-webfont.woff2") format("woff2"), url("../fonts/proximanova-semibold-webfont.woff") format("woff"), url("../fonts/proximanova-semibold-webfont.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("../fonts/proximanova-semiboldit-webfont.woff2") format("woff2"), url("../fonts/proximanova-semiboldit-webfont.woff") format("woff"), url("../fonts/proximanova-semiboldit-webfont.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic; }
+
+.offset a {
+  font-weight: 700;
+  position: absolute;
+  top: -5000px;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: .45em .5em .25em;
+  font-size: 20px;
+  text-align: center;
+  background: rgba(241, 184, 45, 0.9);
+  border-bottom: 1px solid #F1B82D;
+  color: #222222; }
+  @media print {
+    .offset a {
+      display: none; } }
+  .offset a:focus, .offset a:active {
+    top: 0; }
+
+.header-layer,
+.footer-layer {
+  background-color: #444444; }
+
+header,
+footer {
+  padding: 1rem; }
+
+header,
+.wrapper,
+footer {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+  min-width: 320px; }
+
+.wrapper {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; }
+  .wrapper:before, .wrapper:after {
+    content: ' ';
+    display: table; }
+  .wrapper:after {
+    clear: both; }
+  .wrapper .heading {
+    float: left;
+    width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-top: 2em; }
+
+article,
+aside {
+  margin-bottom: 1em; }
+
+article {
+  float: left;
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; }
+  article > :first-child {
+    margin-top: 0; }
+
+aside {
+  float: left;
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; }
+  aside .box {
+    padding: 1em;
+    margin-bottom: 1em;
+    border: solid 0px #DBD5CD;
+    background-color: #EDEAE6; }
+    aside .box > :first-child {
+      margin-top: 0 !important; }
+    aside .box > :last-child {
+      margin-bottom: 0 !important; }
+
+.grid-3 {
+  clear: both;
+  margin: 5em 0; }
+  .grid-3:before, .grid-3:after {
+    content: ' ';
+    display: table; }
+  .grid-3:after {
+    clear: both; }
+  .grid-3 .box {
+    padding: 1em;
+    margin-bottom: 1em;
+    border: solid 1px #F1B82D;
+    background-color: #FFF4D6; }
+    .grid-3 .box > :first-child {
+      margin-top: 0 !important; }
+    .grid-3 .box > :last-child {
+      margin-bottom: 0 !important; }
+  .grid-3 h2 {
+    float: left;
+    width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem; }
+  .grid-3 .column {
+    float: left;
+    width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem; }
+
+footer p {
+  color: #CCCCCC;
+  line-height: 1.125; }
+  footer p a {
+    color: #CCCCCC; }
+    footer p a:hover, footer p a:focus, footer p a:active {
+      color: #F1B82D; }
+
+.mu-sig:before, .mu-sig:after {
+  content: ' ';
+  display: table; }
+
+.mu-sig:after {
+  clear: both; }
+
+.mu-sig .mu-sig__logo,
+.mu-sig .mu-sig__wordmark {
+  margin: 0; }
+
+.mu-sig .mu-sig__logo a,
+.mu-sig .mu-sig__wordmark a {
+  display: block;
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: left 0;
+  margin: 0; }
+
+.mu-sig .mu-sig__logo a {
+  width: 34px;
+  height: 38px;
+  background-image: url("../images/mu-logo-small.svg");
+  float: left;
+  margin-left: -1px; }
+
+.mu-sig .mu-sig__wordmark {
+  margin-left: 44px;
+  padding-top: 9px; }
+
+.mu-sig .mu-sig__wordmark a {
+  width: 229px;
+  height: 27px;
+  background-image: url("../images/mu-wordmark-small.svg");
+  background-position: left -54px; }
+  .mu-sig .mu-sig__wordmark a:hover, .mu-sig .mu-sig__wordmark a:focus, .mu-sig .mu-sig__wordmark a:active {
+    background-position: left -81px; }
+
+@media print {
+  .mu-sig:before, .mu-sig:after {
+    content: ' ';
+    display: table; }
+  .mu-sig:after {
+    clear: both; }
+  .mu-sig .mu-sig__logo,
+  .mu-sig .mu-sig__wordmark {
+    margin: 0; }
+  .mu-sig .mu-sig__logo a,
+  .mu-sig .mu-sig__wordmark a {
+    display: block;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: left 0;
+    margin: 0; }
+  .mu-sig .mu-sig__logo a {
+    width: 66px;
+    height: 74px;
+    position: relative;
+    background: none;
+    float: left;
+    margin-left: -1px; }
+    .mu-sig .mu-sig__logo a:after {
+      text-indent: 0;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: url("../images/mu-logo-large.svg"); }
+  .mu-sig .mu-sig__wordmark {
+    margin-left: 86px;
+    padding-top: 14px; }
+  .mu-sig .mu-sig__wordmark a {
+    width: 478px;
+    height: 56px;
+    position: relative;
+    background: none; }
+    .mu-sig .mu-sig__wordmark a:after {
+      text-indent: 0;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: url("../images/mu-wordmark-large.svg"); } }
+
+.search-forms form {
+  padding: 1.5em; }
+
+.search-forms .light-gold {
+  background: #F6F5EA; }
+  .search-forms .light-gold .search-form__container {
+    position: relative;
+    overflow: hidden;
+    padding-right: 50px; }
+  .search-forms .light-gold .search-form__label {
+    position: absolute;
+    top: -500px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden; }
+  .search-forms .light-gold .search-form__input {
+    width: 100%;
+    background: #fff;
+    display: block;
+    font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    padding: 4px 8px;
+    vertical-align: middle;
+    height: 34px;
+    box-shadow: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-style: solid;
+    border-width: 1px 0 1px 1px;
+    border-color: #D79900; }
+    .search-forms .light-gold .search-form__input::-webkit-input-placeholder {
+      line-height: 1.3125; }
+    .search-forms .light-gold .search-form__input::-moz-placeholder {
+      line-height: 1.3125; }
+    .search-forms .light-gold .search-form__input:-ms-input-placeholder {
+      line-height: 1.3125; }
+  .search-forms .light-gold .search-form__button {
+    font-weight: 700;
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+    cursor: pointer;
+    text-align: center;
+    transition-property: background, border, color;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    border-style: solid;
+    border-width: 1px;
+    background: #FBD986;
+    color: #222222;
+    border: 1px solid #D79900;
+    /* too heavy outline
+    @if ($color-background == transparent) {
+        border: 2px solid $color-border;
+    } @else {
+        border: 1px solid $color-border;
+    }*/
+    font-size: 1em;
+    padding: .3333em 1em;
+    border-radius: 4px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 34px;
+    overflow: hidden;
+    width: 50px; }
+    .search-forms .light-gold .search-form__button:hover, .search-forms .light-gold .search-form__button:focus, .search-forms .light-gold .search-form__button:active {
+      background: #FEE8B6;
+      color: #222222;
+      border-color: #D79900; }
+    .search-forms .light-gold .search-form__button span {
+      display: inline-block;
+      display: block;
+      text-indent: 200%;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 0;
+      background-repeat: no-repeat;
+      background-image: url("../images/search-icon-black.svg");
+      width: 16px;
+      height: 16px; }
+
+.search-forms .light-orange {
+  background: #FFF4D6; }
+  .search-forms .light-orange .search-form__container {
+    position: relative;
+    overflow: hidden;
+    padding-right: 100px; }
+  .search-forms .light-orange .search-form__label {
+    position: absolute;
+    top: -500px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden; }
+  .search-forms .light-orange .search-form__input {
+    width: 100%;
+    background: #fff;
+    display: block;
+    font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    padding: 4px 8px;
+    vertical-align: middle;
+    height: 34px;
+    box-shadow: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-style: solid;
+    border-width: 1px 0 1px 1px;
+    border-color: #992D00; }
+    .search-forms .light-orange .search-form__input::-webkit-input-placeholder {
+      /* WebKit, Blink, Edge */
+      opacity: 0; }
+    .search-forms .light-orange .search-form__input::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      opacity: 0; }
+    .search-forms .light-orange .search-form__input:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      opacity: 0; }
+  .search-forms .light-orange .search-form__button {
+    font-weight: 700;
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+    cursor: pointer;
+    text-align: center;
+    transition-property: background, border, color;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    border-style: solid;
+    border-width: 1px;
+    background: #BD4D1F;
+    color: #FFFFFF;
+    border: 1px solid #611C00;
+    /* too heavy outline
+    @if ($color-background == transparent) {
+        border: 2px solid $color-border;
+    } @else {
+        border: 1px solid $color-border;
+    }*/
+    font-size: 1em;
+    padding: .3333em 1em;
+    border-radius: 4px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 34px;
+    overflow: hidden;
+    width: 100px; }
+    .search-forms .light-orange .search-form__button:hover, .search-forms .light-orange .search-form__button:focus, .search-forms .light-orange .search-form__button:active {
+      background: #611C00;
+      color: #FFFFFF;
+      border-color: #611C00; }
+
+.search-forms .light-gray {
+  background: #F0F0F0; }
+  .search-forms .light-gray .search-form__container {
+    position: relative;
+    overflow: hidden;
+    padding-right: 50px; }
+  .search-forms .light-gray .search-form__label {
+    position: absolute;
+    top: -500px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden; }
+  .search-forms .light-gray .search-form__input {
+    width: 100%;
+    background: #fff;
+    display: block;
+    font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    padding: 4px 8px;
+    vertical-align: middle;
+    height: 34px;
+    box-shadow: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-style: solid;
+    border-width: 1px 0 1px 1px;
+    border-color: #000000; }
+    .search-forms .light-gray .search-form__input::-webkit-input-placeholder {
+      line-height: 1.3125; }
+    .search-forms .light-gray .search-form__input::-moz-placeholder {
+      line-height: 1.3125; }
+    .search-forms .light-gray .search-form__input:-ms-input-placeholder {
+      line-height: 1.3125; }
+  .search-forms .light-gray .search-form__button {
+    font-weight: 700;
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+    cursor: pointer;
+    text-align: center;
+    transition-property: background, border, color;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    border-style: solid;
+    border-width: 1px;
+    background: #222222;
+    color: #FFFFFF;
+    border: 1px solid #000000;
+    /* too heavy outline
+    @if ($color-background == transparent) {
+        border: 2px solid $color-border;
+    } @else {
+        border: 1px solid $color-border;
+    }*/
+    font-size: 1em;
+    padding: .3333em 1em;
+    border-radius: 4px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 34px;
+    overflow: hidden;
+    width: 50px; }
+    .search-forms .light-gray .search-form__button:hover, .search-forms .light-gray .search-form__button:focus, .search-forms .light-gray .search-form__button:active {
+      background: #000000;
+      color: #F1B82D;
+      border-color: #000000; }
+    .search-forms .light-gray .search-form__button span {
+      display: inline-block;
+      display: block;
+      text-indent: 200%;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 0;
+      background-repeat: no-repeat;
+      background-image: url("../images/search-icon-white.svg");
+      width: 16px;
+      height: 16px; }
+
+.search-forms .dark-gold {
+  background: black; }
+  .search-forms .dark-gold .search-form__container {
+    position: relative;
+    overflow: hidden;
+    padding-right: 100px; }
+  .search-forms .dark-gold .search-form__label {
+    position: absolute;
+    top: -500px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden; }
+  .search-forms .dark-gold .search-form__input {
+    width: 100%;
+    background: #fff;
+    display: block;
+    font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    padding: 4px 8px;
+    vertical-align: middle;
+    height: 34px;
+    box-shadow: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-style: solid;
+    border-width: 1px 0 1px 1px;
+    border-color: #fff; }
+    .search-forms .dark-gold .search-form__input::-webkit-input-placeholder {
+      /* WebKit, Blink, Edge */
+      opacity: 0; }
+    .search-forms .dark-gold .search-form__input::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      opacity: 0; }
+    .search-forms .dark-gold .search-form__input:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      opacity: 0; }
+  .search-forms .dark-gold .search-form__button {
+    font-weight: 700;
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+    cursor: pointer;
+    text-align: center;
+    transition-property: background, border, color;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    border-style: solid;
+    border-width: 1px;
+    background: #FBD986;
+    color: #222222;
+    border: 1px solid #FEE8B6;
+    /* too heavy outline
+    @if ($color-background == transparent) {
+        border: 2px solid $color-border;
+    } @else {
+        border: 1px solid $color-border;
+    }*/
+    font-size: 1em;
+    padding: .3333em 1em;
+    border-radius: 4px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 34px;
+    overflow: hidden;
+    width: 100px; }
+    .search-forms .dark-gold .search-form__button:hover, .search-forms .dark-gold .search-form__button:focus, .search-forms .dark-gold .search-form__button:active {
+      background: #FEE8B6;
+      color: #222222;
+      border-color: #F1B82D; }
+
+.search-forms .dark-gray {
+  background: #470102; }
+  .search-forms .dark-gray .search-form__container {
+    position: relative;
+    overflow: hidden;
+    padding-right: 50px; }
+  .search-forms .dark-gray .search-form__label {
+    position: absolute;
+    top: -500px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden; }
+  .search-forms .dark-gray .search-form__input {
+    width: 100%;
+    background: #fff;
+    display: block;
+    font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    padding: 4px 8px;
+    vertical-align: middle;
+    height: 34px;
+    box-shadow: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-style: solid;
+    border-width: 1px 0 1px 1px;
+    border-color: #fff; }
+    .search-forms .dark-gray .search-form__input::-webkit-input-placeholder {
+      line-height: 1.3125; }
+    .search-forms .dark-gray .search-form__input::-moz-placeholder {
+      line-height: 1.3125; }
+    .search-forms .dark-gray .search-form__input:-ms-input-placeholder {
+      line-height: 1.3125; }
+  .search-forms .dark-gray .search-form__button {
+    font-weight: 700;
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+    cursor: pointer;
+    text-align: center;
+    transition-property: background, border, color;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    border-style: solid;
+    border-width: 1px;
+    background: #CCCCCC;
+    color: #222222;
+    border: 1px solid #F0F0F0;
+    /* too heavy outline
+    @if ($color-background == transparent) {
+        border: 2px solid $color-border;
+    } @else {
+        border: 1px solid $color-border;
+    }*/
+    font-size: 1em;
+    padding: .3333em 1em;
+    border-radius: 4px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 34px;
+    overflow: hidden;
+    width: 50px; }
+    .search-forms .dark-gray .search-form__button:hover, .search-forms .dark-gray .search-form__button:focus, .search-forms .dark-gray .search-form__button:active {
+      background: #F0F0F0;
+      color: #000000;
+      border-color: #FFFFFF; }
+    .search-forms .dark-gray .search-form__button span {
+      display: inline-block;
+      display: block;
+      text-indent: 200%;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 0;
+      background-repeat: no-repeat;
+      background-image: url("../images/search-icon-black.svg");
+      width: 16px;
+      height: 16px; }
+
+.light-box {
+  padding: 1.5em;
+  margin-bottom: 1em;
+  border: solid 0px #DBD5CD;
+  background-color: #F0F0F0; }
+  .light-box > :first-child {
+    margin-top: 0 !important; }
+  .light-box > :last-child {
+    margin-bottom: 0 !important; }
+
+.dark-box {
+  padding: 1.5em;
+  margin-bottom: 1em;
+  border: solid 0px #DBD5CD;
+  background-color: #444444; }
+  .dark-box > :first-child {
+    margin-top: 0 !important; }
+  .dark-box > :last-child {
+    margin-bottom: 0 !important; }
+
+.buttons .orange {
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition-property: background, border, color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-width: 1px;
+  background: #BD4D1F;
+  color: #FFFFFF;
+  border: 1px solid #611C00;
+  /* too heavy outline
+    @if ($color-background == transparent) {
+        border: 2px solid $color-border;
+    } @else {
+        border: 1px solid $color-border;
+    }*/
+  font-size: 1em;
+  padding: .3333em 1em;
+  border-radius: 4px; }
+  .buttons .orange:hover, .buttons .orange:focus, .buttons .orange:active {
+    background: #611C00;
+    color: #FFFFFF;
+    border-color: #611C00; }
+
+.buttons .gold {
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition-property: background, border, color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-width: 1px;
+  background: #FBD986;
+  color: #222222;
+  border: 1px solid #D79900;
+  /* too heavy outline
+    @if ($color-background == transparent) {
+        border: 2px solid $color-border;
+    } @else {
+        border: 1px solid $color-border;
+    }*/
+  font-size: 1em;
+  padding: .3333em 1em;
+  border-radius: 4px; }
+  .buttons .gold:hover, .buttons .gold:focus, .buttons .gold:active {
+    background: #FEE8B6;
+    color: #222222;
+    border-color: #D79900; }
+
+.buttons .gray {
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition-property: background, border, color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-width: 1px;
+  background: #222222;
+  color: #FFFFFF;
+  border: 1px solid #000000;
+  /* too heavy outline
+    @if ($color-background == transparent) {
+        border: 2px solid $color-border;
+    } @else {
+        border: 1px solid $color-border;
+    }*/
+  font-size: 1em;
+  padding: .3333em 1em;
+  border-radius: 4px; }
+  .buttons .gray:hover, .buttons .gray:focus, .buttons .gray:active {
+    background: #000000;
+    color: #F1B82D;
+    border-color: #000000; }
+
+.buttons .transparent {
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition-property: background, border, color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-width: 1px;
+  background: none;
+  color: #222222;
+  border: 1px solid #D79900;
+  /* too heavy outline
+    @if ($color-background == transparent) {
+        border: 2px solid $color-border;
+    } @else {
+        border: 1px solid $color-border;
+    }*/
+  font-size: 1em;
+  padding: .3333em 1em;
+  border-radius: 4px; }
+  .buttons .transparent:hover, .buttons .transparent:focus, .buttons .transparent:active {
+    background: #FEE8B6;
+    color: #222222;
+    border-color: #D79900; }
+
+.buttons .orange-large {
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition-property: background, border, color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-width: 1px;
+  background: #BD4D1F;
+  color: #FFFFFF;
+  border: 1px solid #611C00;
+  /* too heavy outline
+    @if ($color-background == transparent) {
+        border: 2px solid $color-border;
+    } @else {
+        border: 1px solid $color-border;
+    }*/
+  font-size: 1.25em;
+  padding: .3333em 1em;
+  border-radius: 6px; }
+  .buttons .orange-large:hover, .buttons .orange-large:focus, .buttons .orange-large:active {
+    background: #611C00;
+    color: #FFFFFF;
+    border-color: #611C00; }
+
+.buttons .gold-large {
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition-property: background, border, color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-width: 1px;
+  background: #FBD986;
+  color: #222222;
+  border: 1px solid #D79900;
+  /* too heavy outline
+    @if ($color-background == transparent) {
+        border: 2px solid $color-border;
+    } @else {
+        border: 1px solid $color-border;
+    }*/
+  font-size: 1.25em;
+  padding: .3333em 1em;
+  border-radius: 6px; }
+  .buttons .gold-large:hover, .buttons .gold-large:focus, .buttons .gold-large:active {
+    background: #FEE8B6;
+    color: #222222;
+    border-color: #D79900; }
+
+.buttons .gray-large {
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition-property: background, border, color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-width: 1px;
+  background: #222222;
+  color: #FFFFFF;
+  border: 1px solid #000000;
+  /* too heavy outline
+    @if ($color-background == transparent) {
+        border: 2px solid $color-border;
+    } @else {
+        border: 1px solid $color-border;
+    }*/
+  font-size: 1.25em;
+  padding: .3333em 1em;
+  border-radius: 6px; }
+  .buttons .gray-large:hover, .buttons .gray-large:focus, .buttons .gray-large:active {
+    background: #000000;
+    color: #F1B82D;
+    border-color: #000000; }
+
+.buttons .transparent-large {
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition-property: background, border, color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-width: 1px;
+  background: none;
+  color: #222222;
+  border: 1px solid #D79900;
+  /* too heavy outline
+    @if ($color-background == transparent) {
+        border: 2px solid $color-border;
+    } @else {
+        border: 1px solid $color-border;
+    }*/
+  font-size: 1.25em;
+  padding: .3333em 1em;
+  border-radius: 6px; }
+  .buttons .transparent-large:hover, .buttons .transparent-large:focus, .buttons .transparent-large:active {
+    background: #FEE8B6;
+    color: #222222;
+    border-color: #D79900; }
+
+.buttons .dark-orange {
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition-property: background, border, color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-width: 1px;
+  background: #BD4D1F;
+  color: #FFFFFF;
+  border: 1px solid #611C00;
+  /* too heavy outline
+    @if ($color-background == transparent) {
+        border: 2px solid $color-border;
+    } @else {
+        border: 1px solid $color-border;
+    }*/
+  font-size: 1em;
+  padding: .3333em 1em;
+  border-radius: 4px; }
+  .buttons .dark-orange:hover, .buttons .dark-orange:focus, .buttons .dark-orange:active {
+    background: #611C00;
+    color: #FFFFFF;
+    border-color: #611C00; }
+
+.buttons .dark-gold {
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition-property: background, border, color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-width: 1px;
+  background: #FBD986;
+  color: #222222;
+  border: 1px solid #FEE8B6;
+  /* too heavy outline
+    @if ($color-background == transparent) {
+        border: 2px solid $color-border;
+    } @else {
+        border: 1px solid $color-border;
+    }*/
+  font-size: 1em;
+  padding: .3333em 1em;
+  border-radius: 4px; }
+  .buttons .dark-gold:hover, .buttons .dark-gold:focus, .buttons .dark-gold:active {
+    background: #FEE8B6;
+    color: #222222;
+    border-color: #F1B82D; }
+
+.buttons .dark-gray {
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition-property: background, border, color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-width: 1px;
+  background: #CCCCCC;
+  color: #222222;
+  border: 1px solid #F0F0F0;
+  /* too heavy outline
+    @if ($color-background == transparent) {
+        border: 2px solid $color-border;
+    } @else {
+        border: 1px solid $color-border;
+    }*/
+  font-size: 1em;
+  padding: .3333em 1em;
+  border-radius: 4px; }
+  .buttons .dark-gray:hover, .buttons .dark-gray:focus, .buttons .dark-gray:active {
+    background: #F0F0F0;
+    color: #000000;
+    border-color: #FFFFFF; }
+
+.buttons .dark-transparent {
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Proxima Nova", "proxima-nova", "Arial", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition-property: background, border, color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-width: 1px;
+  background: none;
+  color: #FBD986;
+  border: 1px solid #FBD986;
+  /* too heavy outline
+    @if ($color-background == transparent) {
+        border: 2px solid $color-border;
+    } @else {
+        border: 1px solid $color-border;
+    }*/
+  font-size: 1em;
+  padding: .3333em 1em;
+  border-radius: 4px; }
+  .buttons .dark-transparent:hover, .buttons .dark-transparent:focus, .buttons .dark-transparent:active {
+    background: #666666;
+    color: #FBD986;
+    border-color: #FBD986; }
+
+@media screen and (min-width: 700px) {
+  html {
+    font-size: 18px; }
+  h1 {
+    font-size: 3em; }
+  h2 {
+    font-size: 2.5em; }
+  figure.left,
+  .alignleft {
+    margin: 0 1em 1em 0;
+    float: left;
+    display: block;
+    max-width: 400px; }
+  figure.right,
+  .alignright {
+    margin: 0 0 1em 1em;
+    float: right;
+    display: block;
+    max-width: 400px; }
+  article {
+    float: left;
+    width: 66.66667%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem; }
+    article.wide {
+      float: left;
+      width: 100%;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem; }
+  aside {
+    float: left;
+    width: 33.33333%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: .9em; }
+  .grid-3 .box {
+    font-size: 14.4px; }
+  .grid-3 .column {
+    float: left;
+    width: 33.33333%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem; }
+  .mu-sig:before, .mu-sig:after {
+    content: ' ';
+    display: table; }
+  .mu-sig:after {
+    clear: both; }
+  .mu-sig .mu-sig__logo,
+  .mu-sig .mu-sig__wordmark {
+    margin: 0; }
+  .mu-sig .mu-sig__logo a,
+  .mu-sig .mu-sig__wordmark a {
+    display: block;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: left 0;
+    margin: 0; }
+  .mu-sig .mu-sig__logo a {
+    width: 50px;
+    height: 56px;
+    background-image: url("../images/mu-logo-medium.svg");
+    float: left;
+    margin-left: -1px; }
+  .mu-sig .mu-sig__wordmark {
+    margin-left: 65px;
+    padding-top: 11px; }
+  .mu-sig .mu-sig__wordmark a {
+    width: 334px;
+    height: 39px;
+    background-image: url("../images/mu-wordmark-medium.svg");
+    background-position: left -78px; }
+    .mu-sig .mu-sig__wordmark a:hover, .mu-sig .mu-sig__wordmark a:focus, .mu-sig .mu-sig__wordmark a:active {
+      background-position: left -117px; } }

@@ -1,0 +1,30 @@
+{#
+/**
+ * Navigation
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 3.0.0
+ *
+ * Variables:
+ * - navigation_current_page: (string) Current page address (optional, see default).
+ * - navigation_hide_unselected_child_links: (boolean) Whether to hide child navigation items of unselected links (optional, see default).
+ * - navigation_id: (string) An id to apply to the block (optional).
+ * - navigation_items: (array) Navigation items (optional, see default).
+ * - navigation_modifier_class: (string) A modifier class to apply to the block (optional).
+ */
+#}
+{% import 'macros/navigation.html.twig' as ui %}
+
+{# Defaults #}
+{% set navigation_current_page = navigation_current_page|default(page.current_page) %}
+{% set navigation_hide_unselected_child_links = navigation_hide_unselected_child_links|default(true) %}
+{% set navigation_items = navigation_items|default(site.navigation_items) %}
+
+{% if (navigation_items) %}
+    <nav role="navigation"{% if (navigation_id) %} id="{{ navigation_id }}"{% endif %}{% if (navigation_modifier_class) %} class="{{ navigation_modifier_class }}"{% endif %}>
+        <div class="nav__container container">
+            {{ ui.navigation(navigation_items, navigation_current_page, navigation_hide_unselected_child_links) }}
+        </div>
+    </nav>
+{% endif %}

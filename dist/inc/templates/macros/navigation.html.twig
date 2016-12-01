@@ -1,0 +1,51 @@
+{#
+/**
+ * Navigation Macro
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 3.0.1
+ */
+
+/**
+ * Outputs a navigation menu
+ *
+ * @param array navigation_items Associative array of link items. Each item can have the following properties.
+ *      - string link URL of the link.
+ *      - string title Text for the link.
+ *      - array children Child link items (with the same definition). These become nested unordered lists.
+ * @param string current_page (Optional) URL or path of the current page.
+ * @param boolean hide_unselected_children (Optional) If true, will hide child lists if the current_page isn't one of the child links or the parent link.
+ * @return string List HTML.
+ */
+#}
+{% macro navigation(navigation_items, current_page, hide_unselected_child_links) %}
+{% spaceless %}
+
+{% if (navigation_items is not empty) %}
+<ul class="nav__list">
+    {% for item in navigation_items %}
+    <li class="nav__item">
+        {# If hide_unselected_child_links is true, we'll only show the child links if the current page is either the active page or one of the child links. #}
+        {% if (hide_unselected_child_links) and (item.children is not empty) %}
+            {% set url_list = item|menu_item_link_list %}
+        {% endif %}
+    
+        {% if (current_page == item.link) %}
+            <strong class="nav__current-page">{{ item.title|striptags('<em>')|raw }}</strong>
+        {% else %}
+            <a href="{{ item.link|striptags }}" class="nav__link">{{ item.title|striptags('<em>')|raw }}</a>
+        {% endif %}
+        
+        {% if (item.children is not empty) %}
+            {% if (not hide_unselected_child_links) or (hide_unselected_child_links and current_page in url_list) %}
+                {{ _self.navigation(item.children, current_page, hide_unselected_child_links|default(false)) }}
+            {% endif %}
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{% endspaceless %}
+{% endmacro %}

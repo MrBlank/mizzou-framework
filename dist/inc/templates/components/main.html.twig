@@ -1,0 +1,25 @@
+{#
+/**
+ * Main Content (Standard Configuration)
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 3.0.0
+ *
+ * Variables:
+ * - main_content: (string) Content of page (optional, see default).
+ * - main_modifier_class: (string) A modifier class to apply to the block (optional).
+ */
+#}
+{# Defaults #}
+{% set main_content = main_content|default(page.content) %}
+
+<main id="content" role="main" tabindex="-1"{% if (main_modifier_class) %} class="{{ main_modifier_class }}"{% endif %}>
+    <div class="main__container container">
+        {% block main_content %}
+            {% if (main_content) %}
+                {{ include(template_from_string(main_content)) }}
+            {% endif %}
+        {% endblock %}
+    </div>
+</main>

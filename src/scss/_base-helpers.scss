@@ -1,0 +1,166 @@
+/**
+ * Mizzou Framework - Sass: Helper Classes
+ *
+ * Requires: _variables.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.00
+ */
+
+
+/* @group Lists */
+
+ul,
+ol 
+{        
+    &.list--spaced > li 
+    {
+        margin-bottom: $base-margin +0em;
+    }
+}
+
+ul.list--square 
+{
+    list-style: square;
+}
+
+ul.list--disc 
+{
+    list-style: disc;
+}
+
+ul.list--circle 
+{
+    list-style: circle;
+}
+
+ol.list--decimal 
+{
+    list-style: decimal;
+}
+
+ol.list--lower-alpha {
+    list-style: lower-alpha;
+}
+
+ol.list--upper-alpha {
+    list-style: upper-alpha;
+}
+
+ol.list--lower-roman {
+    list-style: lower-roman;
+}
+
+ol.list--upper-roman {
+    list-style: upper-roman;
+}
+ul.list--none {
+    list-style: none;
+    padding-left: 0;
+}
+
+li li,
+li p {
+    font-size: inherit;
+}
+
+/* @end */
+
+
+/* @group Horizontal Rules */
+hr
+{
+    &.rule--dashed
+    {
+        border-style: dashed;
+    }
+    &.rule--space {
+        border-color: transparent;
+        visibility: hidden;
+    }
+}
+
+/* @end */
+
+
+/* @group Others  */
+
+.clear {
+    clear: both;
+}
+
+/* @end */
+
+
+/*@group Type helpers */
+
+.dquo 
+{
+	margin-left: -.3em;
+}
+.quo 
+{
+	margin-left: -.2em;
+}
+.caps 
+{
+	font-size: 90%;
+	text-transform: uppercase;
+}
+.dropcap 
+{ 
+	font-weight:$font-bold-default; 
+	float:left; 
+	display: block;
+	//line-height:.7; 
+	line-height:.7;
+	font-size:5.4em; 
+	//margin:.11em .08em 0 -.04em; 
+	margin: 0 .08em 0 -.04em;
+	// padding ...
+	padding-top: .11em;
+
+    &.hang 
+    {
+	    margin-left: -.3em;
+    }
+}
+
+/*doc
+---
+title: Type Helpers
+name: zhelpers_02
+category: Mixins & Helper Classes
+---
+
+## Hanging Quotes
+
+The `.quo` and `.dquo` classes are for single quotes and double quotes, respectively. 
+They push the element to the left a little to cause the punctuation to hang into the margins.
+
+```html_example 
+<h1><span class="quo">&#8216;</span>Let these columns stand. Let them stand a thousand years.&#8217;</h1>
+<p><span class="dquo">&#8220;</span>Let these columns stand. Let them stand a thousand years. Crown them with an arch, memorial to the men who in their magnificent presence learned what life and duty are, and how to live the one and do the other. They will be to all the rallying point of future devotion and service to the university.&#8221;</p>
+```
+
+## Small Caps
+
+The `.caps` class shrinks text a little and transforms text to uppercase.
+
+```html_example 
+<p>The quarterly magazine of <span class="caps">MAA</span> is called <span class="caps">MIZZOU</span> and provides news and information about the University of Missouri</p>
+```
+
+## Dropcaps
+
+The `.dropcap` class works on an inline element, usually and span tag. Add the class `.hang` when it starts with punctuation to hang it in the margins. 
+
+```html_example 
+<p><span class="dropcap">L</span>Let these columns stand. Let them stand a thousand years. Crown them with an arch, memorial to the men who in their magnificent presence learned what life and duty are, and how to live the one and do the other. They will be to all the rallying point of future devotion and service to the university.</p>
+<p><span class="dropcap hang">&#8216;L</span>Let these columns stand. Let them stand a thousand years. Crown them with an arch, memorial to the men who in their magnificent presence learned what life and duty are, and how to live the one and do the other. They will be to all the rallying point of future devotion and service to the university.&#8217;</p>
+```
+
+*/
+
+/* @end */

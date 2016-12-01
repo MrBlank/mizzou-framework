@@ -1,0 +1,382 @@
+@import "../scss/_variables";
+@import "../scss/_fonts";
+@import "../scss/_base-mixins"; 
+@import "../scss/_base";
+@import "../scss/_base-helpers";  
+@import "../scss/_forms"; 
+@import "../scss/_buttons"; 
+@import "../scss/_mizzou-signature"; 
+@import "../scss/_grid";
+@import "../scss/_skip-to-links";
+@import "../scss/_search-forms";
+
+@media print 
+{
+    @import "../scss/_print";
+}
+
+@include font-proxima-nova(
+    $light-300:     'true',
+    $regular-400:   'true',
+    $semibold-600:  'true'
+);
+
+.offset a
+{
+    @include skip-to-content();
+}
+
+.header-layer,
+.footer-layer 
+{
+    background-color: $gray-500;
+}
+.wrapper-layer 
+{
+
+}
+header,
+footer
+{
+    padding: 1rem;
+}
+header,
+.wrapper,
+footer
+{
+    @include center-block($max-width: 960px, $min-width: $base-min-width);
+} 
+.wrapper
+{
+    @include grid-row();
+    
+    .heading 
+    {
+        @include grid-column(1, 1);
+        margin-top: ($base-margin + 1em);
+    }
+}
+article,
+aside 
+{
+    margin-bottom: 1em;
+}
+article
+{
+    @include grid-column(1, 1);
+    
+    & > :first-child {
+        margin-top: 0;
+    }
+}
+aside 
+{
+    @include grid-column(1, 1);
+    
+    .box {
+        @include box();
+    }
+}
+.grid-3 
+{
+    @include clear-fix();
+    clear: both;
+    margin: 5em 0;
+    
+    .box 
+    {
+        @include box(
+            $background:    $gold-100,
+            $border-size:   1px,
+            $border-color:  $gold-400
+        );
+    }
+    h2
+    {
+        @include grid-column(1, 1);
+    }
+    .column
+    {
+        @include grid-column(1, 1);
+    }
+}
+footer 
+{   
+    p 
+    {
+        color: $gray-200;
+        line-height: ($font-line-height * .75);
+        
+        a 
+        {
+            color: $gray-200;
+            
+            &:hover,
+            &:focus,
+            &:active
+            {
+                color: $gold-400;
+            }
+        }
+    }
+} 
+
+
+// Branding 
+
+.mu-sig
+{
+    @include mu-sig(
+        $color: 'white'
+    );
+}
+@media print 
+{
+    .mu-sig
+    {
+        @include mu-sig(
+            $size: 'large',
+            $print: 'true',
+            $color: 'black'
+        );
+    }
+}
+
+
+// Search forms
+
+.search-forms
+{
+    form 
+    {
+        padding: ($base-margin * 1.5em);
+    }
+    
+    .light-gold 
+    {
+        @include search-form(
+            $theme: 'light',
+            $button-color: 'gold',
+            $button-style: 'icon'
+        );
+        background: $tan-100;
+    }
+    .light-orange 
+    {
+        @include search-form(
+            $theme: 'light',
+            $button-color: 'orange'
+        );
+        background: $gold-100;
+    }
+    .light-gray 
+    {
+        @include search-form(
+            $theme: 'light',
+            $button-color: 'gray',
+            $button-style: 'icon'
+        );
+        background: $gray-100;
+    }
+    .dark-gold 
+    {
+        @include search-form(
+            $theme: 'dark',
+            $button-color: 'gold'
+        );
+        background: black;
+    }
+    .dark-gray 
+    {
+        @include search-form(
+            $theme: 'dark',
+            $button-color: 'gray',
+            $button-style: 'icon'
+        );
+        background: $red-600;
+    }
+}
+
+
+// buttons 
+
+.light-box 
+{
+    @include box(
+        $padding: ($base-margin * 1.5em),
+        $background: $gray-100
+    );
+}
+.dark-box 
+{
+    @include box(
+        $padding: ($base-margin * 1.5em),
+        $background: $gray-500
+    );
+}
+
+.buttons {
+    .orange
+    {
+        @include button(
+            $size: 'small',
+            $color: 'orange'
+        );
+    }
+    
+    .gold
+    {
+        @include button(
+            $size: 'small',
+            $color: 'gold'
+        );
+    }
+    
+    .gray
+    {
+        @include button(
+            $size: 'small',
+            $color: 'gray'
+        );
+    }
+    .transparent
+    {
+        @include button(
+            $size: 'small',
+            $color: 'transparent'
+        );
+    }
+    .orange-large
+    {
+        @include button(
+            $size: 'large',
+            $color: 'orange'
+        );
+    }
+    
+    .gold-large
+    {
+        @include button(
+            $size: 'large',
+            $color: 'gold'
+        );
+    }
+    
+    .gray-large
+    {
+        @include button(
+            $size: 'large',
+            $color: 'gray'
+        );
+    }
+    .transparent-large 
+    {
+        @include button(
+            $size: 'large',
+            $color: 'transparent'
+        )    
+    }
+    
+    .dark-orange
+    {
+        @include button(
+            $size: 'small',
+            $color: 'orange',
+            $theme: 'dark'
+        );
+    }
+    
+    .dark-gold
+    {
+        @include button(
+            $size: 'small',
+            $color: 'gold',
+            $theme: 'dark'
+        );
+    }
+    
+    .dark-gray
+    {
+        @include button(
+            $size: 'small',
+            $color: 'gray',
+            $theme: 'dark'
+        );
+    }
+    .dark-transparent
+    {
+        @include button(
+            $size: 'small',
+            $color: 'transparent',
+            $theme: 'dark'
+        );
+    }
+}
+@media screen and (min-width: 700px)
+{
+    html // Put these generic in boilerplate scss
+    {
+        font-size: 18px;
+    }
+    
+    h1 
+    {
+        font-size: 3em;
+    }
+    h2 
+    {
+        font-size: 2.5em;
+    }
+    
+    @include inset-images();
+    
+    article 
+    {
+        @include grid-column(2, 3);
+        
+        &.wide
+        {
+            @include grid-column(3, 3);
+        }
+    }
+    aside 
+    {
+        @include grid-column(1, 3);
+        font-size: .9em;
+    } 
+    .grid-3 
+    {        
+        .box 
+        {
+            font-size: ($font-size *.9px);
+        }
+        .column
+        {
+            @include grid-column(1, 3);
+        }
+    } 
+    
+    .mu-sig
+    {
+        @include mu-sig(
+            $size: 'medium',
+            $color: 'white'
+        );
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+{#
+/**
+ * Unit Signature
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 3.0.0
+ *
+ * Variables:
+ * - unit_signature_is_homepage: (boolean) Whether or not the page is the homepage (optional, see default).
+ * - unit_signature_modifier_class: (string) A modifier class to apply to the block (optional).
+ * - unit_signature_site_base_url: (string) Base URL of the site (optional, see default).
+ * - unit_signature_site_name: (string) Name of the site (optional, see default).
+ */
+#}
+{# Defaults #}
+{% set unit_signature_is_homepage = unit_signature_is_homepage|default(page.is_homepage) %}
+{% set unit_signature_site_base_url = unit_signature_site_base_url|default(site.base_url) %}
+{% set unit_signature_site_name = unit_signature_site_name|default(site.name) %}
+
+<div class="unit-signature{% if (unit_signature_modifier_class) %} {{ unit_signature_modifier_class }}{% endif %}">
+    <h1 class="unit-signature__name">
+        {% if (unit_signature_is_homepage) %}
+            <span>{{ unit_signature_site_name|raw }}</span>
+        {% else %}
+            <a href="{{ unit_signature_site_base_url }}">{{ unit_signature_site_name|raw }}</a>
+        {% endif %}
+    </h1>
+    <h2 class="unit-signature__wordmark"><a href="http://missouri.edu">University of Missouri</a></h2>
+    <p class="unit-signature__logo"><a href="http://missouri.edu">Mizzou Logo</a></p>
+</div>

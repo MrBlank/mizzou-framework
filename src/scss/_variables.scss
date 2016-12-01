@@ -1,0 +1,181 @@
+/**
+ * Mizzou Framework - Sass: Variables
+ *
+ * @author Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2016 Curators of the University of Missouri
+ * @version 1.10
+ */
+
+/* @group Colors */
+
+// Base colors
+
+$black:                         #000000 !default;
+$white:                         #FFFFFF !default;
+$gold:                          #F1B82D !default; // Mizzou Gold
+$tan:                           #A6A495 !default;
+$warm-gray:                     #595552 !default;
+$gray:                          #666666 !default;
+$red:                           #900000 !default;
+$orange:                        #BD4D1F !default;
+$blue:                          #318FD7 !default;
+$green:                         #3F8F26 !default;
+    
+// Variatons
+
+$gold-100:                      #FFF4D6 !default;
+$gold-200:                      #FEE8B6 !default;
+$gold-300:                      #FBD986 !default;
+$gold-400:                      $gold;
+$gold-500:                      #D79900 !default;
+$gold-600:                      #AF7C00 !default;
+
+$tan-100:                       #F6F5EA !default;
+$tan-200:                       #EDEBD5 !default;
+$tan-300:                       #D5D3C0 !default;
+$tan-400:                       $tan;
+$tan-500:                       #77756B !default;
+$tan-600:                       #474740 !default;
+
+$warm-gray-100:                 #EDEAE6 !default;
+$warm-gray-200:                 #DBD5CD !default;
+$warm-gray-300:                 #8F8884 !default;
+$warm-gray-400:                 $warm-gray;
+$warm-gray-500:                 #33312F !default;
+$warm-gray-600:                 #242221 !default;
+
+$gray-100:                      #F0F0F0 !default;
+$gray-200:                      #CCCCCC !default;
+$gray-300:                      #999999 !default;
+$gray-400:                      $gray;
+$gray-500:                      #444444 !default;
+$gray-600:                      #222222 !default;
+
+$red-100:                       #FFECEC !default;
+$red-200:                       #FFC2C4 !default;
+$red-300:                       #CA4B4B !default;
+$red-400:                       $red;
+$red-500:                       #6A0206 !default;
+$red-600:                       #470102 !default;
+
+$orange-100:                    #FFE4DB !default;
+$orange-200:                    #FFBEA9 !default;
+$orange-300:                    #DE6835 !default;
+$orange-400:                    $orange;
+$orange-500:                    #992D00 !default;
+$orange-600:                    #611C00 !default;
+
+$blue-100:                      #E4F1FA !default;
+$blue-200:                      #B2D5F0 !default;
+$blue-300:                      #65ABE1 !default;
+$blue-400:                      $blue;
+$blue-500:                      #1A5888 !default;
+$blue-600:                      #143650 !default;
+
+$green-100:                     #EBF4E9 !default;
+$green-200:                     #B2CFA9 !default;
+$green-300:                     #6FAB5D !default;
+$green-400:                     $green;
+$green-500:                     #2D671B !default;
+$green-600:                     #214716 !default;
+
+// Colors by use
+
+$background-color:              $white !default;
+$text-color:                    $gray-600 !default;
+$link-color:                    $red !default;
+$link-hover-color:              $gray-600 !default;
+$border-color:                  $gray-600 !default;
+$hr-color:                      $gray-200 !default;
+$box-bg-color:                  $warm-gray-100 !default;
+$box-border-color:              $warm-gray-200 !default;
+$code-bg-color:                 $warm-gray-100 !default;
+$code-border-color:             $warm-gray-200 !default;
+$abbr-color:                    $gray-100 !default;
+$mark-color:                    $gold-100 !default;
+$help-color:                    $gray-200 !default;
+$form-error-message-color:      $red !default;
+$form-error-bg-color:           $red-100 !default;
+$form-error-border-color:       $red !default;
+$form-field-border-color:       $gray-200 !default;
+$table-cell-border-color:       $gray-200 !default;
+$table-cell-stripe-color:       $gray-100 !default;
+$table-cell-header-color:       $gold-100 !default;
+
+/* @end */
+
+ 
+/* @group Fonts */
+    
+$font-serif:                    'Janson', 'Times New Roman', Times, serif !default;
+$font-serif-sc:                 'Janson-SC', $font-serif !default;
+$font-sans:                     'Proxima Nova', 'proxima-nova', 'Arial', sans-serif !default; // 'Proxima Nova' is for embedded web fonts & desktop, 'proxima-nova' is for Typekit
+$font-monospace:                'source code pro', 'Menlo', 'Courier New', monospace !default; 
+
+$font-default:                  $font-sans;
+
+// Aligns with Proxima Nova's weights
+
+$font-thin:                     200 !default; 
+$font-light:                    300 !default; 
+$font-normal:                   400 !default;
+$font-medium:                   500 !default;
+$font-semibold:                 600 !default;
+$font-bold:                     700 !default;
+$font-xbold:                    800 !default;
+$font-black:                    900 !default;
+
+$font-bold-default:             $font-semibold !default; // The default bold weight.
+
+// Default font path
+
+$font-path:                     '../fonts' !default;
+
+// Base values
+
+$font-family:                   $font-sans !default;
+$font-size:                     16 !default;
+$font-line-height:              1.5 !default;
+
+/* @end */
+
+
+/* @group Standard Measurements */
+
+$base-margin:                   1 !default;
+$base-min-width:                320px !default; // Narrowest supported phone size
+$base-max-width:                1200px !default;
+$base-border-radius:            4px !default;
+
+/* @end */
+
+
+/* @group Images */
+
+// Default image path
+
+$image-path:                    '../images' !default;
+$use-flexible-images:           true !default;
+$inset-image-width:             400px !default;
+
+/* @end */
+
+
+/* @group Viewport */
+
+// Viewport width
+
+$viewport-width:                device-width !default;
+
+// Breakpoints
+
+$query-2x:			        'only screen and (-webkit-min-device-pixel-ratio: 1.5),only screen and (min--moz-device-pixel-ratio: 1.5),only screen and (min-device-pixel-ratio: 1.5)';
+
+
+/* @end */
+
+
+
+
+
+$query-inset-images: false !default;

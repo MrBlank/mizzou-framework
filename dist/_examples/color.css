@@ -1,0 +1,231 @@
+/**
+ * Mizzou Framework - Sass: Variables
+ *
+ * @author Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2016 Curators of the University of Missouri
+ * @version 1.10
+ */
+/* @group Colors */
+/* @end */
+/* @group Fonts */
+/* @end */
+/* @group Standard Measurements */
+/* @end */
+/* @group Images */
+/* @end */
+/* @group Viewport */
+/* @end */
+/**
+ * Mizzou Framework - Sass: Base Mixins
+ *
+ * Requires: _variables.scss
+ *
+ * @author Josh Hughes (hughesjd@missouri.edu), Josh Nichols (nicholsjc@missouri.edu), University of Missouri
+ * @copyright 2015 Curators of the University of Missouri
+ * @version 1.10
+ */
+/* @group Placeholder Selectors */
+/*
+The `.center-block()` mixin is a quick way to center layouts.
+
+```html_example
+<div class="center-me">
+    <p>A Centered, block-level element.</p>
+</div>
+```
+Here are the variables that can be used:
+
+```
+@max-width  
+@min-width
+
+.center-me {
+    .center-block(@bmax-width: 300px, @min-width: 150px);
+    .box();
+    width: 50%;
+}
+*/
+/**
+ * Sets up containing div, centered with a max-width
+ *
+ * @param unit $max-width (Optional) Width of the block. Defaults to 100%
+ * @param boolean $include-print-style (Optional) Whether to set the block to 100% for printing. Defaults to true
+ */
+/*@mixin center-block(
+    $max-width:                 100%,
+    $include-print-style:       true
+)
+{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $max-width;
+    
+    @if (($max-width != 100%) and ($include-print-style == true)) {
+        @media print
+        {
+            max-width: 100%;
+        }
+    }
+}*/
+/* @end */
+/**
+ * Image replacement technique. Offsets the element text and sets a background image
+ *
+ * @param string $filename (Optional) Filename of the image. Defaults to 'none'
+ * @param unit $width (Optional) Width of the image. Defaults to 'none'
+ * @param unit $height (Optional) Height of the image. Defaults to 'none'
+ */
+/*
+The `.box()` mixin is good for adding empasis to an element. 
+
+```html_example
+<div class="box-example">
+    <p>A box with some added style options.</p>
+</div>
+```
+Here are the variables that can be used with their defaults:
+
+```
+@background: @color-box-bg          // Use 'none' to remove
+@padding: 1rem 
+@border-size: 0                     // Change this to add a border
+@border-color: @color-box-border 
+@border-style: solid
+
+.box-example {
+    .box(@gold-lightest, 1.5, 1px, @gold);
+}
+*/
+.color-row {
+  margin-bottom: 3em; }
+  .color-row:before, .color-row:after {
+    content: ' ';
+    display: table; }
+  .color-row:after {
+    clear: both; }
+  .color-row p {
+    font-family: "source code pro", "Menlo", "Courier New", monospace;
+    font-size: .8em; }
+  .color-row .black {
+    background-color: black; }
+  .color-row .gold-100 {
+    background-color: #FFF4D6; }
+  .color-row .gold-200 {
+    background-color: #FEE8B6; }
+  .color-row .gold-300 {
+    background-color: #FBD986; }
+  .color-row .gold-400 {
+    background-color: #F1B82D; }
+  .color-row .gold-500 {
+    background-color: #D79900; }
+  .color-row .gold-600 {
+    background-color: #AF7C00; }
+  .color-row .tan-100 {
+    background-color: #F6F5EA; }
+  .color-row .tan-200 {
+    background-color: #EDEBD5; }
+  .color-row .tan-300 {
+    background-color: #D5D3C0; }
+  .color-row .tan-400 {
+    background-color: #A6A495; }
+  .color-row .tan-500 {
+    background-color: #77756B; }
+  .color-row .tan-600 {
+    background-color: #474740; }
+  .color-row .warm-gray-100 {
+    background-color: #EDEAE6; }
+  .color-row .warm-gray-200 {
+    background-color: #DBD5CD; }
+  .color-row .warm-gray-300 {
+    background-color: #8F8884; }
+  .color-row .warm-gray-400 {
+    background-color: #595552; }
+  .color-row .warm-gray-500 {
+    background-color: #33312F; }
+  .color-row .warm-gray-600 {
+    background-color: #242221; }
+  .color-row .gray-100 {
+    background-color: #F0F0F0; }
+  .color-row .gray-200 {
+    background-color: #CCCCCC; }
+  .color-row .gray-300 {
+    background-color: #999999; }
+  .color-row .gray-400 {
+    background-color: #666666; }
+  .color-row .gray-500 {
+    background-color: #444444; }
+  .color-row .gray-600 {
+    background-color: #222222; }
+  .color-row .red-100 {
+    background-color: #FFECEC; }
+  .color-row .red-200 {
+    background-color: #FFC2C4; }
+  .color-row .red-300 {
+    background-color: #CA4B4B; }
+  .color-row .red-400 {
+    background-color: #900000; }
+  .color-row .red-500 {
+    background-color: #6A0206; }
+  .color-row .red-600 {
+    background-color: #470102; }
+  .color-row .orange-100 {
+    background-color: #FFE4DB; }
+  .color-row .orange-200 {
+    background-color: #FFBEA9; }
+  .color-row .orange-300 {
+    background-color: #DE6835; }
+  .color-row .orange-400 {
+    background-color: #BD4D1F; }
+  .color-row .orange-500 {
+    background-color: #992D00; }
+  .color-row .orange-600 {
+    background-color: #611C00; }
+  .color-row .blue-100 {
+    background-color: #E4F1FA; }
+  .color-row .blue-200 {
+    background-color: #B2D5F0; }
+  .color-row .blue-300 {
+    background-color: #65ABE1; }
+  .color-row .blue-400 {
+    background-color: #318FD7; }
+  .color-row .blue-500 {
+    background-color: #1A5888; }
+  .color-row .blue-600 {
+    background-color: #143650; }
+  .color-row .green-100 {
+    background-color: #EBF4E9; }
+  .color-row .green-200 {
+    background-color: #B2CFA9; }
+  .color-row .green-300 {
+    background-color: #6FAB5D; }
+  .color-row .green-400 {
+    background-color: #3F8F26; }
+  .color-row .green-500 {
+    background-color: #2D671B; }
+  .color-row .green-600 {
+    background-color: #214716; }
+
+.color-primary {
+  float: left;
+  width: 33.333%;
+  padding-right: 2.5%; }
+
+.color-small {
+  float: left;
+  width: 33.333%;
+  margin-right: 0; }
+
+.color-short {
+  height: 5em;
+  margin-bottom: .5em; }
+
+.color-tall {
+  height: 8em;
+  margin-bottom: .5em; }
+
+.color-hex {
+  margin: 0; }
+
+.color-name {
+  font-weight: 600;
+  margin: 0; }

@@ -1,0 +1,104 @@
+@import "../scss/_variables";
+@import "../scss/_base-mixins";
+
+.color-row 
+{
+    @include clear-fix();
+    margin-bottom: 3em;
+    
+    p 
+    {
+        font-family: $font-monospace;
+        font-size: .8em;
+    }
+    
+    .black              { background-color: black; }
+    
+    .gold-100           { background-color: $gold-100; }
+    .gold-200           { background-color: $gold-200; }
+    .gold-300           { background-color: $gold-300; }
+    .gold-400           { background-color: $gold-400; }
+    .gold-500           { background-color: $gold-500; }
+    .gold-600           { background-color: $gold-600; }
+    
+    .tan-100            { background-color: $tan-100; }
+    .tan-200            { background-color: $tan-200; }
+    .tan-300            { background-color: $tan-300; }
+    .tan-400            { background-color: $tan-400; }
+    .tan-500            { background-color: $tan-500; }
+    .tan-600            { background-color: $tan-600; }
+    
+    .warm-gray-100      { background-color: $warm-gray-100; }
+    .warm-gray-200      { background-color: $warm-gray-200; }
+    .warm-gray-300      { background-color: $warm-gray-300; }
+    .warm-gray-400      { background-color: $warm-gray-400; }
+    .warm-gray-500      { background-color: $warm-gray-500; }
+    .warm-gray-600      { background-color: $warm-gray-600; }
+    
+    .gray-100           { background-color: $gray-100; }
+    .gray-200           { background-color: $gray-200; }
+    .gray-300           { background-color: $gray-300; }
+    .gray-400           { background-color: $gray-400; }
+    .gray-500           { background-color: $gray-500; }
+    .gray-600           { background-color: $gray-600; }
+    
+    .red-100            { background-color: $red-100; }
+    .red-200            { background-color: $red-200; }
+    .red-300            { background-color: $red-300; }
+    .red-400            { background-color: $red-400; }
+    .red-500            { background-color: $red-500; }
+    .red-600            { background-color: $red-600; }
+    
+    .orange-100         { background-color: $orange-100; }
+    .orange-200         { background-color: $orange-200; }
+    .orange-300         { background-color: $orange-300; }
+    .orange-400         { background-color: $orange-400; }
+    .orange-500         { background-color: $orange-500; }
+    .orange-600         { background-color: $orange-600; }
+    
+    .blue-100           { background-color: $blue-100; }
+    .blue-200           { background-color: $blue-200; }
+    .blue-300           { background-color: $blue-300; }
+    .blue-400           { background-color: $blue-400; }
+    .blue-500           { background-color: $blue-500; }
+    .blue-600           { background-color: $blue-600; }
+    
+    .green-100          { background-color: $green-100; }
+    .green-200          { background-color: $green-200; }
+    .green-300          { background-color: $green-300; }
+    .green-400          { background-color: $green-400; }
+    .green-500          { background-color: $green-500; }
+    .green-600          { background-color: $green-600; }
+}
+
+.color-primary
+{
+    float: left;
+    width: 33.333%;
+    padding-right: 2.5%;
+}
+.color-small 
+{   
+    float: left;
+    width: 33.333%;
+    margin-right: 0;
+}
+.color-short 
+{
+    height: 5em;
+    margin-bottom: .5em;
+}
+.color-tall 
+{
+    height: 8em;
+    margin-bottom: .5em;
+}
+.color-hex 
+{
+    margin: 0;
+}
+.color-name 
+{
+    font-weight: $font-bold-default;
+    margin: 0;
+}

@@ -1,0 +1,144 @@
+/**
+ * Sass CSS Framework: Search Form
+ *
+ * Requires: _variables.scss, mizzou-base.scss, _buttons.scss
+ *
+ * $author Josh Hughes (hughesjd@missouri.edu), Undergraduate Studies, University of Missouri
+ * $copyright 2015 Curators of the University of Missouri
+ * $version 3.00
+ */
+
+/**
+ * Styles for a search form
+ *
+ * @param string $theme (Optional) Color theme. Can be 'light' or 'dark'. Defaults to 'light'
+ * @param string $button-color (Optional) Button color. Can be 'orange', 'gold', or 'gray'. Defaults to 'gold' (see .ui-button)
+ * @param boolean $include-print-style (Optional) Whether to hide the form for printing. Defaults to true
+ */
+ 
+ // NOTES: Measured in PX, should convert to EM or REM?
+ 
+@mixin search-form(
+    $theme:                     'light',
+    $button-color:              'gold',
+    $button-style:              'text'
+)
+{    
+    .search-form__container
+    {
+        position: relative;
+        overflow: hidden;
+        
+        @if ($button-style == 'icon') {
+            padding-right: 50px;
+        } @else { 
+            padding-right: 100px;
+        }
+    }
+    
+    .search-form__label
+    {
+        position: absolute;
+        top: -500px;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
+    
+    .search-form__input
+    {
+        width: 100%;
+        background: #fff;
+        display: block;
+        font-family: $font-default;
+        font-size: 14px;
+        line-height: 1;
+        padding: 4px 8px;
+        vertical-align: middle;
+        height: 34px;
+        box-shadow: none;
+        border-top-left-radius: $base-border-radius;
+        border-bottom-left-radius: $base-border-radius;
+        border-style: solid;
+        border-width: 1px 0 1px 1px;
+                
+        @if ($theme == 'dark') {
+            border-color: #fff;
+        } @else { // $theme == 'light'
+            @if ($button-color == 'orange') {
+                border-color: $orange-500;
+            } @else if ($button-color == 'gray') {
+                border-color: $black;
+            } @else { // $button-color == 'gold' 
+                border-color: $gold-500;
+            } 
+        }
+        
+        @if ($button-style == 'text') {
+            &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+                opacity:  0;
+            }
+            &::-moz-placeholder { /* Mozilla Firefox 19+ */
+               opacity:  0;
+            }
+            &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+               opacity:  0;
+            }
+        } @else {
+            &::-webkit-input-placeholder
+            {
+                line-height: 1.3125;
+            }
+            &::-moz-placeholder {
+                line-height: 1.3125;   
+            }
+            &:-ms-input-placeholder {
+                line-height: 1.3125; 
+            }
+        }
+    }
+
+    .search-form__button
+    {
+        @include button(
+            $color: $button-color,
+            $theme: $theme
+        );
+        
+        //border-top-left-radius: 0;
+        //border-bottom-left-radius: 0;
+        @include border-left-radius(0px);
+        line-height: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 34px;
+        overflow: hidden;
+        
+        @if ($button-style == 'icon'){
+            
+            width: 50px;
+            
+            span
+            {
+                display: inline-block;
+                
+                @if (($button-color == 'orange') or (($button-color == 'gray') and ($theme == 'light'))) {
+                    @include replace-with-image(
+                        $filename: 'search-icon-white.svg',
+                        $width: 16px,
+                        $height: 16px
+                    );
+                } @else {
+                    @include replace-with-image(
+                        $filename: 'search-icon-black.svg',
+                        $width: 16px,
+                        $height: 16px
+                    );
+                }
+            }
+        } @else { // $button-style == 'text' 
+             width: 100px;   
+        }
+    }
+}
