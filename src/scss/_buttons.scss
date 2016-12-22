@@ -241,7 +241,7 @@
  * @param string $theme (Optional) Color theme. Can be 'light' or 'dark'. Dark gives the button a lighter border. Defaults to 'light'
  * @param boolean $include-print-style (Optional) Whether to make the button black and white for printing. Defaults to true
  */
-/* 
+ 
 @mixin button(
     $color:                     'gold',
     $theme:                     'light'
@@ -317,4 +317,4 @@
             );
         }
     }
-}*/
+}
